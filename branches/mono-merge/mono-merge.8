@@ -1,0 +1,315 @@
+.\" Copyright 1996-2003 Jeremy Messenger <mezz7@cox.net>.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. All advertising materials mentioning features or use of this software
+.\"    must display the following acknowledgment:
+.\"      This product includes software developed by John D. Polstra.
+.\" 4. The name of the author may not be used to endorse or promote products
+.\"    derived from this software without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.\" $Id: mono-merge.8,v 1.3 2005/05/15 07:06:40 tmclau02 Exp $
+.\"
+.Dd September 04, 2004
+.Os FreeBSD
+.Dt MONO-MERGE 8
+.Sh NAME
+.Nm mono-merge
+.Nd tool to merge BSD# CVS repository with FreeBSD ports tree
+.Sh SYNOPSIS
+.Nm
+.Op Fl aDlpStuvx
+.Op Fl c Ar cvsroot
+.Op Fl d Ar directory
+.Op Fl m Ar module
+.Op Fl s Ar directory
+.Sh DESCRIPTION
+The
+.Nm
+script automates the procedure of merging the latest versions of Mono
+related ports from the BSD# CVS repository with your current ports
+collection. The script can also check out the BSD# ports from CVS.
+.Pp
+The ports from the BSD# repository are development versions of ports in
+the FreeBSD ports tree or Mono/C# ports not currently available there.
+The ports in this tree are meant to be a testing ground for changes to
+Mono and related packages, for the introduction of new applications, or
+for software with no applicable use on FreeBSD currently (like .NET data
+providers not currently used by any ports). They are generally
+experimental versions and are not in the FreeBSD tree precisely because
+they are experimental and possibly unstable. Users are expected to help
+by reporting and debugging any problems found when building and using
+these ports to the BSD# project
+.Aq bsd-sharp-list@forge.novell.com  .
+.Sh OPTIONS
+The following options are supported by
+.Nm :
+.Bl -tag -width Fl
+.It Fl a
+Same as
+.Fl u
+.Fl l
+.Fl p .
+By default,
+.Nm
+will simply merge the existing BSD# ports tree with the existing FreeBSD
+ports tree. This option will update both trees first, and tell you which
+programs will need to be upgraded.
+.It Fl c
+Specifies the CVSROOT, overriding any
+.Cm CVSROOT
+specification in
+.Ar /usr/local/etc/mono-merge.cfg .
+The default
+.Cm CVSROOT
+is
+.Ar anonymous@forgecvs1.novell.com:/cvsroot/bsd-sharp .
+.It Fl D
+Causes
+.Nm
+to reset lang/mono port dependencies to
+.Ar lang/mono-devel .
+This is useful when switching to using the Mono development branch port. When switching to the
+.Ar lang/mono-devel
+port for the first time the user should force a rebuild of all ports that were dependednt on
+.Ar lang/mono
+(and are now dependant on
+.Ar lang/mono-devel )
+to ensure that ports are built against the latest Mono installed.
+.It Fl d
+Specifies the path of the official ports, overriding any
+.Cm DESTDIR
+specification in
+.Ar mono-merge.cfg .
+The default path is
+.Ar /usr/ports .
+.It Fl l
+Lists the ports for which the BSD# ports tree has provided a newer
+version than existed in the FreeBSD ports tree; overridding any
+.Cm pkgversion
+specification in
+.Ar mono-merge.cfg .
+The default is not to list the ports needing an update.
+.It Fl m
+Specifies the CVS module to checkout from BSD# CVS. In general, this
+should always be
+.Ar FreeBSD-ports .
+.Pp
+This option overrides any
+.Cm MODULE
+specification in
+.Ar mono-merge.cfg .
+The default CVS module is
+.Ar ports .
+.It Fl p
+Updates the official ports collection and checks out the BSD# ports.
+You should fill out the
+.Cm SUPFILE
+in
+.Nm
+before using this option. The default is not to cvsup the latest
+official ports tree.
+.It Fl S
+Causes
+.Nm
+to reset
+.Ar lang/mono
+port dependencies to
+.Ar lang/mono-svn .
+This is useful when switching to using the Mono SVN snapshot port. When switching to the
+.Ar lang/mono-svn
+port for the first time the user should force a rebuild of all ports that were dependednt on
+.Ar lang/mono
+(and are now dependant on
+.Ar lang/mono-svn )
+to ensure that ports are built against the latest Mono installed.
+.It Fl s
+Specifies the path to the BSD# ports without the trailing module name
+(e.g. without the trailing /ports), overriding any
+.Cm SRCDIR
+specification in
+.Ar mono-merge.cfg .
+There is no default path, so you must either specify this option, or
+edit
+.Ar mmono-merge.cfg
+and fill in a value for
+.Cm SRCDIR .
+For example, if you keep the BSD# ports tree in
+/usr/ports/bsd-sharp/ports, specify "/usr/ports/bsd-sharp" as the value
+of
+.Cm SRCDIR
+or the argument to
+.Fl s .
+.It Fl u
+Updates the local copy of the BSD# ports repository before merging,
+overridding any
+.Cm updating
+specification in
+.Ar mono-merge.cfg .
+The default is not to update the local copy of the BSD# repository
+before merging.
+.It Fl v
+Enables verbose output, overridding any
+.Cm VERBOSE
+specification in
+.Ar mono-merge.cfg .
+The default is not to display verbose output.
+.It Fl x
+This option merges the experimental versions of applications after the
+usual development versions have been merged.
+.Pp
+The BSD# repository is a testbed for Mono and related applications that
+will eventually make their way into the official FreeBSD ports tree.
+.Sh VARIABLES
+You can add variable definitions to
+.Ar /usr/local/etc/mono-merge.cfg .
+The
+.Ar mono-merge.cfg
+file will override any varibles in
+.Nm ,
+so you can copy the varibles from
+.Nm
+into
+.Ar mono-merge.cfg .
+By using
+.Ar mono-merge.cfg ,
+you do not have to specify any command line arguments to
+.Nm .
+.Pp
+You can add the following variables to
+.Ar mono-merge.cfg :
+.Bl -tag -width Cm
+.It Cm CVSUP_CMD= Ns Ar command
+Set the command used to update the official ports collection. This is
+only used if
+.Cm update_main
+is set to
+.Ar yes
+or if the
+.Fl p
+option is specified. Before using this option, you must set the
+.Cm SUPFILE
+variable. The default command is
+.Ar /usr/local/bin/cvsup -g .
+.It Cm DESTDIR= Ns Ar path
+Set the path to the local FreeBSD ports tree. This id overridden by the
+.Fl d
+option. The default path is
+.Ar /usr/ports .
+.It Cm MODULE= Ns Ar module
+Specify which BSD# CVS module will be checked out. In general, this
+should always be left to the default,
+.Ar ports .
+This variable is overridden by the
+.Fl m
+option. The default CVS module is
+.Ar ports .
+.It Cm PKGVERSION_ARGS= Ns Ar options
+Set the options for
+.Cm PKGVERSION_CMD
+to
+.Ar options .
+This is only useful if
+.Cm pkgversion
+is set to
+.Ar yes
+or the
+.Fl l
+option is specified. The default options are
+.Ar -l \< .
+.It Cm PKGVERSION_CMD= Ns Ar command
+Specify the command used to report port versions.
+This is only useful if
+.Cm pkgversion
+is set to
+.Ar yes
+or the
+.Fl l
+option is specified. The default command is
+.Ar /usr/sbin/pkg_version .
+.It Cm SRCDIR= Ns Ar path
+Set the path to the local copy of the BSD# repository to
+.Ar path
+without the trailing module name (e.g. without the trailing /ports).
+This variable is overridden by the
+.Fl s
+options. There is no default
+path, so you must either specify this variable or set the
+.Fl s
+option.
+.It Cm SUPFILE= Ns Ar path
+Set the path to your ports supfile to
+.Ar path .
+The default is to auto-detect this.
+.It Cm VERBOSE= Ns Ar yes|no
+Set to
+.Ar yes
+to enable verbose output.  This is overridden by the
+.Fl v
+option. The default is
+.Ar no .
+.It Cm pkgversion= Ns Ar yes|no
+Set to
+.Ar yes
+to show a list of outdated ports after
+.Nm
+finishes the merge.  This is overridden by the
+.Fl l
+option. The default is
+.Ar no .
+.It Cm update_main= Ns Ar yes|no
+Set to
+.Ar yes
+to update the official ports tree before merging.  This is overridden by the
+.Fl p
+option. You should also make sure the
+.Cm SUPFILE
+variable is correct before use this option. The default is
+.Ar no .
+.It Cm updating= Ns Ar yes|no
+Set to
+.Ar yes
+to update the local copy of the BSD# repository before merging. This is
+overridden by the
+.Fl u
+option. The default is
+.Ar no .
+.El
+.Sh FILES
+.Bl -tag -width Pa
+.It Pa $ Ns Ev PATH Ns Pa /mono-merge
+Path to the script itself.
+.It Pa /usr/local/etc/mono-merge.cfg
+See the
+.Cm VARIABLES
+section above to learn more about this file.
+.El
+.Sh AUTHORS
+.An Joe Marcus Clarke Aq marcus@FreeBSD.org
+.An Martin Klaffenboeck Aq martin.klaffenboeck@gmx.at
+.An Franz Klammer Aq klammer@webonaut.com
+.An Adam Weinberger Aq adamw@FreeBSD.org
+.An Tom McLaughlin (BSD# specific changes) Aq tmclaugh@sdf.lonestar.org
+.Pp
+.An This manual page was written by Jeremy Messenger Aq mezz7@cox.net .
+.An The Cm DESCRIPTION No was written by Khairil Yusof Aq kaeru@pd.jaring.my .
+.Sh LICENCE AND DISCLAIMER
+BSD License

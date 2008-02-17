@@ -1,0 +1,39 @@
+
+Script about:
+=======================================================================
+This package contains the mono-merge script for merging the BSD#
+Project's ports tree with a standard FreeBSD ports tree.  These ports
+are meant for testing and may not be suitable for day to day use.
+
+To install the mono-merge script:
+
+ # make install
+
+To merge the BSD# ports tree with a FreeBSD ports tree:
+
+ # mono-merge
+
+
+Project About:
+=======================================================================
+WWW: http://forge.novell.com/modules/xfmod/project/?bsd-sharp
+
+FreeBSD ports for Mono related applications and libraries.
+
+The BSD# Project is devoted to porting and maintaining the Mono .NET
+framework for FreeBSD. The Mono framework consists of not only the Mono
+Runtime environment and compiler but the XSP webserver for handling
+ASP.NET applications, the IKVM Java virtual machine for handling Java
+within the framework, and numerous data providers to provide common
+library functions in C# or intergration with existing C libraries.
+
+The BSD# CVS repository currently contains FreeBSD ports for all Mono
+packages released by Novell. It also includes ports for applications and
+libraries from third parties as well with the intent that they be
+intergrated into the standard FreeBSD ports tree. The project aims to
+act as a central testing point for porting new releases from Novell, for
+introducing new applications, and for testing framework wide changes
+that will affect all applications that rely on Mono before they reach
+the FreeBSD ports tree.
+
+- Tom McLaughlin <tmclaugh@sdf.lonestar.org>
