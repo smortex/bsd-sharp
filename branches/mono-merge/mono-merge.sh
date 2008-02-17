@@ -43,6 +43,14 @@ TARBALL=${MARCUSMERGE_TARBALL:="no"}
 MODULE=${MARCUSMERGE_PORTS:="FreeBSD-ports"}
 			# CVS module to checkout.
 
+#For Novell repo:
+#CHECKOUT_CMD=${CHECKOUT_CMD:="cvs -z3 -d:ext:anonymous@forgecvs1.novell.com:/cvsroot/bsd-sharp checkout -P "}
+#UPDATE_CMD=${UPDATE_CMD:="cvs -z3 update -Pd -A "}
+
+#For google repo:
+CHECKOUT_CMD=${CHECKOUT_CMD:="svn checkout http://bsd-sharp.googlecode.com/svn/trunk  "}
+UPDATE_CMD=${UPDATE_CMD:="svn update "}
+
 # You do not have to change anything beyond this line.
 
 PKGVERSION_CMD="/usr/sbin/pkg_version"
@@ -76,7 +84,7 @@ TARBALL_URL="http://forge.novell.com/modules/xfmod/cvs/cvsbrowse.php/bsd-sharp/$
 RMPORTS="RMPORTS"
 MCVER_FILE="MCVER"
 
-MCVER="2005051901"
+MCVER="2008021701"
 
 get_tmpfile()
 {
@@ -127,63 +135,64 @@ download_tarball()
     rm -f ${tmpfile}
 }
 
-args=`getopt ulpaxUDSs:d:c:m: $*`
+usage="usage: ${SCRIPTNAME} [-s <directory>] [-d <directory>] [-c <checkout command>] [-P <update command>] [-m <module>] [-t] [-u] [-v] [-l] [-p] [-a] [-x] [-U] [-D|-S]"
 
-if [ $? != 0 ]; then
-    echo "usage: ${SCRIPTNAME} [-s <directory>] [-d <directory>] [-c <cvsroot>] [-m <module>] [-t] [-u] [-v] [-l] [-p] [-a] [-x] [-U] [-D|-S]"
-    exit 1
-fi
-
-set -- $args
-
-for i; do
+while getopts " hvulpaxUDSs:d:c:m:P:" i
+do
     case "$i" in
-	-s)
-		SRCDIR="$2"; shift;
-		shift;;
-	-d)
-		DESTDIR="$2"; shift;
-		shift;;
-	-c)
-		CVSROOT="$2"; shift;
-		shift;;
-	-m)
-		MODULE="$2"; shift;
-		shift;;
-	-v)
+	s)
+		SRCDIR="$OPTARG";
+		continue;;
+	d)
+		DESTDIR="$OPTARG";
+		continue;;
+	c)
+		CHECKOUT_CMD="$OPTARG";
+		continue;;
+	m)
+		MODULE="$OPTARG";
+		continue;;
+	P)
+		UPDATE_CMD="$OPTARG";
+		continue;;
+	v)
 		VERBOSE="yes";
-		shift;;
-	-t)
+		continue;;
+	t)
 		TARBALL="yes";
-		shift;;
-	-u)
+		continue;;
+	u)
 		updating="yes";
-		shift;;
-	-l)
+		continue;;
+	l)
 		pkgversion="yes";
-		shift;;
-	-p)
+		continue;;
+	p)
 		update_main="yes";
-		shift;;
-	-a)
+		continue;;
+	a)
 		updating="yes";
 		pkgversion="yes";
 		update_main="yes";
-		shift;;
-	-x)
+		continue;;
+	x)
 		experimental="yes";
-		shift;;
-	-U)
+		continue;;
+	U)
 		show_updating="yes";
-		shift;;
-	-D)
+		continue;;
+	D)
 		use_monodev="yes";
-		shift;;
-	-S)
+		continue;;
+	S)
 		use_monosvn="yes";
-		shift;;
-	--)
-		shift; break;;
+		continue;;
+	h)
+		echo $usage;
+		exit 1;;
+	*)
+		echo $usage;
+		exit 1;;
     esac
 done
 
@@ -212,9 +221,9 @@ fi
 
 first_time=0
 
-if [ "${TARBALL}" != "yes" ]; then
-    printf "First we have to check out the ${moduledir} module from\nhttp://forge.novell.com/modules/xfmod/project/?bsd-sharp\n\nCVS Password: anonymous\n\n"
-fi
+#if [ "${TARBALL}" != "yes" ]; then
+#    printf "First we have to check out the ${moduledir} module from\nhttp://forge.novell.com/modules/xfmod/project/?bsd-sharp\n\nCVS Password: anonymous\n\n"
+#fi
 
 # If the SRCDIR doesn't exist, we need to download the repo.  Currently, we
 # can do this via CVS or from a tarball generated periodically.
@@ -225,14 +234,18 @@ if [ ! -d ${SRCDIR} -o ! -d ${SRCDIR}/${moduledir} ]; then
     else
         echo "===> Checking out the ${moduledir} module."
         mkdir -p ${SRCDIR}
+		if [ $? != 0 ]; then
+			printf "Failed to create directory ${SRCDIR}.\n\n"
+			exit 1
+		fi
         cd ${SRCDIR}
-	cvs -z3 -d${CVSROOT} checkout -P ${TAG} ${moduledir}
-	if [ $? != 0 ]; then
-	    printf "Failed to check out the BSD# ports tree.\n\n"
-	    exit 1
-	fi
-        echo "===> Checkout done."
-    fi
+		${CHECKOUT_CMD}${moduledir}
+		if [ $? != 0 ]; then
+		    printf "Failed to check out the BSD# ports tree.\n\n"
+		    exit 1
+		fi
+	        echo "===> Checkout done."
+	    fi
 fi
 
 # Update the BSD# repo if so requested. Don't update if we just checked
@@ -244,11 +257,11 @@ if [ ${updating} = "yes" -a ${first_time} = 0 ]; then
         download_tarball
     else
         cd "${SRCDIR}/${moduledir}"
-        cvs -z3 update -Pd -A
-	if [ $? != 0 ]; then
-	    printf "Failed to update the BSD# ports tree.\n\n"
-	    exit 1
-	fi
+        ${UPDATE_CMD}
+		if [ $? != 0 ]; then
+	    	printf "Failed to update the BSD# ports tree.\n\n"
+		    exit 1
+		fi
     fi
     echo "===> Updating done."
 fi
@@ -258,7 +271,7 @@ mcver="0"
 if [ -f "${SRCDIR}/${moduledir}/${MCVER_FILE}" ]; then
     mcver=`cat "${SRCDIR}/${moduledir}/${MCVER_FILE}"`
     if [ "${mcver}" != "${MCVER}" ]; then
-        echo "This repository requires a newer version of mono-merge.  Please go to http://forge.novell.com/modules/xfmod/project/?bsd-sharp to download the latest version." | fmt 75 79
+        echo "This repository requires a newer version of mono-merge.  Please go to http://code.google.com/p/bsd-sharp/downloads/list to download the latest version." | fmt 75 79
         exit 1
     fi
 fi
