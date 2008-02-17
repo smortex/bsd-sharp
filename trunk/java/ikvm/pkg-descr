@@ -1,0 +1,8 @@
+IKVM.NET is an implementation of Java for Mono and the Microsoft .NET
+Framework. It includes the following components:
+
+* A Java Virtual Machine implemented in .NET
+* A .NET implementation of the Java class libraries
+* Tools that enable Java and .NET interoperability
+
+WWW: http://www.ikvm.net/

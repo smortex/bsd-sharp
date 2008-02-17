@@ -1,0 +1,2 @@
+%%MOD_MONOCONFDIR%%/mod_mono.conf
+%%APACHEMODDIR%%/mod_mono.so

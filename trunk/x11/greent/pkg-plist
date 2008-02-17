@@ -1,0 +1,12 @@
+bin/greent
+lib/greent/GreenT.exe
+lib/greent/GreenT.exe.config
+share/applications/greent.desktop
+share/locale/de/LC_MESSAGES/greent.mo
+share/locale/it/LC_MESSAGES/greent.mo
+share/pixmaps/greent-16.png
+share/pixmaps/greent-24.png
+share/pixmaps/greent-32.png
+share/pixmaps/greent.png
+@dirrmtry share/applications
+@dirrm lib/greent

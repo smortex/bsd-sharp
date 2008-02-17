@@ -1,0 +1,6 @@
+GreenT is a terminal emulator written in C#. Its visibility can be toggled by a
+hotkey just like the consoles found in games. Additionally it supports tabs like
+gnome-terminal. It uses gnome terminals settings for its configuration which it
+updates in realtime when changed in gnome terminal.
+
+WWW:	http://forgeftp.novell.com/greent/homepage/
