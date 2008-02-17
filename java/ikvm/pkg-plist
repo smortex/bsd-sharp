@@ -1,0 +1,11 @@
+bin/ikvm
+bin/ikvmc
+bin/ikvmstub
+lib/ikvm/IKVM.AWT.WinForms.dll
+lib/ikvm/IKVM.GNU.Classpath.dll
+lib/ikvm/IKVM.Runtime.dll
+lib/ikvm/ikvm.exe
+lib/ikvm/ikvmc.exe
+lib/ikvm/ikvmstub.exe
+libdata/pkgconfig/ikvm.pc
+@dirrm lib/ikvm

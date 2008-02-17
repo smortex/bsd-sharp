@@ -1,0 +1,11 @@
+x11-toolkits/glitz|graphics/glitz|%%DATE%%|moved to graphic category
+x11-toolkits/libpixman|graphics/libpixman|%%DATE%%|moved to graphic category
+x11-toolkits/libsvg|graphics/libsvg|%%DATE%%|moved to graphic category
+x11-toolkits/cairo|graphics/cairo|%%DATE%%|moved to graphic category
+x11-toolkits/libsvg-cairo|graphics/libsvg-cairo|%%DATE%%|moved to graphic category
+lang/mono-devel|lang/mono|%%DATE%%|mono-devel has been merged into mono
+x11-toolkits/libgdiplus-devel|x11-toolkits/libgdiplus|%%DATE%%|libgdiplus-devel has been merged into libgdiplus
+www/gecko-sharp-devel|www/gecko-sharp20|%%DATE%%|gecko-sharp-devel has been renamed to gecko-sharp20
+x11-toolkits/gtk-sharp|x11-toolkits/gtk-sharp10|%%DATE%%|gtk-sharp has been renamed to gtk-sharp10
+x11-toolkits/gtk-sharp-devel|x11-toolkits/gtk-sharp20|%%DATE%%|gtk-sharp has been renamed to gtk-sharp20
+www/humano2|www/humano2|%%DATE%%|Death project
