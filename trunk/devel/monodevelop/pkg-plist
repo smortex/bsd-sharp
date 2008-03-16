@@ -1,14 +1,13 @@
 bin/mdtool
 bin/monodevelop
-%%BOO%%lib/monodevelop/AddIns/BackendBindings/BooBinding.dll
-%%BOO%%lib/monodevelop/AddIns/BackendBindings/BooShell.dll
-lib/monodevelop/AddIns/AspNetAddIn/AspNetAddIn.dll
-lib/monodevelop/AddIns/BackendBindings/CBinding.dll
-lib/monodevelop/AddIns/BackendBindings/CSharpBinding.Autotools.dll
-lib/monodevelop/AddIns/BackendBindings/CSharpBinding.dll
+lib/monodevelop/AddIns/AspNetAddIn/MonoDevelop.AspNet.dll
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.dll
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.Autotools.dll
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
-lib/monodevelop/AddIns/BackendBindings/VBNetBinding.dll
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.VBNetBinding.dll
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.dll
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll
+lib/monodevelop/AddIns/GnomePlatform/GnomePlatform.dll
 lib/monodevelop/AddIns/MonoDevelop.Autotools/Makefile.am.project.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/Makefile.include
 lib/monodevelop/AddIns/MonoDevelop.Autotools/Makefile.noauto.project.template
@@ -18,20 +17,10 @@ lib/monodevelop/AddIns/MonoDevelop.Autotools/autogen.sh.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/configure.ac.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/configure.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/exe.wrapper.in.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/expansions.m4
 lib/monodevelop/AddIns/MonoDevelop.Autotools/make-dist.targets
 lib/monodevelop/AddIns/MonoDevelop.Autotools/package.pc.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/rules.make
-lib/monodevelop/AddIns/MonoDevelop.Database/Mono.Data.Sqlite.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Components.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.ConnectionManager.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Designer.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Query.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.MySql.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.Npgsql.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.SqlServer.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.Sqlite.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.dll
-lib/monodevelop/AddIns/MonoDevelop.Database/MySql.Data.dll
 lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.Linux.dll
 lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.dll
 lib/monodevelop/AddIns/MonoDevelop.DesignerSupport/MonoDevelop.DesignerSupport.dll
@@ -50,23 +39,22 @@ lib/monodevelop/AddIns/MonoDevelop.WebReferences/MonoDevelop.WebReferences.dll
 lib/monodevelop/AddIns/MonoDevelop.WebReferences/MonoDevelop.WebReferences.dll.mdb
 lib/monodevelop/AddIns/MonoDeveloperExtensions/MonoDeveloperExtensions.dll
 lib/monodevelop/AddIns/MonoDeveloperExtensions/MonoDeveloperExtensions_nunit.dll
+lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll
 lib/monodevelop/AddIns/NUnit/MonoDevelop.NUnit.dll
 lib/monodevelop/AddIns/NUnit/nunit.core.dll
 lib/monodevelop/AddIns/NUnit/nunit.framework.dll
 lib/monodevelop/AddIns/VersionControl/Diff.dll
 lib/monodevelop/AddIns/VersionControl/DiffWidget.dll
-lib/monodevelop/AddIns/VersionControl/VersionControlAddIn.dll
+lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll
 lib/monodevelop/AddIns/WelcomePage/WelcomePage.css
 lib/monodevelop/AddIns/WelcomePage/WelcomePage.dll
 lib/monodevelop/AddIns/WelcomePage/mono-bg.png
+lib/monodevelop/AddIns/WelcomePage/mono-decoration.png
 lib/monodevelop/AddIns/WelcomePage/mono-logo.png
-lib/monodevelop/AddIns/prj2make-sharp-lib.dll
-lib/monodevelop/bin/FirebirdSql.Data.Firebird.dll
-lib/monodevelop/bin/Mono.Addins.Gui.dll
-lib/monodevelop/bin/Mono.Addins.Setup.dll
-lib/monodevelop/bin/Mono.Addins.dll
-lib/monodevelop/bin/Mono.Addins.dll.config
+lib/monodevelop/bin/Mono.Cecil.Mdb.dll
+lib/monodevelop/bin/Mono.Cecil.Mdb.dll.mdb
 lib/monodevelop/bin/Mono.Cecil.dll
+lib/monodevelop/bin/Mono.Cecil.dll.mdb
 lib/monodevelop/bin/MonoDevelop.Components.dll
 lib/monodevelop/bin/MonoDevelop.Core.Gui.dll
 lib/monodevelop/bin/MonoDevelop.Core.dll
@@ -80,7 +68,6 @@ lib/monodevelop/bin/MonoDevelop.exe
 lib/monodevelop/bin/MonoDevelop.exe.addins
 lib/monodevelop/bin/MonoDevelop.exe.config
 lib/monodevelop/bin/NRefactory.dll
-lib/monodevelop/bin/log4net.dll
 lib/monodevelop/bin/mdhost.exe
 lib/monodevelop/bin/mdrun.exe
 lib/monodevelop/bin/mdrun.exe.config
@@ -94,16 +81,20 @@ lib/monodevelop/data/resources/css/MsdnHelp.css
 lib/monodevelop/data/resources/css/SharpDevelopStandard.css
 %%SVN%%lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll
 libdata/pkgconfig/monodevelop.pc
+libdata/pkgconfig/monodevelop-core-addins.pc
 share/applications/monodevelop.desktop
 share/locale/ca/LC_MESSAGES/monodevelop.mo
 share/locale/cs/LC_MESSAGES/monodevelop.mo
 share/locale/da/LC_MESSAGES/monodevelop.mo
-share/locale/de/LC_MESSAGES/monodevelop.mo
 share/locale/es/LC_MESSAGES/monodevelop.mo
 share/locale/fr/LC_MESSAGES/monodevelop.mo
 share/locale/gl/LC_MESSAGES/monodevelop.mo
+share/locale/hu/LC_MESSAGES/monodevelop.mo
+share/locale/id/LC_MESSAGES/monodevelop.mo
 share/locale/it/LC_MESSAGES/monodevelop.mo
 share/locale/ja/LC_MESSAGES/monodevelop.mo
+share/locale/nl/LC_MESSAGES/monodevelop.mo
+share/locale/sl/LC_MESSAGES/monodevelop.mo
 share/locale/pl/LC_MESSAGES/monodevelop.mo
 share/locale/pt/LC_MESSAGES/monodevelop.mo
 share/locale/pt_BR/LC_MESSAGES/monodevelop.mo
@@ -112,7 +103,6 @@ share/locale/sv/LC_MESSAGES/monodevelop.mo
 share/locale/tr/LC_MESSAGES/monodevelop.mo
 share/locale/zh_CN/LC_MESSAGES/monodevelop.mo
 share/locale/zh_TW/LC_MESSAGES/monodevelop.mo
-share/locale/sl_SI/LC_MESSAGES/monodevelop.mo
 share/mime/application/x-asax.xml
 share/mime/application/x-ascx.xml
 share/mime/application/x-ashx.xml
@@ -141,7 +131,6 @@ share/mime/text/x-js.xml
 share/mime/text/x-msil.xml
 share/mime/text/x-nemerle.xml
 share/mime/text/x-vb.xml
-share/pixmaps/monodevelop.png
 @dirrmtry share/applications
 @dirrmtry share/locale/sv/LC_MESSAGES
 @dirrmtry share/locale/sv
@@ -158,12 +147,13 @@ share/pixmaps/monodevelop.png
 @dirrm lib/monodevelop/AddIns/MonoDeveloperExtensions
 @dirrm lib/monodevelop/AddIns/MonoDevelop.WebReferences
 @dirrm lib/monodevelop/AddIns/MonoDevelop.RegexToolkit
+@dirrm lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio
 @dirrm lib/monodevelop/AddIns/MonoDevelop.GtkCore
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Gettext
 @dirrm lib/monodevelop/AddIns/MonoDevelop.DesignerSupport
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Deployment
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Database
+@dirrm lib/monodevelop/AddIns/GnomePlatform
 @dirrm lib/monodevelop/AddIns/ChangeLogAddIn
 @dirrm lib/monodevelop/AddIns/BackendBindings
 @dirrm lib/monodevelop/AddIns/AspNetAddIn
