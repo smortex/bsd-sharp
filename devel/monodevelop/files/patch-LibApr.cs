@@ -1,5 +1,5 @@
---- Extras/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibApr.cs.orig	Sun Feb 25 17:59:17 2007
-+++ Extras/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibApr.cs	Sun Feb 25 17:59:48 2007
+--- src/addins/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibApr.cs.orig	Sun Feb 25 17:59:17 2007
++++ src/addins/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibApr.cs	Sun Feb 25 17:59:48 2007
 @@ -64,7 +64,7 @@
  
  	public class LibApr1: LibApr

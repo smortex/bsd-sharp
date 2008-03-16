@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	0.17
+PORTVERSION=	1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://go-mono.com/sources/${PORTNAME}/
 
@@ -15,10 +15,12 @@ MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	IDE for Mono and Gtk-sharp.
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
-		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20
+		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
+		mautil:${PORTSDIR}/devel/mono-addins
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
 		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus
+		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
+		mautil:${PORTSDIR}/devel/mono-addins
 
 USE_GECKO=	firefox mozilla
 USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
@@ -26,7 +28,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_BZIP2=	yes
 CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt
-MAN1=		mdtool.1
+MAN1=		mdtool.1 monodevelop.1
 
 OPTIONS=	SVN "Enable subversion support" on \
 		BOO "Enable boo support" on
@@ -41,22 +43,11 @@ PLIST_SUB+=	SVN=""
 PLIST_SUB+=	SVN="@comment "
 .endif
 
-.if !defined(WITHOUT_BOO)
-RUN_DEPENDS+=	booish:${PORTSDIR}/lang/boo
-BUILD_DEPENDS+=	booish:${PORTSDIR}/lang/boo
-CONFIGURE_ARGS+=	--enable-boo
-PLIST_SUB+=	BOO=""
-.else
-PLIST_SUB+=	BOO="@comment "
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]gnome_data[)]/mime$$|(prefix)/share/mime|g ; \
 		s|[(]gnome_data[)]/mime/packages$$|(prefix)/share/mime/packages|g ; \
 		s|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 			${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|%%MOZILLA%%|${LOCALBASE}/lib/${GECKO}|g' \
-		${WRKSRC}/monodevelop.in
 
 post-install:
 	@-update-desktop-database

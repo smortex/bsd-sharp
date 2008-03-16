@@ -1,5 +1,5 @@
---- Extras/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibSvnClient.cs.orig	2007-11-07 18:28:14.000000000 +0000
-+++ Extras/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibSvnClient.cs	2007-11-07 18:28:39.000000000 +0000
+--- src/addins/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibSvnClient.cs.orig	2007-11-07 18:28:14.000000000 +0000
++++ src/addins/VersionControl/MonoDevelop.VersionControl.Subversion/MonoDevelop.VersionControl.Subversion/LibSvnClient.cs	2007-11-07 18:28:39.000000000 +0000
 @@ -698,7 +698,7 @@
  		}
  		

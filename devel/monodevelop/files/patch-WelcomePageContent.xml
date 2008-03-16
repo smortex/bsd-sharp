@@ -1,5 +1,5 @@
---- Extras/WelcomePage/WelcomePageContent.xml.orig	Fri Feb 23 21:47:59 2007
-+++ Extras/WelcomePage/WelcomePageContent.xml	Fri Feb 23 21:49:21 2007
+--- src/addins/WelcomePage/WelcomePageContent.xml.orig	Fri Feb 23 21:47:59 2007
++++ src/addins/WelcomePage/WelcomePageContent.xml	Fri Feb 23 21:49:21 2007
 @@ -16,6 +16,10 @@
  	
  	<Links _title="Support Links">
