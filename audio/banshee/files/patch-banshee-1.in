@@ -1,0 +1,15 @@
+--- src/Clients/Nereid/banshee-1.in.orig	2008-03-24 22:10:54.000000000 -0300
++++ src/Clients/Nereid/banshee-1.in	2008-03-24 22:11:02.000000000 -0300
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ prefix=@prefix@
+ libdir=@expanded_libdir@
+@@ -10,5 +10,5 @@
+ export GST_PLUGIN_PATH=@expanded_libdir@/@PACKAGE@/gstreamer-0.10${GST_PLUGIN_PATH+:$GST_PLUGIN_PATH}
+ 
+ # Finally - environment is set up, time to run our beloved
+-exec -a banshee-1 mono --debug $MONO_EXE "$@"
++exec mono --debug $MONO_EXE "$@"
+ 
