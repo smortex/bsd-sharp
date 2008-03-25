@@ -1,0 +1,14 @@
+bin/gnome-do
+lib/gnome-do/Do.Addins.dll
+lib/gnome-do/Do.Addins.dll.mdb
+lib/gnome-do/Do.DBus.dll
+lib/gnome-do/Do.DBus.dll.mdb
+lib/gnome-do/Do.exe
+lib/gnome-do/Do.exe.config
+lib/gnome-do/libdo.la
+lib/gnome-do/libdo.so
+libdata/pkgconfig/do.addins.pc
+libdata/pkgconfig/do.dbus.pc
+share/applications/gnome-do.desktop
+share/locale/ca/LC_MESSAGES/gnome-do.mo
+@dirrm lib/gnome-do
