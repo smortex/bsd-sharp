@@ -7,9 +7,9 @@
 #
 
 PORTNAME=	mono-addins
-PORTVERSION=	0.3
+PORTVERSION=	0.3.1
 CATEGORIES=	devel
-MASTER_SITES=	http://go-mono.com/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Framework for creating extensible applications on mono
