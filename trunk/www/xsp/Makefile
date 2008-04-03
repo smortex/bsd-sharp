@@ -7,10 +7,9 @@
 #
 
 PORTNAME=	xsp
-PORTVERSION=	1.2.6
-PORTREVISION=	2
+PORTVERSION=	1.9
 CATEGORIES=	www
-MASTER_SITES=	http://go-mono.com/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Mono based web server
