@@ -7,10 +7,9 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	1.2.6
-PORTREVISION=	1
+PORTVERSION=	1.9
 CATEGORIES=	lang
-MASTER_SITES=	http://go-mono.com/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	An open source implementation of .NET Development Framework
@@ -47,12 +46,12 @@ MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 ONLY_FOR_ARCHS= i386 amd64
 
 MAN1=		al.1 cert2spc.1 certmgr.1 chktrust.1 cilc.1 disco.1 dtd2xsd.1 \
-		gacutil.1 genxs.1 ilasm.1 jay.1 macpack.1 makecert.1 mcs.1 \
-		mint.1 mkbundle.1 mono-service.1 mono-shlib-cop.1 mono.1 \
-		monoburg.1 monodis.1 monop.1 monostyle.1 mozroots.1 oldmono.1 \
-		permview.1 prj2make.1 secutil.1 setreg.1 signcode.1 sn.1 \
-		soapsuds.1 sqlsharp.1 wsdl.1 xsd.1 mono-xmltool.1 sgen.1 \
-		httpcfg.1 vbnc.1 resgen.1 monolinker.1 mconfig.1
+		gacutil.1 genxs.1 httpcfg.1 ilasm.1 jay.1 macpack.1 makecert.1 \
+		mconfig.1 mcs.1 mint.1 mkbundle.1 mono-service.1 mono-shlib-cop.1 \
+		mono-xmltool.1 mono.1 monoburg.1 monodis.1 monolinker.1 monop.1 \
+		monostyle.1 mozroots.1 oldmono.1 permview.1 prj2make.1 secutil.1 \
+		setreg.1 sgen.1 signcode.1 sn.1 soapsuds.1 sqlsharp.1 vbnc.1 \
+		wsdl.1 xsd.1 resgen.1
 MAN5=		mono-config.5
 
 .include <bsd.port.pre.mk>
@@ -87,7 +86,8 @@ post-patch:
 		${WRKSRC}/mcs/class/System/System.IO/FAMWatcher.cs
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj \
-		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj2k5
+		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj2k5 \
+		${WRKSRC}/mcs/class/Mono.Mozilla/build-csproj2k5
 
 .if ${OSVERSION} >= 700000 && ${OSVERSION} < 800000
 	@${REINPLACE_CMD} -e 's|freebsd6|freebsd7|g' \
