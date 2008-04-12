@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	0.9.0
+PORTVERSION=	0.10.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -47,6 +47,7 @@ post-patch:
 	s|PANELAPPLET_SERVER_DIR="$$libdir|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g; \
 	s|PANELAPPLET_SERVER_DIR="$$PANELAPPLET_LIBDIR|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' ${WRKSRC}/Tomboy/tomboy.in
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.post.mk>
