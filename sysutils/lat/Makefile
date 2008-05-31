@@ -8,7 +8,7 @@
 PORTNAME=	lat
 PORTVERSION=	1.2.3
 CATEGORIES=	x11 gnome sysutils
-MASTER_SITES=	http://dev.mmgsecurity.com/downloads/lat/1.2/
+MASTER_SITES=	http://www.lbtechservices.com/downloads/lat/1.2/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	A Gtk# LDAP Administration Tool
