@@ -7,10 +7,9 @@
 #
 
 PORTNAME=	gtk-sharp
-PORTVERSION=	2.10.2
-PORTREVISION=	1
+PORTVERSION=	2.12.0
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	http://go-mono.com/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}212/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	GTK+ and GNOME interfaces for the .NET runtime
