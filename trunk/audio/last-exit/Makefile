@@ -14,10 +14,8 @@ MASTER_SITES=	http://folks.o-hand.com/iain/last-exit/
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Mono based Gnome last.fm player
 
-LIB_DEPENDS=	FLAC.7:${PORTSDIR}/audio/flac \
-		id3tag.0:${PORTSDIR}/audio/libid3tag \
+LIB_DEPENDS= 	id3tag.0:${PORTSDIR}/audio/libid3tag \
 		gdbm:${PORTSDIR}/databases/gdbm \
-		vorbis.4:${PORTSDIR}/audio/libvorbis \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		dbus-daemon:${PORTSDIR}/devel/dbus \
@@ -31,7 +29,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack gnometarget gconf2 gnomesharp20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	DATADIRNAME=share
-USE_GSTREAMER=	yes
+USE_GSTREAMER=	flac vorbis
 GCONF_SCHEMAS=	last-exit.schemas lastfm.schemas
 INSTALLS_ICONS=	yes
 
