@@ -7,21 +7,31 @@
 #
 
 PORTNAME=	ikvm
-PORTVERSION=	0.22
+PORTVERSION=	0.36.0.11
 CATEGORIES=	java
-MASTER_SITES=	http://www.go-mono.com/sources/${PORTNAME}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+MASTER_SITE_SUBDIR=	${PORTNAME}
+DISTFILES=	${PORTNAME}bin-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	tmclaugh@sdf.lonestar.org
+MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Java for Mono and the Microsoft .NET Framework
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	${BUILD_DEPENDS}
 
+USE_ZIP=	yes
 USE_GNOME=	gnometarget
-GNU_CONFIGURE=	yes
+NO_BUILD=	yes
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' ${WRKSRC}/Makefile.in
+do-install:
+	${MKDIR} ${PREFIX}/lib/${PORTNAME}
+.for f in ICSharpCode.SharpZipLib.dll ikvm-native.dll IKVM.AWT.WinForms.dll ikvm.exe IKVM.OpenJDK.ClassLibrary.dll IKVM.Runtime.dll ikvmc.exe ikvmstub.exe JVM.DLL
+	@${INSTALL_DATA} ${WRKSRC}/bin/$f ${PREFIX}/lib/${PORTNAME}
+.endfor
+.for f in ikvm ikvmc ikvmstub
+	@echo -e "#!/bin/sh\n${PREFIX}/bin/mono ${PREFIX}/lib/${PORTNAME}/$f.exe \"\$$@\"" > ${PREFIX}/bin/$f
+	${CHMOD} 755 ${PREFIX}/bin/$f
+.endfor
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
