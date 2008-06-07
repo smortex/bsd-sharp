@@ -215,3 +215,4 @@ share/gapi-2.0/pango-api.xml
 @dirrm lib/mono/gac/atk-sharp/2.12.0.0__35e10195dab3c99f
 @dirrmtry lib/mono/gac/atk-sharp
 @dirrmtry lib/gtk-sharp-2.0
+@dirrmtry share/gapi-2.0
