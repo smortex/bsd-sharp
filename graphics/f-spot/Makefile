@@ -19,11 +19,14 @@ COMMENT=	Personal photo management to the GNOME desktop
 LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		gphoto2.2:${PORTSDIR}/graphics/libgphoto2
-RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+
+RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
 
 USE_BZIP2=	yes
 USE_SQLITE=	yes
-USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack gnomesharp20
+USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack gnomedesktopsharp20
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

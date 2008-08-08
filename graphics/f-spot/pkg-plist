@@ -206,5 +206,26 @@ share/omf/f-spot/f-spot-it.omf
 share/omf/f-spot/f-spot-oc.omf
 share/omf/f-spot/f-spot-pt_BR.omf
 share/omf/f-spot/f-spot-sv.omf
+@dirrm share/omf/f-spot
+@dirrm share/gnome/help/f-spot/sv/figures
+@dirrm share/gnome/help/f-spot/sv
+@dirrm share/gnome/help/f-spot/pt_BR/figures
+@dirrm share/gnome/help/f-spot/pt_BR
+@dirrm share/gnome/help/f-spot/oc/figures
+@dirrm share/gnome/help/f-spot/oc
+@dirrm share/gnome/help/f-spot/it/figures
+@dirrm share/gnome/help/f-spot/it
+@dirrm share/gnome/help/f-spot/fr/figures
+@dirrm share/gnome/help/f-spot/fr
+@dirrm share/gnome/help/f-spot/es/figures
+@dirrm share/gnome/help/f-spot/es
+@dirrm share/gnome/help/f-spot/da/figures
+@dirrm share/gnome/help/f-spot/da
+@dirrm share/gnome/help/f-spot/C/figures
+@dirrm share/gnome/help/f-spot/C
+@dirrm share/gnome/help/f-spot
+@dirrm share/applications/screensavers
+@dirrm libexec/gnome-screensaver
+@dirrm lib/gio-sharp-unstable
 @dirrm lib/f-spot/extensions
 @dirrm lib/f-spot
