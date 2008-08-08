@@ -1,0 +1,11 @@
+
+$FreeBSD$
+
+--- src/tasque.in.orig
++++ src/tasque.in
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/usr/bin/env bash
+ 
+ prefix="@prefix@"
+ exec_prefix="@exec_prefix@"

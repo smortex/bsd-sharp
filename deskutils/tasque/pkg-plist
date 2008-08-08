@@ -1,0 +1,30 @@
+@comment $FreeBSD$
+bin/tasque
+lib/tasque/RtmNet.dll
+lib/tasque/Tasque.exe
+lib/tasque/Tasque.exe.config
+libdata/pkgconfig/tasque.pc
+share/locale/fi/LC_MESSAGES/tasque.mo
+share/locale/fr/LC_MESSAGES/tasque.mo
+share/locale/nl/LC_MESSAGES/tasque.mo
+share/locale/pt_BR/LC_MESSAGES/tasque.mo
+share/pixmaps/tasque-16.png
+share/pixmaps/tasque-22.png
+share/pixmaps/tasque-24.png
+share/pixmaps/tasque-32.png
+share/pixmaps/tasque-48.png
+share/pixmaps/tasque.svg
+share/pixmaps/note-16.png
+share/pixmaps/rtmLogo.png
+share/icons/hicolor/16x16/apps/tasque.png
+share/icons/hicolor/22x22/apps/tasque.png
+share/icons/hicolor/24x24/apps/tasque.png
+share/icons/hicolor/32x32/apps/tasque.png
+share/icons/hicolor/48x48/apps/tasque.png
+share/icons/hicolor/scalable/apps/tasque.svg
+%%DATADIR%%/sounds/notify.wav
+share/dbus-1/services/org.gnome.Tasque.service
+share/applications/tasque.desktop
+@dirrmtry share/tasque/sounds
+@dirrmtry share/tasque
+@dirrmtry lib/tasque
