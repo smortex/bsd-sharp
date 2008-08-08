@@ -21,4 +21,13 @@ share/icons/hicolor/256x256/apps/giver.png
 share/icons/hicolor/icon-theme.cache
 %%DATADIR%%/sounds/notify.wav
 share/applications/giver.desktop
+@dirrm %%DATADIR%%/sounds
 @dirrm %%DATADIR%%
+@dirrmtry share/icons/hicolor/256x256/apps
+@dirrmtry share/icons/hicolor/256x256
+@dirrmtry share/icons/hicolor
+@dirrmtry share/icons
+@dirrmtry lib/locale/fi/LC_MESSAGES
+@dirrmtry lib/locale/fi
+@dirrmtry lib/locale
+@dirrm lib/giver
