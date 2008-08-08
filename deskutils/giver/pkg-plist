@@ -1,0 +1,24 @@
+@comment $FreeBSD$
+bin/giver
+lib/giver/Giver.exe
+lib/locale/fi/LC_MESSAGES/giver.mo
+share/pixmaps/giver-16.png
+share/pixmaps/giver-24.png
+share/pixmaps/giveroff-24.png
+share/pixmaps/giver-32.png
+share/pixmaps/giver-48.png
+share/pixmaps/giver-256.png
+share/pixmaps/gravatar.png
+share/pixmaps/blankphoto.png
+share/icons/hicolor/16x16/apps/giver.png
+share/icons/hicolor/24x24/apps/giver.png
+share/icons/hicolor/24x24/apps/giveroff.png
+share/icons/hicolor/32x32/apps/giver.png
+share/icons/hicolor/48x48/apps/giver.png
+share/icons/hicolor/48x48/apps/blankphoto.png
+share/icons/hicolor/48x48/apps/gravatar.png
+share/icons/hicolor/256x256/apps/giver.png
+share/icons/hicolor/icon-theme.cache
+%%DATADIR%%/sounds/notify.wav
+share/applications/giver.desktop
+@dirrm %%DATADIR%%
