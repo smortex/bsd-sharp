@@ -7,14 +7,16 @@
 
 PORTNAME=	taglib-sharp
 PORTVERSION=	2.0.3.0
-CATEGORIES=	devel audio
+CATEGORIES=	audio
 MASTER_SITES=	http://www.taglib-sharp.com/Download/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Tag your software with as much or as little detail as you like
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
-RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
+BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
+		monodocer:${PORTSDIR}/devel/monodoc
+RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
+		monodocer:${PORTSDIR}/devel/monodoc
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
