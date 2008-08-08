@@ -9,7 +9,7 @@
 PORTNAME=	log4net
 PORTVERSION=	1.2.10
 CATEGORIES=	devel
-MASTER_SITES=	http://people.apache.org/dist/incubator/log4net/${PORTVERSION}/
+MASTER_SITES=	http://archive.apache.org/dist/incubator/log4net/${PORTVERSION}/
 DISTNAME=	incubating-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
