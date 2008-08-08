@@ -21,5 +21,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack
+# Building doc fails with mono>=1.2.6
+CONFIGURE_ARGS=	--disable-docs
 
 .include <bsd.port.mk>
