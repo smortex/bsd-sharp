@@ -2,6 +2,9 @@
 bin/giver
 lib/giver/Giver.exe
 lib/locale/fi/LC_MESSAGES/giver.mo
+lib/monodoc/sources/taglib-sharp-docs.source
+lib/monodoc/sources/taglib-sharp-docs.tree
+lib/monodoc/sources/taglib-sharp-docs.zip
 share/pixmaps/giver-16.png
 share/pixmaps/giver-24.png
 share/pixmaps/giveroff-24.png
