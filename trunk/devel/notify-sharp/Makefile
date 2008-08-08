@@ -1,0 +1,23 @@
+# New ports collection makefile for:	notify-sharp
+# Date created:		2008-08-05
+# Whom:			Romain Tartiere <romain@blogreen.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	notify-sharp
+PORTVERSION=	0.4.0
+CATEGORIES=	devel
+MASTER_SITES=	http://romain.blogreen.org/distfiles/
+
+MAINTAINER=	romain@blogreen.org
+COMMENT=	C\# client library for notification-daemon
+
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomehack gtksharp20
+
+.include <bsd.port.mk>
