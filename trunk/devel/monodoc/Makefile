@@ -8,7 +8,7 @@
 #
 
 PORTNAME=	monodoc
-PORTVERSION=	1.9
+PORTVERSION=	1.2.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
