@@ -16,7 +16,6 @@ MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	A .NET port of the Java Hibernate relational persistence tool
 
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		${LOCALBASE}/lib/mono/1.0/Castle.DynamicProxy.dll:${PORTSDIR}/devel/castle.dynamicproxy \
 		${LOCALBASE}/lib/mono/1.0/log4net.dll:${PORTSDIR}/devel/log4net
 
 WRKSRC=		${WRKDIR}
