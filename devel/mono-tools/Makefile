@@ -7,9 +7,9 @@
 #
 
 PORTNAME=	mono-tools
-PORTVERSION=	1.9
+PORTVERSION=	2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Documentation browser for Mono and Mono libraries
@@ -26,7 +26,7 @@ USE_GMAKE=	yes
 USE_GECKO=	firefox mozilla
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 
-MAN1=	create-native-map.1
+MAN1=	create-native-map.1 gendarme.1
 
 .include <bsd.port.pre.mk>
 
