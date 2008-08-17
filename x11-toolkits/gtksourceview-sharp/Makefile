@@ -7,8 +7,7 @@
 #
 
 PORTNAME=	gtksourceview-sharp
-PORTVERSION=	0.11
-PORTREVISION=	2
+PORTVERSION=	0.12
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gtksourceview-sharp-2.0/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
