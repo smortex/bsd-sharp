@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2008-08-17 17:48:06.000000000 -0400
++++ Makefile.in	2008-08-17 17:48:21.000000000 -0400
+@@ -187,7 +187,7 @@
+    docs
+ 
+ pkgconfig_in_files = taglib-sharp.pc.in
+-pkgconfigdir = $(libdir)/pkgconfig
++pkgconfigdir = $(libdir)/../libdata/pkgconfig
+ pkgconfig_DATA = $(pkgconfig_in_files:.pc.in=.pc)
+ EXTRA_DIST = \
+    $(pkgconfig_in_files) \
