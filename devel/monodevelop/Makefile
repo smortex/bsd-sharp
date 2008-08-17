@@ -9,7 +9,7 @@
 PORTNAME=	monodevelop
 PORTVERSION=	1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://go-mono.com/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	IDE for Mono and Gtk-sharp.
