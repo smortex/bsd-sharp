@@ -7,9 +7,9 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	1.9.1
+PORTVERSION=	2.0
 CATEGORIES=	lang
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	An open source implementation of .NET Development Framework
@@ -43,7 +43,7 @@ MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 
 # Removed amd64 arch because builds are exhibiting semaphore problems on
 # pointyhat runs causing failure to build.
-ONLY_FOR_ARCHS= i386 amd64
+ONLY_FOR_ARCHS= i386 #amd64 mono 2.0 (beta) is faling to compile on amd64
 
 MAN1=		al.1 cert2spc.1 certmgr.1 chktrust.1 cilc.1 disco.1 dtd2xsd.1 \
 		gacutil.1 genxs.1 httpcfg.1 ilasm.1 jay.1 macpack.1 makecert.1 \
@@ -87,7 +87,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj2k5 \
-		${WRKSRC}/mcs/class/Mono.Mozilla/build-csproj2k5
+		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5
 
 .if ${OSVERSION} >= 700000 && ${OSVERSION} < 800000
 	@${REINPLACE_CMD} -e 's|freebsd6|freebsd7|g' \
