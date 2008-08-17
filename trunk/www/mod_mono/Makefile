@@ -7,9 +7,9 @@
 #
 
 PORTNAME=	mod_mono
-PORTVERSION=	1.9
+PORTVERSION=	2.0
 CATEGORIES=	www
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Apache module for serving ASP.NET applications
