@@ -8,9 +8,9 @@
 #
 
 PORTNAME=	monodoc
-PORTVERSION=	1.9
+PORTVERSION=	2.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Documentation for Mono and Mono libraries
