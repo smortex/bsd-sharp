@@ -11,7 +11,7 @@ PORTVERSION=	2.20.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GNOME interfaces for the .NET runtime
 
 LATEST_LINK=	gnome-sharp20

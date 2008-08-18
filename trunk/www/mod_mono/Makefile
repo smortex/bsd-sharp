@@ -11,7 +11,7 @@ PORTVERSION=	2.0
 CATEGORIES=	www
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Apache module for serving ASP.NET applications
 
 LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr

@@ -11,7 +11,7 @@ PORTVERSION=	2.0
 CATEGORIES=	www
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based web server
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono

@@ -11,7 +11,7 @@ PORTVERSION=	2.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GDI+ API for System.Windows.Forms in Mono
 
 LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff \

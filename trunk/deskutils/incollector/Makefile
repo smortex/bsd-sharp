@@ -10,7 +10,7 @@ PORTVERSION=	1.1
 CATEGORIES=	deskutils
 MASTER_SITES=	http://www.incollector.devnull.pl/download/sources/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An application to collect various kinds of information
 
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono

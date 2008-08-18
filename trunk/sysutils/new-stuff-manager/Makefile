@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.k-d-w.org/NewStuffManager/source/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An easy way to upgrade plugins of any application
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \

@@ -10,7 +10,7 @@ PORTVERSION=	1.1.12.5
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.research.microsoft.com/downloads/a4aee11a-3154-466e-9f89-e1e8d3d40a56/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An advanced .NET programming language
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono\

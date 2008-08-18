@@ -11,7 +11,7 @@ PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://folks.o-hand.com/iain/last-exit/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based Gnome last.fm player
 
 LIB_DEPENDS= 	id3tag.0:${PORTSDIR}/audio/libid3tag \

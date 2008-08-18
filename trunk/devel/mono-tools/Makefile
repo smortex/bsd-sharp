@@ -11,7 +11,7 @@ PORTVERSION=	2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Documentation browser for Mono and Mono libraries
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \

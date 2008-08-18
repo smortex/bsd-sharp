@@ -10,7 +10,7 @@ PORTVERSION=	2.20.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GNOME desktop interfaces for the .NET runtime
 
 USE_BZIP2=	yes

@@ -12,7 +12,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://archive.apache.org/dist/incubator/log4net/${PORTVERSION}/
 DISTNAME=	incubating-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Port for .NET of the Apache Logging Services project
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono

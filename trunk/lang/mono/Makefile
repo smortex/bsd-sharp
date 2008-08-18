@@ -11,7 +11,7 @@ PORTVERSION=	2.0
 CATEGORIES=	lang
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An open source implementation of .NET Development Framework
 
 CONFLICTS=	mono-devel-[0-9]* mono-svn-[0-9]*
