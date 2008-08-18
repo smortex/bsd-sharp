@@ -11,7 +11,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.go-mono.com/archive/${PORTNAME}/
 DISTNAME=	Moma1-1-1
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Identify issues you may have when porting a .Net application
 
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono\

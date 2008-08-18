@@ -10,7 +10,7 @@ PORTVERSION=	0.4.0.1
 CATEGORIES=	deskutils
 MASTER_SITES=	https://launchpad.net/do/trunk/0.4/+download/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT= Powerful, speedy, and sexy remote control for your GNOME Desktop
 
 BUILD_DEPENDS=  ${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \

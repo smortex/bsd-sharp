@@ -11,7 +11,7 @@ PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://forgeftp.novell.com/greent/releases/${PORTVERSION}/
 
-MAINTAINER=	bsd-sharp-list@forge.novell.com
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A Quake-style terminal emulator written in C#
 
 BUILD_DEPENDS=	xmlto:${PORTSDIR}/textproc/xmlto \
