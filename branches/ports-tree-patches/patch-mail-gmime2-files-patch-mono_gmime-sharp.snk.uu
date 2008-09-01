@@ -1,0 +1,26 @@
+--- mail/gmime2/files/patch-mono_gmime-sharp.snk.uu.orig	1970-01-01 01:00:00.000000000 +0100
++++ mail/gmime2/files/patch-mono_gmime-sharp.snk.uu	2008-08-29 11:22:28.000000000 +0200
+@@ -0,0 +1,23 @@
++
++$FreeBSD$
++
++--- /dev/null
+++++ mono/gmime-sharp.snk.uu
++@@ -0,0 +1,17 @@
+++begin 644 gmime-sharp.snk
+++M!P(````D``!24T$R``0``!$````[K9_N#S+U/8\O%Z6@=_2GY]E&5/9ED;+4
+++M_3IEYS\D;3S<5I5+Y42B,+\"/0\X-!#@*`X87T5QGVM*=^-Z;0#BFVX52POU
+++MP2#9X3I6<'-Q!Z>74^C12LK!;E1$,XX`[.+:%7:3"4KP4='3@TW:U7V3/YF=
+++M+^E'R"#.A%%V(!09K[4`=K&*3WWQJD->HDR!3@.0&^NJ_>M!('.>%LYZ=/8=
+++MDR(+-GTMYOQ%(*20!M3I@S@I29>L8!>Y5KPWAH)Y$[HOW#)6\W86<'FD=3<"
+++M[X-9$,8!S)_D_I+3/H\+U?`\\A\7->)`YE'4Z409]"UP1O*2<0LNLVHNB!ZM
+++M=T-I@N7P,8CGB(+P=1#.7?[%[;4<`P`IOX*R=*=I>^^ZA60Q)`TAMT:<.93)
+++ML133]%HS;3:+C^I3?[$/)9]1P'^K36,AK\5<>RVAS^F!T/VA(EM4\GFZ&'G`
+++MDC*6Z(9P%`0><P;=H8#63X"-PAWIKLS[TV.@<\K<UJ:H)=3S-UM(D(ZU!55W
+++MD80P7#DK'7C<M5ZE[<FXSG/[<SZA0C,A^[2Z1YM`(5P!\B!(QH51/@$#P;H_
+++M;"N6L^TN.8E#@0,JAK^GR&"9`<+\R7ZM;?-A1I\I:-7>=&0;>JAJZ932YG0'
+++M]:W4)WLP#!<=7[,QLVG%8YNV^Y=R-$$%\"Q)`.5',>S;C*`"JG*0!Z*I@U//
+++M>1-@#Y'[&'O"<0YAE4<I"!AI8UU?+35N>LM'<!(+D<(KM%L;7"WP%;S;<[:[
++++<PJ$#%RS&K&=S#T`
+++`
+++end

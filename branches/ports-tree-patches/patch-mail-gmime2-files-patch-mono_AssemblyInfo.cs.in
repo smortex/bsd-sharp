@@ -1,0 +1,14 @@
+--- mail/gmime2/files/patch-mono_AssemblyInfo.cs.in.orig	1970-01-01 01:00:00.000000000 +0100
++++ mail/gmime2/files/patch-mono_AssemblyInfo.cs.in	2008-08-29 10:59:53.000000000 +0200
+@@ -0,0 +1,11 @@
++
++$FreeBSD$
++
++--- mono/AssemblyInfo.cs.in.orig
+++++ mono/AssemblyInfo.cs.in
++@@ -2,5 +2,3 @@
++ using System.Runtime.CompilerServices;
++ 
++ [assembly:AssemblyVersion("@API_VERSION@")]
++-[assembly:AssemblyDelaySign(true)]
++-[assembly:AssemblyKeyFile("@srcdir@/gmime-sharp.pub")]
