@@ -29,7 +29,7 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gtksharp20
+USE_GNOME=	gnomehack gtksharp20
 
 .include <bsd.port.pre.mk>
 .include <bsd.port.post.mk>
