@@ -1,4 +1,5 @@
 #summary Next things to do before BSD# ports reach FreeBSD Ports Tree.
+#labels Featured
 
 = Fix ports that do not build =
 
