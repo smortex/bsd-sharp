@@ -11,7 +11,7 @@ CATEGORIES=	net-im
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Multi-Protocol Instant Messenger
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/anculus-core.pc:${PORTSDIR}/misc/libanculus-sharp \

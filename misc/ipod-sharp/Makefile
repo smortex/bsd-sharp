@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	High level access to iPod
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/podsleuth.pc:${PORTSDIR}/misc/podsleuth \

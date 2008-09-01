@@ -10,7 +10,7 @@ PORTVERSION=	0.2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ndesk.org/archive/${PORTNAME}/
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Callback-based program option parser for C\#
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
