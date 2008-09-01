@@ -1,11 +1,12 @@
-bin/i386-portbld-freebsd7.0-mzclient
-lib/mono-zeroconf/i386-portbld-freebsd7.0-MZClient.exe
-lib/mono-zeroconf/i386-portbld-freebsd7.0-MZClient.exe.mdb
-lib/mono-zeroconf/i386-portbld-freebsd7.0-Mono.Zeroconf.Providers.Avahi.dll
-lib/mono-zeroconf/i386-portbld-freebsd7.0-Mono.Zeroconf.Providers.Avahi.dll.mdb
-lib/mono-zeroconf/i386-portbld-freebsd7.0-Mono.Zeroconf.Providers.Bonjour.dll
-lib/mono-zeroconf/i386-portbld-freebsd7.0-Mono.Zeroconf.Providers.Bonjour.dll.config
-lib/mono-zeroconf/i386-portbld-freebsd7.0-Mono.Zeroconf.Providers.Bonjour.dll.mdb
+@comment $FreeBSD$
+bin/mzclient
+lib/mono-zeroconf/MZClient.exe
+lib/mono-zeroconf/MZClient.exe.mdb
+lib/mono-zeroconf/Mono.Zeroconf.Providers.Avahi.dll
+lib/mono-zeroconf/Mono.Zeroconf.Providers.Avahi.dll.mdb
+lib/mono-zeroconf/Mono.Zeroconf.Providers.Bonjour.dll
+lib/mono-zeroconf/Mono.Zeroconf.Providers.Bonjour.dll.config
+lib/mono-zeroconf/Mono.Zeroconf.Providers.Bonjour.dll.mdb
 lib/mono/gac/Mono.Zeroconf/2.0.0.76__e60c4f4a95e1099e/Mono.Zeroconf.dll
 lib/mono/gac/Mono.Zeroconf/2.0.0.76__e60c4f4a95e1099e/Mono.Zeroconf.dll.mdb
 lib/mono/gac/policy.1.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.1.0.Mono.Zeroconf.dll
@@ -13,6 +14,9 @@ lib/mono/gac/policy.1.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.1.0.confi
 lib/mono/gac/policy.2.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.2.0.Mono.Zeroconf.dll
 lib/mono/gac/policy.2.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e/policy.2.0.config
 lib/mono/mono-zeroconf/Mono.Zeroconf.dll
+%%PORTDOCS%%lib/monodoc/sources/mono-zeroconf-docs.source
+%%PORTDOCS%%lib/monodoc/sources/mono-zeroconf-docs.tree
+%%PORTDOCS%%lib/monodoc/sources/mono-zeroconf-docs.zip
 libdata/pkgconfig/mono-zeroconf.pc
 @dirrm lib/mono/mono-zeroconf
 @dirrm lib/mono/gac/policy.2.0.Mono.Zeroconf/0.0.0.0__e60c4f4a95e1099e
