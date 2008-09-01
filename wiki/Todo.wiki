@@ -1,0 +1,17 @@
+#summary Next things to do before BSD# ports reach FreeBSD Ports Tree.
+
+= Fix ports that do not build =
+
+The following ports are known to fail with Mono 2.0 preview:
+  * audio/muine
+  * mail/evolution-sharp
+  * x11/greent
+
+= Fix linuxism workarounds =
+
+The following projects are known to rely on linuxisms that may have to be worked around a better may and for witch patches have to be send upstream:
+
+  * audio/last-exit (PrctlLinuxism)
+  * deskutils/giver (PrctlLinuxism)
+  * deskutils/tasque (PrctlLinuxism)
+  * deskutils/tomboy (PrctlLinuxism)
