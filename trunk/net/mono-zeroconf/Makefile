@@ -24,5 +24,9 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack
 
+.if !defined(NOPORTDOCS)
+BUILD_DEPENDS+=	monodocer:${PORTSDIR}/devel/monodoc
+.endif
+
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
