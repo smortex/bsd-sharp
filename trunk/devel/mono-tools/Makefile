@@ -15,12 +15,13 @@ MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Documentation browser for Mono and Mono libraries
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
+		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
 		monodocer:${PORTSDIR}/devel/monodoc
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
 		monodocer:${PORTSDIR}/devel/monodoc
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnometarget gnomesharp20
+USE_GNOME=	gnomehack gnometarget gnomedesktopsharp20
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GECKO=	firefox mozilla
