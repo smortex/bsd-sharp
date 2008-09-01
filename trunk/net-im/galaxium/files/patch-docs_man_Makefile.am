@@ -1,0 +1,11 @@
+
+$FreeBSD$
+
+--- docs/man/Makefile.am.orig
++++ docs/man/Makefile.am
+@@ -1,4 +1,4 @@
+-manpagedir = $(prefix)/share/man/man1
++manpagedir = $(mandir)/man1
+ manpage_DATA = galaxium.1.gz
+ 
+ all:
