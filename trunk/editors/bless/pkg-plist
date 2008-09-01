@@ -58,6 +58,7 @@ share/applications/bless.desktop
 %%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_number_base.png
 %%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_preferences_general.png
 %%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_preferences_session.png
+%%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_preferences_undo.png
 %%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_search_find.png
 %%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_search_replace.png
 %%PORTDOCS%%%%DOCSDIR%%/user/figures/bless_select_range.png
