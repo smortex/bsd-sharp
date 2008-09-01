@@ -10,7 +10,7 @@ PORTVERSION=	0.6.2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A tool to discover detailed model information about an iPod
 
 LIB_DEPENDS=	sgutils.1:${PORTSDIR}/sysutils/sg3_utils \

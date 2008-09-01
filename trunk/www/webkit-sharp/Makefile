@@ -20,7 +20,7 @@ MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 #DIST_SUBDIR=	${PORTNAME}
 #EXTRACT_ONLY=
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono bindings for Webkit
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/webkit-1.0.pc:${PORTSDIR}/www/webkit-gtk2
