@@ -20,3 +20,7 @@ The following projects are known to rely on linuxisms that may have to be worked
 = Lint ports =
 
 The `portlint` utility (`ports-mgmt/portlint`) can detect problems in ports. All BSD# ports have to be verified with this tool.
+
+= Build ports with NOPORTDOCS defined =
+
+... and fix accordingly.
