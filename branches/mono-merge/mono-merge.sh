@@ -356,10 +356,8 @@ if [ ${update_main} = "yes" ]; then
         printf "Update of main ports tree requested but I could not\nfind SUPFILE: ${SUPFILE}; aborting...\n\n"
         exit 1
     fi
-fi
 
-# Update the main ports tree if so requested.
-if [ ${update_main} = "yes" ]; then
+    # Update the main ports tree if so requested.
     echo "===> Updating the main ports tree"
     if [ ${VERBOSE} = "yes" ]; then
         ${CVSUP_CMD} ${SUPFILE}
