@@ -20,7 +20,7 @@ RUN_DEPENDS=	xmlto:${PORTSDIR}/textproc/xmlto \
 		tomboy:${PORTSDIR}/deskutils/tomboy \
 
 USE_NANT=	yes
-USE_GNOME=	gnomesharp20
+USE_GNOME=	gnomedesktopsharp20
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
