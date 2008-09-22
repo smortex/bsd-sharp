@@ -18,10 +18,10 @@ MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Personal note taking system for the GNOME desktop
 
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
-BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp-devel \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
-RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp-devel \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
@@ -54,6 +54,7 @@ post-patch:
 	s|PANELAPPLET_SERVER_DIR="$$PANELAPPLET_LIBDIR|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' ${WRKSRC}/Tomboy/tomboy.in
+	@${REINPLACE_CMD} -e 's|gmime-sharp|gmime-sharp-2.4|g' ${WRKSRC}/configure
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.post.mk>
