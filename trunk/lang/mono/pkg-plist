@@ -10,6 +10,7 @@ bin/disco
 bin/dtd2rng
 bin/dtd2xsd
 bin/gacutil
+bin/gacutil2
 bin/genxs
 bin/genxs1
 bin/genxs2
@@ -391,6 +392,8 @@ lib/mono/2.0/System.dll
 lib/mono/2.0/al.exe
 lib/mono/2.0/al.exe.mdb
 lib/mono/2.0/cscompmgd.dll
+lib/mono/2.0/gacutil.exe
+lib/mono/2.0/gacutil.exe.mdb
 lib/mono/2.0/gmcs.exe
 lib/mono/2.0/gmcs.exe.config
 lib/mono/2.0/gmcs.exe.mdb
