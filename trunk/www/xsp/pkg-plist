@@ -1,12 +1,18 @@
+@comment $FreeBSD$
 bin/asp-state
+bin/asp-state1
 bin/asp-state2
 bin/dbsessmgr
+bin/dbsessmgr1
 bin/dbsessmgr2
 bin/fastcgi-mono-server
+bin/fastcgi-mono-server1
 bin/fastcgi-mono-server2
 bin/mod-mono-server
+bin/mod-mono-server1
 bin/mod-mono-server2
 bin/xsp
+bin/xsp1
 bin/xsp2
 lib/mono/1.0/Mono.WebServer.dll
 lib/mono/1.0/fastcgi-mono-server.exe
