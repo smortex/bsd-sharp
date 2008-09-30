@@ -7,11 +7,11 @@
 #
 
 PORTNAME=	f-spot
-PORTVERSION=	0.4.4
+PORTVERSION=	0.5.0.1
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.4
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Personal photo management to the GNOME desktop
@@ -19,10 +19,9 @@ COMMENT=	Personal photo management to the GNOME desktop
 LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		gphoto2.2:${PORTSDIR}/graphics/libgphoto2
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 USE_BZIP2=	yes
 USE_SQLITE=	yes
@@ -32,6 +31,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
+USE_LDCONFIG=	yes
 
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -42,7 +42,8 @@ post-patch:
 		${WRKSRC}/src/f-spot.exe.config.in
 	@${REINPLACE_CMD} 's|target="libgphoto2.so.2"|target="libgphoto2.so"|g'\
 	    	${WRKSRC}/libgphoto2-sharp/libgphoto2-sharp.dll.config
-	@${REINPLACE_CMD} 's|#!/bin/bash|#!/bin/sh|g' \
+	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
+		${WRKSRC}/src/f-spot.in \
 		${WRKSRC}/tools/f-spot-import
 	@${REINPLACE_CMD} 's|G_GNUC_FUNCTION|G_STRLOC|g' \
 		${WRKSRC}/libfspot/f-jpeg-utils.c
