@@ -1,3 +1,4 @@
+@comment $FreeBSD$
 bin/create-native-map
 bin/gasnview
 bin/gendarme
@@ -7,6 +8,8 @@ bin/gnunit2
 bin/gui-compare
 bin/ilcontrast
 bin/monodoc
+bin/mprof-decoder
+bin/mprof-heap-viewer
 lib/create-native-map/MapAttribute.cs
 lib/create-native-map/create-native-map.exe
 lib/gendarme/Gendarme.Framework.dll
@@ -30,6 +33,14 @@ lib/gendarme/rules.xml
 lib/gui-compare/Mono.Cecil.dll
 lib/gui-compare/gui-compare.exe
 lib/ilcontrast/ilcontrast.exe
+lib/mono-tools/mprof-decoder-library.dll
+lib/mono-tools/mprof-decoder-library.dll.mdb
+lib/mono-tools/mprof-decoder.exe
+lib/mono-tools/mprof-decoder.exe.mdb
+lib/mono-tools/mprof-heap-snapshot-explorer.dll
+lib/mono-tools/mprof-heap-snapshot-explorer.dll.mdb
+lib/mono-tools/mprof-heap-viewer.exe
+lib/mono-tools/mprof-heap-viewer.exe.mdb
 lib/mono/1.0/gasnview.exe
 lib/mono/1.0/gnunit.exe
 lib/mono/2.0/gnunit2.exe
@@ -41,9 +52,11 @@ libdata/pkgconfig/create-native-map.pc
 libdata/pkgconfig/gendarme-framework.pc
 share/applications/ilcontrast.desktop
 share/applications/monodoc.desktop
+share/applications/mprof-heap-viewer.desktop
 share/pixmaps/ilcontrast.png
 share/pixmaps/monodoc.png
 @dirrmtry lib/monodoc
+@dirrm lib/mono-tools
 @dirrmtry lib/ilcontrast
 @dirrm lib/gui-compare
 @dirrm lib/gendarme
