@@ -7,12 +7,10 @@
 #
 
 PORTNAME=	muine
-PORTVERSION=	0.8.8
+PORTVERSION=	0.8.9
 PORTREVISION=	2
 CATEGORIES=	audio gnome
-MASTER_SITES=	http://muine-player.org/releases/ \
-		${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	tmclaugh/muine
+MASTER_SITES=	GNOME
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based Gnome audio player
@@ -61,6 +59,8 @@ post-patch:
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|libmusicbrainz.so.4|libmusicbrainz.so|g' \
 		${WRKSRC}/src/muine.exe.config.in
+	@${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|g' \
+		${WRKSRC}/src/muine.in
 
 post-install:
 	${MKDIR} ${PREFIX}/lib/muine/plugins
