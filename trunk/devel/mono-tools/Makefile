@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GECKO=	firefox mozilla
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 
-MAN1=	create-native-map.1 gendarme.1
+MAN1=		create-native-map.1 gendarme.1 mprof-decoder.1 mprof-heap-viewer.1
 
 .include <bsd.port.pre.mk>
 
@@ -38,6 +38,8 @@ post-patch:
 		${WRKSRC}/create-native-map/lib/pkgconfig/Makefile.in
 	@${REINPLACE_CMD} -e "s|%%FBSD_MOZILLA_HOME%%|${PREFIX}/lib/${GECKO}|g" \
 		${WRKSRC}/docbrowser/monodoc.in
+	@${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
+		's|@datadir@/man/man1|@mandir@/man1|g'
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
