@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	gtk-sharp
-PORTVERSION=	2.12.1
+PORTVERSION=	2.12.4
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	ftp://ftp.acc.umu.se/pub/gnome/sources/${PORTNAME}/2.12/
 

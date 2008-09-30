@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	gnome-desktop-sharp
-PORTVERSION=	2.20.1
+PORTVERSION=	2.24.0
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GNOME desktop interfaces for the .NET runtime
