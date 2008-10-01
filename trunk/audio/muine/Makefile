@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	muine
-PORTVERSION=	0.8.9
+PORTVERSION=	0.8.10
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 
@@ -19,7 +19,8 @@ LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
 		gdbm:${PORTSDIR}/databases/gdbm \
 		vorbis.4:${PORTSDIR}/audio/libvorbis \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
-RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
