@@ -3,10 +3,10 @@
 
 = Fix ports that do not build =
 
-The following ports are known to fail with Mono 2.0 preview:
-  * audio/muine
-  * mail/evolution-sharp
-  * x11/greent
+As of 20080102, The following ports are known to fail with Mono 2.0 preview:
+  * ~~audio/muine~~
+  * ~~mail/evolution-sharp~~
+  * ~~x11/greent~~
 
 = Fix linuxism workarounds =
 
