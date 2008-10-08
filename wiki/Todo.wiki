@@ -3,10 +3,9 @@
 
 = Fix ports that do not build =
 
-As of 20080102, The following ports are known to fail with Mono 2.0 preview:
-  * ~~audio/muine~~
-  * ~~mail/evolution-sharp~~
-  * ~~x11/greent~~
+As of 20080108, The following ports are known to fail with Mono 2.0 preview:
+  * deskutils/beagle (upstream does not support gmime2-sharp-2.4)
+  * graphics/f-spot (compiles but does not work on my computer)
 
 = Fix linuxism workarounds =
 
