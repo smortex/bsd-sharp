@@ -15,17 +15,18 @@ COMMENT=	Powerful, speedy, and sexy remote control for your GNOME Desktop
 
 BUILD_DEPENDS=  ${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		${LOCALBASE}libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp
+		${LOCALBASE}/libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp
 RUN_DEPENDS=    ${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		${LOCALBASE}libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp \
+		${LOCALBASE}/libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp \
 		xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_GNOME=      gnomehack gnomeprefix gnomesharp20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+= CPPFLAGS="-I${LOCALBASE}/include" \
-                LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+USE_LDCONFIG=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@libdir@/pkgconfig|@prefix@/libdata/pkgconfig|g' \
@@ -33,5 +34,13 @@ post-patch:
 		${WRKSRC}/Do.Addins/Makefile.in \
 		${WRKSRC}/Do.DBus/Makefile.in \
 		${WRKSRC}/Makefile.include
+
+.if !defined(WITHOUT_NLS)
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
 
 .include <bsd.port.mk>
