@@ -9,7 +9,7 @@
 PORTNAME=	mono
 PORTVERSION=	2.0
 CATEGORIES=	lang
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An open source implementation of .NET Development Framework
