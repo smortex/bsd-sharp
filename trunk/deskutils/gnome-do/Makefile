@@ -6,22 +6,32 @@
 #
 
 PORTNAME=	gnome-do
-PORTVERSION=	0.4.0.1
+PORTVERSION=	0.6.1.0
 CATEGORIES=	deskutils
-MASTER_SITES=	https://launchpad.net/do/trunk/0.4/+download/
+MASTER_SITES=	https://launchpad.net/do/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/${PORTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}/+download/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
-COMMENT= Powerful, speedy, and sexy remote control for your GNOME Desktop
+COMMENT=	Powerful, speedy, and sexy remote control for your GNOME Desktop
 
 BUILD_DEPENDS=  ${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
-				${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		${LOCALBASE}libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp
 RUN_DEPENDS=    ${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
-				${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		${LOCALBASE}libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp \
+		xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_GNOME=      gnomehack gnomeprefix gnomesharp20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+= CPPFLAGS="-I${LOCALBASE}/include" \
                 LDFLAGS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|@libdir@/pkgconfig|@prefix@/libdata/pkgconfig|g' \
+		${WRKSRC}/Do/Makefile.in \
+		${WRKSRC}/Do.Addins/Makefile.in \
+		${WRKSRC}/Do.DBus/Makefile.in \
+		${WRKSRC}/Makefile.include
 
 .include <bsd.port.mk>
