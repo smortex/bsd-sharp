@@ -9,7 +9,7 @@
 PORTNAME=	mono-tools
 PORTVERSION=	2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Documentation browser for Mono and Mono libraries
@@ -25,7 +25,6 @@ USE_GNOME=	gnomehack gnometarget gnomedesktopsharp20
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GECKO=	firefox mozilla
-CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 
 MAN1=		create-native-map.1 gendarme.1 mprof-decoder.1 mprof-heap-viewer.1
 
