@@ -9,6 +9,7 @@ PORTNAME=	blam
 PORTVERSION=	1.8.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.cmartin.tk/${PORTNAME}/
+DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A simple feed reader for GNOME
@@ -24,6 +25,7 @@ USE_GNOME=	gnomesharp20
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 GCONF_SCHEMAS=	blam.schemas
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		blam.1
 
