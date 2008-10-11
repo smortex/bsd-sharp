@@ -6,4 +6,4 @@ Beagle is written in C# using Mono and Gtk#. The indexing is handled by
 Lucene.Net, a C# port of the Lucene indexer. The source code lives in
 the GNOME CVS repository in the module beagle.
 
-WWW: http://www.beaglewiki.org/
+WWW: http://beagle-project.org/

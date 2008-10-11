@@ -1,59 +1,43 @@
+@comment $FreeBSD$
 bin/beagle-config
-bin/beagle-exercise-file-system
 bin/beagle-extract-content
 bin/beagle-imlogviewer
 bin/beagle-index-info
-bin/beagle-index-url
 bin/beagle-info
 bin/beagle-ping
 bin/beagle-query
 bin/beagle-search
 bin/beagle-settings
 bin/beagle-shutdown
+bin/beagle-static-query
 bin/beagle-status
 bin/beagled
-etc/beagle/crawl-applications
-etc/beagle/crawl-documentation
-etc/beagle/crawl-windows
+bin/blocate
+etc/beagle/blocate.conf
+etc/beagle/config-files/BeagleSearch.xml
+etc/beagle/config-files/Daemon.xml
+etc/beagle/config-files/FilesQueryable.xml
+etc/beagle/config-files/GoogleBackends.xml
+etc/beagle/config-files/Networking.xml
+etc/beagle/crawl-rules/crawl-applications
+etc/beagle/crawl-rules/crawl-documentation
+etc/beagle/crawl-rules/crawl-executables
+etc/beagle/crawl-rules/crawl-manpages
+etc/beagle/crawl-rules/crawl-monodoc
+etc/beagle/crawl-rules/crawl-windows
 etc/beagle/external-filters.xml.sample
+etc/beagle/query-mapping.xml
 etc/cron.daily/beagle-crawl-system
 etc/xdg/autostart/beagle-search-autostart.desktop
 etc/xdg/autostart/beagled-autostart.desktop
-include/libbeagle/beagle/beagle-client.h
-include/libbeagle/beagle/beagle-daemon-information-request.h
-include/libbeagle/beagle/beagle-daemon-information-response.h
-include/libbeagle/beagle/beagle-empty-response.h
-include/libbeagle/beagle/beagle-error-response.h
-include/libbeagle/beagle/beagle-finished-response.h
-include/libbeagle/beagle/beagle-hit.h
-include/libbeagle/beagle/beagle-hits-added-response.h
-include/libbeagle/beagle/beagle-hits-subtracted-response.h
-include/libbeagle/beagle/beagle-indexable.h
-include/libbeagle/beagle/beagle-indexing-service-request.h
-include/libbeagle/beagle/beagle-indexing-status-response.h
-include/libbeagle/beagle/beagle-informational-messages-request.h
-include/libbeagle/beagle/beagle-property.h
-include/libbeagle/beagle/beagle-query-part-date.h
-include/libbeagle/beagle/beagle-query-part-human.h
-include/libbeagle/beagle/beagle-query-part-or.h
-include/libbeagle/beagle/beagle-query-part-property.h
-include/libbeagle/beagle/beagle-query-part-text.h
-include/libbeagle/beagle/beagle-query-part-wildcard.h
-include/libbeagle/beagle/beagle-query-part.h
-include/libbeagle/beagle/beagle-query.h
-include/libbeagle/beagle/beagle-queryable-status.h
-include/libbeagle/beagle/beagle-request.h
-include/libbeagle/beagle/beagle-response.h
-include/libbeagle/beagle/beagle-scheduler-information.h
-include/libbeagle/beagle/beagle-search-term-response.h
-include/libbeagle/beagle/beagle-shutdown-request.h
-include/libbeagle/beagle/beagle-snippet-request.h
-include/libbeagle/beagle/beagle-snippet-response.h
-include/libbeagle/beagle/beagle-timestamp.h
-include/libbeagle/beagle/beagle-util.h
-include/libbeagle/beagle/beagle.h
 lib/beagle/Backends/EvolutionBackends.dll
 lib/beagle/Backends/EvolutionBackends.dll.mdb
+lib/beagle/Backends/GoogleBackends.dll
+lib/beagle/Backends/GoogleBackends.dll.mdb
+lib/beagle/Backends/ThunderbirdBackends.dll
+lib/beagle/Backends/ThunderbirdBackends.dll.mdb
+lib/beagle/Beagle.Search.exe
+lib/beagle/Beagle.Search.exe.mdb
 lib/beagle/Beagle.dll
 lib/beagle/Beagle.dll.mdb
 lib/beagle/BeagleDaemon.exe
@@ -68,32 +52,28 @@ lib/beagle/Config.exe
 lib/beagle/Config.exe.mdb
 lib/beagle/DumpIndex.exe
 lib/beagle/DumpIndex.exe.mdb
-lib/beagle/ExerciseFileSystem.exe
-lib/beagle/ExerciseFileSystem.exe.mdb
 lib/beagle/ExtractContent.exe
 lib/beagle/ExtractContent.exe.mdb
 lib/beagle/Filters/Filters.dll
 lib/beagle/Filters/Filters.dll.mdb
 lib/beagle/ImLogViewer.exe
 lib/beagle/ImLogViewer.exe.mdb
-lib/beagle/Images.dll
-lib/beagle/Images.dll.mdb
 lib/beagle/IndexHelper.exe
 lib/beagle/IndexHelper.exe.mdb
-lib/beagle/IndexWebContent.exe
-lib/beagle/IndexWebContent.exe.mdb
 lib/beagle/Info.exe
 lib/beagle/Info.exe.mdb
 lib/beagle/ManageIndex.exe
 lib/beagle/ManageIndex.exe.mdb
 lib/beagle/Query.exe
 lib/beagle/Query.exe.mdb
-lib/beagle/Search.exe
-lib/beagle/Search.exe.mdb
+lib/beagle/RemovableIndex.exe
+lib/beagle/RemovableIndex.exe.mdb
 lib/beagle/Settings.exe
 lib/beagle/Settings.exe.mdb
 lib/beagle/Shutdown.exe
 lib/beagle/Shutdown.exe.mdb
+lib/beagle/StaticQuery.exe
+lib/beagle/StaticQuery.exe.mdb
 lib/beagle/UiUtil.dll
 lib/beagle/UiUtil.dll.config
 lib/beagle/UiUtil.dll.mdb
@@ -101,6 +81,7 @@ lib/beagle/Util.dll
 lib/beagle/Util.dll.config
 lib/beagle/Util.dll.mdb
 lib/beagle/beagled-index-helper
+lib/beagle/keygrabber.py
 lib/beagle/libbeagleglue.a
 lib/beagle/libbeagleglue.la
 lib/beagle/libbeagleglue.so
@@ -109,62 +90,41 @@ lib/beagle/libbeagleuiglue.a
 lib/beagle/libbeagleuiglue.la
 lib/beagle/libbeagleuiglue.so
 lib/beagle/libbeagleuiglue.so.0
-%%WV:%%lib/beagle/libwv1glue.a
-%%WV:%%lib/beagle/libwv1glue.so
-%%WV:%%lib/beagle/libwv1glue.so.0
-%%EPIPHANY:%%lib/epiphany/2.16/extensions/beagle.xml
-%%EPIPHANY:%%lib/epiphany/2.16/extensions/libbeagleextension.a
-%%EPIPHANY:%%lib/epiphany/2.16/extensions/libbeagleextension.la
-%%EPIPHANY:%%lib/epiphany/2.16/extensions/libbeagleextension.so
-lib/libbeagle.a
-lib/libbeagle.la
-lib/libbeagle.so
-lib/libbeagle.so.0
+lib/monodoc/sources/beagle-docs.source
+lib/monodoc/sources/beagle-docs.tree
+lib/monodoc/sources/beagle-docs.zip
 libdata/pkgconfig/beagle-0.0.pc
 libdata/pkgconfig/beagle-daemon.pc
 libdata/pkgconfig/beagle-ui-0.0.pc
-libdata/pkgconfig/libbeagle-0.0.pc
 sbin/beagle-build-index
 sbin/beagle-dump-index
 sbin/beagle-manage-index
+sbin/beagle-master-delete-button
+sbin/beagle-removable-index
 share/applications/beagle-search.desktop
 share/applications/beagle-settings.desktop
 %%DATADIR%%/beagle.xpi
-%%DOCSDIR%%/BeagleClient.html
-%%DOCSDIR%%/BeagleDaemonInformationResponse.html
-%%DOCSDIR%%/BeagleEmptyResponse.html
-%%DOCSDIR%%/BeagleErrorResponse.html
-%%DOCSDIR%%/BeagleFinishedResponse.html
-%%DOCSDIR%%/BeagleHitsAddedResponse.html
-%%DOCSDIR%%/BeagleHitsSubtractedResponse.html
-%%DOCSDIR%%/BeagleIndexingServiceRequest.html
-%%DOCSDIR%%/BeagleQuery.html
-%%DOCSDIR%%/BeagleRequest.html
-%%DOCSDIR%%/BeagleResponse.html
-%%DOCSDIR%%/BeagleShutdownRequest.html
-%%DOCSDIR%%/BeagleSnippetRequest.html
-%%DOCSDIR%%/BeagleSnippetResponse.html
-%%DOCSDIR%%/beagle-BeagleCancelledResponse.html
-%%DOCSDIR%%/beagle-BeagleDaemonInformationRequest.html
-%%DOCSDIR%%/beagle-BeagleHit.html
-%%DOCSDIR%%/beagle-beagle-indexable.html
-%%DOCSDIR%%/beagle-beagle-property.html
-%%DOCSDIR%%/beagle-beagle-query-part.html
-%%DOCSDIR%%/beagle-beagle-timestamp.html
-%%DOCSDIR%%/beagle.devhelp
-%%DOCSDIR%%/beagle.devhelp2
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/ch03.html
-%%DOCSDIR%%/ch04.html
-%%DOCSDIR%%/ch05.html
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
+%%DATADIR%%/icons/hicolor/16x16/apps/tomboy.png
+%%DATADIR%%/icons/hicolor/22x22/apps/tomboy.png
+%%DATADIR%%/icons/hicolor/24x24/apps/tomboy.png
+%%DATADIR%%/icons/hicolor/32x32/apps/tomboy.png
+%%DATADIR%%/icons/hicolor/48x48/apps/tomboy.png
+%%DATADIR%%/icons/hicolor/scalable/apps/tomboy.svg
+%%DATADIR%%/webinterface/default.css
+%%DATADIR%%/webinterface/default.js
+%%DATADIR%%/webinterface/help.html
+%%DATADIR%%/webinterface/hitresult.xsl
+%%DATADIR%%/webinterface/images/beagle-logo.png
+%%DATADIR%%/webinterface/images/busy-animation.gif
+%%DATADIR%%/webinterface/images/favicon.png
+%%DATADIR%%/webinterface/images/system-search.png
+%%DATADIR%%/webinterface/images/title_bg.png
+%%DATADIR%%/webinterface/index.xml
+%%DATADIR%%/webinterface/index.xsl
+%%DATADIR%%/webinterface/mappings.xml
+%%DATADIR%%/webinterface/opensearch.xml
+%%DATADIR%%/webinterface/propname-table.js
+%%DATADIR%%/webinterface/statusresult.xsl
 share/locale/ar/LC_MESSAGES/beagle.mo
 share/locale/bg/LC_MESSAGES/beagle.mo
 share/locale/ca/LC_MESSAGES/beagle.mo
@@ -176,6 +136,7 @@ share/locale/el/LC_MESSAGES/beagle.mo
 share/locale/en_CA/LC_MESSAGES/beagle.mo
 share/locale/en_GB/LC_MESSAGES/beagle.mo
 share/locale/es/LC_MESSAGES/beagle.mo
+share/locale/eu/LC_MESSAGES/beagle.mo
 share/locale/fi/LC_MESSAGES/beagle.mo
 share/locale/fr/LC_MESSAGES/beagle.mo
 share/locale/gl/LC_MESSAGES/beagle.mo
@@ -191,8 +152,10 @@ share/locale/lv/LC_MESSAGES/beagle.mo
 share/locale/mk/LC_MESSAGES/beagle.mo
 share/locale/nb/LC_MESSAGES/beagle.mo
 share/locale/nl/LC_MESSAGES/beagle.mo
+share/locale/oc/LC_MESSAGES/beagle.mo
 share/locale/pa/LC_MESSAGES/beagle.mo
 share/locale/pl/LC_MESSAGES/beagle.mo
+share/locale/pt/LC_MESSAGES/beagle.mo
 share/locale/pt_BR/LC_MESSAGES/beagle.mo
 share/locale/ru/LC_MESSAGES/beagle.mo
 share/locale/sl/LC_MESSAGES/beagle.mo
@@ -206,46 +169,28 @@ share/locale/vi/LC_MESSAGES/beagle.mo
 share/locale/zh_CN/LC_MESSAGES/beagle.mo
 share/locale/zh_HK/LC_MESSAGES/beagle.mo
 share/locale/zh_TW/LC_MESSAGES/beagle.mo
-share/pixmaps/system-search.png
-@dirrmtry share/locale/zh_TW/LC_MESSAGES
-@dirrmtry share/locale/zh_TW
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/zh_CN/LC_MESSAGES
-@dirrmtry share/locale/zh_CN
-@dirrmtry share/locale/uk/LC_MESSAGES
-@dirrmtry share/locale/uk
-@dirrmtry share/locale/sr/LC_MESSAGES
-@dirrmtry share/locale/sr
-@dirrmtry share/locale/sl/LC_MESSAGES
-@dirrmtry share/locale/sl
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
-@dirrmtry share/locale/ko/LC_MESSAGES
-@dirrmtry share/locale/ko
-@dirrmtry share/locale/gl/LC_MESSAGES
-@dirrmtry share/locale/gl
-@dirrmtry share/locale/fi/LC_MESSAGES
-@dirrmtry share/locale/fi
-@dirrmtry share/locale/el/LC_MESSAGES
-@dirrmtry share/locale/el
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/cs/LC_MESSAGES
-@dirrmtry share/locale/cs
-@dirrmtry share/locale/ca/LC_MESSAGES
-@dirrmtry share/locale/ca
-@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%/webinterface/images
+@dirrm %%DATADIR%%/webinterface
+@dirrm %%DATADIR%%/icons/hicolor/scalable/apps
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/apps
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/32x32/apps
+@dirrm %%DATADIR%%/icons/hicolor/32x32
+@dirrm %%DATADIR%%/icons/hicolor/24x24/apps
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/apps
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/apps
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-%%EPIPHANY:%%@dirrmtry lib/epiphany/2.16/extensions
-%%EPIPHANY:%%@dirrmtry lib/epiphany/2.16
-%%EPIPHANY:%%@dirrmtry lib/epiphany
 @dirrm lib/beagle/Filters
 @dirrm lib/beagle/Backends
 @dirrm lib/beagle
-@dirrm include/libbeagle/beagle
-@dirrm include/libbeagle
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg
-@dirrmtry etc/cron.daily
+@dirrm etc/xdg/autostart
+@dirrm etc/cron.daily
+@dirrm etc/beagle/crawl-rules
+@dirrm etc/beagle/config-files
 @dirrm etc/beagle

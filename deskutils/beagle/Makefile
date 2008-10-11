@@ -7,25 +7,30 @@
 #
 
 PORTNAME=	beagle
-PORTVERSION=	0.2.17
+PORTVERSION=	0.3.8
 PORTREVISION?=	0
 CATEGORIES?=	deskutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.2
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT?=	Index and search local files
 
 BUILD_DEPENDS?=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp20 \
 		${LOCALBASE}/lib/mono/evolution-sharp/evolution-sharp.dll:${PORTSDIR}/mail/evolution-sharp \
-		zip:${PORTSDIR}/archivers/zip
+		${LOCALBASE}/libdata/pkgconfig/taglib-sharp.pc:${PORTSDIR}/audio/taglib-sharp \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		zip:${PORTSDIR}/archivers/zip \
+		xdg-open:${PORTSDIR}/devel/xdg-utils
 LIB_DEPENDS?=	exif.12:${PORTSDIR}/graphics/libexif
 RUN_DEPENDS?=	bash:${PORTSDIR}/shells/bash \
 		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
-		${LOCALBASE}/lib/mono/evolution-sharp/evolution-sharp.dll:${PORTSDIR}/mail/evolution-sharp
+		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp20 \
+		${LOCALBASE}/lib/mono/evolution-sharp/evolution-sharp.dll:${PORTSDIR}/mail/evolution-sharp \
+		${LOCALBASE}/libdata/pkgconfig/taglib-sharp.pc:${PORTSDIR}/audio/taglib-sharp \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		xdg-open:${PORTSDIR}/devel/xdg-utils
 
 CONFLICTS=	open-beagle-[0-9]*
 
@@ -36,10 +41,14 @@ USE_GETTEXT=	yes
 USE_GNOME?=	gnomehack gnometarget gnomesharp20 intlhack
 USE_SQLITE=	yes
 USE_AUTOTOOLS=	libtool:15
+USE_LDCONFIG=	yes
 CONFIGURE_ENV?=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS+=--mandir=${PREFIX}/man \
-		--disable-gtk-doc \
+#CONFIGURE_ARGS+=--mandir=${PREFIX}/man \
+#		--disable-gtk-doc \
+#		--with-html-dir=${PREFIX}/share/doc \
+#		--with-mozilla=${GECKO}
+CONFIGURE_ARGS+=--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-mozilla=${GECKO}
 
@@ -51,9 +60,13 @@ CONFIGURE_ARGS+=--disable-python
 
 .if !defined(BEAGLE_SLAVE)
 
-MAN1=		beagle-config.1 beagle-query.1 beagle-shutdown.1 \
+MAN1=		beagle-config.1 beagle-info.1 beagle-ping.1 beagle-query.1 \
+		beagle-search.1 beagle-settings.1 beagle-shutdown.1 \
 		beagle-status.1 beagled.1
-MAN8=		beagle-build-index.8 beagle-manage-index.8
+
+MAN8=		beagle-build-index.8 beagle-doc-extractor.8 \
+		beagle-dump-index.8 beagle-extract-content.8 \
+		beagle-imlogviewer.8 beagle-index-info.8 beagle-manage-index.8
 
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -84,19 +97,14 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|enable_wv1=yes|enable_wv1=no|g' \
 		${WRKSRC}/configure
 .endif
-	@${REINPLACE_CMD} -e 's|/bin/sh|${LOCALBASE}/bin/bash|g ; s| --debug||g' \
-		${WRKSRC}/ImLogViewer/beagle-imlogviewer.in \
+	@${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|g' \
 		${WRKSRC}/tools/beagle-crawl-system.in \
 		${WRKSRC}/tools/beagle-index-info \
 		${WRKSRC}/tools/beagle-ping
-	@${REINPLACE_CMD} -e 's|.so.@EXIF_SOVERSION@|.so|g' \
-		${WRKSRC}/Util/Util.dll.config.in
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' ${WRKSRC}/tools/crawl-rules/crawl-*
 
 post-install:
 	@${MKDIR} ${DATADIR}
-	@${INSTALL} -m 644 ${WRKSRC}/mozilla-extension/beagle.xpi ${DATADIR}
+	@${INSTALL} -m 644 ${WRKSRC}/thunderbird-extension/beagle.xpi ${DATADIR}
 	@${CAT} ${PKGMESSAGE}
 .endif
 
