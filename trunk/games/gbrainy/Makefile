@@ -7,20 +7,10 @@
 
 PORTNAME=	gbrainy
 PORTVERSION=	1.00
-#PORTREVISION=	0
-#PORTEPOCH=	0
 CATEGORIES=	games
 MASTER_SITES=	http://www.softcatala.org/~jmas/${PORTNAME}/
-#MASTER_SITE_SUBDIR=
-#PKGNAMEPREFIX=
-#PKGNAMESUFFIX=
-#DISTNAME=
-#EXTRACT_SUFX=
-#DISTFILES=
-#DIST_SUBDIR=	${PORTNAME}
-#EXTRACT_ONLY=
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A brain teaser and trainer
 
 GNU_CONFIGURE=	yes
