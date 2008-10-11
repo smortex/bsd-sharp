@@ -8,14 +8,18 @@
 PORTNAME=	tasque
 PORTVERSION=	0.1.7
 CATEGORIES=	deskutils
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Simple task management application
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+
+OPTIONS=	RTM	"Enable Remember The Milk backend"	on	\
+		SQLITE	"Enable SQLite backend"			off	\
+		EDS	"Enable Evolution backend"		off
+#		ICECORE	"Enable ICECore backend"		off
 
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
@@ -24,4 +28,42 @@ USE_GNOME=	gnomehack gnomesharp20
 CONFIGURE_ENV=	GMSGFMT="${LOCALBASE}/bin/msgfmt"
 INSTALLS_ICONS=	yes
 
-.include <bsd.port.mk>
+post-patch:
+	${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|' \
+		${WRKSRC}/src/tasque.in
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_RTM) && !defined(WITHOUT_RTM)
+CONFIGURE_ARGS+=	--enable-backend-rtm
+PLIST_SUB+=	RTM=""
+.else
+CONFIGURE_ARGS+=	--disable-backend-rtm
+PLIST_SUB+=	RTM="@comment "
+.endif
+
+.if defined(WITH_SQLITE) && !defined(WITHOUT_SQLITE)
+CONFIGURE_ARGS+=	--enable-backend-sqlite
+PLIST_SUB+=	SQLITE=""
+.else
+CONFIGURE_ARGS+=	--disable-backend-sqlite
+PLIST_SUB+=	SQLITE="@comment "
+.endif
+
+.if defined(WITH_EDS) && !defined(WITHOUT_EDS)
+CONFIGURE_ARGS+=	--enable-backend-eds
+PLIST_SUB+=	EDS=""
+.else
+CONFIGURE_ARGS+=	--disable-backend-eds
+PLIST_SUB+=	EDS="@comment "
+.endif
+
+.if defined(WITH_ICECORE) && !defined(WITHOUT_ICECORE)
+CONFIGURE_ARGS+=	--enable-backend-icecore
+PLIST_SUB+=	ICECORE=""
+.else
+CONFIGURE_ARGS+=	--disable-backend-icecore
+PLIST_SUB+=	ICECORE="@comment "
+.endif
+
+.include <bsd.port.post.mk>
