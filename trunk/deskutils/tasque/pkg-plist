@@ -4,10 +4,14 @@ lib/tasque/RtmNet.dll
 lib/tasque/Tasque.exe
 lib/tasque/Tasque.exe.config
 libdata/pkgconfig/tasque.pc
+share/locale/da/LC_MESSAGES/tasque.mo
+share/locale/de/LC_MESSAGES/tasque.mo
 share/locale/fi/LC_MESSAGES/tasque.mo
 share/locale/fr/LC_MESSAGES/tasque.mo
+share/locale/it/LC_MESSAGES/tasque.mo
 share/locale/nl/LC_MESSAGES/tasque.mo
 share/locale/pt_BR/LC_MESSAGES/tasque.mo
+share/locale/sv/LC_MESSAGES/tasque.mo
 share/pixmaps/tasque-16.png
 share/pixmaps/tasque-22.png
 share/pixmaps/tasque-24.png
