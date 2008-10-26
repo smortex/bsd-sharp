@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.0
+PORTVERSION=	2.0.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
