@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome-desktop-sharp
 PORTVERSION=	2.24.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
@@ -19,7 +20,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_PERL5_RUN=	yes
 USE_GNOME=	gnomehack gnomepanel gtkhtml3 gtksharp20 gnomesharp20 librsvg2 vte \
-		libgnomeprintui
+		libgnomeprintui gtksourceview2
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
