@@ -8,11 +8,14 @@
 
 PORTNAME=	mono
 PORTVERSION=	2.0.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An open source implementation of .NET Development Framework
+
+BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser
 
 CONFLICTS=	mono-devel-[0-9]* mono-svn-[0-9]*
 
@@ -21,14 +24,15 @@ USE_BISON=	build
 USE_GNOME=	gnomehack glib20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
+USE_PERL5_BUILD=yes
 LIBTOOLFILES=	configure libgc/configure
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--program-transform-name=\'\' \
-		--with-gc=included \
-		--with-tls=pthread \
+		--with-moonlinght=no \
+		--with-preview=yes \
 		--mandir=${PREFIX}/man
 MAKE_ARGS=	EXTERNAL_MCS=false
 
@@ -41,9 +45,7 @@ MONO_SHARED_DIR=${WRKDIR}
 MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 		LC_ALL=C
 
-# Removed amd64 arch because builds are exhibiting semaphore problems on
-# pointyhat runs causing failure to build.
-ONLY_FOR_ARCHS= i386 #amd64 mono 2.0 (beta) is faling to compile on amd64
+ONLY_FOR_ARCHS= i386 amd64
 
 MAN1=		al.1 cert2spc.1 certmgr.1 chktrust.1 cilc.1 disco.1 dtd2xsd.1 \
 		gacutil.1 genxs.1 httpcfg.1 ilasm.1 jay.1 macpack.1 makecert.1 \
@@ -58,6 +60,7 @@ MAN5=		mono-config.5
 
 .if ${ARCH} == "amd64"
 USE_FAM=	yes
+MAKE_ARGS+=	MONO_GENERIC_SHARING=none #https://bugzilla.novell.com/show_bug.cgi?id=434457
 .endif
 
 pre-everything::
@@ -87,7 +90,20 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj2k5 \
-		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5
+		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5 \
+		${WRKSRC}/mcs/class/Mono.Cairo/Samples/gtk/compile.sh \
+		${WRKSRC}/mcs/class/Mono.Cairo/Samples/png/compile.sh \
+		${WRKSRC}/mcs/class/Mono.Cairo/Samples/win32/compile.sh \
+		${WRKSRC}/mcs/class/Mono.Cairo/Samples/x11/compile.sh
+	@${REINPLACE_CMD} -e 's|^#!/bin/perl|#!/usr/bin/env perl|g' \
+		${WRKSRC}/mcs/errors/do-tests.pl \
+		${WRKSRC}/mcs/tools/scan-tests.pl \
+		${WRKSRC}/msvc/create-windef.pl \
+		${WRKSRC}/mono/benchmark/test-driver \
+		${WRKSRC}/mono/cil/make-opcodes-def.pl \
+		${WRKSRC}/mono/metadata/make-bundle.pl \
+		${WRKSRC}/mono/mini/genmdesc.pl \
+		${WRKSRC}/mono/tests/stress-runner.pl
 
 .if ${OSVERSION} >= 700000 && ${OSVERSION} < 800000
 	@${REINPLACE_CMD} -e 's|freebsd6|freebsd7|g' \
