@@ -7,19 +7,21 @@
 
 PORTNAME=	tasque
 PORTVERSION=	0.1.7
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Simple task management application
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		${LOCALBASE}/libdata/pkgconfig/notify-sharp.pc:${PORTSDIR}/devel/notify-sharp
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		${LOCALBASE}/libdata/pkgconfig/notify-sharp.pc:${PORTSDIR}/devel/notify-sharp
 
 OPTIONS=	RTM	"Enable Remember The Milk backend"	on	\
 		SQLITE	"Enable SQLite backend"			off	\
 		EDS	"Enable Evolution backend"		off
-#		ICECORE	"Enable ICECore backend"		off
 
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
@@ -56,14 +58,6 @@ PLIST_SUB+=	EDS=""
 .else
 CONFIGURE_ARGS+=	--disable-backend-eds
 PLIST_SUB+=	EDS="@comment "
-.endif
-
-.if defined(WITH_ICECORE) && !defined(WITHOUT_ICECORE)
-CONFIGURE_ARGS+=	--enable-backend-icecore
-PLIST_SUB+=	ICECORE=""
-.else
-CONFIGURE_ARGS+=	--disable-backend-icecore
-PLIST_SUB+=	ICECORE="@comment "
 .endif
 
 .include <bsd.port.post.mk>
