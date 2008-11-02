@@ -1,4 +1,3 @@
-@comment $FreeBSD$
 bin/tasque
 lib/tasque/RtmNet.dll
 lib/tasque/Tasque.exe
