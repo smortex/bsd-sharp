@@ -8,21 +8,19 @@
 
 PORTNAME=	monodevelop
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
-COMMENT=	IDE for Mono and Gtk-sharp.
+COMMENT=	IDE for the .NET platform
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
-		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
 		mautil:${PORTSDIR}/devel/mono-addins
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
-		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
 		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
 		mautil:${PORTSDIR}/devel/mono-addins
 
-USE_GECKO=	firefox mozilla
 USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
@@ -30,8 +28,7 @@ USE_BZIP2=	yes
 CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt
 MAN1=		mdtool.1 monodevelop.1
 
-OPTIONS=	SVN "Enable subversion support" on \
-		BOO "Enable boo support" on
+OPTIONS=	SVN "Enable subversion support" on
 
 .include <bsd.port.pre.mk>
 
@@ -40,6 +37,7 @@ RUN_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
 CONFIGURE_ARGS+=	--enable-subversion
 PLIST_SUB+=	SVN=""
 .else
+CONFIGURE_ARGS+=	--disable-subversion
 PLIST_SUB+=	SVN="@comment "
 .endif
 
@@ -53,5 +51,4 @@ post-install:
 	@-update-desktop-database
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
-.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 .include <bsd.port.post.mk>
