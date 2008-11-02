@@ -35,6 +35,7 @@ lib/f-spot/extensions/FacebookExport.dll
 lib/f-spot/extensions/FlickrExport.dll
 lib/f-spot/extensions/FolderExport.dll
 lib/f-spot/extensions/GalleryExport.dll
+lib/f-spot/extensions/HashJob.dll
 lib/f-spot/extensions/MergeDb.dll
 lib/f-spot/extensions/PicasaWebExport.dll
 lib/f-spot/extensions/RawPlusJpeg.dll
