@@ -3,10 +3,14 @@
 
 = Fix ports that do not build =
 
-As of 20080109, The following ports are known to fail with Mono 2.0 preview:
+The following ports are known to fail with the current infraestructure:
+
+  * devel/monodevelop-boo (./Gui/OptionPanels/GeneralShellPanel.boo(47,9): BCE0047: Method 'GLib.Object.get_Properties()' cannot be overridden because it is not virtual)
+
   * deskutils/beagle (upstream does not support gmime2-sharp-2.4)
-  * graphics/f-spot (compiles but does not work on my computer)
-  * x11-toolkits/gtksourceview-sharp (an example fails to build)
+
+  * graphics/f-spot (compiles but does not work, see bug #2)
+
 
 = Fix linuxism workarounds =
 
