@@ -1,41 +1,21 @@
---- configure.orig	2008-10-22 14:20:01.000000000 -0300
-+++ configure	2008-10-31 18:38:35.000000000 -0300
-@@ -2988,34 +2988,24 @@
- 		with_tls=pthread
- 		;;
- 	*-*-*freebsd6*)
--		platform_win32=no
--		if test "x$PTHREAD_CFLAGS" = "x"; then
--			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
--			libmono_cflags=
--		else
--			CPPFLAGS="$CPPFLAGS $PTHREAD_CFLAGS -DGC_FREEBSD_THREADS"
--			libmono_cflags="$PTHREAD_CFLAGS"
--		fi
--		if test "x$PTHREAD_LIBS" = "x"; then
--			LDFLAGS="$LDFLAGS -pthread"
--			libmono_ldflags="-pthread"
--		else
--			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
--			libmono_ldflags="$PTHREAD_LIBS"
--		fi
+--- configure.orig	2008-12-09 19:49:56.000000000 -0300
++++ configure	2008-12-09 19:50:22.000000000 -0300
+@@ -3003,7 +3003,8 @@
+ 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
+ 			libmono_ldflags="$PTHREAD_LIBS"
+ 		fi
 -		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6"
--		need_link_unlink=yes
-+                platform_win32=no
-+                CPPFLAGS="$CPPFLAGS -D_REENTRANT -DGC_FREEBSD_THREADS -D_GNU_SOURCE -DUSE_MMAP -DUSE_MUNMAP"
-+                libmono_cflags="-D_REENTRANT"
-+                LDFLAGS="$LDFLAGS -pthread"
-+                CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6"
-+                libmono_ldflags="-pthread"
-+                need_link_unlink=yes
++		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6 -D_GNU_SOURCE -D_REENTRANT -DUSE_MMAP -DUSE_MUNMAP"
++		libmono_cflags="$libmono_cflags -D_REENTRANT"
+ 		need_link_unlink=yes
  		cat >>confdefs.h <<\_ACEOF
  #define PTHREAD_POINTER_ID 1
- _ACEOF
+@@ -3011,11 +3012,11 @@
  
  		libdl=
  		libgc_threads=pthreads
 -		with_sigaltstack=yes
-+		#with_sigaltstack=yes
++#		with_sigaltstack=yes
  # TLS is only partially implemented on -CURRENT (compiler support
  # but NOT library support)
  #
@@ -44,7 +24,7 @@
  		;;
  	*-*-*openbsd*)
  		platform_win32=no
-@@ -38211,8 +38201,8 @@
+@@ -38211,8 +38212,8 @@
  INTERP_SUPPORTED=no
  LIBC="libc.so.6"
  INTL="libc.so.6"
