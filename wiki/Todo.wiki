@@ -1,6 +1,15 @@
 #summary Next things to do before BSD# ports reach FreeBSD Ports Tree.
 #labels Featured
 
+= Mono:FreeBSD page =
+
+ update http://www.mono-project.com/Mono:FreeBSD
+
+= Mono test =
+
+ pinvoke2 mono test fails on AMD 64 only.
+ (all other tests are ok)
+
 = Fix ports that do not build =
 
 The following ports are known to fail with the current infraestructure:
@@ -9,7 +18,6 @@ The following ports are known to fail with the current infraestructure:
 
   * deskutils/beagle (upstream does not support gmime2-sharp-2.4)
 
-  * graphics/f-spot (compiles but does not work, see bug #2)
 
 
 = Fix linuxism workarounds =
