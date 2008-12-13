@@ -8,7 +8,7 @@
 
 PORTNAME=	mono
 PORTVERSION=	2.0.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -16,8 +16,6 @@ MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An open source implementation of .NET Development Framework
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser
-
-CONFLICTS=	mono-devel-[0-9]* mono-svn-[0-9]*
 
 USE_BZIP2=	yes
 USE_BISON=	build
@@ -33,6 +31,7 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 CONFIGURE_ARGS=	--program-transform-name=\'\' \
 		--with-moonlinght=no \
 		--with-preview=yes \
+		--with-sigaltstack=no \
 		--mandir=${PREFIX}/man
 MAKE_ARGS=	EXTERNAL_MCS=false
 
@@ -61,11 +60,6 @@ MAN5=		mono-config.5
 .if ${ARCH} == "amd64"
 USE_FAM=	yes
 MAKE_ARGS+=	MONO_GENERIC_SHARING=none #https://bugzilla.novell.com/show_bug.cgi?id=434457
-CONFIGURE_ARGS+=	--with-sigaltstack=no
-.endif
-
-.if ${ARCH} == "i386"
-CONFIGURE_ARGS+=	--with-sigaltstack=yes #should be no...
 .endif
 
 pre-everything::
