@@ -1,0 +1,17 @@
+bin/moma
+lib/moma/Definitions/1.2.3-defs.zip
+lib/moma/ICSharpCode.SharpZipLib.dll
+lib/moma/MoMA.Analyzer.dll
+lib/moma/MoMA.exe
+lib/moma/Mono.Cecil.dll
+lib/moma/Resources/button_ok.png
+lib/moma/Resources/dialog-warning.png
+lib/moma/Resources/list-add.png
+lib/moma/Resources/list-remove.png
+lib/moma/Resources/monkey.png
+lib/moma/Resources/monoback.png
+lib/moma/Resources/spinner.gif
+@dirrm lib/moma/Resources
+@dirrm lib/moma/Definitions
+@dirrmtry lib/moma/Reports
+@dirrmtry lib/moma

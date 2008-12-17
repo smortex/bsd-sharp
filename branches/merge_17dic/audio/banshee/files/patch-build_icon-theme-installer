@@ -1,0 +1,11 @@
+
+$FreeBSD$
+
+--- build/icon-theme-installer.orig
++++ build/icon-theme-installer
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/usr/bin/env bash
+ 
+ # icon-theme-installer
+ # Copyright (C) 2006 Novell, Inc.

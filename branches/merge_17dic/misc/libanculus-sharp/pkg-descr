@@ -1,0 +1,16 @@
+"Anculus" means servant in Latin, and that is exactly what the library does. It
+serves and helps you to easily and quickly write new applications.
+libanculus-sharp contains all the building blocks that you need to develop a
+good C# application.
+
+Features:
+ - XML Configuration files (primitive types, strings, serializable objects,
+   lists, arrays, ...)
+ - Sorting algorithms (quicksort)
+ - String Search algorithms (Boyer-Moore, Aho-Corasick)
+ - Translation support (Managed Gettext)
+ - Logging (Console, Colored Console, File)
+ - Gui thread dispatching (Gtk-sharp, System.Windows.Forms)
+ - Collections (sorted list)
+
+WWW:	http://libanculus-sharp.googlecode.com/
