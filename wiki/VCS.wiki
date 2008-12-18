@@ -20,7 +20,7 @@ Examples:
  * `/branches/bsd-sharp-2.2` Maintenance branch of the BSD# partial ports tree providing mono-2.2.
 == Tags ==
 
-`/tags` contains snapshots of the branches. The content of a branch never change.
+`/tags` contains snapshots of the branches. The content of a tag never change.
 
 = Creating a branch =
 
