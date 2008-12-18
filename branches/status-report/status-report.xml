@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cat='proj'>
+	<title>BSD# Project</title>
+	<contact>
+		<person>
+			<name>
+				<given>Phillip</given>
+				<common>Neumann</common>
+			</name>
+			<email>pneumann@gmail.com</email>
+		</person>
+		<person>
+			<name>
+				<given>Romain</given>
+				<common>Tartière</common>
+			</name>
+			<email>romain@blogreen.org</email>
+		</person>
+	</contact>
+
+	<links>
+		<url href="http://code.google.com/p/bsd-sharp/">The BSD# project on Google-code</url>
+		<url href="http://www.mono-project.org/">Mono (Open source .Net Development Framework)</url>
+	</links>
+
+	<body>
+		<p>The BSD# Project is devoted to porting the Mono .NET framework and applications to the FreeBSD operating system.</p>
+		<p>Because of a lack of time, Mono stalled at version 1.2.5 for more than one year. However, things have moved and the BSD# Team is proud to announce that the Mono ports is about to be updated to the latest available version (mono-2.0.1) in the FreeBSD ports tree. Ports depending on Mono will also be updated to the latest available version at the same occasion. The code is available form the BSD# Project's website, and will be merged short after FreeBSD 7.1 is released.</p>
+	</body>
+
+	<help>
+		<task>Test and send feedback.</task>
+		<task>Build a debug live-image of FreeBSD so that Mono hackers without a FreeBSD box can help us fixing bugs more efficiency.</task>
+	</help>
+
+</project>
