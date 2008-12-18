@@ -1,0 +1,15 @@
+bin/new-stuff-manager
+lib/new-stuff-manager/NDesk.DBus.dll
+lib/new-stuff-manager/nsm-sharp.dll
+lib/new-stuff-manager/new-stuff-manager.exe
+libdata/pkgconfig/nsm-sharp.pc
+share/dbus-1/services/org.gnome.NewStuffManager.service
+share/doc/new-stuff-manager/examples/DownloadManager.py
+share/doc/new-stuff-manager/examples/testapp.cs
+share/doc/new-stuff-manager/examples/testapp.py
+%%DATADIR%%/specs/deskbarapplet.conf
+@dirrm share/doc/new-stuff-manager/examples
+@dirrm share/doc/new-stuff-manager
+@dirrm %%DATADIR%%/specs
+@dirrm %%DATADIR%%
+@dirrm lib/new-stuff-manager

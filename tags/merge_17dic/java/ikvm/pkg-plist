@@ -1,0 +1,13 @@
+bin/ikvm
+bin/ikvmc
+bin/ikvmstub
+lib/ikvm/ICSharpCode.SharpZipLib.dll
+lib/ikvm/IKVM.AWT.WinForms.dll
+lib/ikvm/IKVM.OpenJDK.ClassLibrary.dll
+lib/ikvm/IKVM.Runtime.dll
+lib/ikvm/JVM.DLL
+lib/ikvm/ikvm.exe
+lib/ikvm/ikvm-native.dll
+lib/ikvm/ikvmc.exe
+lib/ikvm/ikvmstub.exe
+@dirrm lib/ikvm

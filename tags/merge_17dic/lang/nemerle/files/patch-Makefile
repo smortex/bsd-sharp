@@ -1,0 +1,13 @@
+--- Makefile.orig	Wed Jun  1 06:07:57 2005
++++ Makefile	Wed Jun 29 22:00:39 2005
+@@ -68,8 +68,8 @@
+ 
+ # This is necessary to make sure, that configuration file
+ # has been generated, and it is up to date.
+-config.mak: configure
+-	./configure
++#config.mak: configure
++#	./configure
+ 
+ send: dist send-dist
+ 

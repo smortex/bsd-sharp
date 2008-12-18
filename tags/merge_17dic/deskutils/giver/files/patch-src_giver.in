@@ -1,0 +1,11 @@
+
+$FreeBSD$
+
+--- src/giver.in.orig
++++ src/giver.in
+@@ -6,4 +6,4 @@
+ 
+ cd ${libdir}
+ 
+-exec -a "Giver" mono "Giver.exe" "$@"
++exec mono "Giver.exe" "$@"

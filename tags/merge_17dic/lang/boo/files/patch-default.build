@@ -1,0 +1,20 @@
+--- default.build.orig	2008-08-17 13:44:06.000000000 -0400
++++ default.build	2008-08-17 13:44:54.000000000 -0400
+@@ -66,7 +66,7 @@
+ 		<property name="nosign" value="true" overwrite="true" />
+ 	</target>
+ 
+-	<target name="all" depends="booc, booi, booish, boo-pkgconfig, Boo.Lang.CodeDom, Boo.Lang.Useful, boo, Boo.Microsoft.Build.Tasks, update-vs2005-env">	
++	<target name="all" depends="booc, booi, booish, boo-pkgconfig, Boo.Lang.CodeDom, Boo.Lang.Useful, boo, Boo.Microsoft.Build.Tasks">	
+ 	</target>
+ 	
+ 	<target name="set-release-configuration">
+@@ -621,7 +621,7 @@
+ 		</copy>
+ 		
+ 		<copy file="extras/boo.lang" todir="${fakeroot.gsv}/share/gtksourceview-1.0/language-specs/" />
+-		<copy file="${build.dir}/boo.pc" todir="${fakeroot.libdir}/pkgconfig/" />
++		<copy file="${build.dir}/boo.pc" todir="${fakeroot.libdir}/../libdata/pkgconfig/" />
+ 		<copy file="extras/boo-mime-info.xml" todir="${fakeroot.sharedmime}/share/mime/packages/" />
+ 
+ 		<exec program="chmod" commandline="+x ${fakeroot.bindir}/booc" />

@@ -1,0 +1,7 @@
+bin/incollector
+lib/incollector/incollector.exe
+share/applications/incollector.desktop
+share/pixmaps/incollector.ico
+share/pixmaps/incollector.png
+@dirrm lib/incollector
+@dirrmtry share/applications
