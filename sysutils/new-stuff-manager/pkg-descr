@@ -1,9 +1,0 @@
-NewStuffManager is a program that runs in the background and downloads/installs
-plugins. It can be used by any application through its D-Bus interface.
-
-The idea for NewStuffManager emerged from the Deskbar-Applet project. 
-The goal for NewStuffManager is to provide an easy way to upgrade plugins of 
-any application. Therefore, it is very easy for developers to enhance their 
-application with a plugin update service. 
-
-WWW:	http://www.k-d-w.org/node/3
