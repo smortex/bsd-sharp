@@ -27,7 +27,7 @@ Examples:
 To create a new branch (e.g. `trunk` has mono-2.0 and mono-2.2 is under development) copy the trunk to the new branch using:
 
 {{{
-svn copy https://bsd-sharp.googlecode.com/svn/trunk https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-2.0
+svn copy https://bsd-sharp.googlecode.com/svn/trunk https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-2.0 -m "Create bsd-sharp-2.0 branch for mono-2.0 maintenance."
 }}}
 
 The porting effort can now continue:
@@ -41,7 +41,7 @@ svn checkout https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-2.0
 
 When a branch is considered stable, tag it using the date in the form YYYYMMDD:
 {{{
-svn copy https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-2.0 https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20081218
+svn copy https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-2.0 https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20081218 -m "TAG bsd-sharp-20081218."
 }}}
 
 You can then send a problem report mentioning the tag. If you want to send a diff in your PR, use svn ask for a diff between your tag and the previous one:
