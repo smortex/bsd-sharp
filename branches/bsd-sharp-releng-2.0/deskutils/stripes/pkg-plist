@@ -1,0 +1,16 @@
+bin/stripes
+bin/stripes-sharp.exe
+include/stripes/axl_decl.h
+include/stripes/axl_hash.h
+include/stripes/axl_log.h
+include/stripes/stripes.h
+include/stripes/stripes_gen.h
+include/stripes/stripes_gen_config.h
+include/stripes/stripes_types.h
+lib/libstripes.a
+lib/libstripes.la
+lib/libstripes.so
+lib/libstripes.so.0
+share/applications/stripes.desktop
+@dirrm include/stripes
+@dirrmtry share/applications

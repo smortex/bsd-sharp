@@ -1,0 +1,9 @@
+--- Do/gnome-do.in.orig	2008-03-24 23:13:27.000000000 -0300
++++ Do/gnome-do.in	2008-03-24 23:13:33.000000000 -0300
+@@ -18,5 +18,6 @@
+ 
+ # If Do is not running, run it.
+ if pgrep -u "`id -un`" '^gnome-do$' >/dev/null; then
++else
+ 	exec mono "$GNOME_DO_EXE" "$@"
+ fi

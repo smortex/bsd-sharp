@@ -1,0 +1,30 @@
+lib/mono/1.0/NHibernate.dll
+lib/mono/gac/Iesi.Collections/1.0.0.1__154fdcb44c4484fc/Iesi.Collections.dll
+lib/mono/gac/NHibernate/1.0.2.0__154fdcb44c4484fc/NHibernate.dll
+%%PORTDOCS%%%%DOCSDIR%%/html/architecture.html
+%%PORTDOCS%%%%DOCSDIR%%/html/associations.html
+%%PORTDOCS%%%%DOCSDIR%%/html/basic-mapping.html
+%%PORTDOCS%%%%DOCSDIR%%/html/caches.html
+%%PORTDOCS%%%%DOCSDIR%%/html/collections.html
+%%PORTDOCS%%%%DOCSDIR%%/html/contrib-preface.html
+%%PORTDOCS%%%%DOCSDIR%%/html/example-parentchild.html
+%%PORTDOCS%%%%DOCSDIR%%/html/full_cream.gif
+%%PORTDOCS%%%%DOCSDIR%%/html/html.css
+%%PORTDOCS%%%%DOCSDIR%%/html/index.html
+%%PORTDOCS%%%%DOCSDIR%%/html/lite.gif
+%%PORTDOCS%%%%DOCSDIR%%/html/mapping-attributes.html
+%%PORTDOCS%%%%DOCSDIR%%/html/nullables.html
+%%PORTDOCS%%%%DOCSDIR%%/html/overview.gif
+%%PORTDOCS%%%%DOCSDIR%%/html/part-contrib.html
+%%PORTDOCS%%%%DOCSDIR%%/html/part-mapping.html
+%%PORTDOCS%%%%DOCSDIR%%/html/persistent-classes.html
+%%PORTDOCS%%%%DOCSDIR%%/html/preface.html
+%%PORTDOCS%%%%DOCSDIR%%/html/session-configuration.html
+%%PORTDOCS%%%%DOCSDIR%%/html/support.html
+%%PORTDOCS%%%%DOCSDIR%%/html/tool-hbm2net.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm lib/mono/gac/NHibernate/1.0.2.0__154fdcb44c4484fc
+@dirrmtry lib/mono/gac/NHibernate
+@dirrm lib/mono/gac/Iesi.Collections/1.0.0.1__154fdcb44c4484fc
+@dirrm lib/mono/gac/Iesi.Collections

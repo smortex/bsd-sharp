@@ -1,0 +1,31 @@
+# New ports collection makefile for:	monodevelop-java
+# Date created:		2008-03-02
+# Whom:			Romain Tartiere <romain@blogreen.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	monodevelop-java
+PORTVERSION=	1.0
+CATEGORIES=	devel
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+
+MAINTAINER=	bsd-sharp@googlegroups.com
+COMMENT=	MonoDevelop Java/IKVM language support
+
+HAS_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_GETTEXT=	yes
+CONFIGURE_ARGS=	--prefix=${PREFIX}
+USE_GNOME=	gtksharp20
+
+BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash \
+	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' \
+		${WRKSRC}/JavaBinding.make
+
+.include <bsd.port.pre.mk>
+.include <bsd.port.post.mk>

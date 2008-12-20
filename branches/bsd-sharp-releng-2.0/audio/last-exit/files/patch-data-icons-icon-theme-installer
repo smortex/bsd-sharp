@@ -1,0 +1,8 @@
+--- data/icons/icon-theme-installer.orig	Sun Jan 21 19:46:45 2007
++++ data/icons/icon-theme-installer	Sun Jan 21 19:46:54 2007
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # icon-theme-installer
+ # Copyright (C) 2006 Novell, Inc.

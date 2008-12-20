@@ -1,0 +1,14 @@
+
+$FreeBSD$
+
+--- data/sounds/Makefile.in.orig
++++ data/sounds/Makefile.in
+@@ -396,7 +396,7 @@
+ 
+ install-exec-local: all
+ 	$(mkinstalldirs) $(SOUNDSDIR)
+-	$(INSTALL_PROGRAM) $(SOUND_FILES) $(SOUNDSDIR)
++	$(INSTALL_DATA) $(SOUND_FILES) $(SOUNDSDIR)
+ 
+ uninstall-local:
+ 	rm -rf $(SOUNDSDIR)

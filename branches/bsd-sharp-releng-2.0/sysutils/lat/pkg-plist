@@ -1,0 +1,27 @@
+bin/lat
+lib/lat/gnome-keyring-glue.dll
+lib/lat/gnome-keyring-glue.dll.config
+lib/lat/lat.exe
+lib/lat/plugins/ActiveDirectoryCoreViews.dll
+lib/lat/plugins/JpegAttributeViewer.dll
+lib/lat/plugins/PasswordAttributeViewer.dll
+lib/lat/plugins/PosixCoreViews.dll
+libdata/pkgconfig/lat-plugins.pc
+share/application-registry/lat.applications
+share/applications/lat.desktop
+share/gnome/help/lat/C/figures/lat_window.png
+share/gnome/help/lat/C/lat.xml
+share/gnome/help/lat/C/legal.xml
+share/omf/lat/lat-C.omf
+share/pixmaps/lat.png
+share/locale/fr_FR/LC_MESSAGES/lat.mo
+share/locale/pt_BR/LC_MESSAGES/lat.mo
+share/locale/it_IT/LC_MESSAGES/lat.mo
+@dirrmtry share/locale/it_IT/LC_MESSAGES
+@dirrmtry share/locale/it_IT
+@dirrm share/omf/lat
+@dirrm share/gnome/help/lat/C/figures
+@dirrm share/gnome/help/lat/C
+@dirrm share/gnome/help/lat
+@dirrm lib/lat/plugins
+@dirrm lib/lat
