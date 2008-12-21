@@ -14,10 +14,8 @@ MASTER_SITES=	ftp://ftp.acc.umu.se/pub/gnome/sources/${PORTNAME}/2.12/
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GTK+ and GNOME interfaces for the .NET runtime
 
-BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		monodocer:${PORTSDIR}/devel/monodoc
+BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		monodocer:${PORTSDIR}/devel/monodoc \
 		${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
 
 LATEST_LINK=	gtk-sharp20
