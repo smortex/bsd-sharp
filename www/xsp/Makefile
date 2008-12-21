@@ -7,9 +7,9 @@
 #
 
 PORTNAME=	xsp
-PORTVERSION=	2.0
+PORTVERSION=	2.2
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based web server
@@ -21,7 +21,6 @@ USE_SQLITE=	3
 USE_BZIP2=	yes
 USE_GNOME=	gnometarget gnomehack
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 USE_GMAKE=	yes
 
 MAN1=		asp-state.1 dbsessmgr.1 mod-mono-server.1 xsp.1 \
