@@ -24,10 +24,8 @@ MAINTAINER=	romain@blogreen.org
 COMMENT=	Fully managed implementation of gnome-keyring
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		mdassembler:${PORTSDIR}/devel/monodoc \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		mdassembler:${PORTSDIR}/devel/monodoc \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
 
 USE_BZIP2=	yes
