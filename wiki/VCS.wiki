@@ -49,3 +49,19 @@ You can then send a problem report mentioning the tag. If you want to send a dif
 {{{
 svn diff https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20081218  https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20090204
 }}}
+
+= Merging Modifications =
+
+If a modification in trunk has to be made merged in a branch (or a modification in a branch has to be merged in the trunk), use the following syntax:
+
+{{{
+cd /path/to/the/branch
+# See what is going to happen
+svn diff -c 204 https://bsd-sharp.googlecode.com/svn/trunk
+# Try the merge
+svn merge --dry-run -c 204 https://bsd-sharp.googlecode.com/svn/trunk
+# Do it!
+svn merge -c 204 https://bsd-sharp.googlecode.com/svn/trunk
+}}}
+
+This will merge changeset 204 in the branch. Note that the merge is not committed, so do not forget to `svn commit`.
