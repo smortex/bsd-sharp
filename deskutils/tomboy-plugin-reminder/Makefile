@@ -11,7 +11,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	http://flukkost.nu/
 DISTNAME=	tomboy-reminder-${PORTVERSION}
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Automatically open notes at a given date and time
 
 BUILD_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
