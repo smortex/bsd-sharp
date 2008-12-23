@@ -827,6 +827,8 @@ libdata/pkgconfig/mono-options.pc
 libdata/pkgconfig/mono.pc
 libdata/pkgconfig/monodoc.pc
 libdata/pkgconfig/smcs.pc
+libdata/pkgconfig/system.web.extensions.design_1.0.pc
+libdata/pkgconfig/system.web.extensions_1.0.pc
 libdata/pkgconfig/wcf.pc
 man/man1/csharp.1
 man/man1/mdassembler.1
