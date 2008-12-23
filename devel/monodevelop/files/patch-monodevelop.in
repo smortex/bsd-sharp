@@ -1,12 +1,12 @@
---- monodevelop.in.orig	2008-03-16 08:15:34.000000000 -0300
-+++ monodevelop.in	2008-03-16 08:16:01.000000000 -0300
+--- monodevelop.in.orig	2008-12-22 20:24:42.000000000 -0300
++++ monodevelop.in	2008-12-22 20:26:27.000000000 -0300
 @@ -1,4 +1,4 @@
 -#!/bin/bash
 +#!/bin/sh
  
  reWrite() {
      ret=""
-@@ -81,21 +81,21 @@
+@@ -81,21 +81,20 @@
  case x$1 in
  	x--profile)
  		shift
@@ -29,6 +29,6 @@
  		;;
  esac
  
--exec -a "monodevelop"  @RUNTIME@ ./MonoDevelop.exe "$@"
+-exec -a "monodevelop"  @RUNTIME@ --debug ./MonoDevelop.exe "$@"
+-
 +exec @RUNTIME@ ./MonoDevelop.exe "$@"
- 
