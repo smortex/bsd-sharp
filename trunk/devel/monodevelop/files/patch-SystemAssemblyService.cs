@@ -1,6 +1,6 @@
---- src/core/MonoDevelop.Core/MonoDevelop.Core/SystemAssemblyService.cs.orig	Fri Feb 23 21:20:47 2007
-+++ src/core/MonoDevelop.Core/MonoDevelop.Core/SystemAssemblyService.cs	Fri Feb 23 21:21:31 2007
-@@ -272,9 +272,9 @@
+--- src/core/MonoDevelop.Core/MonoDevelop.Core/SystemAssemblyService.cs.orig	2008-12-22 20:20:38.000000000 -0300
++++ src/core/MonoDevelop.Core/MonoDevelop.Core/SystemAssemblyService.cs	2008-12-22 20:21:26.000000000 -0300
+@@ -359,9 +359,9 @@
  				foreach (string pathdir in path_dirs.Split (Path.PathSeparator)) {
  					if (pathdir == null)
  						continue;

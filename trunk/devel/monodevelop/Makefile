@@ -7,8 +7,7 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	1.0
-PORTREVISION=	1
+PORTVERSION=	1.9.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -25,7 +24,8 @@ USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_BZIP2=	yes
-CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt
+CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt \
+			--enable-aspnet --enable-aspnetedit
 MAN1=		mdtool.1 monodevelop.1
 
 OPTIONS=	SVN "Enable subversion support" on
