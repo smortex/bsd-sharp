@@ -16,8 +16,10 @@ COMMENT=	VisualBasic.NET support for Mono
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
+MAN1=		vbnc.1
+
 USE_BZIP2=	yes
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 
 .include <bsd.port.mk>
