@@ -15,10 +15,8 @@ MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	High level access to iPod
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/podsleuth.pc:${PORTSDIR}/misc/podsleuth \
-		monodocer:${PORTSDIR}/devel/monodoc \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/podsleuth.pc:${PORTSDIR}/misc/podsleuth \
-		monodocer:${PORTSDIR}/devel/monodoc \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 GNU_CONFIGURE=	yes
