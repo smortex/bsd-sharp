@@ -1,4 +1,3 @@
-@comment $FreeBSD$
 bin/mautil
 lib/mono/gac/Mono.Addins.CecilReflector/0.4.0.0__0738eb9f132ed756/Mono.Addins.CecilReflector.dll
 lib/mono/gac/Mono.Addins.CecilReflector/0.4.0.0__0738eb9f132ed756/Mono.Addins.CecilReflector.dll.mdb
