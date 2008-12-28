@@ -8,6 +8,7 @@
 
 PORTNAME=	monodevelop
 PORTVERSION=	1.9.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
