@@ -8,7 +8,7 @@
 
 PORTNAME=	mono
 PORTVERSION=	2.2
-#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
@@ -121,5 +121,6 @@ post-configure:
 	@${REINPLACE_CMD} -e 's|share\/man|man|g' \
 		${WRKSRC}/mcs/jay/Makefile
 
-.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+#.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+.include "${.CURDIR}/bsd.mono.mk"
 .include <bsd.port.post.mk>
