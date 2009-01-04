@@ -121,6 +121,5 @@ post-configure:
 	@${REINPLACE_CMD} -e 's|share\/man|man|g' \
 		${WRKSRC}/mcs/jay/Makefile
 
-#.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
-.include "${.CURDIR}/bsd.mono.mk"
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.post.mk>
