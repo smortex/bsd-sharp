@@ -1,6 +1,0 @@
-The Mono Migration Analyzer (MoMA) tool helps you identify issues you
-may have when porting your .Net application to Mono. It helps pinpoint 
-platform specific calls (P/Invoke) and areas that are not yet supported 
-by the Mono project.
-
-WWW: http://www.mono-project.com/Moma
