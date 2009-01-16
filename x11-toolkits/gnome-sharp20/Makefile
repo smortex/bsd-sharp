@@ -21,8 +21,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_PERL5_RUN=	yes
-USE_GNOME=	gnomehack gnomepanel gtksharp20 librsvg2 vte \
-		libgnomeprintui
+USE_GNOME=	gnomehack gnomepanel gtksharp20 librsvg2 vte libgnomeprintui
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
