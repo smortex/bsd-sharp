@@ -1,8 +1,9 @@
 # New ports collection makefile for:	blam
-# Date created:		2008-09-17
-# Whom:			Romain Tartiere <romain@blogreen.org>
+# Date created:				20040812
+# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/net/blam/Makefile,v 1.24 2008/07/25 22:46:14 miwi Exp $
+#   $Id: Makefile,v 1.22 2006/10/26 05:32:53 tmclau02 Exp $
 #
 
 PORTNAME=	blam
@@ -25,9 +26,7 @@ USE_GNOME=	gnomesharp20
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 GCONF_SCHEMAS=	blam.schemas
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		blam.1
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
