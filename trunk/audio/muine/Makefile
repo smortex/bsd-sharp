@@ -20,7 +20,7 @@ LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
 		vorbis.4:${PORTSDIR}/audio/libvorbis \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+RUN_DEPENDS=	${RUN_DEPENDS}
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes

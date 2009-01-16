@@ -21,8 +21,8 @@ LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff \
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget glib20
 USE_GMAKE=	yes
-INSTALLS_SHLIB=	yes
 USE_XLIB=	yes
+USE_LDCONFIG=   yes
 LIBTOOLFILES=	configure cairo/configure
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
@@ -36,10 +36,6 @@ CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 # Avoid build error on 64-bit architectures
 .if (${ARCH} == "amd64") || (${ARCH} == "ia64") || (${ARCH} == "sparc64")
 CFLAGS+=        -fPIC
-.endif
-
-.if ${OSVERSION} < 503000
-IGNORE= does not build and is useless without working Mono
 .endif
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"

@@ -9,7 +9,7 @@
 PORTNAME=	gtk-sharp
 PORTVERSION=	2.12.5
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	ftp://ftp.acc.umu.se/pub/gnome/sources/${PORTNAME}/2.12/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GTK+ and GNOME interfaces for the .NET runtime

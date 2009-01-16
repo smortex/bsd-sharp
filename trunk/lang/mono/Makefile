@@ -22,7 +22,7 @@ USE_BISON=	build
 USE_GNOME=	gnomehack glib20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_PERL5_BUILD=yes
+USE_PERL5_BUILD=	yes
 LIBTOOLFILES=	configure libgc/configure
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -64,15 +64,6 @@ MAKE_ARGS+=	MONO_GENERIC_SHARING=none #https://bugzilla.novell.com/show_bug.cgi?
 
 pre-everything::
 	@${CAT} ${PKGMESSAGE}
-
-.if ${OSVERSION} < 503000
-IGNORE=	does not work on 4.X and 5.X before 503000
-.endif
-
-# ttyname_r(3) patch
-.if ${OSVERSION} < 600028
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-support_mph.h
-.endif
 
 .if exists(${LOCALBASE}/lib/libfam.so)
 USE_FAM=	yes
