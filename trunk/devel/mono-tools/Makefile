@@ -9,7 +9,7 @@
 PORTNAME=	mono-tools
 PORTVERSION=	2.2
 CATEGORIES=	devel
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Documentation browser for Mono and Mono libraries

@@ -13,12 +13,7 @@ $FreeBSD$
  		need_link_unlink=yes
  
  cat >>confdefs.h <<\_ACEOF
-@@ -2967,11 +2968,11 @@
- 
- 		libdl=
- 		libgc_threads=pthreads
--		with_sigaltstack=yes
-+#		with_sigaltstack=yes
+@@ -2972,7 +2973,7 @@
  # TLS is only partially implemented on -CURRENT (compiler support
  # but NOT library support)
  #
@@ -27,7 +22,7 @@ $FreeBSD$
  		;;
  	*-*-*openbsd*)
  		platform_win32=no
-@@ -39145,8 +39146,8 @@
+@@ -39146,8 +39147,8 @@
  INTERP_SUPPORTED=no
  LIBC="libc.so.6"
  INTL="libc.so.6"
