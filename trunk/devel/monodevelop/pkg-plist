@@ -145,6 +145,12 @@ lib/monodevelop/data/resources/css/SharpDevelopStandard.css
 libdata/pkgconfig/monodevelop.pc
 libdata/pkgconfig/monodevelop-core-addins.pc
 share/applications/monodevelop.desktop
+share/icons/hicolor/16x16/apps/monodevelop.png
+share/icons/hicolor/22x22/apps/monodevelop.png
+share/icons/hicolor/24x24/apps/monodevelop.png
+share/icons/hicolor/32x32/apps/monodevelop.png
+share/icons/hicolor/48x48/apps/monodevelop.png
+share/icons/hicolor/scalable/apps/monodevelop.svg
 share/locale/ca/LC_MESSAGES/monodevelop.mo
 share/locale/cs/LC_MESSAGES/monodevelop.mo
 share/locale/da/LC_MESSAGES/monodevelop.mo
