@@ -12,7 +12,7 @@ CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}-barcode
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	freebsd-mono@freebsd.org
 COMMENT=	A barcode generator
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \

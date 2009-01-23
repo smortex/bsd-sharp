@@ -10,7 +10,7 @@ PORTVERSION=	0.1.8
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	freebsd-mono@freebsd.org
 COMMENT=	Easy file sharing
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/glib-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtk-sharp20 \

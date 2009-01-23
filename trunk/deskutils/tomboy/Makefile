@@ -12,7 +12,7 @@ CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	freebsd-mono@freebsd.org
 COMMENT=	Personal note taking system for the GNOME desktop
 
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
