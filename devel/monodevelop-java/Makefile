@@ -10,7 +10,7 @@ PORTVERSION=	1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	freebsd-mono@freebsd.org
 COMMENT=	MonoDevelop Java/IKVM language support
 
 HAS_CONFIGURE=	yes
