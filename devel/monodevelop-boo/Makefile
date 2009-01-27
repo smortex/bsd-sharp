@@ -10,7 +10,7 @@ PORTVERSION=	1.9.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	freebsd-mono@freebsd.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	MonoDevelop Boo language support
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash \

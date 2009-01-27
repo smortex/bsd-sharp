@@ -11,7 +11,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.ssw.uni-linz.ac.at/Research/Projects/Coco/packages/ \
 		http://romain.blogreen.org/distfiles/
 
-MAINTAINER=	freebsd-mono@freebsd.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Compiler Generator
 
 BUILD_DEPENDS=	gmcs:${PORTSDIR}/lang/mono
