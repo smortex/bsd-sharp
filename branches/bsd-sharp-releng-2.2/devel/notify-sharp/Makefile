@@ -10,7 +10,7 @@ PORTVERSION=	0.4.0
 CATEGORIES=	devel
 MASTER_SITES=	http://romain.blogreen.org/distfiles/
 
-MAINTAINER=	freebsd-mono@freebsd.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	C\# client library for notification-daemon
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
