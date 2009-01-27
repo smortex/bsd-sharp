@@ -10,7 +10,7 @@ PORTVERSION=	0.6.1.0
 CATEGORIES=	deskutils
 MASTER_SITES=	https://launchpad.net/do/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/${PORTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}/+download/
 
-MAINTAINER=	freebsd-mono@freebsd.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Powerful, speedy, and sexy remote control for your GNOME Desktop
 
 BUILD_DEPENDS=  ${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
