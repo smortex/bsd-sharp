@@ -13,7 +13,7 @@ CATEGORIES=	mail
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	-sharp20
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings for gmime
 
 LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime2

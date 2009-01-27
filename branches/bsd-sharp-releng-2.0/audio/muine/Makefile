@@ -11,7 +11,7 @@ PORTVERSION=	0.8.10
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono based Gnome audio player
 
 LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \

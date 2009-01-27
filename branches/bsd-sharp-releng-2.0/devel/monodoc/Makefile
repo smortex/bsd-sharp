@@ -12,7 +12,7 @@ PORTVERSION=	2.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Documentation for Mono and Mono libraries
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
