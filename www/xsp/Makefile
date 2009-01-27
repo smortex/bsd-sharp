@@ -7,9 +7,9 @@
 #
 
 PORTNAME=	xsp
-PORTVERSION=	2.2
+PORTVERSION=	2.4
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based web server

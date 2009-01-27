@@ -3,8 +3,6 @@ bin/create-native-map
 bin/gasnview
 bin/gendarme
 bin/gendarme-wizard
-bin/gnunit
-bin/gnunit2
 bin/gsharp
 bin/gui-compare
 bin/ilcontrast
@@ -48,8 +46,6 @@ lib/mono-tools/mprof-heap-snapshot-explorer.dll.mdb
 lib/mono-tools/mprof-heap-viewer.exe
 lib/mono-tools/mprof-heap-viewer.exe.mdb
 lib/mono/1.0/gasnview.exe
-lib/mono/1.0/gnunit.exe
-lib/mono/2.0/gnunit2.exe
 lib/monodoc/GeckoHtmlRender.dll
 lib/monodoc/GtkHtmlHtmlRender.dll
 lib/monodoc/MonoWebBrowserHtmlRender.dll
