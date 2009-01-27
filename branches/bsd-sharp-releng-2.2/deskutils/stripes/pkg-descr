@@ -1,0 +1,8 @@
+Stripes has been created to produce barcodes using a command line tool
+and a graphical user interface, but also comes with a library that
+could be used to enable your applications to produce barcodes. 
+
+Stripes is based on Cairo Graphics, which enables it to produce the
+output in PDF, PNG and Postscript, with a high quality output.
+
+WWW: http://stripes.aspl.es/
