@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	mono-basic
-PORTVERSION=	2.2
+PORTVERSION=	2.4
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	VisualBasic.NET support for Mono
@@ -21,5 +21,10 @@ MAN1=		vbnc.1
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
+
+tests: build
+	@${ECHO_MSG} "===> Running ${PORTNAME} regression tests"
+	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+		${MAKE_FLAGS} Makefile ${MAKE_ARGS} test)
 
 .include <bsd.port.mk>
