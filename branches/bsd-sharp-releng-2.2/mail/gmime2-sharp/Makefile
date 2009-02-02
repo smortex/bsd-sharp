@@ -6,13 +6,16 @@
 #   $Id: Makefile,v 1.17 2006/10/26 18:37:29 tmclau02 Exp $
 #
 
+PORTREVISION=	1
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-sharp
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono bindings for gmime
 
-LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime2
+IGNORE=		try to install weaked-named assembly into the GAC.
+
+LIB_DEPENDS=	gmime-2.0.4:${PORTSDIR}/mail/gmime2
 
 MASTERDIR=	${.CURDIR}/../gmime2
 BUILD_WRKSRC=	${WRKSRC}/mono

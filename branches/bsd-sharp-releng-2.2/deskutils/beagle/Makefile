@@ -17,7 +17,7 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT?=	Index and search local files
 
 BUILD_DEPENDS?=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp20 \
+		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
 		${LOCALBASE}/lib/mono/evolution-sharp/evolution-sharp.dll:${PORTSDIR}/mail/evolution-sharp \
 		${LOCALBASE}/libdata/pkgconfig/taglib-sharp.pc:${PORTSDIR}/audio/taglib-sharp \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
@@ -26,7 +26,7 @@ BUILD_DEPENDS?=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/ww
 LIB_DEPENDS?=	exif.12:${PORTSDIR}/graphics/libexif
 RUN_DEPENDS?=	bash:${PORTSDIR}/shells/bash \
 		${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp20 \
+		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
 		${LOCALBASE}/lib/mono/evolution-sharp/evolution-sharp.dll:${PORTSDIR}/mail/evolution-sharp \
 		${LOCALBASE}/libdata/pkgconfig/taglib-sharp.pc:${PORTSDIR}/audio/taglib-sharp \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \

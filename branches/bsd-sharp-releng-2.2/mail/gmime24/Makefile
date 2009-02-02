@@ -10,6 +10,7 @@ PORTVERSION=	2.4.3
 PORTREVISION?=	0
 CATEGORIES?=	mail
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX?=	-24
 
 MAINTAINER?=	mnag@FreeBSD.org
 COMMENT?=	Library (written in C) for parsing and creating messages using MIME
@@ -38,9 +39,9 @@ post-patch:
 
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}24
 .for i in docs/reference/html/*
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}24
 .endfor
 .endif
 
