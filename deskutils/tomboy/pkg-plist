@@ -1,6 +1,10 @@
 @comment $FreeBSD$
 bin/tomboy
 bin/tomboy-panel
+lib/tomboy/Mono.Addins.Gui.dll
+lib/tomboy/Mono.Addins.Setup.dll
+lib/tomboy/Mono.Addins.dll
+lib/tomboy/Mono.Addins.dll.config
 lib/tomboy/Tomboy.exe
 lib/tomboy/Tomboy.exe.config
 lib/tomboy/Tomboy.exe.mdb

@@ -11,7 +11,7 @@ PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	GNOME desktop interfaces for the .NET runtime
 
 USE_BZIP2=	yes

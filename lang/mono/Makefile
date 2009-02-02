@@ -7,11 +7,12 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.4
+PORTVERSION=	2.0.1
+PORTREVISION=	6
 CATEGORIES=	lang
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	An open source implementation of .NET Development Framework
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser
@@ -48,10 +49,10 @@ ONLY_FOR_ARCHS= i386 amd64
 MAN1=		al.1 cert2spc.1 certmgr.1 chktrust.1 cilc.1 disco.1 dtd2xsd.1 \
 		gacutil.1 genxs.1 httpcfg.1 ilasm.1 jay.1 macpack.1 makecert.1 \
 		mconfig.1 mcs.1 mint.1 mkbundle.1 mono-service.1 mono-shlib-cop.1 \
-		mono-xmltool.1 mono.1 monodis.1 monolinker.1 monop.1 \
+		mono-xmltool.1 mono.1 monoburg.1 monodis.1 monolinker.1 monop.1 \
 		monostyle.1 mozroots.1 oldmono.1 permview.1 prj2make.1 secutil.1 \
-		setreg.1 sgen.1 signcode.1 sn.1 soapsuds.1 sqlsharp.1 wsdl.1 \
-		xsd.1 resgen.1
+		setreg.1 sgen.1 signcode.1 sn.1 soapsuds.1 sqlsharp.1 vbnc.1 \
+		wsdl.1 xsd.1 resgen.1
 MAN5=		mono-config.5
 
 .include <bsd.port.pre.mk>
