@@ -6,18 +6,15 @@
 #   $Id: Makefile,v 1.17 2006/10/26 18:37:29 tmclau02 Exp $
 #
 
-PORTREVISION=	1
 CATEGORIES=	mail
-PKGNAMESUFFIX=	-sharp
+PKGNAMESUFFIX=	-24-sharp
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono bindings for gmime
 
-IGNORE=		try to install weaked-named assembly into the GAC.
+LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime24
 
-LIB_DEPENDS=	gmime-2.0.4:${PORTSDIR}/mail/gmime2
-
-MASTERDIR=	${.CURDIR}/../gmime2
+MASTERDIR=	${.CURDIR}/../gmime24
 BUILD_WRKSRC=	${WRKSRC}/mono
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 DESCR=		${.CURDIR}/pkg-descr
@@ -26,9 +23,9 @@ PLIST=		${.CURDIR}/pkg-plist
 USE_GNOME=	gnomehack gnometarget glib20 gtksharp20
 CONFIGURE_ARGS=	--enable-mono=yes
 
-LATEST_LINK=	gmime2-sharp
+LATEST_LINK=	gmime24-sharp
 
-# Else we conflict with mail/gmime2
+# Else we conflict with mail/gmime24
 NOPORTDOCS=	yes
 
 # Done in pre-configure because master port has a post-patch target already.
