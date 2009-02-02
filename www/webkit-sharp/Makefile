@@ -10,7 +10,7 @@ PORTVERSION=	0.2
 #PORTREVISION=	0
 #PORTEPOCH=	0
 CATEGORIES=	www
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 #MASTER_SITE_SUBDIR=
 #PKGNAMEPREFIX=
 #PKGNAMESUFFIX=
@@ -20,7 +20,7 @@ MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 #DIST_SUBDIR=	${PORTNAME}
 #EXTRACT_ONLY=
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings for Webkit
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/webkit-1.0.pc:${PORTSDIR}/www/webkit-gtk2

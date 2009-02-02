@@ -12,7 +12,7 @@ PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	GNOME interfaces for the .NET runtime
 
 LATEST_LINK=	gnome-sharp20

@@ -1,7 +1,0 @@
-include/exarg/exarg.h
-lib/libexarg.a
-lib/libexarg.la
-lib/libexarg.so
-lib/libexarg.so.0
-libdata/pkgconfig/exarg.pc
-@dirrm include/exarg

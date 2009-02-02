@@ -9,10 +9,10 @@
 PORTNAME=	gecko-sharp
 PORTVERSION=	0.13
 CATEGORIES=	www
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}2/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings for embeding mozilla
 
 USE_GECKO=	firefox mozilla

@@ -7,16 +7,18 @@
 #
 
 PORTNAME=	mono-tools
-PORTVERSION=	2.4
+PORTVERSION=	2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Documentation browser for Mono and Mono libraries
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20
+		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
+		monodocer:${PORTSDIR}/devel/monodoc
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
+		monodocer:${PORTSDIR}/devel/monodoc
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget gnomedesktopsharp20
@@ -38,6 +40,6 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@datadir@/man/man1|@mandir@/man1|g'
 
-.include "${PORTSDIR}/lang/mono/bsd.mono.mk"
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 .include <bsd.port.post.mk>

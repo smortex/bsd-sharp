@@ -10,7 +10,7 @@ PORTREVISION=	1
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-sharp
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings for gmime
 
 IGNORE=		try to install weaked-named assembly into the GAC.
