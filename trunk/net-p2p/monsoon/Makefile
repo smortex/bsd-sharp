@@ -6,10 +6,9 @@
 #
 
 PORTNAME=	monsoon
-PORTVERSION=	0.15
+PORTVERSION=	0.20
 CATEGORIES=	net-p2p
-MASTER_SITES=	http://www.monsoon-project.org/jaws/data/files/
-#DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
+MASTER_SITES=	http://monotorrent.com/Files/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Gtk+ BitTorrent client
@@ -17,15 +16,14 @@ COMMENT=	Gtk+ BitTorrent client
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-                ${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
-
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV+= CPPFLAGS="-I${LOCALBASE}/include" \
-                LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
-#USE_GNOME=	gnomesharp20
+USE_GNOME=	gnomesharp20
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 

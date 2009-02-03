@@ -20,5 +20,6 @@ share/locale/fr/LC_MESSAGES/monsoon.mo
 share/locale/it/LC_MESSAGES/monsoon.mo
 share/locale/nl/LC_MESSAGES/monsoon.mo
 share/locale/pt_BR/LC_MESSAGES/monsoon.mo
+share/locale/sv/LC_MESSAGES/monsoon.mo
 @dirrm lib/monsoon/icons
 @dirrm lib/monsoon
