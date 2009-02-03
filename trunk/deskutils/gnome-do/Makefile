@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	gnome-do
-PORTVERSION=	0.6.1.0
+PORTVERSION=	0.8.0
 CATEGORIES=	deskutils
-MASTER_SITES=	https://launchpad.net/do/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/${PORTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}/+download/
+MASTER_SITES=	https://edge.launchpad.net/do/trunk/${PORTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}/+download/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Powerful, speedy, and sexy remote control for your GNOME Desktop
@@ -36,10 +36,17 @@ INSTALLS_ICONS=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@libdir@/pkgconfig|@prefix@/libdata/pkgconfig|g' \
+		${WRKSRC}/build.rules.mk \
+		${WRKSRC}/Do.Interface.Linux.Classic/Makefile.in \
+		${WRKSRC}/Do.Interface.Linux.Mini/Makefile.in \
+		${WRKSRC}/Do.Interface.Linux/Makefile.in \
+		${WRKSRC}/Do.Universe/Makefile.in \
+		${WRKSRC}/Do.Interface.Linux.GlassFrame/Makefile.in \
+		${WRKSRC}/Do.Platform.Linux/Makefile.in \
 		${WRKSRC}/Do/Makefile.in \
-		${WRKSRC}/Do.Addins/Makefile.in \
-		${WRKSRC}/Do.DBus/Makefile.in \
-		${WRKSRC}/Makefile.include
+		${WRKSRC}/Do.Platform/Makefile.in \
+		${WRKSRC}/Do.Interface.Linux.Docky/Makefile.in \
+		${WRKSRC}/Do.Interface.Linux.HUD/Makefile.in
 
 .if !defined(WITHOUT_NLS)
 USE_GETTEXT=	yes
