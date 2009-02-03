@@ -1,0 +1,11 @@
+--- MonoTorrent/Makefile.in.orig	2009-02-02 21:56:09.000000000 -0300
++++ MonoTorrent/Makefile.in	2009-02-02 21:56:50.000000000 -0300
+@@ -477,7 +477,7 @@
+ bin_SCRIPTS = $(BINARIES)
+ programfilesdir = @libdir@/@PACKAGE@
+ programfiles_DATA = $(PROGRAMFILES)
+-linuxpkgconfigdir = @libdir@/pkgconfig
++linuxpkgconfigdir = @libdir@/../libdata/pkgconfig
+ linuxpkgconfig_DATA = $(LINUX_PKGCONFIG)
+ 
+ # generating satellite assemblies
