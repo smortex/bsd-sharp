@@ -1,0 +1,4 @@
+lib/mono-nat/Mono.Nat.dll
+lib/mono-nat/Mono.Nat.dll.mdb
+libdata/pkgconfig/mono.nat.pc
+@dirrm lib/mono-nat
