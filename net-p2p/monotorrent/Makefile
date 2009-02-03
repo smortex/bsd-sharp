@@ -1,4 +1,4 @@
-# New ports collection makefile for:	monsoon
+# New ports collection makefile for:	monotorrent
 # Date created:				20090202
 # Whom:					pneumann@gmail.com
 #
