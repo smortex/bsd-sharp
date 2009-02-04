@@ -2,7 +2,7 @@
 # Date created:				Aug 25 2008
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/mono-addins/Makefile,v 1.4 2008/12/24 19:49:04 flz Exp $
+# $FreeBSD: ports/devel/mono-addins/Makefile,v 1.5 2009/01/22 18:21:08 flz Exp $
 #
 
 PORTNAME=	mono-addins
@@ -10,7 +10,7 @@ PORTVERSION=	0.4
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	flz@FreeBSD.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono framework to create extensible applications
 
 LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono
