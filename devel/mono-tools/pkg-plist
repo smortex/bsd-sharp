@@ -104,6 +104,9 @@ lib/monodoc/sources/Gendarme.Rules.Smells.zip
 lib/monodoc/sources/Gendarme.Rules.Ui.source
 lib/monodoc/sources/Gendarme.Rules.Ui.tree
 lib/monodoc/sources/Gendarme.Rules.Ui.zip
+lib/monodoc/sources/gendarme.source
+lib/monodoc/sources/gendarme.tree
+lib/monodoc/sources/gendarme.zip
 lib/mperfmon/config
 lib/mperfmon/mperfmon.exe
 libdata/pkgconfig/create-native-map.pc
