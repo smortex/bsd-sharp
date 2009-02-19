@@ -2,7 +2,7 @@
 # Date created:					20041008
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/graphics/f-spot/Makefile,v 1.28 2008/03/27 02:06:20 mezz Exp $
+# $FreeBSD: ports/graphics/f-spot/Makefile,v 1.33 2009/02/09 08:59:56 flz Exp $
 #   $Id: Makefile,v 1.45 2007/08/26 05:10:23 killfill Exp $
 #
 

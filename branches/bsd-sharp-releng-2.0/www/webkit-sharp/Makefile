@@ -2,7 +2,7 @@
 # Date created:		2008-09-01
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/www/webkit-sharp/Makefile,v 1.1 2009/02/09 08:59:58 flz Exp $
 #
 
 PORTNAME=	webkit-sharp

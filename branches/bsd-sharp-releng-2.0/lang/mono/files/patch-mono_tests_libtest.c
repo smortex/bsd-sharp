@@ -1,5 +1,5 @@
 
-$FreeBSD$
+$FreeBSD: ports/lang/mono/files/patch-mono_tests_libtest.c,v 1.1 2009/02/09 08:59:57 flz Exp $
 
 --- mono/tests/libtest.c.orig
 +++ mono/tests/libtest.c

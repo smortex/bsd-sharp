@@ -1,5 +1,5 @@
 
-$FreeBSD$
+$FreeBSD: ports/graphics/f-spot/files/patch-icons_Makefile.in,v 1.1 2009/02/09 08:59:56 flz Exp $
 
 --- icons/Makefile.in.orig
 +++ icons/Makefile.in

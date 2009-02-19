@@ -1,4 +1,4 @@
-@comment $FreeBSD$
+@comment $FreeBSD: ports/deskutils/tomboy/pkg-plist,v 1.16 2009/02/09 08:59:59 flz Exp $
 bin/tomboy
 bin/tomboy-panel
 lib/tomboy/Tomboy.exe

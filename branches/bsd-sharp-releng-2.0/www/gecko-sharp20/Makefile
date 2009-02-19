@@ -2,7 +2,7 @@
 # Date created:					20040825
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.17 2008/07/25 22:46:15 miwi Exp $
+# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.18 2009/02/09 08:59:59 flz Exp $
 #   $Id: Makefile,v 1.19 2007/02/07 15:49:20 killfill Exp $
 #
 
