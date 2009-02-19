@@ -54,10 +54,10 @@ repo_trunk=`echo $repo_root | sed 's|/branches/.*|/trunk|'`
 source=""
 if [ -n "${_c}" ]; then
 	svn merge -c "${_c}" ${repo_trunk}
-	source="changeset ${_c}."
+	source="changeset ${_c}"
 else
 	svn merge -r "${_r}" ${repo_trunk}
-	source="revision ${_r}."
+	source="revision ${_r}"
 fi
 
 if [ $? -eq 0 ]; then
