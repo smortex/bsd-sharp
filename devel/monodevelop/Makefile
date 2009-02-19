@@ -7,8 +7,7 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	1.9.1
-PORTREVISION=	2
+PORTVERSION=	1.9.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -47,6 +46,8 @@ post-patch:
 		s|[(]gnome_data[)]/mime/packages$$|(prefix)/share/mime/packages|g ; \
 		s|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 			${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|' \
+		${WRKSRC}/monodevelop.in
 
 post-install:
 	@-update-desktop-database
