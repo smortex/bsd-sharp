@@ -2,7 +2,7 @@
 # Date created:					20040825
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.17 2008/07/25 22:46:15 miwi Exp $
+# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.18 2009/02/09 08:59:59 flz Exp $
 #   $Id: Makefile,v 1.19 2007/02/07 15:49:20 killfill Exp $
 #
 
@@ -12,7 +12,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}2/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings for embeding mozilla
 
 USE_GECKO=	firefox mozilla

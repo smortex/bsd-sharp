@@ -2,7 +2,7 @@
 # Date created:					20040820
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.9 2007/10/23 03:32:36 tmclaugh Exp $
+# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.15 2009/02/09 08:59:55 flz Exp $
 #   $Id: Makefile,v 1.46 2007/12/13 19:37:18 killfill Exp $
 #
 
@@ -11,7 +11,7 @@ PORTVERSION=	2.4
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	GDI+ API for System.Windows.Forms in Mono
 
 LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff \

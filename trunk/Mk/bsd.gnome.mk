@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.gnome.mk,v 1.152 2009/01/10 05:21:02 marcus Exp $
+# $FreeBSD: ports/Mk/bsd.gnome.mk,v 1.153 2009/02/09 08:59:54 flz Exp $
 #	$NetBSD: $
 #     $MCom: ports/Mk/bsd.gnome.mk,v 1.471 2008/09/01 16:45:46 ahze Exp $
 #
@@ -70,15 +70,15 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
-		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
-		gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
+		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedesktopsharp20 \
+		gnomedocutils gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
 		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
 		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 libgda4 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
 		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
-		pygtk2 pygtksourceview vte gnomedesktopsharp20 
+		pygtk2 pygtksourceview vte
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian

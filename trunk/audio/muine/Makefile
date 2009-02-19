@@ -2,7 +2,7 @@
 # Date created:				20040615
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/audio/muine/Makefile,v 1.45 2008/07/25 22:46:13 miwi Exp $
+# $FreeBSD: ports/audio/muine/Makefile,v 1.47 2009/02/09 08:59:57 flz Exp $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
 #
 
