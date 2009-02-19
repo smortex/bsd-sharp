@@ -47,17 +47,15 @@ if [ -z "${_c}${_r}" -o -n "${_c}" -a -n "${_r}" ]; then
 fi
 
 repo_root=`svn info | awk ' $1 == "URL" { print $3 } '`
-
-echo $repo_root
-
 repo_trunk=`echo $repo_root | sed 's|/branches/.*|/trunk|'`
 
-echo $repo_trunk
-
+source=""
 if [ -n "${_c}" ]; then
 	svn merge -c "${_c}" ${repo_trunk}
+	source="changeset ${_c}."
 else
 	svn merge -r "${_r}" ${repo_trunk}
+	source="revision ${_r}."
 fi
 
 if [ $? -eq 0 ]; then
@@ -68,7 +66,7 @@ if [ $? -eq 0 ]; then
 		read ans
 	done
 	if [ "$ans" = "yes" ]; then
-		echo COMMIT
+		svn commit -m "MFT from ${source}."
 	fi
 fi
 
