@@ -1,4 +1,4 @@
-@comment $FreeBSD$
+@comment $FreeBSD: ports/audio/muine/pkg-plist,v 1.14 2009/02/09 08:59:57 flz Exp $
 bin/muine
 share/doc/muine/muine-docs.zip
 share/doc/muine/muine-docs.tree

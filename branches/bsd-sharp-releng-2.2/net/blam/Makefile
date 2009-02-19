@@ -2,7 +2,7 @@
 # Date created:				20040812
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/net/blam/Makefile,v 1.24 2008/07/25 22:46:14 miwi Exp $
+# $FreeBSD: ports/net/blam/Makefile,v 1.25 2009/02/09 08:59:59 flz Exp $
 #   $Id: Makefile,v 1.22 2006/10/26 05:32:53 tmclau02 Exp $
 #
 
@@ -12,7 +12,7 @@ PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cmartin.tk/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A simple feed reader for GNOME
 
 BUILD_DEPENDS=	msgfmt:${PORTSDIR}/devel/gettext \

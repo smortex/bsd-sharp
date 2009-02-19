@@ -1,5 +1,5 @@
 
-$FreeBSD$
+$FreeBSD: ports/x11-toolkits/gtksourceview-sharp/files/patch-Makefile.in,v 1.4 2009/02/09 08:59:55 flz Exp $
 
 --- Makefile.in.orig
 +++ Makefile.in
