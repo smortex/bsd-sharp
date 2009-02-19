@@ -1,0 +1,74 @@
+#!/bin/sh
+#
+# Merge from trunk
+
+usage()
+{
+	cat << EOT >&2
+usage:
+  $0 -c M:N...
+  $0 -r M[,N...]
+EOT
+	exit 1
+}
+
+# Ensure the repository is up-to-date before doing anything.
+if ! svn update; then
+	echo "*** Repository update failed!" >&2
+	exit 1
+fi
+
+out=`svn status | grep -v '^?'`
+if [ -n "${out}" ]; then
+	echo "*** Repository has local modifications!" >&2
+	exit 1
+fi
+
+_c=""
+_r=""
+
+args=`getopt c:r: $*`
+if [ $? -ne 0 ]; then
+	usage
+fi
+set -- $args
+
+for i
+do
+	case "$i" in
+		-c) _c="$2"; shift; shift;;
+		-r) _r="$2"; shift; shift;;
+		--) shift; break;;
+	esac
+done
+
+if [ -z "${_c}${_r}" -o -n "${_c}" -a -n "${_r}" ]; then
+	usage
+fi
+
+repo_root=`svn info | awk ' $1 == "URL" { print $3 } '`
+
+echo $repo_root
+
+repo_trunk=`echo $repo_root | sed 's|/branches/.*|/trunk|'`
+
+echo $repo_trunk
+
+if [ -n "${_c}" ]; then
+	svn merge -c "${_c}" ${repo_trunk}
+else
+	svn merge -r "${_r}" ${repo_trunk}
+fi
+
+if [ $? -eq 0 ]; then
+	ans=""
+	while [ "$ans" != "yes" -a "$ans" != "no" ]; do
+		svn diff
+		echo -n "Commit this? (yes/no) "
+		read ans
+	done
+	if [ "$ans" = "yes" ]; then
+		echo COMMIT
+	fi
+fi
+
