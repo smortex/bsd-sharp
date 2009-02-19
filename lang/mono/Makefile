@@ -2,7 +2,7 @@
 # Date created:        22 July 2002
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/mono/Makefile,v 1.69 2007/10/25 18:34:27 tmclaugh Exp $
+# $FreeBSD: ports/lang/mono/Makefile,v 1.76 2009/02/09 08:59:57 flz Exp $
 #   $Id: Makefile,v 1.98 2007/12/13 19:31:45 killfill Exp $
 #
 
@@ -11,7 +11,7 @@ PORTVERSION=	2.4
 CATEGORIES=	lang
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	An open source implementation of .NET Development Framework
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser

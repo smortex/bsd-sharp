@@ -2,7 +2,7 @@
 # Date created:				24 October 2004
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/bless/Makefile,v 1.22 2007/10/24 23:35:32 marcus Exp $
+# $FreeBSD: ports/editors/bless/Makefile,v 1.25 2009/02/09 09:00:00 flz Exp $
 #   $Id: Makefile,v 1.22 2006/11/01 02:49:57 tmclau02 Exp $
 #
 
@@ -12,7 +12,7 @@ PORTEPOCH=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://download.gna.org/bless/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A high quality, full featured hex editor
 
 USE_GNOME=	gnomehack gnomeprefix gnometarget gnomedocutils gtksharp20
