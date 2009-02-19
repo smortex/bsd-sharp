@@ -2,6 +2,8 @@
 #
 # Merge from trunk
 
+PAGER=${DIFF_PAGER:=${PAGER:=less}}
+
 usage()
 {
 	cat << EOT >&2
@@ -61,7 +63,7 @@ fi
 if [ $? -eq 0 ]; then
 	ans=""
 	while [ "$ans" != "yes" -a "$ans" != "no" ]; do
-		svn diff
+		svn diff | ${PAGER}
 		echo -n "Commit this? (yes/no) "
 		read ans
 	done
