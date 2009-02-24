@@ -2,12 +2,13 @@
 # Date created:				20040615
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/audio/muine/Makefile,v 1.47 2009/02/09 08:59:57 flz Exp $
+# $FreeBSD: ports/audio/muine/Makefile,v 1.48 2009/02/21 15:51:12 miwi Exp $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
 #
 
 PORTNAME=	muine
 PORTVERSION=	0.8.10
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 
@@ -41,7 +42,7 @@ OPTIONS=	XINE "Enable Xine backend" off \
 
 .include <bsd.port.pre.mk>
 .if defined (WITH_FAAD)
-LIB_DEPENDS+=	faad.0:${PORTSDIR}/audio/faad
+LIB_DEPENDS+=	faad.2:${PORTSDIR}/audio/faad
 .else
 CONFIGURE_ARGS+=	--disable-faad2
 .endif
