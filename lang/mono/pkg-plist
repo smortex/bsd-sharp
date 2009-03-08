@@ -16,7 +16,6 @@ bin/gacutil1
 bin/gacutil2
 bin/genxs
 bin/genxs1
-bin/genxs2
 bin/gmcs
 bin/httpcfg
 bin/ilasm
