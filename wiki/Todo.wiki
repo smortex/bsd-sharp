@@ -1,4 +1,4 @@
-#summary Next things to do before BSD# ports reach FreeBSD Ports Tree.
+#summary BSD# TODO List
 #labels Featured
 
 = Mono:FreeBSD page =
