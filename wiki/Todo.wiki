@@ -1,35 +1,46 @@
 #summary BSD# TODO List
 #labels Featured
 
-= Mono:FreeBSD page =
+= [http://www.mono-project.com/Mono:FreeBSD Mono:FreeBSD] page =
 
- update http://www.mono-project.com/Mono:FreeBSD
+The BSD# page on the Mono website (http://www.mono-project.com/Mono:FreeBSD) is outdated.
 
-= Mono test =
+I (romain) used the contact form to have some pointers in ~ december 2008 but did not have an answer.
 
- pinvoke2 mono test fails on AMD 64 only.
- (all other tests are ok)
+= Failing tests (`cd lang/mono && make tests`) =
 
-= Fix ports that do not build =
+== amd64 ==
 
-The following ports are known to fail with the current infraestructure:
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        ||
+||            || pinvoke2.exe      || pinvoke2.exe      ||
+||            || winx64structs.exe || winx64structs.exe ||
+
+== i386 ==
+
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        ||
+||            || pinvoke2.exe      || pinvoke2.exe      ||
+||            || winx64structs.exe || winx64structs.exe ||
+
+= BROKEN Ports =
+
+The following ports are known to fail with the current infrastructure:
 
   * devel/monodevelop-boo (./Gui/OptionPanels/GeneralShellPanel.boo(47,9): BCE0047: Method 'GLib.Object.get_Properties()' cannot be overridden because it is not virtual)
 
   * deskutils/beagle (upstream does not support gmime2-sharp-2.4)
 
 
-
-= Fix linuxism workarounds =
+= Fix linuxisms =
 
 The following projects are known to rely on linuxisms that may have to be worked around a better may and for witch patches have to be send upstream:
 
-  * audio/last-exit (PrctlLinuxism)
-  * deskutils/giver (PrctlLinuxism)
-  * deskutils/tasque (PrctlLinuxism)
-  * deskutils/tomboy-devel (PrctlLinuxism)
+|| *port*                 || *linuxism*    || *status* ||
+|| audio/last-exit        || PrctlLinuxism || TODO ||
+|| deskutils/giver        || PrctlLinuxism || TODO || 
+|| deskutils/tasque       || PrctlLinuxism || TODO ||
+|| deskutils/tomboy-devel || PrctlLinuxism || TODO ||
 
-= Lint ports =
+= Check ports =
 
 The `portlint` utility (`ports-mgmt/portlint`) can detect problems in ports. All BSD# ports have to be verified with this tool.
 
