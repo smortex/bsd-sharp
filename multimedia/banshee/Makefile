@@ -50,9 +50,7 @@ INSTALL=	/usr/bin/install
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 
-.if !defined(WITHOUT_DOCS) && !defined(NOPORTDOCS)
-BUILD_DEPENDS+=	${LOCALBASE}/bin/monodocer:${PORTSDIR}/devel/monodoc
-.else
+.if defined(WITHOUT_DOCS) || defined(NOPORTDOCS)
 CONFIGURE_ARGS+=	--disable-docs
 .endif
 
