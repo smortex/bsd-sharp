@@ -845,7 +845,6 @@ lib/monodoc/sources/monoapi.zip
 lib/monodoc/sources/netdocs.source
 lib/monodoc/sources/netdocs.tree
 lib/monodoc/sources/netdocs.zip
-lib/monodoc/sources/nunit-docs.source
 libdata/pkgconfig/cecil.pc
 libdata/pkgconfig/dotnet.pc
 libdata/pkgconfig/dotnet35.pc
