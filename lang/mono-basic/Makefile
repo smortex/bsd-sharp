@@ -8,7 +8,7 @@
 PORTNAME=	mono-basic
 PORTVERSION=	2.4
 CATEGORIES=	lang
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	VisualBasic.NET support for Mono
