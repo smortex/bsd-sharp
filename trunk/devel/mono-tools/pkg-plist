@@ -34,7 +34,6 @@ lib/gendarme/gendarme-wizard.exe
 lib/gendarme/gendarme.exe
 lib/gendarme/rules.xml
 lib/gsharp/gsharp.exe
-lib/gui-compare/Mono.Cecil.dll
 lib/gui-compare/gui-compare.exe
 lib/ilcontrast/ilcontrast.exe
 lib/mono-tools/mprof-decoder-library.dll
