@@ -10,7 +10,7 @@ PORTNAME=	mod_mono
 PORTVERSION=	2.4
 PORTREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Apache module for serving ASP.NET applications
