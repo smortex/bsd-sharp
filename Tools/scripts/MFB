@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Merge from trunk
+# Merge from branch
 
 PAGER=${DIFF_PAGER:=${PAGER:=less}}
 
@@ -8,8 +8,8 @@ usage()
 {
 	cat << EOT >&2
 usage:
-  $0 -c M:N...
-  $0 -r M[,N...]
+  $0 branch -c M:N...
+  $0 branch -r M[,N...]
 EOT
 	exit 1
 }
@@ -28,6 +28,12 @@ fi
 
 _c=""
 _r=""
+
+_branch="$1"; shift
+
+if [ -z "${_branch}" ]; then
+	usage
+fi
 
 args=`getopt c:r: $*`
 if [ $? -ne 0 ]; then
@@ -48,21 +54,15 @@ if [ -z "${_c}${_r}" -o -n "${_c}" -a -n "${_r}" ]; then
 	usage
 fi
 
-repo_root=`LC_ALL=C svn info | awk ' $1 == "URL:" { print $2 } '`
-repo_trunk=`echo "${repo_root}" | sed -e 's|/branches/.*|/trunk|'`
-repo_branch=`echo "${repo_root}" | sed -e 's|.*/branches/\([^/]*\).*|\1|'`
-
-if [ -z "${repo_branch}" ]; then
-	echo "*** MFT is intended to be run from a branch" >&2
-	exit 1
-fi
+repo_root=`LC_ALL=C svn info | awk ' $1 == "URL:" { print $2 } ' | sed -E -e 's|/trunk($\|/.*)||'`
+repo_branch="${repo_root}/branches/${_branch}"
 
 source=""
 if [ -n "${_c}" ]; then
-	svn merge -c "${_c}" ${repo_trunk} || exit 1
+	svn merge -c "${_c}" ${repo_branch} || exit 1
 	source="changeset ${_c}"
 else
-	svn merge -r "${_r}" ${repo_trunk} || exit 1
+	svn merge -r "${_r}" ${repo_branch} || exit 1
 	source="revision ${_r}"
 fi
 
@@ -74,7 +74,7 @@ if [ $? -eq 0 ]; then
 		read ans
 	done
 	if [ "$ans" = "yes" ]; then
-		svn commit -m "(${repo_branch}) MFT from ${source}."
+		svn commit -m "MFB (${_branch}) ${source}."
 	fi
 fi
 

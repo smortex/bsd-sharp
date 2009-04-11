@@ -8,9 +8,9 @@
 
 PORTSDIR=${PORTSDIR:=/var/cache/portshaker/freebsd}
 
-remove_id()
+unsubstitute_keywords()
 {
-	sed -e 's|\$\(FreeBSD\)[^\$]*\$|\1|g' < $1 > $2
+	sed -e 's|\$\(FreeBSD\|MCom\):[^\$]*\$|\1|g' < $1 > $2
 }
 
 compare_noid()
@@ -18,16 +18,20 @@ compare_noid()
 	while read file_name
 	do
 
-		if [ -e "${PORTSDIR}/${file_name}" ]; then
-			remove_id "${file_name}" "${tomerge_noid}"
-			remove_id "${PORTSDIR}/${file_name}" "${current_noid}"
+		if [ -e "${PORTSDIR}/${file_name}" ] && ! cmp -s "${file_name}" "${PORTSDIR}/${file_name}" ; then
+
+			# Files are different: un-substitutes keywords and try again.
+			unsubstitute_keywords "${file_name}" "${tomerge_noid}"
+			unsubstitute_keywords "${PORTSDIR}/${file_name}" "${current_noid}"
 
 			cmp -s "${current_noid}" "${tomerge_noid}"
 			if [ $? -eq 0 ]; then
+				# File has not changed. Merge it.
 				cp "${PORTSDIR}/${file_name}" "${file_name}"
+				echo "U ${file_name}"
 			else
-				echo ${file_name}
-				#diff  -u "${file_name}" "${PORTSDIR}/${file_name}"
+				# File was modified. Need to be inspected by hand.
+				echo "? ${file_name}"
 			fi
 		fi
 	done
@@ -38,6 +42,7 @@ tomerge_noid=`mktemp -t MFC`
 
 for directory
 do
+	echo "MFC ${PORTSDIR}/${directory} -> ${directory}"
 	find $directory -type f  ! -regex '.*/\.svn.*' | compare_noid
 done
 
