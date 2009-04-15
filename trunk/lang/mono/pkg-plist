@@ -853,6 +853,7 @@ libdata/pkgconfig/mono-lineeditor.pc
 libdata/pkgconfig/mono-nunit.pc
 libdata/pkgconfig/mono-options.pc
 libdata/pkgconfig/mono.pc
+libdata/pkgconfig/mono.web.pc
 libdata/pkgconfig/monodoc.pc
 libdata/pkgconfig/smcs.pc
 libdata/pkgconfig/system.web.extensions.design_1.0.pc
