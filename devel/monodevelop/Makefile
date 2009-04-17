@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	1.9.2
+PORTVERSION=	2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -27,6 +27,8 @@ USE_BZIP2=	yes
 CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt \
 			--enable-aspnet --enable-aspnetedit
 MAN1=		mdtool.1 monodevelop.1
+USE_GETTEXT=	yes
+INSTALLS_ICONS=	yes
 
 OPTIONS=	SVN "Enable subversion support" on
 
@@ -47,7 +49,8 @@ post-patch:
 		s|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 			${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|' \
-		${WRKSRC}/monodevelop.in
+		${WRKSRC}/monodevelop.in \
+		${WRKSRC}/mdtool.in
 
 post-install:
 	@-update-desktop-database
