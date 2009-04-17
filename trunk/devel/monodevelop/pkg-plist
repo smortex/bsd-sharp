@@ -38,6 +38,18 @@ lib/monodevelop/AddIns/MonoDevelop.Autotools/expansions.m4
 lib/monodevelop/AddIns/MonoDevelop.Autotools/make-dist.targets
 lib/monodevelop/AddIns/MonoDevelop.Autotools/package.pc.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/rules.make
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.am.project.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.include
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.noauto.project.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.solution.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/autogen.sh.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/configure.ac.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/configure.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/exe.wrapper.in.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/expansions.m4
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/make-dist.targets
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/package.pc.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/rules.make
 lib/monodevelop/AddIns/MonoDevelop.CodeMetrics/MonoDevelop.CodeMetrics.dll
 lib/monodevelop/AddIns/MonoDevelop.CodeMetrics/MonoDevelop.CodeMetrics.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Debugger/MonoDevelop.Debugger.dll
@@ -58,9 +70,6 @@ lib/monodevelop/AddIns/MonoDevelop.GtkCore/libstetic.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.GtkCore/libsteticui.dll
 lib/monodevelop/AddIns/MonoDevelop.GtkCore/libsteticui.dll.config
 lib/monodevelop/AddIns/MonoDevelop.GtkCore/libsteticui.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.Moonlight/MonoDevelop.Moonlight.dll
-lib/monodevelop/AddIns/MonoDevelop.Moonlight/MonoDevelop.Moonlight.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.Moonlight/Silverlight.js
 lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll
 lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.RegexToolkit/MonoDevelop.RegexToolkit.dll
@@ -95,6 +104,9 @@ lib/monodevelop/AddIns/VersionControl/Diff.dll
 lib/monodevelop/AddIns/VersionControl/Diff.dll.mdb
 lib/monodevelop/AddIns/VersionControl/DiffWidget.dll
 lib/monodevelop/AddIns/VersionControl/DiffWidget.dll.mdb
+%%SVN%%lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll
+%%SVN%%lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll.config
+%%SVN%%lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll.mdb
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll.mdb
 lib/monodevelop/AddIns/WelcomePage/WelcomePage.css
@@ -143,8 +155,6 @@ lib/monodevelop/data/options/MonoDevelop-tools.xml
 lib/monodevelop/data/options/MonoDevelopProperties.xml
 lib/monodevelop/data/options/StandardHeader.xml
 lib/monodevelop/data/options/TipsOfTheDay.xml
-%%SVN%%lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll
-%%SVN%%lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll.mdb
 libdata/pkgconfig/monodevelop.pc
 libdata/pkgconfig/monodevelop-core-addins.pc
 share/applications/monodevelop.desktop
@@ -175,6 +185,8 @@ share/locale/sv/LC_MESSAGES/monodevelop.mo
 share/locale/tr/LC_MESSAGES/monodevelop.mo
 share/locale/zh_CN/LC_MESSAGES/monodevelop.mo
 share/locale/zh_TW/LC_MESSAGES/monodevelop.mo
+share/mime/XMLnamespaces
+share/mime/aliases
 share/mime/application/x-asax.xml
 share/mime/application/x-ascx.xml
 share/mime/application/x-ashx.xml
@@ -197,12 +209,21 @@ share/mime/application/x-resourcesx.xml
 share/mime/application/x-soap-remoting.xml
 share/mime/application/x-web-config.xml
 share/mime/application/x-wsdl.xml
+share/mime/generic-icons
+share/mime/globs
+share/mime/globs2
+share/mime/icons
+share/mime/magic
+share/mime/mime.cache
 share/mime/packages/monodevelop.xml
+share/mime/subclasses
 share/mime/text/x-csharp.xml
 share/mime/text/x-js.xml
 share/mime/text/x-msil.xml
 share/mime/text/x-nemerle.xml
 share/mime/text/x-vb.xml
+share/mime/treemagic
+share/mime/types
 @dirrmtry share/applications
 @dirrmtry share/locale/sv/LC_MESSAGES
 @dirrmtry share/locale/sv
@@ -227,6 +248,7 @@ share/mime/text/x-vb.xml
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Deployment
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Debugger
 @dirrm lib/monodevelop/AddIns/MonoDevelop.CodeMetrics
+@dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools/templates
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet/Schemas
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet
