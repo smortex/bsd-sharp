@@ -1,0 +1,6 @@
+bareFTP is a file transfer client supporting the FTP, FTP over SSL/TLS (FTPS)
+and SSH File Transfer Protocol (SFTP). It is written in C#, targeting the Mono
+framework and the GNOME desktop environment. bareFTP is released under the
+terms of the GPL license.
+
+WWW:	http://www.bareftp.org/
