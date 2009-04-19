@@ -87,6 +87,8 @@ share/locale/vi/LC_MESSAGES/gnome-do.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-do.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-do.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-do.mo
-@dirrm share/locale/ast/LC_MESSAGES
-@dirrm share/locale/ast
+@dirrmtry share/icons/hicolor/256x256/apps
+@dirrmtry share/icons/hicolor/256x256
+@dirrm share/gnome-do/ClockTheme
+@dirrm share/gnome-do
 @dirrm lib/gnome-do
