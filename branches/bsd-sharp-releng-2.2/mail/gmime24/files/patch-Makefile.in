@@ -1,14 +1,14 @@
 
-$FreeBSD: ports/mail/gmime24/files/patch-Makefile.in,v 1.1 2009/02/09 08:59:58 flz Exp $
+$FreeBSD: ports/mail/gmime24/files/patch-Makefile.in,v 1.2 2009/04/25 18:39:41 mnag Exp $
 
---- Makefile.in.orig
-+++ Makefile.in
-@@ -231,7 +231,7 @@
- target_alias = @target_alias@
+--- Makefile.in.orig	2009-04-25 12:01:47.000000000 -0300
++++ Makefile.in	2009-04-25 12:04:34.000000000 -0300
+@@ -233,7 +233,7 @@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
--SUBDIRS = util gmime src $(am__append_1) tests docs $(am__append_2) \
-+SUBDIRS = util gmime $(am__append_1) tests docs $(am__append_2) \
- 	tools .
+-SUBDIRS = build util gmime src $(am__append_1) tests docs \
++SUBDIRS = build util gmime $(am__append_1) tests docs \
+ 	$(am__append_2) tools .
  DISTCLEANFILES = iconv-detect.h
  EXTRA_DIST = \
