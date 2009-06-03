@@ -2,7 +2,7 @@
 # Date created:         2003-01-01
 # Whom:                 Juli Mallett
 #
-# $FreeBSD: ports/x11-toolkits/gtk-sharp20/Makefile,v 1.59 2009/02/09 08:59:54 flz Exp $
+# $FreeBSD: ports/x11-toolkits/gtk-sharp20/Makefile,v 1.60 2009/03/22 19:34:49 pav Exp $
 #   $Id: Makefile,v 1.27 2007/10/03 00:48:49 killfill Exp $
 #
 
