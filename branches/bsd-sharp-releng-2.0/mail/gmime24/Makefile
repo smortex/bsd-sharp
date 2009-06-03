@@ -2,7 +2,7 @@
 # Date created:				16 Apr 2001
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/mail/gmime24/Makefile,v 1.3 2009/04/25 18:39:41 mnag Exp $
+# $FreeBSD: ports/mail/gmime24/Makefile,v 1.4 2009/05/31 20:31:03 pav Exp $
 #
 
 PORTNAME=	gmime
@@ -31,7 +31,7 @@ CONFIGURE_ARGS?=	--with-libiconv=${LOCALBASE} \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib"
 
-LATEST_LINK?=	${PORTNAME}2
+LATEST_LINK?=	${PORTNAME}24
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|stdint.h|inttypes.h|" ${WRKSRC}/zentimer.h
