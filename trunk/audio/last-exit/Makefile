@@ -7,7 +7,6 @@
 
 PORTNAME=	last-exit
 PORTVERSION=	4
-PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://folks.o-hand.com/iain/last-exit/
 

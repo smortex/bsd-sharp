@@ -7,7 +7,6 @@
 
 PORTNAME=	new-stuff-manager
 PORTVERSION=	0.2.3
-PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.k-d-w.org/NewStuffManager/source/
 
