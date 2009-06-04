@@ -7,7 +7,6 @@
 
 PORTNAME=	ipod-sharp
 PORTVERSION=	0.8.0
-PORTREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/
 

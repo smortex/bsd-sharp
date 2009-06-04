@@ -2,11 +2,12 @@
 # Date created:				Jul 10 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.10 2009/03/18 09:12:44 flz Exp $
+# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.12 2009/06/03 15:10:09 flz Exp $
 #
 
 PORTNAME=	banshee
 PORTVERSION=	1.4.3
+PORTEPOCH=	1
 PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee-project.org/banshee/
@@ -29,6 +30,7 @@ LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono \
 
 OPTIONS=	DOCS "Install documentation" on \
 		MTP "Enable MTP support" on
+#		BPMDETECT "Enable BPM detection" on
 #		IPOD "Enable iPod support" on \
 
 USE_BZIP2=	yes
@@ -43,7 +45,7 @@ USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS+=	--disable-boo
+CONFIGURE_ARGS+=	--disable-boo --disable-shave
 
 # Need absolute path for build/icon-install-theme.
 INSTALL=	/usr/bin/install
@@ -70,6 +72,10 @@ PLIST_SUB+=	OPT_MTP=""
 CONFIGURE_ARGS+=	--disable-mtp
 PLIST_SUB+=	OPT_MTP="@comment "
 .endif
+
+#.if !defined(WITHOUT_BPMDETECT)
+#USE_GSTREAMER+=	soundtouch
+#.endif
 
 post-patch:
 	@${REINPLACE_CMD} "s|!/bin/bash|!${PREFIX}/bin/bash|" \

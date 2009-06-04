@@ -7,7 +7,6 @@
 
 PORTNAME=	greent
 PORTVERSION=	0.9.1
-PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://forgeftp.novell.com/greent/releases/${PORTVERSION}/
 
