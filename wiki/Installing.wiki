@@ -1,0 +1,54 @@
+#summary How to have cutting edge mono on FreeBSD
+#labels Featured
+
+= BSD# Branches =
+
+The BSD# Team maintain various branches for various mono versions in the BSD# repository:
+
+|| *Path* || *Mono Version* || *Status* || *Maintained* ||
+|| `/branches/bsd-sharp-releng-2.0` || 2.0 || Committed on 2009-02-09 || Yes ||
+|| `/branches/bsd-sharp-releng-2.2` || 2.2 || Stalled || No ||
+|| `/trunk` || 2.4 || Pending || Yes ||
+
+Each branch contains a partial ports tree (only ports related to mono and possibly patches for `Mk/*` files are available) and are *not intended to replace the FreeBSD ports tree* but rather merged into it.
+
+To ease this, a merge tool named _portshaker_ has been developed by the BSD# Team, and is available in the download section (or in the BSD# repository).
+
+= Tracking a BSD# branch =
+
+Okay, you are curious and whant to see what will be available later on FreeBSD _now_? Or maybe you want to run the bleeding edge mono? Here is ow to setup and maintain your merged FreeBSD ports tree.
+
+== Install _portshaker_ ==
+
+Either downlaod and extract a tarball from the download section or checkout the code using the following command:
+{{{
+svn co "http://bsd-sharp.googlecode.com/svn/branches/portshaker/"
+}}}
+
+Then build and install _portshaker_:
+{{{
+make DESTDIR="/usr/local"
+sudo make DESTDIR="/usr/local" install
+}}}
+
+For convenience, _portshaker_ ships with example configuration files for tracking the `trunk`, where the porting effort is concentrated. Install the examples running:
+{{{
+make -C examples DESTDIR="/usr/local" install
+}}}
+
+The default configuration file should fit your needs, but you can cuustomise if: `/usr/local/etc/portshaker.conf`.
+
+== Update your ports ==
+
+Updating your FreeBSD ports tree, your copy of the BSD# repository and meging them is as easy as running _portshaker_:
+
+{{{
+portshaker
+}}}
+
+The default behaviour is to update and merge all configured ports tree.
+
+
+== Updating you ports ==
+
+Since the BSD# ports tree is merged into the FreeBSD ports tree, you can update your ports the usual way (using _portupgrade_ for example).
