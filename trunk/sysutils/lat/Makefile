@@ -10,7 +10,7 @@ PORTVERSION=	1.2.3
 CATEGORIES=	x11 gnome sysutils
 MASTER_SITES=	http://www.lbtechservices.com/downloads/lat/1.2/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A Gtk# LDAP Administration Tool
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \

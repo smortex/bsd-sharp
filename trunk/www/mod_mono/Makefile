@@ -11,7 +11,7 @@ PORTVERSION=	2.4
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Apache module for serving ASP.NET applications
 
 LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr

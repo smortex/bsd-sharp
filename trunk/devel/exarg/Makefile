@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	aspl-fact
 DISTNAME=	exarg-1.0.b2392.g2413
 
-MAINTAINER=	pneumann@gmail.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Utility for parsing program arguments
 
 WRKSRC=	${WRKDIR}/exarg-1.0.b2392.g2413

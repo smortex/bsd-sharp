@@ -10,7 +10,7 @@ PORTVERSION=	2.4
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	VisualBasic.NET support for Mono
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
