@@ -11,7 +11,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	http://www.reitwiessner.de/programs/
 DISTNAME=	tomboy-latex-${PORTVERSION}
 
-MAINTAINER=	freebsd-mono@freebsd.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	LaTeX math plugin for Tomboy
 
 BUILD_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy

@@ -20,7 +20,7 @@ MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 #DIST_SUBDIR=	${PORTNAME}
 #EXTRACT_ONLY=
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Fully managed implementation of gnome-keyring
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
