@@ -41,7 +41,7 @@ svn checkout https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-releng-2.0
 
 When a branch is considered stable, tag it using the date in the form YYYYMMDD:
 {{{
-svn copy https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-releng-2.0 https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20081218 -m "TAG bsd-sharp-20081218."
+svn copy https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-releng-2.0 https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-`date +%Y%m%d` -m "TAG bsd-sharp-`date +%Y%m%d`."
 }}}
 
 You can then send a problem report mentioning the tag. If you want to send a diff in your PR, use svn ask for a diff between your tag and the previous one:
