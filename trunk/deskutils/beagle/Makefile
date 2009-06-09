@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	beagle
-PORTVERSION=	0.3.8
+PORTVERSION=	0.3.9
 PORTREVISION?=	0
 CATEGORIES?=	deskutils gnome
 MASTER_SITES=	GNOME
@@ -17,7 +17,7 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT?=	Index and search local files
 
 BUILD_DEPENDS?=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+		${LOCALBASE}/libdata/pkgconfig/gmime-sharp-2.4.pc:${PORTSDIR}/mail/gmime24-sharp \
 		${LOCALBASE}/lib/mono/evolution-sharp/evolution-sharp.dll:${PORTSDIR}/mail/evolution-sharp \
 		${LOCALBASE}/libdata/pkgconfig/taglib-sharp.pc:${PORTSDIR}/audio/taglib-sharp \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
