@@ -12,7 +12,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://dist.codehaus.org/boo/distributions/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A CLI-targeted programming language similar to Python
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/shared-mime-info.pc:${PORTSDIR}/misc/shared-mime-info \

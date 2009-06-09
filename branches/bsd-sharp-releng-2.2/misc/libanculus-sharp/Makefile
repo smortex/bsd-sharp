@@ -10,7 +10,7 @@ PORTVERSION=	0.3.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	bsd-sharp@googlegroups.com
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Reusable utility library for Mono and MS.Net
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
