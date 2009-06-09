@@ -5,6 +5,9 @@
 #
 # Files are automatically copied, files that need to be merged by hand are
 # listed on stdout.
+#
+# TODO: Fix PORTREVISIONs so that we can bump them in /trunk and still not have
+#       messed-up PORTREVISIONs in the FreeBSD ports tree.
 
 PORTSDIR=${PORTSDIR:=/var/cache/portshaker/freebsd}
 
