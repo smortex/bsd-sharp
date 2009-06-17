@@ -8,6 +8,7 @@
 
 PORTNAME=	mono
 PORTVERSION=	2.4.2
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
 
