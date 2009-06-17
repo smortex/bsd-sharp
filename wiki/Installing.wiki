@@ -6,14 +6,16 @@
 The BSD# Team maintain various branches for various mono versions in the BSD# repository:
 
 || *Path* || *Mono Version* || *Status* || *Maintained* ||
-|| `/branches/bsd-sharp-releng-2.0` || 2.0 || Committed on 2009-02-09 || Yes ||
+|| `/branches/bsd-sharp-releng-2.0` || 2.0.1 || Committed on 2009-02-09 || Yes ||
 || `/branches/bsd-sharp-releng-2.2` || 2.2 || Stalled || No ||
-|| `/branches/bsd-sharp-releng-2.4` || 2.4 || Pending || Yes ||
-|| `/trunk` || 2.4.2p1 || N/A || Yes ||
+|| `/branches/bsd-sharp-releng-2.4` || 2.4 || Pending (1) || Yes ||
+|| `/trunk` || 2.4.2p2 || N/A || Yes ||
 
 Version suffixes legend:
  * pX --- Preview X
  * bX --- Beta X
+
+(1) http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/135248
 
 Each branch contains a partial ports tree (only ports related to mono and possibly patches for `Mk/*` files are available) and are *not intended to replace the FreeBSD ports tree* but rather merged into it.
 
