@@ -26,13 +26,21 @@
 
 	<body>
 		<p>The BSD# Project is devoted to porting the Mono .NET framework and applications to the FreeBSD operating system.</p>
-		<p>Because of a lack of time, Mono stalled at version 1.2.5 for more than one year in the FreeBSD ports tree. However, things have moved and the BSD# Team is proud to announce that the Mono ports is about to be updated to 2.0.1. Ports depending on Mono will also be updated to the latest available version at the same occasion.</p>
-		<p>While the ports will be updated really soon now that FreeBSD 7.1 has been released, impatients can download and merge the BSD# ports in their FreeBSD tree right now following the instructions provided on the BSD# Project's page.</p>
+		<p>During the past six months, the BSD# Team continued to track the Mono development and the lang/mono port was updated to version 2.4, the latest stable version of Mono (skipping version 2.2 because of some regressions in this release).</p>
+		<p>In the meantime, many other related ports have been updated or added. These ports include:</p>
+		<ul>
+			<li>www/xsp and www/mod_mono that make it possible to use FreeBSD for hosting ASP.NET application;</li>
+			<li>multimedia/moonlight, an Open Source implementation of Microsft SilverLight;</li>
+			<!--li>lang/mono-basic, the Visual Basic.NET Framework for Mono;</li-->
+			<!--li>devel/monodevelop, an Integrated Development Environment for .NET;</li-->
+			<!--li>deskuils/gnome-do, an all-in-one launch-box to perform actions quickly with your computer;</li-->
+			<li>and much more...</li>
+		</ul>
 	</body>
 
 	<help>
-		<task>Test and send feedback.</task>
-		<task>Port Mono applications to FreeBSD</task>
+		<task>Test mono ports and send feedback (a special attention to environments where NO_PORTSDOC / WITH_DEBUG is set has to be taken).</task>
+		<task>Port the mono-debugger to FreeBSD.</task>
 		<task>Build a debug live-image of FreeBSD so that Mono hackers without a FreeBSD box can help us fixing bugs more efficiency.</task>
 	</help>
 
