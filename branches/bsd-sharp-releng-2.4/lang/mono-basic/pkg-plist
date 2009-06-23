@@ -1,4 +1,4 @@
-@comment $FreeBSD$
+@comment $FreeBSD: ports/lang/mono-basic/pkg-plist,v 1.1 2009/06/23 11:46:40 flz Exp $
 bin/vbnc
 lib/mono/2.0/Microsoft.VisualBasic.dll
 lib/mono/2.0/vbnc.exe
