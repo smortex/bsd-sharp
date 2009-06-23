@@ -2,7 +2,7 @@
 # Date created:         		20061025
 # Whom:                 		Tom McLaughlin <tmclaugh@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gnome-sharp20/Makefile,v 1.8 2009/02/09 08:59:54 flz Exp $
+# $FreeBSD: ports/x11-toolkits/gnome-sharp20/Makefile,v 1.10 2009/06/22 07:55:49 flz Exp $
 #   $Id: Makefile,v 1.3 2007/10/02 03:37:51 killfill Exp $
 #
 

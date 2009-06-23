@@ -2,7 +2,7 @@
 # Date Created:				Aug 25 2008
 # Whom:				 	Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/taglib-sharp/Makefile,v 1.4 2009/02/23 10:20:08 flz Exp $
+# $FreeBSD: ports/audio/taglib-sharp/Makefile,v 1.5 2009/06/22 07:55:45 flz Exp $
 #
 
 PORTNAME=	taglib-sharp
