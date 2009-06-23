@@ -1,5 +1,5 @@
 
-$FreeBSD$
+$FreeBSD: ports/lang/mono/files/patch-mono_mini_mini-x86.c,v 1.3 2009/06/22 07:55:47 flz Exp $
 
 --- mono/mini/mini-x86.c.orig
 +++ mono/mini/mini-x86.c

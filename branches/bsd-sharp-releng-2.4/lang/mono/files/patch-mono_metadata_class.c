@@ -1,5 +1,5 @@
 
-$FreeBSD$
+$FreeBSD: ports/lang/mono/files/patch-mono_metadata_class.c,v 1.2 2009/06/22 07:55:47 flz Exp $
 
 --- mono/metadata/class.c.orig
 +++ mono/metadata/class.c
