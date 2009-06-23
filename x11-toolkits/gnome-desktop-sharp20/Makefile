@@ -2,7 +2,7 @@
 # Date created:         		20070531
 # Whom:                 		pneumann@gmail.com
 #
-# $FreeBSD: ports/x11-toolkits/gnome-desktop-sharp20/Makefile,v 1.1 2009/02/09 08:59:55 flz Exp $
+# $FreeBSD: ports/x11-toolkits/gnome-desktop-sharp20/Makefile,v 1.3 2009/06/22 07:55:49 flz Exp $
 #
 
 PORTNAME=	gnome-desktop-sharp

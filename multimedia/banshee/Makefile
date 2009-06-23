@@ -2,7 +2,7 @@
 # Date created:				Jul 10 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.12 2009/06/03 15:10:09 flz Exp $
+# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.13 2009/06/22 07:55:47 flz Exp $
 #
 
 PORTNAME=	banshee
