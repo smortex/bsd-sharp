@@ -31,7 +31,7 @@
 		<ul>
 			<li>www/xsp and www/mod_mono that make it possible to use FreeBSD for hosting ASP.NET application;</li>
 			<li>multimedia/moonlight, an Open Source implementation of Microsft SilverLight;</li>
-			<!--li>lang/mono-basic, the Visual Basic.NET Framework for Mono;</li-->
+			<li>lang/mono-basic, the Visual Basic.NET Framework for Mono;</li>
 			<!--li>devel/monodevelop, an Integrated Development Environment for .NET;</li-->
 			<!--li>deskuils/gnome-do, an all-in-one launch-box to perform actions quickly with your computer;</li-->
 			<li>and much more...</li>
