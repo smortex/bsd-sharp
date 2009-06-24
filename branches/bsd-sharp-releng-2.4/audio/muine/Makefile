@@ -2,7 +2,7 @@
 # Date created:				20040615
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/audio/muine/Makefile,v 1.48 2009/02/21 15:51:12 miwi Exp $
+# $FreeBSD: ports/audio/muine/Makefile,v 1.49 2009/06/23 21:14:53 flz Exp $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
 #
 
@@ -14,6 +14,8 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono based Gnome audio player
+
+BROKEN=		doesn't build and is apparently unmaintained
 
 LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
 		id3tag.0:${PORTSDIR}/audio/libid3tag \
