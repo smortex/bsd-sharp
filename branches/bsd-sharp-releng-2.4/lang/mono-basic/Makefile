@@ -20,6 +20,7 @@ MAN1=		vbnc.1
 
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
+CONFIGURE_ARGS=	--prefix=${PREFIX}
 USE_GMAKE=	yes
 
 tests: build
