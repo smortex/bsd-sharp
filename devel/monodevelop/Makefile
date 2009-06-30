@@ -14,10 +14,9 @@ MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	IDE for the .NET platform
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
-		mautil:${PORTSDIR}/devel/mono-addins
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
-		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
+BUILD_DEPENDS=	mautil:${PORTSDIR}/devel/mono-addins \
+		update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
+RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
 		mautil:${PORTSDIR}/devel/mono-addins
 
 USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
