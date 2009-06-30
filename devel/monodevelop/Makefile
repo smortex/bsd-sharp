@@ -17,6 +17,7 @@ COMMENT=	IDE for the .NET platform
 BUILD_DEPENDS=	mautil:${PORTSDIR}/devel/mono-addins \
 		update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
+		exctags:${PORTSDIR}/devel/ctags \
 		mautil:${PORTSDIR}/devel/mono-addins
 
 USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
