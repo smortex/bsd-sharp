@@ -8,9 +8,9 @@
 
 PORTNAME=	mono
 PORTVERSION=	2.4.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	An open source implementation of .NET Development Framework
