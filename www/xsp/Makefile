@@ -7,8 +7,7 @@
 #
 
 PORTNAME=	xsp
-PORTVERSION=	2.4.2
-PORTREVISION=	1
+PORTVERSION=	2.4
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
