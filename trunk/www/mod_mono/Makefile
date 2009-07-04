@@ -2,14 +2,14 @@
 # Date created:					20040828
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/www/mod_mono/Makefile,v 1.1 2009/06/22 07:55:48 flz Exp $
 #   $Id: Makefile,v 1.39 2007/12/13 19:35:47 killfill Exp $
 #
 
 PORTNAME=	mod_mono
 PORTVERSION=	2.4.2
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Apache module for serving ASP.NET applications

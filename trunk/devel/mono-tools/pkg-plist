@@ -1,4 +1,4 @@
-@comment $FreeBSD$
+@comment $FreeBSD: ports/devel/mono-tools/pkg-plist,v 1.9 2009/06/22 07:55:46 flz Exp $
 bin/create-native-map
 bin/gasnview
 bin/gendarme

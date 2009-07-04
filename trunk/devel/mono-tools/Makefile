@@ -2,7 +2,7 @@
 # Date created:			2005-06-16
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/devel/mono-tools/Makefile,v 1.14 2009/02/09 08:59:55 flz Exp $
+# $FreeBSD: ports/devel/mono-tools/Makefile,v 1.15 2009/06/22 07:55:46 flz Exp $
 #   $Id: Makefile,v 1.30 2007/12/13 19:32:53 killfill Exp $
 #
 
@@ -10,7 +10,7 @@ PORTNAME=	mono-tools
 PORTVERSION=	2.4.2
 PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Documentation browser for Mono and Mono libraries
