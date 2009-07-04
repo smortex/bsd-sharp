@@ -2,7 +2,7 @@
 #
 # Switch between stable and preview repositories of mono.
 
-STABLE_SOURCE="${STABLE_SOURCE:=ftp://ftp.novell.com/pub/mono/sources/}"
+STABLE_SOURCE="${STABLE_SOURCE:=http://ftp.novell.com/pub/mono/sources/}"
 PREVIEW_SOURCE="${PREVIEW_SOURCE:=http://mono.ximian.com/monobuild/preview/sources/}"
 
 case $1 in
