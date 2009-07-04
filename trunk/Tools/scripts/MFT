@@ -8,6 +8,7 @@ usage()
 {
 	cat << EOT >&2
 usage:
+  $0 -a port...
   $0 -c M:N...
   $0 -r M[,N...]
 EOT
@@ -26,10 +27,11 @@ if [ -n "${out}" ]; then
 	exit 1
 fi
 
+_a=""
 _c=""
 _r=""
 
-args=`getopt c:r: $*`
+args=`getopt ac:r: $*`
 if [ $? -ne 0 ]; then
 	usage
 fi
@@ -38,13 +40,14 @@ set -- $args
 for i
 do
 	case "$i" in
+		-a) _a=1; shift;;
 		-c) _c="$2"; shift; shift;;
 		-r) _r="$2"; shift; shift;;
 		--) shift; break;;
 	esac
 done
 
-if [ -z "${_c}${_r}" -o -n "${_c}" -a -n "${_r}" ]; then
+if [ -z "${_a}${_c}${_r}" -o -n "${_c}" -a -n "${_r}" ]; then
 	usage
 fi
 
@@ -61,11 +64,44 @@ source=""
 if [ -n "${_c}" ]; then
 	svn merge -c "${_c}" ${repo_trunk} || exit 1
 	source="changeset ${_c}"
-else
+elif [ -n "${_r}" ]; then
 	svn merge -r "${_r}" ${repo_trunk} || exit 1
 	source="revision ${_r}"
+else
+	for path; do
+		echo "===> Merging ${path}..."
+		svn merge "${repo_root}/${path}" "${repo_trunk}/${path}" "${path}" || exit 1
+	done
+	source="trunk (dumb copy)"
 fi
 
+
+# Now we have merged, look for Makefiles and cleannup PORTREVISION for ports
+# with both the PORTVERSION and PORTREVISION changed.
+for makefile in `svn status | awk ' $2 ~ /\/Makefile$/ { print $2 } '`; do
+	svn diff "${makefile}" | grep -q '^+PORTVERSION'
+	if [ $? -eq 0 ]; then
+		# PORTVERSION changed. Ensure PORTREVISION is not set
+		svn diff "${makefile}" | grep -q '^+PORTREVISION'
+		if [ $? -eq 0 ]; then
+			# Remove PORTREVISION
+			mv "${makefile}" "${makefile}.orig" && cat "${makefile}.orig" | grep -v '^PORTREVISION' > "${makefile}" && rm "${makefile}.orig" || exit 1
+		fi
+	else
+		# PORTVERSION is untouched. Ensure the new PORTREVISION is consistent.
+		old_revision=`svn diff "${makefile}" | awk '$1 ~ /^-PORTREVISION/ { print $2 }'`
+		new_revision=`svn diff "${makefile}" | awk '$1 ~ /^+PORTREVISION/ { print $2 }'`
+		old_revision=${old_revision:=0}
+		new_revision=${new_revision:=0}
+
+		if [ $(( ${old_revision} + 1 )) -ne ${new_revision} ]; then
+			mv "${makefile}" "${makefile}.orig" && cat "${makefile}.orig" | sed -e "s|^\\(PORTREVISION.*\\)${old_revision}|\\1$((${old_revision} + 1))|" > "${makefile}" && rm "${makefile}.orig" || exit 1
+		fi
+	fi
+done
+
+
+# Display changes and ask for committing.
 if [ $? -eq 0 ]; then
 	ans=""
 	while [ "$ans" != "yes" -a "$ans" != "no" ]; do
