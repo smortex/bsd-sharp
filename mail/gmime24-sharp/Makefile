@@ -2,7 +2,7 @@
 # Date Created:					20050513
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/mail/gmime24-sharp/Makefile,v 1.1 2009/02/09 08:59:58 flz Exp $
+# $FreeBSD: ports/mail/gmime24-sharp/Makefile,v 1.2 2009/06/14 08:36:42 miwi Exp $
 #   $Id: Makefile,v 1.17 2006/10/26 18:37:29 tmclau02 Exp $
 #
 

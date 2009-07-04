@@ -2,14 +2,14 @@
 # Date created:					20040820
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.15 2009/02/09 08:59:55 flz Exp $
+# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.16 2009/06/22 07:55:49 flz Exp $
 #   $Id: Makefile,v 1.46 2007/12/13 19:37:18 killfill Exp $
 #
 
 PORTNAME=	libgdiplus
 PORTVERSION=	2.4.2
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	GDI+ API for System.Windows.Forms in Mono
