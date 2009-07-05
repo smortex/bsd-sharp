@@ -1,32 +1,35 @@
 # New ports collection makefile for:	gnome-do-plugins
-# Date created:		2009-01-30
+# Date created:		2009-07-02
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
 # $FreeBSD$
 #
 
 PORTNAME=	gnome-do-plugins
-PORTVERSION=	0.8.0
-CATEGORIES=	deskutils gnome
-MASTER_SITES=	http://launchpadlibrarian.net/21782250/
+PORTVERSION=	0.8.1
+PORTREVISION?=	0
+CATEGORIES?=	deskutils
+MASTER_SITES=	https://launchpadlibrarian.net/23832017/
+PKGNAMESUFFIX=  ${DO_PLUGIN_SUFFIX}
 
-MAINTAINER=	romain@blogreen.org
-COMMENT=	Plugins for gnome-do
+MAINTAINER=     mono@FreeBSD.org
+COMMENT?=	gnome-do collection of plugins
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/do.platform.pc:${PORTSDIR}/deskutils/gnome-do \
+BUILD_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do \
 		${LOCALBASE}/libdata/pkgconfig/banshee-1-collection-indexer.pc:${PORTSDIR}/multimedia/banshee \
 		${LOCALBASE}/libdata/pkgconfig/evolution-sharp.pc:${PORTSDIR}/mail/evolution-sharp \
 		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet \
 		mdtool:${PORTSDIR}/devel/monodevelop
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/do.platform.pc:${PORTSDIR}/deskutils/gnome-do \
+RUN_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do \
 		${LOCALBASE}/libdata/pkgconfig/banshee-1-collection-indexer.pc:${PORTSDIR}/multimedia/banshee \
 		${LOCALBASE}/libdata/pkgconfig/evolution-sharp.pc:${PORTSDIR}/mail/evolution-sharp \
 		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet \
-		wnb:${PORTSDIR}/textproc/wordnet \
-		wish8.4:${PORTSDIR}/x11-toolkits/tk84
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	intltool
 
-.include <bsd.port.mk>
+WANT_GNOME=	yes
+
+.include <bsd.port.pre.mk>
+
+.include "${MASTERDIR}/Makefile.common"
+
+.include <bsd.port.post.mk>
