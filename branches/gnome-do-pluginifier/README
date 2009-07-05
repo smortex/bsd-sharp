@@ -1,0 +1,12 @@
+README file for gnome-do-pluginifier
+
+This utility builds a skeleton of gnome-do-plugins meta-port and all
+gnome-do-plugin-foo which it brings.
+
+This is mostly an exercise for learning a bit of C# and checking that the port
+of MonoDevelop on FreeBSD is stable enough for inclusion into the FreeBSD ports
+tree. gnome-do-pluginifier is included in the BSD# repository in the hope it
+will help to cope with future gnome-do-plugins.
+
+Beware that this tool only builds a skeleton (that's supposed to be Okay) and
+you will have to handle specific dependencies by hand for each plugin.
