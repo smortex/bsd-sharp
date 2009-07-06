@@ -26,7 +26,7 @@
 
 	<body>
 		<p>The BSD# Project is devoted to porting the Mono .NET framework and applications to the FreeBSD operating system.</p>
-		<p>During the past six months, the BSD# Team continued to track the Mono development and the lang/mono port was updated to version 2.4, the latest stable version of Mono (skipping version 2.2 because of some regressions in this release).</p>
+		<p>During the past six months, the BSD# Team continued to track the Mono development and the lang/mono port was updated to version 2.4.2, the latest stable version of Mono (skipping version 2.2 because of some regressions in this release).</p>
 		<p>In the meantime, many other related ports have been updated or added. These ports include:</p>
 		<ul>
 			<li>www/xsp and www/mod_mono that make it possible to use FreeBSD for hosting ASP.NET application;</li>
