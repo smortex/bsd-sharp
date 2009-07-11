@@ -28,7 +28,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--program-transform-name=\'\' \
-		--with-moonlinght=no \
+		--with-moonlight=no \
 		--with-preview=yes \
 		--with-sigaltstack=no \
 		--mandir=${PREFIX}/man
