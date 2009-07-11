@@ -924,8 +924,6 @@ share/locale/ja/LC_MESSAGES/mcs.mo
 @dirrm share/libgc-mono
 @dirrm share/jay
 @dirrm lib/monodoc/sources
-@dirrm lib/monodoc/sources
-@dirrm lib/monodoc
 @dirrm lib/monodoc
 @dirrm lib/mono/monodoc
 @dirrm lib/mono/gac/nunit.util/2.4.8.0__96d09a1eb7f44a77
