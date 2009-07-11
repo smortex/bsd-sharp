@@ -30,7 +30,6 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 CONFIGURE_ARGS=	--program-transform-name=\'\' \
 		--with-moonlight=no \
 		--with-preview=yes \
-		--with-sigaltstack=no \
 		--mandir=${PREFIX}/man
 MAKE_ARGS=	EXTERNAL_MCS=false
 
