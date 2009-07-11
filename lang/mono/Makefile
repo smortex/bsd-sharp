@@ -28,7 +28,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--program-transform-name=\'\' \
-		--with-preview=yes \
 		--mandir=${PREFIX}/man
 MAKE_ARGS=	EXTERNAL_MCS=false
 
