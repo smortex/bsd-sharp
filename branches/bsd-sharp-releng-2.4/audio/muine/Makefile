@@ -2,13 +2,13 @@
 # Date created:				20040615
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/audio/muine/Makefile,v 1.49 2009/06/23 21:14:53 flz Exp $
+# $FreeBSD: ports/audio/muine/Makefile,v 1.50 2009/07/06 21:25:36 naddy Exp $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
 #
 
 PORTNAME=	muine
 PORTVERSION=	0.8.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 

@@ -2,7 +2,7 @@
 # Date created:		2008-12-20
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/lang/mono-basic/Makefile,v 1.3 2009/06/24 09:35:44 flz Exp $
+# $FreeBSD: ports/lang/mono-basic/Makefile,v 1.4 2009/07/06 10:22:00 flz Exp $
 #
 
 PORTNAME=	mono-basic
