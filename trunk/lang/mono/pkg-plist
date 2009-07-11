@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/lang/mono/pkg-plist,v 1.31 2009/06/22 07:55:46 flz Exp $
+@comment $FreeBSD: ports/lang/mono/pkg-plist,v 1.32 2009/07/11 16:53:16 glewis Exp $
 bin/al
 bin/al1
 bin/al2
