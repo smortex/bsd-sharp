@@ -2,16 +2,17 @@
 # Date created:        22 July 2002
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/mono/Makefile,v 1.77 2009/06/22 07:55:46 flz Exp $
+# $FreeBSD: ports/lang/mono/Makefile,v 1.69 2007/10/25 18:34:27 tmclaugh Exp $
 #   $Id: Makefile,v 1.98 2007/12/13 19:31:45 killfill Exp $
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.4.2.1
+PORTVERSION=	2.0.1
+PORTREVISION=	5
 CATEGORIES=	lang
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An open source implementation of .NET Development Framework
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser
@@ -21,15 +22,16 @@ USE_BISON=	build
 USE_GNOME=	gnomehack glib20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_PERL5_BUILD=	yes
+USE_PERL5_BUILD=yes
 LIBTOOLFILES=	configure libgc/configure
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--program-transform-name=\'\' \
-		--with-moonlight=no \
+		--with-moonlinght=no \
 		--with-preview=yes \
+		--with-sigaltstack=no \
 		--mandir=${PREFIX}/man
 MAKE_ARGS=	EXTERNAL_MCS=false
 
@@ -42,19 +44,16 @@ MONO_SHARED_DIR=${WRKDIR}
 MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 		LC_ALL=C
 
-ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS= i386 amd64
 
-MAN1=		al.1 cert2spc.1 certmgr.1 chktrust.1 cilc.1 csharp.1 disco.1 \
-		dtd2xsd.1 gacutil.1 genxs.1 httpcfg.1 ilasm.1 jay.1 macpack.1 \
-		makecert.1 mconfig.1 mcs.1 mdassembler.1 mdoc-assemble.1 \
-		mdoc-export-html.1 mdoc-export-msxdoc.1 mdoc-update.1 \
-		mdoc-validate.1 mdoc.1 mdvalidater.1 mint.1 mkbundle.1 \
-		mono-cil-strip.1 mono-service.1 mono-shlib-cop.1 \
-		mono-xmltool.1 mono.1 monodis.1 monodocer.1 monodocs2html.1 \
-		monolinker.1 monop.1 monostyle.1 mozroots.1 oldmono.1 \
-		permview.1 prj2make.1 resgen.1 secutil.1 setreg.1 sgen.1 \
-		signcode.1 sn.1 soapsuds.1 sqlsharp.1 wsdl.1 xsd.1
-MAN5=		mdoc.5 mono-config.5
+MAN1=		al.1 cert2spc.1 certmgr.1 chktrust.1 cilc.1 disco.1 dtd2xsd.1 \
+		gacutil.1 genxs.1 httpcfg.1 ilasm.1 jay.1 macpack.1 makecert.1 \
+		mconfig.1 mcs.1 mint.1 mkbundle.1 mono-service.1 mono-shlib-cop.1 \
+		mono-xmltool.1 mono.1 monoburg.1 monodis.1 monolinker.1 monop.1 \
+		monostyle.1 mozroots.1 oldmono.1 permview.1 prj2make.1 secutil.1 \
+		setreg.1 sgen.1 signcode.1 sn.1 soapsuds.1 sqlsharp.1 vbnc.1 \
+		wsdl.1 xsd.1 resgen.1
+MAN5=		mono-config.5
 
 .include <bsd.port.pre.mk>
 
@@ -65,6 +64,15 @@ MAKE_ARGS+=	MONO_GENERIC_SHARING=none #https://bugzilla.novell.com/show_bug.cgi?
 
 pre-everything::
 	@${CAT} ${PKGMESSAGE}
+
+.if ${OSVERSION} < 503000
+IGNORE=	does not work on 4.X and 5.X before 503000
+.endif
+
+# ttyname_r(3) patch
+.if ${OSVERSION} < 600028
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-support_mph.h
+.endif
 
 .if exists(${LOCALBASE}/lib/libfam.so)
 USE_FAM=	yes

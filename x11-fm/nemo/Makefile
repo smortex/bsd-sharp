@@ -20,7 +20,7 @@ MASTER_SITES=	http://www.iola.dk/nemo/downloads/
 #DIST_SUBDIR=	${PORTNAME}
 #EXTRACT_ONLY=
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A calendar-based file browser
 
 USE_BZIP2=	yes

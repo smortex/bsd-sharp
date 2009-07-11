@@ -1,19 +1,17 @@
 # New ports collection makefile for:	blam
-# Date created:				20040812
-# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
+# Date created:		2008-09-17
+# Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/net/blam/Makefile,v 1.26 2009/02/19 13:51:38 flz Exp $
-#   $Id: Makefile,v 1.22 2006/10/26 05:32:53 tmclau02 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	blam
 PORTVERSION=	1.8.6
-PORTREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://www.cmartin.tk/${PORTNAME}/ \
-		http://romain.blogreen.org/distfiles/
+MASTER_SITES=	http://www.cmartin.tk/${PORTNAME}/
+DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A simple feed reader for GNOME
 
 BUILD_DEPENDS=	msgfmt:${PORTSDIR}/devel/gettext \
@@ -27,7 +25,9 @@ USE_GNOME=	gnomesharp20
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 GCONF_SCHEMAS=	blam.schemas
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		blam.1
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+.include <bsd.port.post.mk>

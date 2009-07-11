@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	monodevelop-database
-PORTVERSION=	2.0
+PORTVERSION=	1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	MonoDevelop database support
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop

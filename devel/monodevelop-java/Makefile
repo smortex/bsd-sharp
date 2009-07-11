@@ -6,14 +6,13 @@
 #
 
 PORTNAME=	monodevelop-java
-PORTVERSION=	2.0
+PORTVERSION=	1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	MonoDevelop Java/IKVM language support
 
-USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes

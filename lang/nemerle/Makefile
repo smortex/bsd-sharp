@@ -11,7 +11,7 @@ PORTVERSION=	0.9.3
 CATEGORIES=	lang
 MASTER_SITES=	http://nemerle.org/download/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A functional, object-oriented, imperative language targeting .NET
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \

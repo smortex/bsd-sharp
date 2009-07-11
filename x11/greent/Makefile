@@ -7,10 +7,11 @@
 
 PORTNAME=	greent
 PORTVERSION=	0.9.1
+PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://forgeftp.novell.com/greent/releases/${PORTVERSION}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A Quake-style terminal emulator written in C#
 
 BUILD_DEPENDS=	xmlto:${PORTSDIR}/textproc/xmlto \

@@ -7,12 +7,12 @@
 #
 
 PORTNAME=	boo
-PORTVERSION=	0.9.1.3287
+PORTVERSION=	0.8.2.2960
 CATEGORIES=	lang
 MASTER_SITES=	http://dist.codehaus.org/boo/distributions/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A CLI-targeted programming language similar to Python
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/shared-mime-info.pc:${PORTSDIR}/misc/shared-mime-info \

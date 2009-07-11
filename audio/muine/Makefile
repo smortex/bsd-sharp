@@ -2,20 +2,17 @@
 # Date created:				20040615
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/audio/muine/Makefile,v 1.50 2009/07/06 21:25:36 naddy Exp $
+# $FreeBSD: ports/audio/muine/Makefile,v 1.45 2008/07/25 22:46:13 miwi Exp $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
 #
 
 PORTNAME=	muine
 PORTVERSION=	0.8.10
-PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based Gnome audio player
-
-BROKEN=		doesn't build and is apparently unmaintained
 
 LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
 		id3tag.0:${PORTSDIR}/audio/libid3tag \
@@ -23,7 +20,7 @@ LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
 		vorbis.4:${PORTSDIR}/audio/libvorbis \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
-RUN_DEPENDS=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -44,7 +41,7 @@ OPTIONS=	XINE "Enable Xine backend" off \
 
 .include <bsd.port.pre.mk>
 .if defined (WITH_FAAD)
-LIB_DEPENDS+=	faad.2:${PORTSDIR}/audio/faad
+LIB_DEPENDS+=	faad.0:${PORTSDIR}/audio/faad
 .else
 CONFIGURE_ARGS+=	--disable-faad2
 .endif

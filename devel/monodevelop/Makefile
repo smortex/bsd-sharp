@@ -7,28 +7,26 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	2.0
+PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	IDE for the .NET platform
 
-BUILD_DEPENDS=	mautil:${PORTSDIR}/devel/mono-addins \
-		update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
-RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
-		exctags:${PORTSDIR}/devel/ctags \
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
+		mautil:${PORTSDIR}/devel/mono-addins
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
+		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
 		mautil:${PORTSDIR}/devel/mono-addins
 
 USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_BZIP2=	yes
-CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt \
-			--enable-aspnet --enable-aspnetedit
+CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt
 MAN1=		mdtool.1 monodevelop.1
-USE_GETTEXT=	yes
-INSTALLS_ICONS=	yes
 
 OPTIONS=	SVN "Enable subversion support" on
 
@@ -48,9 +46,6 @@ post-patch:
 		s|[(]gnome_data[)]/mime/packages$$|(prefix)/share/mime/packages|g ; \
 		s|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 			${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|' \
-		${WRKSRC}/monodevelop.in \
-		${WRKSRC}/mdtool.in
 
 post-install:
 	@-update-desktop-database

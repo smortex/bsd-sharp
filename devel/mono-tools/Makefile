@@ -2,22 +2,23 @@
 # Date created:			2005-06-16
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/devel/mono-tools/Makefile,v 1.15 2009/06/22 07:55:46 flz Exp $
+# $FreeBSD: ports/devel/mono-tools/Makefile,v 1.10 2007/10/23 03:22:49 tmclaugh Exp $
 #   $Id: Makefile,v 1.30 2007/12/13 19:32:53 killfill Exp $
 #
 
 PORTNAME=	mono-tools
-PORTVERSION=	2.4.2
-PORTREVISION=	1
+PORTVERSION=	2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Documentation browser for Mono and Mono libraries
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
-		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20
+		${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
+		monodocer:${PORTSDIR}/devel/monodoc
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gecko-sharp-2.0.pc:${PORTSDIR}/www/gecko-sharp20 \
+		monodocer:${PORTSDIR}/devel/monodoc
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget gnomedesktopsharp20
@@ -39,6 +40,6 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@datadir@/man/man1|@mandir@/man1|g'
 
-.include "${PORTSDIR}/lang/mono/bsd.mono.mk"
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 .include <bsd.port.post.mk>

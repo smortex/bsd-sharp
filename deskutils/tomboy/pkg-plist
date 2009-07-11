@@ -1,6 +1,10 @@
-@comment $FreeBSD: ports/deskutils/tomboy/pkg-plist,v 1.17 2009/06/22 07:55:46 flz Exp $
+@comment $FreeBSD$
 bin/tomboy
 bin/tomboy-panel
+lib/tomboy/Mono.Addins.Gui.dll
+lib/tomboy/Mono.Addins.Setup.dll
+lib/tomboy/Mono.Addins.dll
+lib/tomboy/Mono.Addins.dll.config
 lib/tomboy/Tomboy.exe
 lib/tomboy/Tomboy.exe.config
 lib/tomboy/Tomboy.exe.mdb
@@ -29,6 +33,8 @@ lib/tomboy/addins/Tasque.Addin.dll
 lib/tomboy/addins/Tasque.Addin.dll.mdb
 lib/tomboy/addins/WebDavSyncService.dll
 lib/tomboy/addins/WebDavSyncService.dll.mdb
+lib/tomboy/libprintnotes.la
+lib/tomboy/libprintnotes.so
 lib/tomboy/libtomboy.la
 lib/tomboy/libtomboy.so
 libdata/bonobo/servers/GNOME_TomboyApplet.server
@@ -92,25 +98,6 @@ share/gnome/help/tomboy/de/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/de/figures/tomboy-tools.png
 share/gnome/help/tomboy/de/legal.xml
 share/gnome/help/tomboy/de/tomboy.xml
-share/gnome/help/tomboy/el/figures/add-notebook-search.png
-share/gnome/help/tomboy/el/figures/add-to-notebook.png
-share/gnome/help/tomboy/el/figures/delete-notebook.png
-share/gnome/help/tomboy/el/figures/move-notes-search.png
-share/gnome/help/tomboy/el/figures/new-notebook.png
-share/gnome/help/tomboy/el/figures/note-template.png
-share/gnome/help/tomboy/el/figures/notebook-icon.png
-share/gnome/help/tomboy/el/figures/tomboy-main-menu.png
-share/gnome/help/tomboy/el/figures/tomboy-new-note.png
-share/gnome/help/tomboy/el/figures/tomboy-panel.png
-share/gnome/help/tomboy/el/figures/tomboy-pindown.png
-share/gnome/help/tomboy/el/figures/tomboy-pinup.png
-share/gnome/help/tomboy/el/figures/tomboy-preferences-add-ins.png
-share/gnome/help/tomboy/el/figures/tomboy-preferences-editing.png
-share/gnome/help/tomboy/el/figures/tomboy-preferences-hotkeys.png
-share/gnome/help/tomboy/el/figures/tomboy-preferences-synchronization.png
-share/gnome/help/tomboy/el/figures/tomboy-tools.png
-share/gnome/help/tomboy/el/legal.xml
-share/gnome/help/tomboy/el/tomboy.xml
 share/gnome/help/tomboy/en_GB/figures/add-notebook-search.png
 share/gnome/help/tomboy/en_GB/figures/add-to-notebook.png
 share/gnome/help/tomboy/en_GB/figures/delete-notebook.png
@@ -149,25 +136,6 @@ share/gnome/help/tomboy/es/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/es/figures/tomboy-tools.png
 share/gnome/help/tomboy/es/legal.xml
 share/gnome/help/tomboy/es/tomboy.xml
-share/gnome/help/tomboy/eu/figures/add-notebook-search.png
-share/gnome/help/tomboy/eu/figures/add-to-notebook.png
-share/gnome/help/tomboy/eu/figures/delete-notebook.png
-share/gnome/help/tomboy/eu/figures/move-notes-search.png
-share/gnome/help/tomboy/eu/figures/new-notebook.png
-share/gnome/help/tomboy/eu/figures/note-template.png
-share/gnome/help/tomboy/eu/figures/notebook-icon.png
-share/gnome/help/tomboy/eu/figures/tomboy-main-menu.png
-share/gnome/help/tomboy/eu/figures/tomboy-new-note.png
-share/gnome/help/tomboy/eu/figures/tomboy-panel.png
-share/gnome/help/tomboy/eu/figures/tomboy-pindown.png
-share/gnome/help/tomboy/eu/figures/tomboy-pinup.png
-share/gnome/help/tomboy/eu/figures/tomboy-preferences-add-ins.png
-share/gnome/help/tomboy/eu/figures/tomboy-preferences-editing.png
-share/gnome/help/tomboy/eu/figures/tomboy-preferences-hotkeys.png
-share/gnome/help/tomboy/eu/figures/tomboy-preferences-synchronization.png
-share/gnome/help/tomboy/eu/figures/tomboy-tools.png
-share/gnome/help/tomboy/eu/legal.xml
-share/gnome/help/tomboy/eu/tomboy.xml
 share/gnome/help/tomboy/fr/figures/add-notebook-search.png
 share/gnome/help/tomboy/fr/figures/add-to-notebook.png
 share/gnome/help/tomboy/fr/figures/delete-notebook.png
@@ -395,10 +363,8 @@ share/locale/zh_TW/LC_MESSAGES/tomboy.mo
 share/omf/tomboy/tomboy-C.omf
 share/omf/tomboy/tomboy-ca.omf
 share/omf/tomboy/tomboy-de.omf
-share/omf/tomboy/tomboy-el.omf
 share/omf/tomboy/tomboy-en_GB.omf
 share/omf/tomboy/tomboy-es.omf
-share/omf/tomboy/tomboy-eu.omf
 share/omf/tomboy/tomboy-fr.omf
 share/omf/tomboy/tomboy-it.omf
 share/omf/tomboy/tomboy-oc.omf
@@ -446,8 +412,6 @@ share/omf/tomboy/tomboy-uk.omf
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrm share/omf/tomboy
-@dirrm share/locale/la/LC_MESSAGES
-@dirrm share/locale/la
 @dirrm share/gnome/help/tomboy/uk/figures
 @dirrm share/gnome/help/tomboy/uk
 @dirrm share/gnome/help/tomboy/sv/figures
@@ -464,14 +428,10 @@ share/omf/tomboy/tomboy-uk.omf
 @dirrm share/gnome/help/tomboy/it
 @dirrm share/gnome/help/tomboy/fr/figures
 @dirrm share/gnome/help/tomboy/fr
-@dirrm share/gnome/help/tomboy/eu/figures
-@dirrm share/gnome/help/tomboy/eu
 @dirrm share/gnome/help/tomboy/es/figures
 @dirrm share/gnome/help/tomboy/es
 @dirrm share/gnome/help/tomboy/en_GB/figures
 @dirrm share/gnome/help/tomboy/en_GB
-@dirrm share/gnome/help/tomboy/el/figures
-@dirrm share/gnome/help/tomboy/el
 @dirrm share/gnome/help/tomboy/de/figures
 @dirrm share/gnome/help/tomboy/de
 @dirrm share/gnome/help/tomboy/ca/figures

@@ -2,7 +2,7 @@
 # Date created:					20041008
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/graphics/f-spot/Makefile,v 1.33 2009/02/09 08:59:56 flz Exp $
+# $FreeBSD: ports/graphics/f-spot/Makefile,v 1.28 2008/03/27 02:06:20 mezz Exp $
 #   $Id: Makefile,v 1.45 2007/08/26 05:10:23 killfill Exp $
 #
 
@@ -14,7 +14,7 @@ CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Personal photo management to the GNOME desktop
 
 LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms \

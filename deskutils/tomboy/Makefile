@@ -2,26 +2,24 @@
 # Date created:					20041011
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/deskutils/tomboy/Makefile,v 1.36 2009/06/23 18:51:00 flz Exp $
+# $FreeBSD: ports/deskutils/tomboy/Makefile,v 1.33 2008/06/06 13:18:32 edwin Exp $
 #   $Id: Makefile,v 1.49 2007/09/20 15:16:43 killfill Exp $
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	0.14.3
+PORTVERSION=	0.12.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Personal note taking system for the GNOME desktop
 
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
-BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime24-sharp \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		mautil:${PORTSDIR}/devel/mono-addins
-RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime24-sharp \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		mautil:${PORTSDIR}/devel/mono-addins
+BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -30,7 +28,6 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
-USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=--enable-evolution=yes \
 		--enable-dbus=yes \

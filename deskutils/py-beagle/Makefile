@@ -10,7 +10,7 @@ PORTREVISION=	1
 CATEGORIES=	deskutils gnome python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 
 LIB_DEPENDS=	beagle:${PORTSDIR}/deskutils/beagle
 

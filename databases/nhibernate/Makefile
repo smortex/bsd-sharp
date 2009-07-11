@@ -12,7 +12,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A .NET port of the Java Hibernate relational persistence tool
 
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \

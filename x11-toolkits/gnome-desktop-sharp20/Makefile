@@ -2,15 +2,16 @@
 # Date created:         		20070531
 # Whom:                 		pneumann@gmail.com
 #
-# $FreeBSD: ports/x11-toolkits/gnome-desktop-sharp20/Makefile,v 1.3 2009/06/22 07:55:49 flz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-desktop-sharp
-PORTVERSION=	2.26.0
+PORTVERSION=	2.24.0
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	GNOME desktop interfaces for the .NET runtime
 
 USE_BZIP2=	yes

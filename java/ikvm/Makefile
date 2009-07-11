@@ -7,13 +7,13 @@
 #
 
 PORTNAME=	ikvm
-PORTVERSION=	0.40.0.1
-CATEGORIES=	devel java
+PORTVERSION=	0.36.0.11
+CATEGORIES=	java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 DISTFILES=	${PORTNAME}bin-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Java for Mono and the Microsoft .NET Framework
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
@@ -23,18 +23,15 @@ USE_ZIP=	yes
 USE_GNOME=	gnometarget
 NO_BUILD=	yes
 
-.include <bsd.port.pre.mk>
-
 do-install:
 	${MKDIR} ${PREFIX}/lib/${PORTNAME}
-	@(cd ${WRKSRC}/bin/ && ${COPYTREE_SHARE} \* ${PREFIX}/lib/${PORTNAME})
-.if ${ARCH} != "amd64"
-	@(cd ${WRKSRC}/bin-x64/ && ${COPYTREE_SHARE} JVM.DLL ikvm-native.dll ${PREFIX}/lib/${PORTNAME})
-.endif
+.for f in ICSharpCode.SharpZipLib.dll ikvm-native.dll IKVM.AWT.WinForms.dll ikvm.exe IKVM.OpenJDK.ClassLibrary.dll IKVM.Runtime.dll ikvmc.exe ikvmstub.exe JVM.DLL
+	@${INSTALL_DATA} ${WRKSRC}/bin/$f ${PREFIX}/lib/${PORTNAME}
+.endfor
 .for f in ikvm ikvmc ikvmstub
-	@${ECHO_CMD} "#!/bin/sh\n${PREFIX}/bin/mono ${PREFIX}/lib/${PORTNAME}/$f.exe \"\$$@\"" > ${PREFIX}/bin/$f
+	@echo -e "#!/bin/sh\n${PREFIX}/bin/mono ${PREFIX}/lib/${PORTNAME}/$f.exe \"\$$@\"" > ${PREFIX}/bin/$f
 	${CHMOD} 755 ${PREFIX}/bin/$f
 .endfor
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

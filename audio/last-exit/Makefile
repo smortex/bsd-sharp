@@ -7,10 +7,11 @@
 
 PORTNAME=	last-exit
 PORTVERSION=	4
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://folks.o-hand.com/iain/last-exit/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Mono based Gnome last.fm player
 
 LIB_DEPENDS= 	id3tag.0:${PORTSDIR}/audio/libid3tag \

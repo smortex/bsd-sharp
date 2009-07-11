@@ -10,7 +10,7 @@ PORTVERSION=	1.00
 CATEGORIES=	games
 MASTER_SITES=	http://www.softcatala.org/~jmas/${PORTNAME}/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	A brain teaser and trainer
 
 GNU_CONFIGURE=	yes

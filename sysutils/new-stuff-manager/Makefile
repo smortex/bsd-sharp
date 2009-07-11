@@ -7,10 +7,11 @@
 
 PORTNAME=	new-stuff-manager
 PORTVERSION=	0.2.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.k-d-w.org/NewStuffManager/source/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	An easy way to upgrade plugins of any application
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \

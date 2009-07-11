@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	bsd-sharp@googlegroups.com
 COMMENT=	Simple task management application
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
