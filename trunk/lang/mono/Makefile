@@ -27,9 +27,9 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
-CONFIGURE_ARGS=	--program-transform-name=\'\' \
-		--mandir=${PREFIX}/man
+CONFIGURE_ARGS=	--program-transform-name=\'\'
 MAKE_ARGS=	EXTERNAL_MCS=false
+USE_GETTEXT=	yes
 
 OPTIONS=	MOON	"Enable Moonlight Profile (2.1 Alpha)"	on
 
