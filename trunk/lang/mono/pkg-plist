@@ -972,6 +972,7 @@ share/locale/ja/LC_MESSAGES/mcs.mo
 @dirrm lib/mono/gac/System.Web.Services
 @dirrm lib/mono/gac/System.Web.Routing/3.5.0.0__31bf3856ad364e35
 @dirrm lib/mono/gac/System.Web.Routing
+@dirrm lib/mono/gac/System.Web.Mvc
 @dirrm lib/mono/gac/System.Web.Extensions/3.5.0.0__31bf3856ad364e35
 @dirrm lib/mono/gac/System.Web.Extensions/1.0.61025.0__31bf3856ad364e35
 @dirrm lib/mono/gac/System.Web.Extensions.Design/3.5.0.0__31bf3856ad364e35
