@@ -326,7 +326,7 @@ do_shelf_PLIST_FILES=	share/gnome-do/plugins/Do.Shelf_1.2.mpack \
 do_shelf_BUILD_WRKSRC=	Shelf
 
 # skype
-do_skype_RUN_DEPENDS=	
+do_skype_RUN_DEPENDS=	skype:${PORTSDIR}/net/skype
 do_skype_PLIST_FILES=	share/gnome-do/plugins/Do.Skype_1.2.mpack \
 			share/gnome-do/plugins/Skype.dll \
 			share/gnome-do/plugins/Skype.dll.mdb
