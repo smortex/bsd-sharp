@@ -111,7 +111,6 @@ do_firefox_PLIST_FILES=		share/gnome-do/plugins/Do.Firefox_2.2.mpack \
 				share/gnome-do/plugins/Firefox.dll \
 				share/gnome-do/plugins/Firefox.dll.mdb
 do_firefox_BUILD_WRKSRC=	Firefox
-do_firefox_UNSAFE=		yes
 
 # flickr
 do_flickr_RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet
