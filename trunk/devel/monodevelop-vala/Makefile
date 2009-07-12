@@ -15,6 +15,7 @@ COMMENT=	Vala language support for Monodevelop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop \
+		exctags:${PORTSDIR}/devel/ctags \
 		valac:${LOCALBASE}/lang/vala
 
 USE_BZIP2=	yes
