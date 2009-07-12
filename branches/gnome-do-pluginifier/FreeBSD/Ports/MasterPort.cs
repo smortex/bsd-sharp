@@ -23,7 +23,7 @@ MASTER_SITES=	https://launchpadlibrarian.net/23832017/
 PKGNAMESUFFIX=  ${{DO_PLUGIN_SUFFIX}}
 
 MAINTAINER=     mono@FreeBSD.org
-COMMENT?=		gnome-do collection of plugins
+COMMENT?=	gnome-do collection of plugins
 
 BUILD_DEPENDS+=	gnome-do:${{PORTSDIR}}/deskutils/gnome-do
 RUN_DEPENDS+=	gnome-do:${{PORTSDIR}}/deskutils/gnome-do
@@ -45,13 +45,14 @@ do_${{DO_PLUGIN}}_LIB_DEPENDS?=
 do_${{DO_PLUGIN}}_RUN_DEPENDS?=
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=      yes
+USE_GMAKE=		yes
+USE_GNOME=		intltool
 
 BUILD_DEPENDS+=	${{do_${{DO_PLUGIN}}_BUILD_DEPENDS}}
 LIB_DEPENDS+=	${{do_${{DO_PLUGIN}}_LIB_DEPENDS}}
 RUN_DEPENDS+=	${{do_${{DO_PLUGIN}}_RUN_DEPENDS}}
 PLIST_FILES=	${{do_${{DO_PLUGIN}}_PLIST_FILES}}
-PLIST_DIRS=	${{do_${{DO_PLUGIN}}_PLIST_DIRS}}
+PLIST_DIRS=	share/gnome-do/plugins
 BUILD_WRKSRC=	${{WRKSRC}}/${{do_${{DO_PLUGIN}}_BUILD_WRKSRC}}
 INSTALL_WRKSRC=	${{BUILD_WRKSRC}}
 

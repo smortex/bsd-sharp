@@ -50,7 +50,7 @@ MASTERDIR=	${{.CURDIR}}/../../deskutils/gnome-do-plugins
 		{
 			plugin_name = NormalizePortName(plugin.Name);
 			this.master_port = master_port;
-			makefile = String.Format(MAKEFILE_TEMPLATE, Name, DateTime.Now.Date.ToString("yyyy-MM-dd"), Description, PluginInternalName);
+			makefile = String.Format(MAKEFILE_TEMPLATE, Name, DateTime.Now.Date.ToString("yyyy-MM-dd"), Comment, PluginInternalName);
 		}
 	}
 }
