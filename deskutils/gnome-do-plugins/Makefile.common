@@ -361,7 +361,7 @@ do_tasque_PLIST_FILES=	share/gnome-do/plugins/Do.Tasque_1.0.mpack \
 do_tasque_BUILD_WRKSRC=	Tasque
 
 # terminal-server-client
-do_terminalserverclient_RUN_DEPENDS=	
+do_terminalserverclient_RUN_DEPENDS=	tsclient:${PORTSDIR}/net/tsclient
 do_terminalserverclient_PLIST_FILES=	share/gnome-do/plugins/Do.TerminalServerClient_1.1.mpack \
 					share/gnome-do/plugins/TerminalServerClient.dll \
 					share/gnome-do/plugins/TerminalServerClient.dll.mdb
