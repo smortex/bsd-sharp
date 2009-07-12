@@ -130,7 +130,7 @@ do_gnomesession_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMESession_1.5.mpack \
 do_gnomesession_BUILD_WRKSRC=	GNOME-Session
 
 # gnome-terminal
-do_gnometerminal_RUN_DEPENDS=	
+do_gnometerminal_RUN_DEPENDS=	gnome-terminal:${PORTSDIR}/x11/gnome-terminal
 do_gnometerminal_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMETerminal_1.1.mpack \
 				share/gnome-do/plugins/GNOME-Terminal.dll \
 				share/gnome-do/plugins/GNOME-Terminal.dll.mdb
