@@ -109,17 +109,17 @@ do_flickr_PLIST_FILES=	share/gnome-do/plugins/Do.Flickr_1.4.mpack \
 do_flickr_BUILD_WRKSRC=	Flickr
 
 # gnome-dictionary
-do_gnomedictionary_RUN_DEPENDS=	gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils
-do_gnomedictionary_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMEDictionary_1.0.mpack \
-				share/gnome-do/plugins/GNOME-Dictionary.dll \
-				share/gnome-do/plugins/GNOME-Dictionary.dll.mdb
+do_gnomedictionary_RUN_DEPENDS=		gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils
+do_gnomedictionary_PLIST_FILES=		share/gnome-do/plugins/Do.GNOMEDictionary_1.0.mpack \
+					share/gnome-do/plugins/GNOME-Dictionary.dll \
+					share/gnome-do/plugins/GNOME-Dictionary.dll.mdb
 do_gnomedictionary_BUILD_WRKSRC=	GNOME-Dictionary
 
 # gnome-screenshot
-do_gnomescreenshot_RUN_DEPENDS=	
-do_gnomescreenshot_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMEScreenshot_1.0.mpack \
-				share/gnome-do/plugins/GNOME-Screenshot.dll \
-				share/gnome-do/plugins/GNOME-Screenshot.dll.mdb
+do_gnomescreenshot_RUN_DEPENDS=		gnome-screenshot:${PORTSDIR}/deskutils/gnome-utils
+do_gnomescreenshot_PLIST_FILES=		share/gnome-do/plugins/Do.GNOMEScreenshot_1.0.mpack \
+					share/gnome-do/plugins/GNOME-Screenshot.dll \
+					share/gnome-do/plugins/GNOME-Screenshot.dll.mdb
 do_gnomescreenshot_BUILD_WRKSRC=	GNOME-Screenshot
 
 # gnome-session
