@@ -11,7 +11,7 @@ do_alias_PLIST_FILES=	share/gnome-do/plugins/Alias.dll \
 do_alias_BUILD_WRKSRC=	Alias
 
 # archive
-do_archive_RUN_DEPENDS=	
+do_archive_RUN_DEPENDS=	file-roller:${PORTSDIR}/archivers/file-roller
 do_archive_PLIST_FILES=	share/gnome-do/plugins/Archive.dll \
 			share/gnome-do/plugins/Archive.dll.mdb \
 			share/gnome-do/plugins/Do.Archive_1.0.mpack
