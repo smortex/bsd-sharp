@@ -389,7 +389,7 @@ do_tinyurl_PLIST_FILES=	share/gnome-do/plugins/Do.TinyUrl_1.0.mpack \
 do_tinyurl_BUILD_WRKSRC=	TinyUrl
 
 # tomboy
-do_tomboy_RUN_DEPENDS=	
+do_tomboy_RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 do_tomboy_PLIST_FILES=	share/gnome-do/plugins/Do.Tomboy_1.3.mpack \
 			share/gnome-do/plugins/Tomboy.dll \
 			share/gnome-do/plugins/Tomboy.dll.mdb
