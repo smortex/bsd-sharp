@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	flickrnet
-PORTVERSION=	2.1.5
+PORTVERSION=	2.2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://dl.getdropbox.com/u/146215/
-DISTNAME=	FlickrNet-25207
+MASTER_SITES=	http://romain.blogreen.org/distfiles/
+DISTNAME=	FlickrNet${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}-Src-48055
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Flickr .Net API Library
@@ -27,7 +27,7 @@ do-configure:
 do-install:
 	${MKDIR} ${PREFIX}/lib/mono/flickrnet
 	cd ${WRKSRC}/bin/Debug && ${INSTALL_DATA} FlickrNet.dll ${PREFIX}/lib/mono/flickrnet
-	cd ${WRKSRC} && sed -e 's|@prefix@|${PREFIX}|' < flickrnet.pc.in > flickrnet.pc
+	cd ${WRKSRC} && ${SED} -e 's|@prefix@|${PREFIX}|' < flickrnet.pc.in > flickrnet.pc
 	cd ${WRKSRC} && ${INSTALL_DATA} flickrnet.pc ${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.mk>
