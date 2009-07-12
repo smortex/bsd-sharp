@@ -9,19 +9,21 @@ do_alias_PLIST_FILES=	share/gnome-do/plugins/Alias.dll \
 			share/gnome-do/plugins/Alias.dll.mdb \
 			share/gnome-do/plugins/Do.Alias_1.0.mpack
 do_alias_BUILD_WRKSRC=	Alias
+do_alias_UNSAFE=	yes
 
 # archive
-do_archive_RUN_DEPENDS=	file-roller:${PORTSDIR}/archivers/file-roller
-do_archive_PLIST_FILES=	share/gnome-do/plugins/Archive.dll \
-			share/gnome-do/plugins/Archive.dll.mdb \
-			share/gnome-do/plugins/Do.Archive_1.0.mpack
+do_archive_RUN_DEPENDS=		file-roller:${PORTSDIR}/archivers/file-roller
+do_archive_PLIST_FILES=		share/gnome-do/plugins/Archive.dll \
+				share/gnome-do/plugins/Archive.dll.mdb \
+				share/gnome-do/plugins/Do.Archive_1.0.mpack
 do_archive_BUILD_WRKSRC=	Archive
+do_archive_UNSAFE=		yes
 
 # banshee
-do_banshee_RUN_DEPENDS=	banshee:${PORTSDIR}/multimedia/banshee
-do_banshee_PLIST_FILES=	share/gnome-do/plugins/Banshee.dll \
-			share/gnome-do/plugins/Banshee.dll.mdb \
-			share/gnome-do/plugins/Do.Banshee_0.9.mpack
+do_banshee_RUN_DEPENDS=		banshee:${PORTSDIR}/multimedia/banshee
+do_banshee_PLIST_FILES=		share/gnome-do/plugins/Banshee.dll \
+				share/gnome-do/plugins/Banshee.dll.mdb \
+				share/gnome-do/plugins/Do.Banshee_0.9.mpack
 do_banshee_BUILD_WRKSRC=	Banshee
 
 # bibtex
@@ -30,6 +32,7 @@ do_bibtex_PLIST_FILES=	share/gnome-do/plugins/Bibtex.dll \
 			share/gnome-do/plugins/Bibtex.dll.mdb \
 			share/gnome-do/plugins/Do.Bibtex_1.8.mpack
 do_bibtex_BUILD_WRKSRC=	Bibtex
+do_bibtex_UNSAFE=	yes
 
 # cl-ickable
 do_clickable_RUN_DEPENDS=	
@@ -37,6 +40,7 @@ do_clickable_PLIST_FILES=	share/gnome-do/plugins/Cl.ickable.dll \
 				share/gnome-do/plugins/Cl.ickable.dll.mdb \
 				share/gnome-do/plugins/Do.Cl.ickable_1.0.mpack
 do_clickable_BUILD_WRKSRC=	Cl.ickable
+do_clickable_UNSAFE=		yes
 
 # claws-mail
 do_clawsmail_RUN_DEPENDS=	claws-mail:${PORTSDIR}/mail/claws-mail
@@ -44,6 +48,7 @@ do_clawsmail_PLIST_FILES=	share/gnome-do/plugins/ClawsMail.dll \
 				share/gnome-do/plugins/ClawsMail.dll.mdb \
 				share/gnome-do/plugins/Do.ClawsMail_1.0.mpack
 do_clawsmail_BUILD_WRKSRC=	ClawsMail
+do_clawsmail_UNSAFE=		yes
 
 # confluence
 do_confluence_RUN_DEPENDS=	
@@ -51,6 +56,7 @@ do_confluence_PLIST_FILES=	share/gnome-do/plugins/Confluence.dll \
 				share/gnome-do/plugins/Confluence.dll.mdb \
 				share/gnome-do/plugins/Do.Confluence_1.0.mpack
 do_confluence_BUILD_WRKSRC=	Confluence
+do_confluence_UNSAFE=		yes
 
 # disk-mounter
 do_diskmounter_RUN_DEPENDS=	
@@ -58,6 +64,7 @@ do_diskmounter_PLIST_FILES=	share/gnome-do/plugins/DiskMounter.dll \
 				share/gnome-do/plugins/DiskMounter.dll.mdb \
 				share/gnome-do/plugins/Do.DiskMounter_1.0.mpack
 do_diskmounter_BUILD_WRKSRC=	DiskMounter
+do_diskmounter_UNSAFE=		yes
 
 # eog-slideshow
 do_eogslideshow_RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
@@ -65,6 +72,7 @@ do_eogslideshow_PLIST_FILES=	share/gnome-do/plugins/Do.EyeOfGNOME_1.0.mpack \
 				share/gnome-do/plugins/EOG-Slideshow.dll \
 				share/gnome-do/plugins/EOG-Slideshow.dll.mdb
 do_eogslideshow_BUILD_WRKSRC=	EOG-Slideshow
+do_eogslideshow_UNSAFE=		yes
 
 # emesene
 do_emesene_RUN_DEPENDS=		emesene:${PORTSDIR}/net-im/emesene
@@ -72,6 +80,7 @@ do_emesene_PLIST_FILES=		share/gnome-do/plugins/Do.Emesene_1.0.mpack \
 				share/gnome-do/plugins/Emesene.dll \
 				share/gnome-do/plugins/Emesene.dll.mdb
 do_emesene_BUILD_WRKSRC=	Emesene
+do_emesene_UNSAFE=		yes
 
 # epiphany
 do_epiphany_RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
@@ -86,6 +95,7 @@ do_evolution_PLIST_FILES=	share/gnome-do/plugins/Do.Evolution_1.2.mpack \
 				share/gnome-do/plugins/Evolution.dll \
 				share/gnome-do/plugins/Evolution.dll.mdb
 do_evolution_BUILD_WRKSRC=	Evolution
+do_evolution_UNSAFE=		yes
 
 # file
 do_file_RUN_DEPENDS=	
@@ -93,6 +103,7 @@ do_file_PLIST_FILES=	share/gnome-do/plugins/Do.File_2.5.mpack \
 			share/gnome-do/plugins/File.dll \
 			share/gnome-do/plugins/File.dll.mdb
 do_file_BUILD_WRKSRC=	File
+do_file_UNSAFE=		yes
 
 # firefox
 do_firefox_RUN_DEPENDS=		firefox3:${PORTSDIR}/www/firefox3
@@ -100,6 +111,7 @@ do_firefox_PLIST_FILES=		share/gnome-do/plugins/Do.Firefox_2.2.mpack \
 				share/gnome-do/plugins/Firefox.dll \
 				share/gnome-do/plugins/Firefox.dll.mdb
 do_firefox_BUILD_WRKSRC=	Firefox
+do_firefox_UNSAFE=		yes
 
 # flickr
 do_flickr_RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet
@@ -107,6 +119,7 @@ do_flickr_PLIST_FILES=	share/gnome-do/plugins/Do.Flickr_1.4.mpack \
 			share/gnome-do/plugins/Flickr.dll \
 			share/gnome-do/plugins/Flickr.dll.mdb
 do_flickr_BUILD_WRKSRC=	Flickr
+do_flickr_UNSAFE=	yes
 
 # gnome-dictionary
 do_gnomedictionary_RUN_DEPENDS=		gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils
@@ -114,6 +127,7 @@ do_gnomedictionary_PLIST_FILES=		share/gnome-do/plugins/Do.GNOMEDictionary_1.0.m
 					share/gnome-do/plugins/GNOME-Dictionary.dll \
 					share/gnome-do/plugins/GNOME-Dictionary.dll.mdb
 do_gnomedictionary_BUILD_WRKSRC=	GNOME-Dictionary
+do_gnomedictionary_UNSAFE=		yes
 
 # gnome-screenshot
 do_gnomescreenshot_RUN_DEPENDS=		gnome-screenshot:${PORTSDIR}/deskutils/gnome-utils
@@ -121,6 +135,7 @@ do_gnomescreenshot_PLIST_FILES=		share/gnome-do/plugins/Do.GNOMEScreenshot_1.0.m
 					share/gnome-do/plugins/GNOME-Screenshot.dll \
 					share/gnome-do/plugins/GNOME-Screenshot.dll.mdb
 do_gnomescreenshot_BUILD_WRKSRC=	GNOME-Screenshot
+do_gnomescreenshot_UNSAFE=		yes
 
 # gnome-session
 do_gnomesession_RUN_DEPENDS=	gnome-screensaver-command:${PORTSDIR}/x11/gnome-screensaver
@@ -128,6 +143,7 @@ do_gnomesession_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMESession_1.5.mpack \
 				share/gnome-do/plugins/GNOME-Session.dll \
 				share/gnome-do/plugins/GNOME-Session.dll.mdb
 do_gnomesession_BUILD_WRKSRC=	GNOME-Session
+do_gnomesession_UNSAFE=		yes
 
 # gnome-terminal
 do_gnometerminal_RUN_DEPENDS=	gnome-terminal:${PORTSDIR}/x11/gnome-terminal
@@ -135,6 +151,7 @@ do_gnometerminal_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMETerminal_1.1.mpack 
 				share/gnome-do/plugins/GNOME-Terminal.dll \
 				share/gnome-do/plugins/GNOME-Terminal.dll.mdb
 do_gnometerminal_BUILD_WRKSRC=	GNOME-Terminal
+do_gnometerminal_UNSAFE=	yes
 
 # google-calculator
 do_googlecalculator_RUN_DEPENDS=	
@@ -142,6 +159,7 @@ do_googlecalculator_PLIST_FILES=	share/gnome-do/plugins/Do.GoogleCalculator_1.0.
 					share/gnome-do/plugins/GoogleCalculator.dll \
 					share/gnome-do/plugins/GoogleCalculator.dll.mdb
 do_googlecalculator_BUILD_WRKSRC=	GoogleCalculator
+do_googlecalculator_UNSAFE=		yes
 
 # google-calendar
 do_googlecalendar_RUN_DEPENDS=	
@@ -149,6 +167,7 @@ do_googlecalendar_PLIST_FILES=	share/gnome-do/plugins/Do.GoogleCalendar_1.5.mpac
 				share/gnome-do/plugins/GoogleCalendar.dll \
 				share/gnome-do/plugins/GoogleCalendar.dll.mdb
 do_googlecalendar_BUILD_WRKSRC=	GoogleCalendar
+do_googlecalendar_UNSAFE=	yes
 
 # google-contacts
 do_googlecontacts_RUN_DEPENDS=	
@@ -156,6 +175,7 @@ do_googlecontacts_PLIST_FILES=	share/gnome-do/plugins/Do.GMail_1.5.mpack \
 				share/gnome-do/plugins/GoogleContacts.dll \
 				share/gnome-do/plugins/GoogleContacts.dll.mdb
 do_googlecontacts_BUILD_WRKSRC=	GoogleContacts
+do_googlecontacts_UNSAFE=	yes
 
 # google-docs
 do_googledocs_RUN_DEPENDS=	
@@ -163,6 +183,7 @@ do_googledocs_PLIST_FILES=	share/gnome-do/plugins/Do.GoogleDocs_1.0.mpack \
 				share/gnome-do/plugins/GoogleDocs.dll \
 				share/gnome-do/plugins/GoogleDocs.dll.mdb
 do_googledocs_BUILD_WRKSRC=	GoogleDocs
+do_googledocs_UNSAFE=		yes
 
 # google-maps
 do_googlemaps_RUN_DEPENDS=	
@@ -170,6 +191,7 @@ do_googlemaps_PLIST_FILES=	share/gnome-do/plugins/Do.GoogleMaps_1.1.mpack \
 				share/gnome-do/plugins/GoogleMaps.dll \
 				share/gnome-do/plugins/GoogleMaps.dll.mdb
 do_googlemaps_BUILD_WRKSRC=	GoogleMaps
+do_googlemaps_UNSAFE=		yes
 
 # google-search
 do_googlesearch_RUN_DEPENDS=	
@@ -184,6 +206,7 @@ do_imageshack_PLIST_FILES=	share/gnome-do/plugins/Do.ImageShack_1.1.mpack \
 				share/gnome-do/plugins/ImageShack.dll \
 				share/gnome-do/plugins/ImageShack.dll.mdb
 do_imageshack_BUILD_WRKSRC=	ImageShack
+do_imageshack_UNSAFE=		yes
 
 # jira
 do_jira_RUN_DEPENDS=	
@@ -191,6 +214,7 @@ do_jira_PLIST_FILES=	share/gnome-do/plugins/Do.JIRA_2.3.mpack \
 			share/gnome-do/plugins/JIRA.dll \
 			share/gnome-do/plugins/JIRA.dll.mdb
 do_jira_BUILD_WRKSRC=	JIRA
+do_jira_UNSAFE=		yes
 
 # launchpad
 do_launchpad_RUN_DEPENDS=	
@@ -198,6 +222,7 @@ do_launchpad_PLIST_FILES=	share/gnome-do/plugins/Do.Launchpad_1.1.mpack \
 				share/gnome-do/plugins/Launchpad.dll \
 				share/gnome-do/plugins/Launchpad.dll.mdb
 do_launchpad_BUILD_WRKSRC=	Launchpad
+do_launchpad_UNSAFE=		yes
 
 # locate-files
 do_locatefiles_RUN_DEPENDS=	
@@ -205,6 +230,7 @@ do_locatefiles_PLIST_FILES=	share/gnome-do/plugins/Do.LocateFiles_1.1.mpack \
 				share/gnome-do/plugins/LocateFiles.dll \
 				share/gnome-do/plugins/LocateFiles.dll.mdb
 do_locatefiles_BUILD_WRKSRC=	LocateFiles
+do_locatefiles_UNSAFE=		yes
 
 # mpd
 do_mpd_RUN_DEPENDS=	mpc:${PORTSDIR}/audio/mpc
@@ -212,6 +238,7 @@ do_mpd_PLIST_FILES=	share/gnome-do/plugins/Do.MPD_1.0.mpack \
 			share/gnome-do/plugins/MPD.dll \
 			share/gnome-do/plugins/MPD.dll.mdb
 do_mpd_BUILD_WRKSRC=	MPD
+do_mpd_UNSAFE=		yes
 
 # man-look-up
 do_manlookup_RUN_DEPENDS=	yelp:${PORTSDIR}/x11/yelp
@@ -226,6 +253,7 @@ do_microblogging_PLIST_FILES=	share/gnome-do/plugins/Do.Microblog_1.0.mpack \
 				share/gnome-do/plugins/Microblog.dll \
 				share/gnome-do/plugins/Microblog.dll.mdb
 do_microblogging_BUILD_WRKSRC=	Microblogging
+do_microblogging_UNSAFE=	yes
 
 # nx
 do_nx_RUN_DEPENDS=	
@@ -233,6 +261,7 @@ do_nx_PLIST_FILES=	share/gnome-do/plugins/Do.NX_1.0.mpack \
 			share/gnome-do/plugins/NX.dll \
 			share/gnome-do/plugins/NX.dll.mdb
 do_nx_BUILD_WRKSRC=	NX
+do_nx_UNSAFE=		yes
 
 # open-search
 do_opensearch_RUN_DEPENDS=	
@@ -240,6 +269,7 @@ do_opensearch_PLIST_FILES=	share/gnome-do/plugins/Do.OpenSearch_1.2.mpack \
 				share/gnome-do/plugins/OpenSearch.dll \
 				share/gnome-do/plugins/OpenSearch.dll.mdb
 do_opensearch_BUILD_WRKSRC=	OpenSearch
+do_opensearch_UNSAFE=		yes
 
 # opera
 do_opera_RUN_DEPENDS=	opera:${PORTSDIR}/www/opera
@@ -247,6 +277,7 @@ do_opera_PLIST_FILES=	share/gnome-do/plugins/Do.Opera_1.0.mpack \
 			share/gnome-do/plugins/Opera.dll \
 			share/gnome-do/plugins/Opera.dll.mdb
 do_opera_BUILD_WRKSRC=	Opera
+do_opera_UNSAFE=	yes
 
 # pastebin
 do_pastebin_RUN_DEPENDS=	
@@ -254,6 +285,7 @@ do_pastebin_PLIST_FILES=	share/gnome-do/plugins/Do.Pastebin_1.1.mpack \
 				share/gnome-do/plugins/Pastebin.dll \
 				share/gnome-do/plugins/Pastebin.dll.mdb
 do_pastebin_BUILD_WRKSRC=	Pastebin
+do_pastebin_UNSAFE=		yes
 
 # pidgin
 do_pidgin_RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
@@ -268,6 +300,7 @@ do_pingfm_PLIST_FILES=	share/gnome-do/plugins/Do.PingFM_1.0.mpack \
 			share/gnome-do/plugins/PingFM.dll \
 			share/gnome-do/plugins/PingFM.dll.mdb
 do_pingfm_BUILD_WRKSRC=	PingFM
+do_pingfm_UNSAFE=	yes
 
 # putty
 do_putty_RUN_DEPENDS=	putty:${PORTSDIR}/security/putty
@@ -275,6 +308,7 @@ do_putty_PLIST_FILES=	share/gnome-do/plugins/Do.Putty_1.0.mpack \
 			share/gnome-do/plugins/Putty.dll \
 			share/gnome-do/plugins/Putty.dll.mdb
 do_putty_BUILD_WRKSRC=	Putty
+do_putty_UNSAFE=	yes
 
 # quote
 do_quote_RUN_DEPENDS=	
@@ -282,6 +316,7 @@ do_quote_PLIST_FILES=	share/gnome-do/plugins/Do.Quote_1.1.mpack \
 			share/gnome-do/plugins/Quote.dll \
 			share/gnome-do/plugins/Quote.dll.mdb
 do_quote_BUILD_WRKSRC=	Quote
+do_quote_UNSAFE=	yes
 
 # rss
 do_rss_RUN_DEPENDS=	
@@ -289,6 +324,7 @@ do_rss_PLIST_FILES=	share/gnome-do/plugins/Do.RSS_1.0.mpack \
 			share/gnome-do/plugins/RSS.dll \
 			share/gnome-do/plugins/RSS.dll.mdb
 do_rss_BUILD_WRKSRC=	RSS
+do_rss_UNSAFE=		yes
 
 # request-tracker
 do_requesttracker_RUN_DEPENDS=	
@@ -296,6 +332,7 @@ do_requesttracker_PLIST_FILES=	share/gnome-do/plugins/Do.RequestTracker_1.0.mpac
 				share/gnome-do/plugins/RequestTracker.dll \
 				share/gnome-do/plugins/RequestTracker.dll.mdb
 do_requesttracker_BUILD_WRKSRC=	RequestTracker
+do_requesttracker_UNSAFE=	yes
 
 # rhythmbox
 do_rhythmbox_RUN_DEPENDS=	rhythmbox:${PORTSDIR}/audio/rhythmbox
@@ -303,13 +340,15 @@ do_rhythmbox_PLIST_FILES=	share/gnome-do/plugins/Do.Rhythmbox_2.1.mpack \
 				share/gnome-do/plugins/Rhythmbox.dll \
 				share/gnome-do/plugins/Rhythmbox.dll.mdb
 do_rhythmbox_BUILD_WRKSRC=	Rhythmbox
+do_rhythmbox_UNSAFE=		yes
 
 # riptide
 do_riptide_RUN_DEPENDS=	
-do_riptide_PLIST_FILES=	share/gnome-do/plugins/Do.Riptide_1.0.mpack \
-			share/gnome-do/plugins/Riptide.dll \
-			share/gnome-do/plugins/Riptide.dll.mdb
+do_riptide_PLIST_FILES=		share/gnome-do/plugins/Do.Riptide_1.0.mpack \
+				share/gnome-do/plugins/Riptide.dll \
+				share/gnome-do/plugins/Riptide.dll.mdb
 do_riptide_BUILD_WRKSRC=	Riptide
+do_riptide_UNSAFE=		yes
 
 # ssh
 do_ssh_RUN_DEPENDS=	gnome-terminal:${PORTSDIR}/x11/gnome-terminal
@@ -317,6 +356,7 @@ do_ssh_PLIST_FILES=	share/gnome-do/plugins/Do.SSH_1.1.mpack \
 			share/gnome-do/plugins/SSH.dll \
 			share/gnome-do/plugins/SSH.dll.mdb
 do_ssh_BUILD_WRKSRC=	SSH
+do_ssh_UNSAFE=		yes
 
 # shelf
 do_shelf_RUN_DEPENDS=	
@@ -324,6 +364,7 @@ do_shelf_PLIST_FILES=	share/gnome-do/plugins/Do.Shelf_1.2.mpack \
 			share/gnome-do/plugins/Shelf.dll \
 			share/gnome-do/plugins/Shelf.dll.mdb
 do_shelf_BUILD_WRKSRC=	Shelf
+do_shelf_UNSAFE=	yes
 
 # skype
 do_skype_RUN_DEPENDS=	skype:${PORTSDIR}/net/skype
@@ -331,6 +372,7 @@ do_skype_PLIST_FILES=	share/gnome-do/plugins/Do.Skype_1.2.mpack \
 			share/gnome-do/plugins/Skype.dll \
 			share/gnome-do/plugins/Skype.dll.mdb
 do_skype_BUILD_WRKSRC=	Skype
+do_skype_UNSAFE=	yes
 
 # squeeze-center
 do_squeezecenter_RUN_DEPENDS=	squeezecenter:${PORTSDIR}/audio/squeezecenter
@@ -338,6 +380,7 @@ do_squeezecenter_PLIST_FILES=	share/gnome-do/plugins/Do.SqueezeCenter_1.1.mpack 
 				share/gnome-do/plugins/SqueezeCenter.dll \
 				share/gnome-do/plugins/SqueezeCenter.dll.mdb
 do_squeezecenter_BUILD_WRKSRC=	SqueezeCenter
+do_squeezecenter_UNSAFE=	yes
 
 # stock-quote
 do_stockquote_RUN_DEPENDS=	
@@ -345,6 +388,7 @@ do_stockquote_PLIST_FILES=	share/gnome-do/plugins/Do.StockQuote_1.0.mpack \
 				share/gnome-do/plugins/StockQuote.dll \
 				share/gnome-do/plugins/StockQuote.dll.mdb
 do_stockquote_BUILD_WRKSRC=	StockQuote
+do_stockquote_UNSAFE=		yes
 
 # system-services
 do_systemservices_RUN_DEPENDS=	
@@ -352,6 +396,7 @@ do_systemservices_PLIST_FILES=	share/gnome-do/plugins/Do.SystemServices_1.0.mpac
 				share/gnome-do/plugins/SystemServices.dll \
 				share/gnome-do/plugins/SystemServices.dll.mdb
 do_systemservices_BUILD_WRKSRC=	SystemServices
+do_systemservices_UNSAFE=	yes
 
 # tasque
 do_tasque_RUN_DEPENDS=	tasque:${PORTSDIR}/deskutils/tasque
@@ -359,6 +404,7 @@ do_tasque_PLIST_FILES=	share/gnome-do/plugins/Do.Tasque_1.0.mpack \
 			share/gnome-do/plugins/Tasque.dll \
 			share/gnome-do/plugins/Tasque.dll.mdb
 do_tasque_BUILD_WRKSRC=	Tasque
+do_tasque_UNSAFE=	yes
 
 # terminal-server-client
 do_terminalserverclient_RUN_DEPENDS=	tsclient:${PORTSDIR}/net/tsclient
@@ -366,6 +412,7 @@ do_terminalserverclient_PLIST_FILES=	share/gnome-do/plugins/Do.TerminalServerCli
 					share/gnome-do/plugins/TerminalServerClient.dll \
 					share/gnome-do/plugins/TerminalServerClient.dll.mdb
 do_terminalserverclient_BUILD_WRKSRC=	TerminalServerClient
+do_terminalserverclient_UNSAFE=		yes
 
 # text
 do_text_RUN_DEPENDS=	
@@ -373,6 +420,7 @@ do_text_PLIST_FILES=	share/gnome-do/plugins/Do.Text_1.0.mpack \
 			share/gnome-do/plugins/Text.dll \
 			share/gnome-do/plugins/Text.dll.mdb
 do_text_BUILD_WRKSRC=	Text
+do_text_UNSAFE=		yes
 
 # thunderbird
 do_thunderbird_RUN_DEPENDS=	thunderbird:${PORTSDIR}/mail/thunderbird
@@ -380,13 +428,15 @@ do_thunderbird_PLIST_FILES=	share/gnome-do/plugins/Do.Thunderbird_1.0.mpack \
 				share/gnome-do/plugins/Thunderbird.dll \
 				share/gnome-do/plugins/Thunderbird.dll.mdb
 do_thunderbird_BUILD_WRKSRC=	Thunderbird
+do_thunderbird_UNSAFE=		yes
 
 # tiny-url
 do_tinyurl_RUN_DEPENDS=	
-do_tinyurl_PLIST_FILES=	share/gnome-do/plugins/Do.TinyUrl_1.0.mpack \
-			share/gnome-do/plugins/TinyUrl.dll \
-			share/gnome-do/plugins/TinyUrl.dll.mdb
+do_tinyurl_PLIST_FILES=		share/gnome-do/plugins/Do.TinyUrl_1.0.mpack \
+				share/gnome-do/plugins/TinyUrl.dll \
+				share/gnome-do/plugins/TinyUrl.dll.mdb
 do_tinyurl_BUILD_WRKSRC=	TinyUrl
+do_tinyurl_UNSAFE=		yes
 
 # tomboy
 do_tomboy_RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
@@ -401,6 +451,7 @@ do_translate_PLIST_FILES=	share/gnome-do/plugins/Do.Translate_1.0.mpack \
 				share/gnome-do/plugins/Translate.dll \
 				share/gnome-do/plugins/Translate.dll.mdb
 do_translate_BUILD_WRKSRC=	Translate
+do_translate_UNSAFE=		yes
 
 # vinagre
 do_vinagre_RUN_DEPENDS=		vinagre:${PORTSDIR}/net/vinagre
@@ -408,6 +459,7 @@ do_vinagre_PLIST_FILES=		share/gnome-do/plugins/Do.VinagreVNC_1.0.mpack \
 				share/gnome-do/plugins/Vinagre.dll \
 				share/gnome-do/plugins/Vinagre.dll.mdb
 do_vinagre_BUILD_WRKSRC=	Vinagre
+do_vinagre_UNSAFE=		yes
 
 # virtual-box
 do_virtualbox_RUN_DEPENDS=	VBoxManage:${PORTSDIR}/emulators/virtualbox
@@ -415,6 +467,7 @@ do_virtualbox_PLIST_FILES=	share/gnome-do/plugins/Do.VirtualBox_1.3.mpack \
 				share/gnome-do/plugins/VirtualBox.dll \
 				share/gnome-do/plugins/VirtualBox.dll.mdb
 do_virtualbox_BUILD_WRKSRC=	VirtualBox
+do_virtualbox_UNSAFE=		yes
 
 # volume-control
 do_volumecontrol_RUN_DEPENDS=	
@@ -422,6 +475,7 @@ do_volumecontrol_PLIST_FILES=	share/gnome-do/plugins/Do.VolumeControl_1.0.mpack 
 				share/gnome-do/plugins/VolumeControl.dll \
 				share/gnome-do/plugins/VolumeControl.dll.mdb
 do_volumecontrol_BUILD_WRKSRC=	VolumeControl
+do_volumecontrol_UNSAFE=	yes
 
 # window-manager
 do_windowmanager_RUN_DEPENDS=	
@@ -429,6 +483,7 @@ do_windowmanager_PLIST_FILES=	share/gnome-do/plugins/Do.WindowManager_1.2.mpack 
 				share/gnome-do/plugins/WindowManager.dll \
 				share/gnome-do/plugins/WindowManager.dll.mdb
 do_windowmanager_BUILD_WRKSRC=	WindowManager
+do_windowmanager_UNSAFE=	yes
 
 # woof
 do_woof_RUN_DEPENDS=	woof:${PORTSDIR}/www/woof
@@ -436,14 +491,16 @@ do_woof_PLIST_FILES=	share/gnome-do/plugins/Do.Woof_1.0.mpack \
 			share/gnome-do/plugins/Woof.dll \
 			share/gnome-do/plugins/Woof.dll.mdb
 do_woof_BUILD_WRKSRC=	Woof
+do_woof_UNSAFE=		yes
 
 # wordnet
-do_wordnet_RUN_DEPENDS=	wnb:${PORTSDIR}/textproc/wordnet \
-			wish8.4:${PORTSDIR}/x11-toolkits/tk84
-do_wordnet_PLIST_FILES=	share/gnome-do/plugins/Do.Wordnet_1.0.mpack \
-			share/gnome-do/plugins/Wordnet.dll \
-			share/gnome-do/plugins/Wordnet.dll.mdb
+do_wordnet_RUN_DEPENDS=		wnb:${PORTSDIR}/textproc/wordnet \
+				wish8.4:${PORTSDIR}/x11-toolkits/tk84
+do_wordnet_PLIST_FILES=		share/gnome-do/plugins/Do.Wordnet_1.0.mpack \
+				share/gnome-do/plugins/Wordnet.dll \
+				share/gnome-do/plugins/Wordnet.dll.mdb
 do_wordnet_BUILD_WRKSRC=	Wordnet
+do_wordnet_UNSAFE=		yes
 
 # zim
 do_zim_RUN_DEPENDS=	zim:${PORTSDIR}/editors/zim
@@ -451,11 +508,12 @@ do_zim_PLIST_FILES=	share/gnome-do/plugins/Do.Zim_1.0.mpack \
 			share/gnome-do/plugins/Zim.dll \
 			share/gnome-do/plugins/Zim.dll.mdb
 do_zim_BUILD_WRKSRC=	Zim
-
+do_zim_UNSAFE=		yes
 
 do_${DO_PLUGIN}_BUILD_DEPENDS?=
 do_${DO_PLUGIN}_LIB_DEPENDS?=
 do_${DO_PLUGIN}_RUN_DEPENDS?=
+do_${DO_PLUGIN}_UNSAFE?=
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
@@ -464,10 +522,16 @@ USE_GNOME=	intltool
 BUILD_DEPENDS+=	${do_${DO_PLUGIN}_BUILD_DEPENDS}
 LIB_DEPENDS+=	${do_${DO_PLUGIN}_LIB_DEPENDS}
 RUN_DEPENDS+=	${do_${DO_PLUGIN}_RUN_DEPENDS}
+UNSAFE=		${do_${DO_PLUGIN}_UNSAFE}
 PLIST_FILES=	${do_${DO_PLUGIN}_PLIST_FILES}
 PLIST_DIRS=	share/gnome-do/plugins
 BUILD_WRKSRC=	${WRKSRC}/${do_${DO_PLUGIN}_BUILD_WRKSRC}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
+
+.if ${UNSAFE} == yes
+pre-everything::
+	@${CAT} ${PKGMESSAGE}
+.endif
 
 post-configure:
 	cd ${WRKSRC}/BundledLibraries && gmake
