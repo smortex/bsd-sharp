@@ -256,7 +256,7 @@ do_pastebin_PLIST_FILES=	share/gnome-do/plugins/Do.Pastebin_1.1.mpack \
 do_pastebin_BUILD_WRKSRC=	Pastebin
 
 # pidgin
-do_pidgin_RUN_DEPENDS=	
+do_pidgin_RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 do_pidgin_PLIST_FILES=	share/gnome-do/plugins/Do.Pidgin_1.6.mpack \
 			share/gnome-do/plugins/Pidgin.dll \
 			share/gnome-do/plugins/Pidgin.dll.mdb
