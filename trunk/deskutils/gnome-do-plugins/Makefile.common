@@ -102,7 +102,7 @@ do_firefox_PLIST_FILES=		share/gnome-do/plugins/Do.Firefox_2.2.mpack \
 do_firefox_BUILD_WRKSRC=	Firefox
 
 # flickr
-do_flickr_RUN_DEPENDS=	
+do_flickr_RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet
 do_flickr_PLIST_FILES=	share/gnome-do/plugins/Do.Flickr_1.4.mpack \
 			share/gnome-do/plugins/Flickr.dll \
 			share/gnome-do/plugins/Flickr.dll.mdb
