@@ -298,7 +298,7 @@ do_requesttracker_PLIST_FILES=	share/gnome-do/plugins/Do.RequestTracker_1.0.mpac
 do_requesttracker_BUILD_WRKSRC=	RequestTracker
 
 # rhythmbox
-do_rhythmbox_RUN_DEPENDS=	
+do_rhythmbox_RUN_DEPENDS=	rhythmbox:${PORTSDIR}/audio/rhythmbox
 do_rhythmbox_PLIST_FILES=	share/gnome-do/plugins/Do.Rhythmbox_2.1.mpack \
 				share/gnome-do/plugins/Rhythmbox.dll \
 				share/gnome-do/plugins/Rhythmbox.dll.mdb
