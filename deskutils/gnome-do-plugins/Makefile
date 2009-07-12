@@ -16,6 +16,7 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT?=	gnome-do collection of plugins
 
 BUILD_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do \
+		gsed:${PORTSDIR}/textproc/gsed \
 		${LOCALBASE}/libdata/pkgconfig/banshee-1-collection-indexer.pc:${PORTSDIR}/multimedia/banshee \
 		${LOCALBASE}/libdata/pkgconfig/evolution-sharp.pc:${PORTSDIR}/mail/evolution-sharp \
 		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet

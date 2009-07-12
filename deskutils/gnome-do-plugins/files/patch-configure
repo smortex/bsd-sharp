@@ -3,6 +3,15 @@ $FreeBSD$
 
 --- configure.orig
 +++ configure
+@@ -4909,7 +4909,7 @@
+ 	#IT_PROG_INTLTOOL([0.35.0])
+ 	#AC_PROG_INTLTOOL([0.21])
+ 
+-	ALL_LINGUAS=`grep -v '^#' $srcdir/po/LINGUAS | sed -r ':a;N;$!ba;s/\n/ /g; s/[ ]+/ /g'`
++	ALL_LINGUAS=`grep -v '^#' $srcdir/po/LINGUAS | gsed -r ':a;N;$!ba;s/\n/ /g; s/[ ]+/ /g'`
+ 	GETTEXT_PACKAGE=gnome-do-plugins
+ 
+ 
 @@ -6566,7 +6566,7 @@
  test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
