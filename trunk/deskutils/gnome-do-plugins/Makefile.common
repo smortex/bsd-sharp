@@ -39,7 +39,7 @@ do_clickable_PLIST_FILES=	share/gnome-do/plugins/Cl.ickable.dll \
 do_clickable_BUILD_WRKSRC=	Cl.ickable
 
 # claws-mail
-do_clawsmail_RUN_DEPENDS=	
+do_clawsmail_RUN_DEPENDS=	claws-mail:${PORTSDIR}/mail/claws-mail
 do_clawsmail_PLIST_FILES=	share/gnome-do/plugins/ClawsMail.dll \
 				share/gnome-do/plugins/ClawsMail.dll.mdb \
 				share/gnome-do/plugins/Do.ClawsMail_1.0.mpack
