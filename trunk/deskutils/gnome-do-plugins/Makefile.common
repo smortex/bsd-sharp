@@ -431,7 +431,7 @@ do_windowmanager_PLIST_FILES=	share/gnome-do/plugins/Do.WindowManager_1.2.mpack 
 do_windowmanager_BUILD_WRKSRC=	WindowManager
 
 # woof
-do_woof_RUN_DEPENDS=	
+do_woof_RUN_DEPENDS=	woof:${PORTSDIR}/www/woof
 do_woof_PLIST_FILES=	share/gnome-do/plugins/Do.Woof_1.0.mpack \
 			share/gnome-do/plugins/Woof.dll \
 			share/gnome-do/plugins/Woof.dll.mdb
