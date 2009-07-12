@@ -81,7 +81,7 @@ do_epiphany_PLIST_FILES=	share/gnome-do/plugins/Do.Epiphany_1.0.mpack \
 do_epiphany_BUILD_WRKSRC=	Epiphany
 
 # evolution
-do_evolution_RUN_DEPENDS=	
+do_evolution_RUN_DEPENDS=	evolution:${PORTSDIR}/mail/evolution
 do_evolution_PLIST_FILES=	share/gnome-do/plugins/Do.Evolution_1.2.mpack \
 				share/gnome-do/plugins/Evolution.dll \
 				share/gnome-do/plugins/Evolution.dll.mdb
