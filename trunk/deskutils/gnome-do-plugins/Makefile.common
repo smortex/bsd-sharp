@@ -18,7 +18,7 @@ do_archive_PLIST_FILES=	share/gnome-do/plugins/Archive.dll \
 do_archive_BUILD_WRKSRC=	Archive
 
 # banshee
-do_banshee_RUN_DEPENDS=	
+do_banshee_RUN_DEPENDS=	banshee:${PORTSDIR}/multimedia/banshee
 do_banshee_PLIST_FILES=	share/gnome-do/plugins/Banshee.dll \
 			share/gnome-do/plugins/Banshee.dll.mdb \
 			share/gnome-do/plugins/Do.Banshee_0.9.mpack
