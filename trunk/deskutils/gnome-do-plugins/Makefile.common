@@ -410,7 +410,7 @@ do_vinagre_PLIST_FILES=		share/gnome-do/plugins/Do.VinagreVNC_1.0.mpack \
 do_vinagre_BUILD_WRKSRC=	Vinagre
 
 # virtual-box
-do_virtualbox_RUN_DEPENDS=	
+do_virtualbox_RUN_DEPENDS=	VBoxManage:${PORTSDIR}/emulators/virtualbox
 do_virtualbox_PLIST_FILES=	share/gnome-do/plugins/Do.VirtualBox_1.3.mpack \
 				share/gnome-do/plugins/VirtualBox.dll \
 				share/gnome-do/plugins/VirtualBox.dll.mdb
