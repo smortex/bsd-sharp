@@ -312,7 +312,7 @@ do_riptide_PLIST_FILES=	share/gnome-do/plugins/Do.Riptide_1.0.mpack \
 do_riptide_BUILD_WRKSRC=	Riptide
 
 # ssh
-do_ssh_RUN_DEPENDS=	
+do_ssh_RUN_DEPENDS=	gnome-terminal:${PORTSDIR}/x11/gnome-terminal
 do_ssh_PLIST_FILES=	share/gnome-do/plugins/Do.SSH_1.1.mpack \
 			share/gnome-do/plugins/SSH.dll \
 			share/gnome-do/plugins/SSH.dll.mdb
