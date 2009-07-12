@@ -375,7 +375,7 @@ do_text_PLIST_FILES=	share/gnome-do/plugins/Do.Text_1.0.mpack \
 do_text_BUILD_WRKSRC=	Text
 
 # thunderbird
-do_thunderbird_RUN_DEPENDS=	
+do_thunderbird_RUN_DEPENDS=	thunderbird:${PORTSDIR}/mail/thunderbird
 do_thunderbird_PLIST_FILES=	share/gnome-do/plugins/Do.Thunderbird_1.0.mpack \
 				share/gnome-do/plugins/Thunderbird.dll \
 				share/gnome-do/plugins/Thunderbird.dll.mdb
