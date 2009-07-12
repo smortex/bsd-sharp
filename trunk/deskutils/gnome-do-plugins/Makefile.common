@@ -207,7 +207,7 @@ do_locatefiles_PLIST_FILES=	share/gnome-do/plugins/Do.LocateFiles_1.1.mpack \
 do_locatefiles_BUILD_WRKSRC=	LocateFiles
 
 # mpd
-do_mpd_RUN_DEPENDS=	
+do_mpd_RUN_DEPENDS=	mpc:${PORTSDIR}/audio/mpc
 do_mpd_PLIST_FILES=	share/gnome-do/plugins/Do.MPD_1.0.mpack \
 			share/gnome-do/plugins/MPD.dll \
 			share/gnome-do/plugins/MPD.dll.mdb
