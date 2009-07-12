@@ -67,10 +67,10 @@ do_eogslideshow_PLIST_FILES=	share/gnome-do/plugins/Do.EyeOfGNOME_1.0.mpack \
 do_eogslideshow_BUILD_WRKSRC=	EOG-Slideshow
 
 # emesene
-do_emesene_RUN_DEPENDS=	
-do_emesene_PLIST_FILES=	share/gnome-do/plugins/Do.Emesene_1.0.mpack \
-			share/gnome-do/plugins/Emesene.dll \
-			share/gnome-do/plugins/Emesene.dll.mdb
+do_emesene_RUN_DEPENDS=		emesene:${PORTSDIR}/net-im/emesene
+do_emesene_PLIST_FILES=		share/gnome-do/plugins/Do.Emesene_1.0.mpack \
+				share/gnome-do/plugins/Emesene.dll \
+				share/gnome-do/plugins/Emesene.dll.mdb
 do_emesene_BUILD_WRKSRC=	Emesene
 
 # epiphany
