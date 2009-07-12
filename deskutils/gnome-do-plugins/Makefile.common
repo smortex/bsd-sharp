@@ -242,7 +242,7 @@ do_opensearch_PLIST_FILES=	share/gnome-do/plugins/Do.OpenSearch_1.2.mpack \
 do_opensearch_BUILD_WRKSRC=	OpenSearch
 
 # opera
-do_opera_RUN_DEPENDS=	
+do_opera_RUN_DEPENDS=	opera:${PORTSDIR}/www/opera
 do_opera_PLIST_FILES=	share/gnome-do/plugins/Do.Opera_1.0.mpack \
 			share/gnome-do/plugins/Opera.dll \
 			share/gnome-do/plugins/Opera.dll.mdb
