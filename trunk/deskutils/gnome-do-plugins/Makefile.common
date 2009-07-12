@@ -95,10 +95,10 @@ do_file_PLIST_FILES=	share/gnome-do/plugins/Do.File_2.5.mpack \
 do_file_BUILD_WRKSRC=	File
 
 # firefox
-do_firefox_RUN_DEPENDS=	
-do_firefox_PLIST_FILES=	share/gnome-do/plugins/Do.Firefox_2.2.mpack \
-			share/gnome-do/plugins/Firefox.dll \
-			share/gnome-do/plugins/Firefox.dll.mdb
+do_firefox_RUN_DEPENDS=		firefox3:${PORTSDIR}/www/firefox3
+do_firefox_PLIST_FILES=		share/gnome-do/plugins/Do.Firefox_2.2.mpack \
+				share/gnome-do/plugins/Firefox.dll \
+				share/gnome-do/plugins/Firefox.dll.mdb
 do_firefox_BUILD_WRKSRC=	Firefox
 
 # flickr
