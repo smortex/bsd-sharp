@@ -446,7 +446,7 @@ do_wordnet_PLIST_FILES=	share/gnome-do/plugins/Do.Wordnet_1.0.mpack \
 do_wordnet_BUILD_WRKSRC=	Wordnet
 
 # zim
-do_zim_RUN_DEPENDS=	
+do_zim_RUN_DEPENDS=	zim:${PORTSDIR}/editors/zim
 do_zim_PLIST_FILES=	share/gnome-do/plugins/Do.Zim_1.0.mpack \
 			share/gnome-do/plugins/Zim.dll \
 			share/gnome-do/plugins/Zim.dll.mdb
