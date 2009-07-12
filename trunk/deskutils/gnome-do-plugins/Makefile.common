@@ -214,7 +214,7 @@ do_mpd_PLIST_FILES=	share/gnome-do/plugins/Do.MPD_1.0.mpack \
 do_mpd_BUILD_WRKSRC=	MPD
 
 # man-look-up
-do_manlookup_RUN_DEPENDS=	
+do_manlookup_RUN_DEPENDS=	yelp:${PORTSDIR}/x11/yelp
 do_manlookup_PLIST_FILES=	share/gnome-do/plugins/Do.ManPages_1.2.mpack \
 				share/gnome-do/plugins/ManLookUp.dll \
 				share/gnome-do/plugins/ManLookUp.dll.mdb
