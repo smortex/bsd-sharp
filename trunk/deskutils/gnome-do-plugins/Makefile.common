@@ -270,7 +270,7 @@ do_pingfm_PLIST_FILES=	share/gnome-do/plugins/Do.PingFM_1.0.mpack \
 do_pingfm_BUILD_WRKSRC=	PingFM
 
 # putty
-do_putty_RUN_DEPENDS=	
+do_putty_RUN_DEPENDS=	putty:${PORTSDIR}/security/putty
 do_putty_PLIST_FILES=	share/gnome-do/plugins/Do.Putty_1.0.mpack \
 			share/gnome-do/plugins/Putty.dll \
 			share/gnome-do/plugins/Putty.dll.mdb
