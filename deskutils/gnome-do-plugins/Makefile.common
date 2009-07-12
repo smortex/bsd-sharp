@@ -123,7 +123,7 @@ do_gnomescreenshot_PLIST_FILES=		share/gnome-do/plugins/Do.GNOMEScreenshot_1.0.m
 do_gnomescreenshot_BUILD_WRKSRC=	GNOME-Screenshot
 
 # gnome-session
-do_gnomesession_RUN_DEPENDS=	
+do_gnomesession_RUN_DEPENDS=	gnome-screensaver-command:${PORTSDIR}/x11/gnome-screensaver
 do_gnomesession_PLIST_FILES=	share/gnome-do/plugins/Do.GNOMESession_1.5.mpack \
 				share/gnome-do/plugins/GNOME-Session.dll \
 				share/gnome-do/plugins/GNOME-Session.dll.mdb
