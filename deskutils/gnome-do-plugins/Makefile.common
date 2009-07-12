@@ -74,7 +74,7 @@ do_emesene_PLIST_FILES=		share/gnome-do/plugins/Do.Emesene_1.0.mpack \
 do_emesene_BUILD_WRKSRC=	Emesene
 
 # epiphany
-do_epiphany_RUN_DEPENDS=	
+do_epiphany_RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 do_epiphany_PLIST_FILES=	share/gnome-do/plugins/Do.Epiphany_1.0.mpack \
 				share/gnome-do/plugins/Epiphany.dll \
 				share/gnome-do/plugins/Epiphany.dll.mdb
