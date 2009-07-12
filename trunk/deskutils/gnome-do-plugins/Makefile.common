@@ -333,7 +333,7 @@ do_skype_PLIST_FILES=	share/gnome-do/plugins/Do.Skype_1.2.mpack \
 do_skype_BUILD_WRKSRC=	Skype
 
 # squeeze-center
-do_squeezecenter_RUN_DEPENDS=	
+do_squeezecenter_RUN_DEPENDS=	squeezecenter:${PORTSDIR}/audio/squeezecenter
 do_squeezecenter_PLIST_FILES=	share/gnome-do/plugins/Do.SqueezeCenter_1.1.mpack \
 				share/gnome-do/plugins/SqueezeCenter.dll \
 				share/gnome-do/plugins/SqueezeCenter.dll.mdb
