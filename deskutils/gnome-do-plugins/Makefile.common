@@ -60,7 +60,7 @@ do_diskmounter_PLIST_FILES=	share/gnome-do/plugins/DiskMounter.dll \
 do_diskmounter_BUILD_WRKSRC=	DiskMounter
 
 # eog-slideshow
-do_eogslideshow_RUN_DEPENDS=	
+do_eogslideshow_RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 do_eogslideshow_PLIST_FILES=	share/gnome-do/plugins/Do.EyeOfGNOME_1.0.mpack \
 				share/gnome-do/plugins/EOG-Slideshow.dll \
 				share/gnome-do/plugins/EOG-Slideshow.dll.mdb
