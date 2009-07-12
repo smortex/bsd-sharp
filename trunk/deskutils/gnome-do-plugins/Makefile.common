@@ -403,10 +403,10 @@ do_translate_PLIST_FILES=	share/gnome-do/plugins/Do.Translate_1.0.mpack \
 do_translate_BUILD_WRKSRC=	Translate
 
 # vinagre
-do_vinagre_RUN_DEPENDS=	
-do_vinagre_PLIST_FILES=	share/gnome-do/plugins/Do.VinagreVNC_1.0.mpack \
-			share/gnome-do/plugins/Vinagre.dll \
-			share/gnome-do/plugins/Vinagre.dll.mdb
+do_vinagre_RUN_DEPENDS=		vinagre:${PORTSDIR}/net/vinagre
+do_vinagre_PLIST_FILES=		share/gnome-do/plugins/Do.VinagreVNC_1.0.mpack \
+				share/gnome-do/plugins/Vinagre.dll \
+				share/gnome-do/plugins/Vinagre.dll.mdb
 do_vinagre_BUILD_WRKSRC=	Vinagre
 
 # virtual-box
