@@ -354,7 +354,7 @@ do_systemservices_PLIST_FILES=	share/gnome-do/plugins/Do.SystemServices_1.0.mpac
 do_systemservices_BUILD_WRKSRC=	SystemServices
 
 # tasque
-do_tasque_RUN_DEPENDS=	
+do_tasque_RUN_DEPENDS=	tasque:${PORTSDIR}/deskutils/tasque
 do_tasque_PLIST_FILES=	share/gnome-do/plugins/Do.Tasque_1.0.mpack \
 			share/gnome-do/plugins/Tasque.dll \
 			share/gnome-do/plugins/Tasque.dll.mdb
