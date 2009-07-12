@@ -10,9 +10,9 @@ PORTVERSION=	0.8.1
 PORTREVISION?=	0
 CATEGORIES?=	deskutils
 MASTER_SITES=	https://launchpadlibrarian.net/23832017/
-PKGNAMESUFFIX=  ${DO_PLUGIN_SUFFIX}
+PKGNAMESUFFIX=	${DO_PLUGIN_SUFFIX}
 
-MAINTAINER=     mono@FreeBSD.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT?=	gnome-do collection of plugins
 
 BUILD_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do \
