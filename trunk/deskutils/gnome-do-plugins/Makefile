@@ -1,5 +1,5 @@
 # New ports collection makefile for:	gnome-do-plugins
-# Date created:		2009-07-02
+# Date created:		2009-07-12
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
 # $FreeBSD$
@@ -18,13 +18,8 @@ COMMENT?=	gnome-do collection of plugins
 BUILD_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do \
 		${LOCALBASE}/libdata/pkgconfig/banshee-1-collection-indexer.pc:${PORTSDIR}/multimedia/banshee \
 		${LOCALBASE}/libdata/pkgconfig/evolution-sharp.pc:${PORTSDIR}/mail/evolution-sharp \
-		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet \
-		mdtool:${PORTSDIR}/devel/monodevelop
-RUN_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do \
-		${LOCALBASE}/libdata/pkgconfig/banshee-1-collection-indexer.pc:${PORTSDIR}/multimedia/banshee \
-		${LOCALBASE}/libdata/pkgconfig/evolution-sharp.pc:${PORTSDIR}/mail/evolution-sharp \
-		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet \
-
+		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet
+RUN_DEPENDS+=	gnome-do:${PORTSDIR}/deskutils/gnome-do
 
 WANT_GNOME=	yes
 
