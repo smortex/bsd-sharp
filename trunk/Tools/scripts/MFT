@@ -70,9 +70,10 @@ elif [ -n "${_r}" ]; then
 else
 	for path; do
 		echo "===> Merging ${path}..."
-		svn merge "${repo_root}/${path}" "${repo_trunk}/${path}" "${path}" || exit 1
+		last_chage=`LC_ALL=C svn info | awk ' $1 == "Last" && $2 == "Changed" && $3 == "Rev:" { print $4 }'`
+		svn merge -r ${last_chage}:HEAD "${repo_trunk}/${path}" "${path}" || exit 1
 	done
-	source="trunk (dumb copy)"
+	source="revision ${last_chage}:HEAD for ${path}"
 fi
 
 
