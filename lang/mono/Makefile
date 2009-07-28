@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.4.2.2
+PORTVERSION=	2.4.2.3
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -73,11 +73,6 @@ pre-everything::
 	@${CAT} ${PKGMESSAGE}
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/configure ${WRKSRC}/libgc/configure
-	@${REINPLACE_CMD} -e 's|%%CC%%|${CC}|g ; \
-		s|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/mcs/tools/mkbundle/mkbundle.cs
 	@${REINPLACE_CMD} -e 's|libgamin-1.so.0|libgamin-1.so.1|g' \
 		${WRKSRC}/mcs/class/System/System.IO/FAMWatcher.cs
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' \
@@ -88,23 +83,6 @@ post-patch:
 		${WRKSRC}/mcs/class/Mono.Cairo/Samples/png/compile.sh \
 		${WRKSRC}/mcs/class/Mono.Cairo/Samples/win32/compile.sh \
 		${WRKSRC}/mcs/class/Mono.Cairo/Samples/x11/compile.sh
-	@${REINPLACE_CMD} -e 's|^#!/bin/perl|#!/usr/bin/env perl|g' \
-		${WRKSRC}/mcs/errors/do-tests.pl \
-		${WRKSRC}/mcs/tools/scan-tests.pl \
-		${WRKSRC}/msvc/create-windef.pl \
-		${WRKSRC}/mono/benchmark/test-driver \
-		${WRKSRC}/mono/cil/make-opcodes-def.pl \
-		${WRKSRC}/mono/metadata/make-bundle.pl \
-		${WRKSRC}/mono/mini/genmdesc.pl \
-		${WRKSRC}/mono/tests/stress-runner.pl
-
-.if ${OSVERSION} >= 700000 && ${OSVERSION} < 800000
-	@${REINPLACE_CMD} -e 's|freebsd6|freebsd7|g' \
-		${WRKSRC}/configure ${WRKSRC}/libgc/configure
-.elif ${OSVERSION} >= 800000
-	@${REINPLACE_CMD} -e 's|freebsd6|freebsd8|g' \
-		${WRKSRC}/configure ${WRKSRC}/libgc/configure
-.endif
 
 tests: build
 	@${ECHO_MSG} "===> Running mono regression tests"
