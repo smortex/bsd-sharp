@@ -58,7 +58,6 @@ MAN5=		mdoc.5 mono-config.5
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "amd64"
-USE_FAM=	yes
 MAKE_ARGS+=	MONO_GENERIC_SHARING=none #https://bugzilla.novell.com/show_bug.cgi?id=434457
 .endif
 
@@ -72,10 +71,6 @@ PLIST_SUB+=	MOON="@comment "
 
 pre-everything::
 	@${CAT} ${PKGMESSAGE}
-
-.if exists(${LOCALBASE}/lib/libfam.so)
-USE_FAM=	yes
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
