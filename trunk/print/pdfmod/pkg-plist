@@ -1,0 +1,21 @@
+@comment $FreeBSD$
+bin/pdfmod
+lib/pdfmod/PdfSharp.dll
+lib/pdfmod/PdfSharp.dll.mdb
+lib/pdfmod/PdfMod.exe
+lib/pdfmod/Hyena.dll
+lib/pdfmod/Hyena.dll.mdb
+lib/pdfmod/Mono.Data.Sqlite.dll
+lib/pdfmod/Mono.Data.Sqlite.dll.mdb
+lib/pdfmod/Hyena.Gui.dll
+lib/pdfmod/Hyena.Gui.dll.config
+lib/pdfmod/Hyena.Gui.dll.mdb
+lib/pdfmod/poppler-sharp.dll
+lib/pdfmod/poppler-sharp.dll.config
+lib/pdfmod/PdfMod.exe.mdb
+share/locale/fr/LC_MESSAGES/pdfmod.mo
+share/applications/pdfmod.desktop
+share/gnome/help/pdfmod/C/pdfmod.xml
+@dirrm share/gnome/help/pdfmod/C
+@dirrm share/gnome/help/pdfmod
+@dirrm lib/pdfmod
