@@ -1,23 +1,10 @@
 #summary How to have cutting edge mono on FreeBSD
 #labels Featured
 
-= BSD# Branches =
 
-The BSD# Team maintain various branches for various mono versions in the BSD# repository:
+= Choose which BSD# branch to track =
 
-|| *Path* || *Mono Version* || *Status* || *Maintained* ||
-|| `/branches/bsd-sharp-releng-2.0` || 2.0.1 ||Outdated|| No ||
-|| `/branches/bsd-sharp-releng-2.2` || 2.2 || Outdated || No ||
-|| `/branches/bsd-sharp-releng-2.4` || 2.4.2.1 || Pending ([http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/136675 ports/136675]) || Yes ||
-|| `/trunk` || 2.4.2.1 || N/A || Yes ||
-
-Each branch contains a partial ports tree (only ports related to mono and possibly patches for `Mk/*` files are available) and are *not intended to replace the FreeBSD ports tree* but rather merged into it.
-
-To ease this, a merge tool named _portshaker_ has been developed by the BSD# Team, and is available in the download section (or in the BSD# repository).
-
-= Tracking a BSD# branch =
-
-Okay, you are curious and whant to see what will be available later on FreeBSD _now_? Or maybe you want to run the bleeding edge mono? Here is ow to setup and maintain your merged FreeBSD ports tree.
+First, have a look to the [Branches] of mono ports maintained by the BSD# Team and make yourself an idea of what you want to track.
 
 == Install _portshaker_ ==
 
@@ -37,7 +24,7 @@ For convenience, _portshaker_ ships with example configuration files for trackin
 make -C examples DESTDIR="/usr/local" install
 }}}
 
-The default configuration file should fit your needs, but you can cuustomise if: `/usr/local/etc/portshaker.conf`.
+The default configuration file should fit your needs, but you can customise it: `/usr/local/etc/portshaker.conf`.
 
 == Update your ports ==
 
