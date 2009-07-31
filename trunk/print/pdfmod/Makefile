@@ -8,7 +8,7 @@
 PORTNAME=	pdfmod
 PORTVERSION=	0.3
 CATEGORIES=	print
-MASTER_SITES=	http://banshee-project.org/~gburt/${PORTNAME}/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	romain@blogreen.org
 COMMENT=	A tool for modifying PDF documents
@@ -19,5 +19,4 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomesharp20
 USE_GETTEXT=	yes
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
