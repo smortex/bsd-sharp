@@ -2,12 +2,12 @@
 # Date created:		2008-09-01
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/www/webkit-sharp/Makefile,v 1.1 2009/02/09 08:59:58 flz Exp $
+# $FreeBSD: ports/www/webkit-sharp/Makefile,v 1.2 2009/07/31 13:56:37 dinoex Exp $
 #
 
 PORTNAME=	webkit-sharp
 PORTVERSION=	0.2
-#PORTREVISION=	0
+PORTREVISION=	1
 #PORTEPOCH=	0
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}/

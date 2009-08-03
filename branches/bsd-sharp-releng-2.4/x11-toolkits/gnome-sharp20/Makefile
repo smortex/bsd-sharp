@@ -2,12 +2,13 @@
 # Date created:         		20061025
 # Whom:                 		Tom McLaughlin <tmclaugh@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gnome-sharp20/Makefile,v 1.10 2009/06/22 07:55:49 flz Exp $
+# $FreeBSD: ports/x11-toolkits/gnome-sharp20/Makefile,v 1.11 2009/07/31 13:57:23 dinoex Exp $
 #   $Id: Makefile,v 1.3 2007/10/02 03:37:51 killfill Exp $
 #
 
 PORTNAME=	gnome-sharp
 PORTVERSION=	2.24.1
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 

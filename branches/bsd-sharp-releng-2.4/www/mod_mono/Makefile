@@ -2,7 +2,7 @@
 # Date created:					20040828
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/mod_mono/Makefile,v 1.2 2009/07/06 10:22:45 flz Exp $
+# $FreeBSD: ports/www/mod_mono/Makefile,v 1.3 2009/08/02 19:36:01 mezz Exp $
 #   $Id: Makefile,v 1.39 2007/12/13 19:35:47 killfill Exp $
 #
 
@@ -23,7 +23,7 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 USE_APACHE=	2.0+
 USE_BZIP2=	yes
 USE_GNOME=	gnometarget
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ARGS=	--man=${PREFIX}/man
 
 MAN8=		mod_mono.8

@@ -2,13 +2,13 @@
 # Date created:				20040812
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/net/blam/Makefile,v 1.26 2009/02/19 13:51:38 flz Exp $
+# $FreeBSD: ports/net/blam/Makefile,v 1.27 2009/07/31 13:54:37 dinoex Exp $
 #   $Id: Makefile,v 1.22 2006/10/26 05:32:53 tmclau02 Exp $
 #
 
 PORTNAME=	blam
 PORTVERSION=	1.8.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.cmartin.tk/${PORTNAME}/ \
 		http://romain.blogreen.org/distfiles/
