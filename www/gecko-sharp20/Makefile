@@ -2,12 +2,13 @@
 # Date created:					20040825
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.18 2009/02/09 08:59:59 flz Exp $
+# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.19 2009/07/31 13:56:26 dinoex Exp $
 #   $Id: Makefile,v 1.19 2007/02/07 15:49:20 killfill Exp $
 #
 
 PORTNAME=	gecko-sharp
 PORTVERSION=	0.13
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}

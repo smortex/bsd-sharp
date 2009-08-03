@@ -2,12 +2,13 @@
 # Date created:				24 October 2004
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/bless/Makefile,v 1.26 2009/02/20 14:26:18 flz Exp $
+# $FreeBSD: ports/editors/bless/Makefile,v 1.27 2009/07/31 13:50:34 dinoex Exp $
 #   $Id: Makefile,v 1.22 2006/11/01 02:49:57 tmclau02 Exp $
 #
 
 PORTNAME=	bless
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://download.gna.org/bless/

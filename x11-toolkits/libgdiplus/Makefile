@@ -2,7 +2,7 @@
 # Date created:					20040820
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.17 2009/07/06 10:24:16 flz Exp $
+# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.18 2009/08/02 19:36:25 mezz Exp $
 #   $Id: Makefile,v 1.46 2007/12/13 19:37:18 killfill Exp $
 #
 
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 USE_XLIB=	yes
 USE_LDCONFIG=   yes
 LIBTOOLFILES=	configure cairo/configure
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 # Included cairo does not work for us.  Enable below when Mono catches

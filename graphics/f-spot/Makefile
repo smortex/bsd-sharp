@@ -2,13 +2,13 @@
 # Date created:					20041008
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/graphics/f-spot/Makefile,v 1.33 2009/02/09 08:59:56 flz Exp $
+# $FreeBSD: ports/graphics/f-spot/Makefile,v 1.34 2009/07/31 13:52:07 dinoex Exp $
 #   $Id: Makefile,v 1.45 2007/08/26 05:10:23 killfill Exp $
 #
 
 PORTNAME=	f-spot
 PORTVERSION=	0.5.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}

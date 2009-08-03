@@ -2,11 +2,12 @@
 # Date created:				Aug 25 2008
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/mono-addins/Makefile,v 1.5 2009/01/22 18:21:08 flz Exp $
+# $FreeBSD: ports/devel/mono-addins/Makefile,v 1.6 2009/07/31 13:50:24 dinoex Exp $
 #
 
 PORTNAME=	mono-addins
 PORTVERSION=	0.4
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 

@@ -2,13 +2,13 @@
 # Date created:				Jul 10 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.13 2009/06/22 07:55:47 flz Exp $
+# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.14 2009/07/31 13:54:21 dinoex Exp $
 #
 
 PORTNAME=	banshee
 PORTVERSION=	1.4.3
 PORTEPOCH=	1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee-project.org/banshee/
 DISTNAME=	${PORTNAME}-1-${PORTVERSION}
