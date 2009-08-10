@@ -37,6 +37,8 @@ share/locale/pl/LC_MESSAGES/pdfmod.mo
 share/locale/pt_BR/LC_MESSAGES/pdfmod.mo
 share/locale/sv/LC_MESSAGES/pdfmod.mo
 share/locale/ta/LC_MESSAGES/pdfmod.mo
+@dirrm share/icons/hicolor/256x256/apps
+@dirrm share/icons/hicolor/256x256
 @dirrm share/gnome/help/pdfmod/sv
 @dirrm share/gnome/help/pdfmod/pl
 @dirrm share/gnome/help/pdfmod/hr
