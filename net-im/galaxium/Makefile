@@ -7,6 +7,7 @@
 
 PORTNAME=	galaxium
 PORTVERSION=	0.7.4.1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -21,7 +22,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/anculus-core.pc:${PORTSDIR}/misc/l
 RUN_DEPENDS=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_AUTOTOOLS=	libtool:15 aclocal:110 autoconf:262 automake:110
+USE_AUTOTOOLS=	libtool:22 aclocal:110 autoconf:262 automake:110
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 AUTOMAKE_ARGS=	--add-missing --gnu
