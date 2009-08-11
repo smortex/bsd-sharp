@@ -8,7 +8,7 @@
 
 PORTNAME=	beagle
 PORTVERSION=	0.3.9
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -40,7 +40,7 @@ USE_GECKO=	firefox mozilla
 USE_GETTEXT=	yes
 USE_GNOME?=	gnomehack gnometarget gnomesharp20 intlhack
 USE_SQLITE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 CONFIGURE_ENV?=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
