@@ -8,6 +8,7 @@
 
 PORTNAME=	mono
 PORTVERSION=	2.4.2.3
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -20,7 +21,7 @@ USE_BZIP2=	yes
 USE_BISON=	build
 USE_GNOME=	gnomehack glib20
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_PERL5_BUILD=	yes
 LIBTOOLFILES=	configure libgc/configure
 GNU_CONFIGURE=	yes
