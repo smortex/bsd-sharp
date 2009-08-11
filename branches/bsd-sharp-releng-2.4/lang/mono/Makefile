@@ -2,7 +2,7 @@
 # Date created:        22 July 2002
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/mono/Makefile,v 1.81 2009/07/17 12:33:53 flz Exp $
+# $FreeBSD: ports/lang/mono/Makefile,v 1.83 2009/08/09 18:53:09 flz Exp $
 #   $Id: Makefile,v 1.98 2007/12/13 19:31:45 killfill Exp $
 #
 
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USE_BISON=	build
 USE_GNOME=	gnomehack glib20
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_PERL5_BUILD=	yes
 LIBTOOLFILES=	configure libgc/configure
 GNU_CONFIGURE=	yes
