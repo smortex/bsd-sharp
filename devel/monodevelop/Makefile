@@ -8,6 +8,7 @@
 
 PORTNAME=	monodevelop
 PORTVERSION=	2.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -22,7 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
 
 USE_GNOME=	gnometarget gnomehack gtksharp20 gnomesharp20
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_BZIP2=	yes
 CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt \
 			--enable-aspnet --enable-aspnetedit
