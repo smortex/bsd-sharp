@@ -7,25 +7,21 @@ The BSD# page on the Mono website (http://www.mono-project.com/Mono:FreeBSD) is 
 
 I (romain) used the contact form to have some pointers in ~ december 2008 but did not have an answer.
 
-= Failing tests (`cd lang/mono && make tests`) =
+= Failing regression tests (`cd lang/mono && make tests`) =
 
 == amd64 ==
 
-|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        ||
-||            || pinvoke2.exe      || pinvoke2.exe      ||
-||            || winx64structs.exe || winx64structs.exe ||
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* ||
+||            ||   ||      ||appdomain-unload.exe (unverified)  ||
 
 == i386 ==
 
-|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        ||
-||            || pinvoke2.exe      || pinvoke2.exe      ||
-||            || winx64structs.exe || winx64structs.exe ||
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* ||
+||            ||   ||      ||appdomain-unload.exe (often)  ||
 
 = BROKEN Ports =
 
 The following ports are known to fail with the current infrastructure:
-
-  * devel/monodevelop-boo (./Gui/OptionPanels/GeneralShellPanel.boo(47,9): BCE0047: Method 'GLib.Object.get_Properties()' cannot be overridden because it is not virtual)
 
   * deskutils/beagle (upstream does not support gmime2-sharp-2.4)
 
