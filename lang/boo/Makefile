@@ -19,8 +19,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/shared-mime-info.pc:${PORTSDIR}/mi
 		${LOCALBASE}/libdata/pkgconfig/gtksourceview-1.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 PATCH_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
-WRKSRC=		${WRKDIR}
 
+WRKSRC=		${WRKDIR}
 USE_ZIP=	yes
 USE_NANT=	yes
 
