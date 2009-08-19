@@ -151,11 +151,12 @@ System()
 	if [ ${_test_status} -eq 1 ]; then
 		set +e
 		$@ > "${_stdout}" 2> "${_stderr}"
+		_ret=$?
 		set -e
 	else
 		$@ > /dev/null 2>&1
+		_ret=$?
 	fi
-	_ret=$?
 }
 
 
