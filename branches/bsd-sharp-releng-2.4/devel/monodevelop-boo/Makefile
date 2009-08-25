@@ -15,9 +15,9 @@ COMMENT=	MonoDevelop Boo language support
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop \
+		${LOCALBASE}/libdata/pkgconfig/gtksourceview-sharp-2.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview-sharp \
 		booc:${PORTSDIR}/lang/boo
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/monodevelop \
-		booc:${PORTSDIR}/lang/boo
+RUN_DEPENDS=	${BUILD_DEPENDS}
 
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
