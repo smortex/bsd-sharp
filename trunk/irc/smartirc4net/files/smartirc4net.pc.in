@@ -1,0 +1,8 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+Name: SmartIrc4net
+Description: SmartIrc4net - IRC library
+Version: @PORTVERSION@
+Libs: -r:${libdir}/mono/smartirc4net/Meebey.SmartIrc4net.dll
