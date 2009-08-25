@@ -1,5 +1,6 @@
-lib/mono/1.0/log4net.dll
+lib/mono/2.0/log4net.dll
 lib/mono/gac/log4net/1.2.10.0__1b44e1d426115821/log4net.dll
+libdata/pkgconfig/log4net.pc
 %%PORTDOCS%%%%DOCSDIR%%/contributing.html
 %%PORTDOCS%%%%DOCSDIR%%/css/site.css
 %%PORTDOCS%%%%DOCSDIR%%/css/style.css
@@ -2174,469 +2175,469 @@ lib/mono/gac/log4net/1.2.10.0__1b44e1d426115821/log4net.dll
 %%PORTDOCS%%%%DOCSDIR%%/release/sdk/treenodeplus.gif
 %%PORTDOCS%%%%DOCSDIR%%/roadmap.html
 %%PORTDOCS%%%%DOCSDIR%%/support.html
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/src/NotLogging.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Performance/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/src/Math.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/EntryPoint.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/SimpleApp.exe.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src/Math.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Repository/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src/LoggingExample.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/1.0/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/mono/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/AsyncAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/FastDbAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/FireEventAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/MessageBoxAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/MessageObjectExpanderAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/MsmqAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/PatternFileAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/SimpleSmtpAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/LoggingExample.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/SampleAppendersApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/IWmiBoundEvent.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiAppender.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiAppender.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiInstaller.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiLayout.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiLoggingEvent.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Appenders/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/EventIDLogApp.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/EventIDLogApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/TraceLogApp.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/TraceLogApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/TraceLogApp.exe.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Extensibility/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/Layout/ForwardingLayout.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/Layout/LineWrappingLayout.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/LoggingExample.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/SampleLayoutsApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Layouts/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src/NotLogging.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src/NotLogging.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src/NotLogging.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src/NotLogging.vbproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Performance/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/RemotingClient.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/RemotingClient.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/RemotingServer.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/RemotingServer.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Remoting/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src/Math.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src/SharedModule.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src/Math.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src/SharedModule.vbproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/EntryPoint.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/SimpleApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/SimpleApp.exe.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/EntryPoint.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/SimpleApp.exe.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/SimpleApp.vbproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/Math.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/SimpleModule.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/Math.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/SimpleModule.vbproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Repository/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/ConsoleApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/LoggingExample.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/ConsoleApp.vbproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/LoggingExample.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/AssemblyVersionInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Global.asax
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Global.asax.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Global.asax.resx
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Web.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.csproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.csproj.webinfo
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.vsdisco
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebForm1.aspx
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebForm1.aspx.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebForm1.aspx.resx
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/readme.txt
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/AssemblyVersionInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Global.asax
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Global.asax.resx
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Global.asax.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Web.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.vbproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.vbproj.webinfo
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.vsdisco
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebForm1.aspx
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebForm1.aspx.resx
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebForm1.aspx.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/Tutorials/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/cs-examples.sln
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.0/vb-examples.sln
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/src/AssemblyInfo.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/src/Math.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/AssemblyInfo.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/EntryPoint.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/SimpleApp.exe.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src/AssemblyInfo.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src/Math.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Repository/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/AssemblyInfo.cpp
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/ConsoleApp.cpp
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/ConsoleApp.vcproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src/AssemblyInfo.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src/LoggingExample.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/Tutorials/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/cpp-examples.sln
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/1.1/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/net/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/ConsoleApp.csdproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/ConsoleApp.exe.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/EntryPoint.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/LoggingExample.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/AssemblyInfo.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/ConsoleApp.exe.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/ConsoleApp.vbdproj
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/EntryPoint.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/LoggingExample.vb
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/cs-examples.sln
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/1.0/vb-examples.sln
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/netcf/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/src/Math.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/EntryPoint.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/SimpleApp.exe.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src/AssemblyInfo.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src/Math.cs
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src/SimpleModule.dll.log4net
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Repository/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src/App.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src/AssemblyInfo.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src/LoggingExample.js
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/1.0/nant.config
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/nant.build
-%%PORTDOCS%%%%EXAMPLESDIR%%/sscli/nant.config
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli/1.0
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/sscli
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf/1.0
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/netcf
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SharedModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.1
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/Layout
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net/1.0
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/net
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/src
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono/1.0
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/mono
-%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/src/NotLogging.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Performance/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/src/Math.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/EntryPoint.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src/SimpleApp.exe.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src/Math.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Repository/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src/LoggingExample.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/Tutorials/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/1.0/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/mono/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/AsyncAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/FastDbAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/FireEventAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/MessageBoxAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/MessageObjectExpanderAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/MsmqAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/PatternFileAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender/SimpleSmtpAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/LoggingExample.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/SampleAppendersApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/IWmiBoundEvent.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiAppender.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiAppender.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiInstaller.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiLayout.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src/WmiLoggingEvent.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Appenders/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/EventIDLogApp.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src/EventIDLogApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/TraceLogApp.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/TraceLogApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src/TraceLogApp.exe.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Extensibility/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/Layout/ForwardingLayout.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/Layout/LineWrappingLayout.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/LoggingExample.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/SampleLayoutsApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Layouts/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src/NotLogging.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src/NotLogging.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src/NotLogging.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src/NotLogging.vbproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Performance/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/RemotingClient.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src/RemotingClient.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/RemotingServer.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src/RemotingServer.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Remoting/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src/Math.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src/SharedModule.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src/Math.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src/SharedModule.vbproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/EntryPoint.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/SimpleApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src/SimpleApp.exe.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/EntryPoint.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/SimpleApp.exe.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src/SimpleApp.vbproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/Math.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/SimpleModule.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/Math.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src/SimpleModule.vbproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Repository/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/ConsoleApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src/LoggingExample.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/ConsoleApp.vbproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src/LoggingExample.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/AssemblyVersionInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Global.asax
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Global.asax.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Global.asax.resx
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/Web.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.csproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.csproj.webinfo
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebApp.vsdisco
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebForm1.aspx
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebForm1.aspx.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src/WebForm1.aspx.resx
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/readme.txt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/AssemblyVersionInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Global.asax
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Global.asax.resx
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Global.asax.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/Web.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.vbproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.vbproj.webinfo
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebApp.vsdisco
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebForm1.aspx
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebForm1.aspx.resx
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src/WebForm1.aspx.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/Tutorials/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/cs-examples.sln
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.0/vb-examples.sln
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/src/AssemblyInfo.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/src/Math.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/AssemblyInfo.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/EntryPoint.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src/SimpleApp.exe.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src/AssemblyInfo.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src/Math.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Repository/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/AssemblyInfo.cpp
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/ConsoleApp.cpp
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src/ConsoleApp.vcproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src/AssemblyInfo.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src/LoggingExample.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/Tutorials/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/cpp-examples.sln
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/1.1/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/net/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/ConsoleApp.csdproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/ConsoleApp.exe.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/EntryPoint.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src/LoggingExample.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/AssemblyInfo.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/ConsoleApp.exe.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/ConsoleApp.vbdproj
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/EntryPoint.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src/LoggingExample.vb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/Tutorials/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/cs-examples.sln
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/1.0/vb-examples.sln
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netcf/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/src/Math.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/EntryPoint.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src/SimpleApp.exe.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src/AssemblyInfo.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src/Math.cs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src/SimpleModule.dll.log4net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Repository/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src/App.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src/AssemblyInfo.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src/LoggingExample.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/Tutorials/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/1.0/nant.config
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/nant.build
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sscli/nant.config
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp/js
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials/ConsoleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Tutorials
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SimpleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository/SharedModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0/Repository
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli/1.0
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/sscli
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials/ConsoleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0/Tutorials
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf/1.0
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/netcf
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/js
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp/cpp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials/ConsoleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Tutorials
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule/js
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp/js
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SimpleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SharedModule/js
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository/SharedModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1/Repository
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.1
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/WebApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials/ConsoleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Tutorials
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SimpleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository/SharedModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Repository
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingServer
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting/RemotingClient
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Remoting
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/vb
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance/NotLogging
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Performance
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src/Layout
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts/SampleLayoutsApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Layouts
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/TraceLogApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility/EventIDLogApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Extensibility
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/WmiAppender
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src/Appender
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders/SampleAppendersApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0/Appenders
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net/1.0
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/net
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials/ConsoleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Tutorials
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SimpleApp
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository/SharedModule
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Repository
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs/src
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging/cs
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance/NotLogging
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0/Performance
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono/1.0
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/mono
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/release/sdk
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/release/manual
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/release/howto

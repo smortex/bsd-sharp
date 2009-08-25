@@ -8,8 +8,10 @@
 
 PORTNAME=	log4net
 PORTVERSION=	1.2.10
+PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://archive.apache.org/dist/incubator/log4net/${PORTVERSION}/
+MASTER_SITES=	APACHE
+MASTER_SITE_SUBDIR=	incubator/log4net/${PORTVERSION}
 DISTNAME=	incubating-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
@@ -24,7 +26,8 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 
 do-install:
-	@(cd ${INSTALL_WRKSRC}/bin/mono/1.0/release && ${SETENV} MONO_SHARED_DIR=${WRKDIR} ${LOCALBASE}/bin/gacutil /root ${PREFIX}/lib/ /gacdir ${PREFIX}/lib /package 1.0 /i log4net.dll)
+	@(cd ${INSTALL_WRKSRC}/bin/mono/2.0/release && ${SETENV} MONO_SHARED_DIR=${WRKDIR} ${LOCALBASE}/bin/gacutil /root ${PREFIX}/lib/ /gacdir ${PREFIX}/lib /package 2.0 /i log4net.dll)
+	${SED} -e 's|@PREFIX@|${PREFIX}|' -e 's|@PORTVERSION@|${PORTVERSION}|' < ${FILESDIR}/log4net.pc.in > ${PREFIX}/libdata/pkgconfig/log4net.pc
 
 post-install:
 .if !defined (NOPORTDOCS)
@@ -33,6 +36,8 @@ post-install:
 	@cd ${WRKSRC}/doc; ${FIND} . | ${CPIO} -pdm -R \
 	${DOCOWN}:${DOCGRP} ${DOCSDIR}
 	@${CHMOD} -R ugo-w,ugo+rX ${DOCSDIR}
+.endif
+.if !defined (NOPORTEXAMPLES)
 	@${ECHO_CMD} "Installing examples..."
 	@${MKDIR} ${EXAMPLESDIR}
 	@cd ${WRKSRC}/examples; ${FIND} . \
