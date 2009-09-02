@@ -37,7 +37,6 @@ CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 post-patch:
 	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
-		${WRKSRC}/src/f-spot.in \
-		${WRKSRC}/tools/f-spot-import
+		${WRKSRC}/src/f-spot.in
 
 .include <bsd.port.mk>
