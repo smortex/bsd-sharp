@@ -1,0 +1,13 @@
+
+$FreeBSD$
+
+--- gstreamer-sharp/Makefile.in.orig
++++ gstreamer-sharp/Makefile.in
+@@ -169,6 +169,7 @@
+ MAKEINFO = @MAKEINFO@
+ MDASSEMBLER = @MDASSEMBLER@
+ MKDIR_P = @MKDIR_P@
++MONO = mono
+ MONODOCER = @MONODOCER@
+ MONODOCS2HTML = @MONODOCS2HTML@
+ MONODOC_DEPENDENCY_CFLAGS = @MONODOC_DEPENDENCY_CFLAGS@
