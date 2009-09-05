@@ -1,4 +1,4 @@
-@comment $FreeBSD$
+@comment $FreeBSD: ports/multimedia/banshee-mirage/pkg-plist,v 1.1 2009/08/09 18:38:17 flz Exp $
 lib/libmirageaudio.so
 lib/libmirageaudio.la
 lib/libmirageaudio.a

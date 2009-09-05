@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mono/files/patch-configure,v 1.14 2009/06/22 07:55:47 flz Exp $
+$FreeBSD: ports/lang/mono/files/patch-configure,v 1.15 2009/07/17 12:33:54 flz Exp $
 
 --- configure.orig
 +++ configure
@@ -22,7 +22,7 @@ $FreeBSD: ports/lang/mono/files/patch-configure,v 1.14 2009/06/22 07:55:47 flz E
  		;;
  	*-*-*openbsd*)
  		platform_win32=no
-@@ -39414,8 +39415,8 @@
+@@ -39146,8 +39147,8 @@
  INTERP_SUPPORTED=no
  LIBC="libc.so.6"
  INTL="libc.so.6"
@@ -32,4 +32,4 @@ $FreeBSD: ports/lang/mono/files/patch-configure,v 1.14 2009/06/22 07:55:47 flz E
 +SQLITE3="libsqlite3.so.8"
  X11="libX11.so"
  
- sizeof_register="SIZEOF_VOID_P"
+ jit_wanted=false

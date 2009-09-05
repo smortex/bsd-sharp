@@ -2,7 +2,7 @@
 # Date created:		2009-03-22
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/multimedia/banshee-mirage/Makefile,v 1.1 2009/08/09 18:38:17 flz Exp $
 #
 
 PORTNAME=	mirage
