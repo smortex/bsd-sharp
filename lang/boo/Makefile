@@ -3,14 +3,13 @@
 # Whom:				Christopher Nehren <apeiron@coitusmentis.info>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.26 2007/10/27 05:33:27 killfill Exp $
 #
 
 PORTNAME=	boo
-PORTVERSION=	0.9.1.3287
+PORTVERSION=	0.9.2
 CATEGORIES=	lang
 MASTER_SITES=	http://dist.codehaus.org/boo/distributions/
-DISTNAME=	${PORTNAME}-${PORTVERSION}-src
+DISTNAME=	${PORTNAME}-${PORTVERSION}.3383-src
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A CLI-targeted programming language similar to Python
