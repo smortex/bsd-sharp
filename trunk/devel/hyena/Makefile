@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	hyena
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -16,7 +16,6 @@ COMMENT=	Library of GUI and non-GUI C-sharp code
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtksharp20
-USE_AUTOTOOLS=	autoconf:262
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@libdir@/pkgconfig|@libdir@/../libdata/pkgconfig|g' \
