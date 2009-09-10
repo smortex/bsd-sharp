@@ -14,6 +14,7 @@ lib/pdfmod/poppler-sharp.dll.config
 lib/pdfmod/poppler-sharp.dll.mdb
 share/applications/pdfmod.desktop
 share/gnome/help/pdfmod/C/pdfmod.xml
+share/gnome/help/pdfmod/ca/pdfmod.xml
 share/gnome/help/pdfmod/de/pdfmod.xml
 share/gnome/help/pdfmod/es/pdfmod.xml
 share/gnome/help/pdfmod/fr/pdfmod.xml
@@ -35,17 +36,19 @@ share/locale/hr/LC_MESSAGES/pdfmod.mo
 share/locale/it/LC_MESSAGES/pdfmod.mo
 share/locale/lt/LC_MESSAGES/pdfmod.mo
 share/locale/pl/LC_MESSAGES/pdfmod.mo
+share/locale/pt/LC_MESSAGES/pdfmod.mo
 share/locale/pt_BR/LC_MESSAGES/pdfmod.mo
 share/locale/sv/LC_MESSAGES/pdfmod.mo
 share/locale/ta/LC_MESSAGES/pdfmod.mo
-@dirrm share/icons/hicolor/256x256/apps
-@dirrm share/icons/hicolor/256x256
+@dirrmtry share/icons/hicolor/256x256/apps
+@dirrmtry share/icons/hicolor/256x256
 @dirrm share/gnome/help/pdfmod/sv
 @dirrm share/gnome/help/pdfmod/pl
 @dirrm share/gnome/help/pdfmod/hr
 @dirrm share/gnome/help/pdfmod/fr
 @dirrm share/gnome/help/pdfmod/es
 @dirrm share/gnome/help/pdfmod/de
+@dirrm share/gnome/help/pdfmod/ca
 @dirrm share/gnome/help/pdfmod/C
 @dirrm share/gnome/help/pdfmod
 @dirrm lib/pdfmod
