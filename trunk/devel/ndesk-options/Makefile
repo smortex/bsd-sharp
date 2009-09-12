@@ -16,12 +16,11 @@ COMMENT=	Callback-based program option parser for C\#
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
-IGNORE=		For now, NDesk.Options.dll is intended to be used as a private assembly.
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
 post-patch:
-	@${reinplace_cmd} -e 's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g' \
-		${wrksrc}/makefile.in
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g' \
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
