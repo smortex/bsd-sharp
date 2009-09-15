@@ -11,13 +11,15 @@ I (romain) used the contact form to have some pointers in ~ december 2008 but di
 
 == amd64 ==
 
-|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* ||
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk) ||
 ||            ||   ||      ||appdomain-unload.exe (unverified)  ||
 
 == i386 ==
 
-|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* ||
-||            ||   ||      ||appdomain-unload.exe (often)  ||
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk) ||
+||            ||   ||      ||appdomain-unload.exe (1)  ||
+
+ 1. https://bugzilla.novell.com/show_bug.cgi?id=528830
 
 = BROKEN Ports =
 
