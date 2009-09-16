@@ -9,12 +9,14 @@ I (romain) used the contact form to have some pointers in ~ december 2008 but di
 
 = Failing regression tests (`cd lang/mono && make tests`) =
 
-== amd64 ==
+== amd64 (8-BETA4) ==
 
 || *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk) ||
-||            ||   ||      ||appdomain-unload.exe (unverified)  ||
+||            ||   ||      ||appdomain-unload.exe  ||
+||            ||   ||      ||remoting2.exe||
+||            ||   ||      ||remoting3.exe||
 
-== i386 ==
+== i386 (7-STABLE) ==
 
 || *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk) ||
 ||            ||   ||      ||appdomain-unload.exe (1)  ||
