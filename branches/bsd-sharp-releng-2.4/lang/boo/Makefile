@@ -9,24 +9,46 @@ PORTNAME=	boo
 PORTVERSION=	0.9.2
 CATEGORIES=	lang
 MASTER_SITES=	http://dist.codehaus.org/boo/distributions/
-DISTNAME=	${PORTNAME}-${PORTVERSION}.3383-src
+DISTNAME=	${PORTNAME}-${PORTVERSION}.${BUILD_NUMBER}-src
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A CLI-targeted programming language similar to Python
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/shared-mime-info.pc:${PORTSDIR}/misc/shared-mime-info \
-		${LOCALBASE}/libdata/pkgconfig/gtksourceview-1.0.pc:${PORTSDIR}/x11-toolkits/gtksourceview
-RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 PATCH_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
+BUILD_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
+RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
+		${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 WRKSRC=		${WRKDIR}
-USE_ZIP=	yes
+USE_GNOME=	gtksourceview
 USE_NANT=	yes
+USE_ZIP=	yes
 
-post-extract:
+BUILD_NUMBER=	3383
+
+.if !defined(NOPORTDOCS)
+PORTDOCS=	*
+.endif
+.if !defined(NOPORTEXAMPLES)
+PORTEXAMPLES=	*
+.endif
+
+post-patch:
 	@${REINPLACE_CMD} \
-	-e 's|"install.prefix" value="/usr/local"|"install.prefix" value="${PREFIX}"|' \
-	${WRKSRC}/default.build
+		-e 's!%%PREFIX%%!${PREFIX}!' \
+		-e 's!%%DOCSDIR%%!${DOCSDIR}!' \
+		-e 's!%%EXAMPLESDIR%%!${EXAMPLESDIR}!' \
+		${WRKSRC}/default.build
+.if defined(NOPORTDOCS)
+	@${REINPLACE_CMD} -e 's/%%INSTALLDOCS%%//' ${WRKSRC}/default.build
+.else
+	@${REINPLACE_CMD} -e 's/%%INSTALLDOCS%%/install-docs,/' ${WRKSRC}/default.build
+.endif
+.if defined(NOPORTEXAMPLES)
+	@${REINPLACE_CMD} -e 's/%%INSTALLEXAMPLES%%//' ${WRKSRC}/default.build
+.else
+	@${REINPLACE_CMD} -e 's/%%INSTALLEXAMPLES%%/install-examples,/' ${WRKSRC}/default.build
+.endif
 
 post-install:
 	${LOCALBASE}/bin/update-mime-database ${LOCALBASE}/share/mime
