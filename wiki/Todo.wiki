@@ -12,16 +12,21 @@ I (romain) used the contact form to have some pointers in ~ december 2008 but di
 == amd64 (8-BETA4) ==
 
 || *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk) ||
-||            ||   ||      ||appdomain-unload.exe  ||
-||            ||   ||      ||remoting2.exe||
-||            ||   ||      ||remoting3.exe||
+||            ||   ||      ||appdomain-unload.exe (1) ||
+||            ||   ||      ||remoting2.exe (2) ||
+||            ||   ||      ||remoting3.exe (2) ||
 
 == i386 (7-STABLE) ==
 
-|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk) ||
+|| *mono-2.0* || *mono-2.2*        || *mono-2.4*        || *mono-2.6* (svn trunk @142237) ||
 ||            ||   ||      ||appdomain-unload.exe (1)  ||
+||            ||   ||      ||remoting2.exe (2) ||
+||            ||   ||      ||remoting3.exe (2) ||
+||            ||   ||      ||bug-80307.exe (3) ||
 
  1. https://bugzilla.novell.com/show_bug.cgi?id=528830
+ 2. Known to fail on GNU/Linux too (Not a FreeBSD bug)
+ 3. Related to gamin (i.e. it's some local patches to fix some features that makes the test fail). Not tested on amd64.
 
 = BROKEN Ports =
 
