@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mono-basic/files/patch-configure,v 1.1 2009/06/23 11:46:02 flz Exp $
+$FreeBSD$
 
 --- configure.orig
 +++ configure

@@ -2,7 +2,7 @@
 # Date created:					20040828
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/mod_mono/Makefile,v 1.3 2009/08/02 19:36:01 mezz Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.39 2007/12/13 19:35:47 killfill Exp $
 #
 

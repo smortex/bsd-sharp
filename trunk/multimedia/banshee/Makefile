@@ -2,7 +2,7 @@
 # Date created:				Jul 10 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.14 2009/07/31 13:54:21 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	banshee

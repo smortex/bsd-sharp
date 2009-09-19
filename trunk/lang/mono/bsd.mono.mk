@@ -5,7 +5,7 @@
 # bsd.mono.mk: accomodate the peculiarities of building C# ports within
 # the FreeBSD ports system.
 #
-# $FreeBSD: ports/lang/mono/bsd.mono.mk,v 1.9 2009/02/09 08:59:57 flz Exp $
+# $FreeBSD$
 #   $Id: bsd.mono.mk,v 1.27 2007/11/22 15:31:04 killfill Exp $
 #
 

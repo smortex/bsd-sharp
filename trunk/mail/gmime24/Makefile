@@ -2,7 +2,7 @@
 # Date created:				16 Apr 2001
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/mail/gmime24/Makefile,v 1.5 2009/06/23 18:49:38 flz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gmime

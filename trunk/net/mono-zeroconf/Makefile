@@ -2,7 +2,7 @@
 # Date created:				Aug 27 2008
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/net/mono-zeroconf/Makefile,v 1.3 2009/06/22 07:55:47 flz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mono-zeroconf
