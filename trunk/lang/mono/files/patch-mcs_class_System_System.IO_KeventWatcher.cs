@@ -8,12 +8,12 @@ $FreeBSD$
  
  	struct kevent : IDisposable {
 -		public int ident;
-+		public long ident;
++		public IntPtr ident;
  		public short filter;
  		public ushort flags;
  		public uint fflags;
 -		public int data;
-+		public long data;
++		public IntPtr data;
  		public IntPtr udata;
  
  		public void Dispose ()
@@ -23,8 +23,8 @@ $FreeBSD$
  	struct timespec {
 -		public int tv_sec;
 -		public int tv_usec;
-+		public long tv_sec;
-+		public long tv_usec;
++		public IntPtr tv_sec;
++		public IntPtr tv_usec;
  	}
  
  	class KeventFileData {
@@ -71,17 +71,25 @@ $FreeBSD$
  				}
  			}
  		}
-@@ -166,16 +191,19 @@
- 			nullts.tv_usec = 0;
+@@ -162,20 +187,23 @@
+ 			kevent ev = new kevent();
+ 			ev.udata = IntPtr.Zero;
+ 			timespec nullts = new timespec();
+-			nullts.tv_sec = 0;
+-			nullts.tv_usec = 0;
++			nullts.tv_sec = IntPtr.Zero;
++			nullts.tv_usec = IntPtr.Zero;
  			if (fd > 0) {
- 				ev.ident = fd;
+-				ev.ident = fd;
 -				ev.filter = -4;
 -				ev.flags = 1 | 4 | 20;
 -				ev.fflags = 20 | 2 | 1 | 8;
+-				ev.data = 0;
++				ev.ident = (IntPtr)fd;
 +				ev.filter = EVFILT_VNODE;
 +				ev.flags = EV_ADD | EV_ENABLE | EV_CLEAR;
 +				ev.fflags = NOTE_RENAME | NOTE_WRITE | NOTE_DELETE | NOTE_ATTRIB;
- 				ev.data = 0;
++				ev.data = IntPtr.Zero;
  				ev.udata = Marshal.StringToHGlobalAuto (data.Directory);
  				kevent outev = new kevent();
  				outev.udata = IntPtr.Zero;
@@ -92,11 +100,11 @@ $FreeBSD$
 +				}
  				data.ev = ev;
 -				requests [fd] = data;
-+				requests [(long)fd] = data;
++				requests [(IntPtr)fd] = data;
  			}
  			
  			if (!data.IncludeSubdirs)
-@@ -204,12 +232,12 @@
+@@ -204,31 +232,35 @@
  
  		static void StopMonitoringDirectory (KeventData data)
  		{
@@ -111,7 +119,15 @@ $FreeBSD$
  			while (!stop) {
  				kevent ev = new kevent();
  				ev.udata = IntPtr.Zero;
-@@ -223,12 +251,16 @@
+ 				kevent nullev = new kevent();
+ 				nullev.udata = IntPtr.Zero;
+ 				timespec ts = new timespec();
+-				ts.tv_sec = 0;
+-				ts.tv_usec = 0;
++				ts.tv_sec = IntPtr.Zero;
++				ts.tv_usec = IntPtr.Zero;
+ 				int haveEvents;
+ 				lock (this) {
  					haveEvents = kevent (conn, ref nullev, 0, ref ev, 1, ref ts);
  				}
  
@@ -126,7 +142,7 @@ $FreeBSD$
 +						Error ();
 +					} else {
 +						// Restart monitoring
-+						KeventData data = (KeventData) requests [(long)(ev.ident)];
++						KeventData data = (KeventData) requests [(IntPtr)(ev.ident)];
 +						StopMonitoringDirectory (data);
 +						StartMonitoringDirectory (data);
 +						ProcessEvent (ev);
@@ -150,7 +166,7 @@ $FreeBSD$
  		{
  			lock (this) {
 -				KeventData data = (KeventData) requests [ev.ident];
-+				KeventData data = (KeventData) requests [(long)(ev.ident)];
++				KeventData data = (KeventData) requests [(IntPtr)(ev.ident)];
  				if (!data.Enabled)
  					return;
  
@@ -159,7 +175,7 @@ $FreeBSD$
  								if (fsw.IncludeSubdirectories && fsi is DirectoryInfo) {
  									data.Directory = filename;
 -									requests [ev.ident] = data;
-+									requests [(long)(ev.ident)] = data;
++									requests [(IntPtr)(ev.ident)] = data;
  									ProcessEvent(ev);
  								}
  								PostEvent(filename, fsw, fa, changedFsi);
