@@ -2,7 +2,7 @@
 # Date created:        22 July 2002
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/mono/Makefile,v 1.83 2009/08/09 18:53:09 flz Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.98 2007/12/13 19:31:45 killfill Exp $
 #
 

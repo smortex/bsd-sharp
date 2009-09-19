@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/webkit-sharp/pkg-plist,v 1.1 2009/02/09 08:59:58 flz Exp $
+@comment $FreeBSD$
 lib/mono/gac/webkit-sharp/1.0.0.0__eaa1d335d2e19745/webkit-sharp.dll
 lib/mono/gac/webkit-sharp/1.0.0.0__eaa1d335d2e19745/webkit-sharp.dll.config
 lib/mono/webkit-sharp/webkit-sharp.dll

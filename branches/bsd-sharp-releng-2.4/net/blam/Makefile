@@ -2,7 +2,7 @@
 # Date created:				20040812
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/net/blam/Makefile,v 1.27 2009/07/31 13:54:37 dinoex Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.22 2006/10/26 05:32:53 tmclau02 Exp $
 #
 

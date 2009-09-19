@@ -2,7 +2,7 @@
 # Date created:					20041011
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/deskutils/tomboy/Makefile,v 1.37 2009/07/31 13:50:02 dinoex Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.49 2007/09/20 15:16:43 killfill Exp $
 #
 

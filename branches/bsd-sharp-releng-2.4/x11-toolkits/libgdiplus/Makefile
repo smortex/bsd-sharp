@@ -2,7 +2,7 @@
 # Date created:					20040820
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgdiplus/Makefile,v 1.18 2009/08/02 19:36:25 mezz Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.46 2007/12/13 19:37:18 killfill Exp $
 #
 

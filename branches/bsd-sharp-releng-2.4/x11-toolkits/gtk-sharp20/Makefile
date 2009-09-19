@@ -2,7 +2,7 @@
 # Date created:         2003-01-01
 # Whom:                 Juli Mallett
 #
-# $FreeBSD: ports/x11-toolkits/gtk-sharp20/Makefile,v 1.62 2009/07/31 13:57:23 dinoex Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.27 2007/10/03 00:48:49 killfill Exp $
 #
 
