@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/gmime24/files/patch-Makefile.in,v 1.2 2009/04/25 18:39:41 mnag Exp $
+$FreeBSD$
 
 --- Makefile.in.orig	2009-04-25 12:01:47.000000000 -0300
 +++ Makefile.in	2009-04-25 12:04:34.000000000 -0300

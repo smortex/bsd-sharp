@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/f-spot/files/patch-icon-theme-installer,v 1.1 2009/02/09 08:59:56 flz Exp $
+$FreeBSD$
 
 --- icon-theme-installer.orig
 +++ icon-theme-installer

@@ -2,7 +2,7 @@
 # Date created:         			20040821
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/x11-toolkits/gtksourceview-sharp/Makefile,v 1.12 2009/08/02 19:36:24 mezz Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.30 2007/05/19 17:34:30 killfill Exp $
 #
 

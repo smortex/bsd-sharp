@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/mod_mono/files/patch-src_mod__mono.c,v 1.1 2009/06/22 07:55:48 flz Exp $
+$FreeBSD$
 
 --- src/mod_mono.c.orig
 +++ src/mod_mono.c

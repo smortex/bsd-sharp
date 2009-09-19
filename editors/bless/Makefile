@@ -2,7 +2,7 @@
 # Date created:				24 October 2004
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/bless/Makefile,v 1.27 2009/07/31 13:50:34 dinoex Exp $
+# $FreeBSD$
 #   $Id: Makefile,v 1.22 2006/11/01 02:49:57 tmclau02 Exp $
 #
 

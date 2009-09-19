@@ -2,7 +2,7 @@
 # Date created:				Aug 25 2008
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/mono-addins/Makefile,v 1.6 2009/07/31 13:50:24 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mono-addins
