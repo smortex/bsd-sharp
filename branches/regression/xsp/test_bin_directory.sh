@@ -19,7 +19,7 @@ port="4242"
 
 Fixture.SetUp
 
-	Test.SetUp "TestName"
+	Test.SetUp "XspWithBinDirectory"
 
 		downloaded=`mktemp -t fetch`
 

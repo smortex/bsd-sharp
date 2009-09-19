@@ -127,8 +127,10 @@ Test.TearDown()
 	_total_success_count=$(($_total_success_count+$_test_success_count))
 	_total_failure_count=$(($_total_failure_count+$_test_failure_count))
 	_total_test_count=$(($_total_test_count+$_test_test_count))
+	if [ ${_test_status} -lt 2 ]; then
+		_clean_last_system_call
+	fi
 	_test_status=0
-	_clean_last_system_call
 	set +e
 }
 
