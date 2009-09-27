@@ -3,8 +3,8 @@
 STATUS_REPORT=	status-report.xml
 
 SEND_TO=	monthly@FreeBSD.org
-SEND_CC=	bsd-sharp@googlegroups.com
-SEND_SUBJECT=	[status-report] BSD\#
+SEND_CC=	mono@FreeBSD.org
+SEND_SUBJECT=	[status-report] BSD\# Project
 
 lint:
 	@xmllint --noout ${STATUS_REPORT} && echo "${STATUS_REPORT} looks fine..."
