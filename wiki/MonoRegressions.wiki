@@ -23,4 +23,4 @@
 
   1. https://bugzilla.novell.com/show_bug.cgi?id=528830
   1. Known to fail on GNU/Linux too (Not a FreeBSD bug)
-  1. Related to gamin (i.e. it's some local patches to fix some features that makes the test fail). (*A fix is being tested*).
+  1. Related to gamin (i.e. it's some local patches to fix some features that makes the test fail). (https://bugzilla.novell.com/show_bug.cgi?id=542485).
