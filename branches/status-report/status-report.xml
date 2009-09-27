@@ -5,13 +5,6 @@
 	<contact>
 		<person>
 			<name>
-				<given>Phillip</given>
-				<common>Neumann</common>
-			</name>
-			<email>pneumann@gmail.com</email>
-		</person>
-		<person>
-			<name>
 				<given>Romain</given>
 				<common>Tartière</common>
 			</name>
@@ -26,13 +19,12 @@
 
 	<body>
 		<p>The BSD# Project is devoted to porting the Mono .NET framework and applications to the FreeBSD operating system.</p>
-		<p>During the past six months, the BSD# Team continued to track the Mono development and the lang/mono port was updated to version 2.4.2, the latest stable version of Mono (skipping version 2.2 because of some regressions in this release).</p>
-		<p>In the meantime, many other related ports have been updated or added. These ports include:</p>
+		<p>During the past year, the BSD# Team continued to track the Mono development and the lang/mono port have almost always been up-to-date (we however had to skip mono-2.2 because of some regression issues in this release).  Most of our patches have been merged in the mono trunk upstream, and should be included in the upcoming mono-2.6 release.</p>
+		<p>In the meantime, a few more .NET related ports have been updated or added to the FreeBSD ports tree. These ports include:</p>
 		<ul>
 			<li>www/xsp and www/mod_mono that make it possible to use FreeBSD for hosting ASP.NET application;</li>
-			<li>multimedia/moonlight, an Open Source implementation of Microsft SilverLight;</li>
 			<li>lang/mono-basic, the Visual Basic.NET Framework for Mono;</li>
-			<!--li>devel/monodevelop, an Integrated Development Environment for .NET;</li-->
+			<li>devel/monodevelop, an Integrated Development Environment for .NET;</li>
 			<!--li>deskuils/gnome-do, an all-in-one launch-box to perform actions quickly with your computer;</li-->
 			<li>and much more...</li>
 		</ul>
