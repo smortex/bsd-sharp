@@ -33,6 +33,9 @@ INSTALLS_ICONS=	yes
 
 OPTIONS=	SVN "Enable subversion support" on
 
+# Restrict to stable (even) versions, indicated by the second component.
+PORTSCOUT=      limitw:1,even
+
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_SVN)

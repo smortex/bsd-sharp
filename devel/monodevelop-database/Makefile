@@ -26,4 +26,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
 
+# Restrict to stable (even) versions, indicated by the second component.
+PORTSCOUT=      limitw:1,even
+
 .include <bsd.port.mk>
