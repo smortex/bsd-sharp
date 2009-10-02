@@ -23,4 +23,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 PLIST_FILES=	lib/monodevelop/AddIns/BackendBindings/MonoDevelop.ValaBinding.dll
 
+# Restrict to stable (even) versions, indicated by the second component.
+PORTSCOUT=      limitw:1,even
+
 .include <bsd.port.mk>
