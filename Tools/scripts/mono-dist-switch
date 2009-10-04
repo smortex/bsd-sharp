@@ -29,5 +29,5 @@ for Makefile in `grep -l "${search}" */*/Makefile`; do
 	files=`cd ${portdir} && make -V DISTFILES`
 	( cd ${distdir} && rm -f $files )
 	# Fetch again
-	( cd ${portdir} && make makesum )
+	( cd ${portdir} && sudo make fetch && make makesum )
 done
