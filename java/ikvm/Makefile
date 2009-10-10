@@ -32,7 +32,7 @@ do-install:
 	@(cd ${WRKSRC}/bin-x64/ && ${COPYTREE_SHARE} JVM.DLL ikvm-native.dll ${PREFIX}/lib/${PORTNAME})
 .endif
 .for f in ikvm ikvmc ikvmstub
-	@${ECHO_CMD} "#!/bin/sh\n${PREFIX}/bin/mono ${PREFIX}/lib/${PORTNAME}/$f.exe \"\$$@\"" > ${PREFIX}/bin/$f
+	@echo -e "#!/bin/sh\n${PREFIX}/bin/mono ${PREFIX}/lib/${PORTNAME}/$f.exe \"\$$@\"" > ${PREFIX}/bin/$f
 	${CHMOD} 755 ${PREFIX}/bin/$f
 .endfor
 
