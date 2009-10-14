@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	incollector
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	deskutils
 MASTER_SITES=	http://www.incollector.devnull.pl/download/sources/
 
