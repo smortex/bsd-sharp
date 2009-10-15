@@ -11,7 +11,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	mono@FreeBSD.org
-COMMENT=	High level access to iPod
+COMMENT=	Manipulate iTunesDB used in Apple iPod devices
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/podsleuth.pc:${PORTSDIR}/misc/podsleuth \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib

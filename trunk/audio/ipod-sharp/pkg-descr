@@ -1,3 +1,2 @@
-[description of the port]
-
-WWW:	http://port.home.page/
+ipod-sharp is a library that allows manipulation of the iTunesDB used in Apple
+iPod devices.
