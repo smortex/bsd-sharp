@@ -22,6 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
+CONFIGURE_ARGS+=--with-hal-callouts-dir=/usr/local/libexec
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack pkgconfig
 
