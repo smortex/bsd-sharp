@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	ipod-sharp
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.3
 CATEGORIES=	misc
-MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/
+MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	High level access to iPod
@@ -19,6 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/podsleuth.pc:${PORTSDIR}/misc/podsle
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 GNU_CONFIGURE=	yes
+USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtksharp20
 
