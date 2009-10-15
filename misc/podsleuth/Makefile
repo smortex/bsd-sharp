@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	podsleuth
-PORTVERSION=	0.6.2
+PORTVERSION=	0.6.5
 CATEGORIES=	misc
-MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/
+MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A tool to discover detailed model information about an iPod
