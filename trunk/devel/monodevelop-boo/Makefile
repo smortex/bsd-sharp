@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	monodevelop-boo
-PORTVERSION=	2.0
+PORTVERSION=	2.1.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
