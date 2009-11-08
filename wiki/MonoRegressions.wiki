@@ -5,7 +5,7 @@
 
 == FreeBSD 8-RC1 amd64 (Last updated: 20090927) ==
 
-|| *mono-2.4.2.3* (FreeBSD ports) || *mono-2.6*  (svn branch @145666) || *mono-trunk* (svn trunk @142668) ||
+|| *mono-2.4.2.3* (FreeBSD ports) || *mono-2.6*  (svn branch @145666) || *mono-trunk* (svn trunk @145666) ||
 ||            || appdomain-unload.exe (1) || appdomain-unload.exe (1) ||
 ||            || bug-80307.exe (2)  ||bug-80307.exe (2) ||
 
