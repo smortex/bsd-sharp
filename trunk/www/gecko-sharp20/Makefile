@@ -27,6 +27,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' ${WRKSRC}/Makefile.in
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
-.include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
