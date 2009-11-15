@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.4.3
+PORTVERSION=	1.5.1
 PORTEPOCH=	1
-PORTREVISION=	2
 CATEGORIES=	multimedia audio
-MASTER_SITES=	http://download.banshee-project.org/banshee/
+MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/stable/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-1-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
@@ -28,10 +27,10 @@ LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono \
 		${LOCALBASE}/libdata/pkgconfig/mono-zeroconf.pc:${PORTSDIR}/net/mono-zeroconf \
 		${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins
 
-OPTIONS=	DOCS "Install documentation" on \
-		MTP "Enable MTP support" on
-#		BPMDETECT "Enable BPM detection" on
-#		IPOD "Enable iPod support" on \
+OPTIONS=	DOCS      "Install documentation" on \
+		MTP       "Enable MTP support"    on \
+		BPMDETECT "Enable BPM detection"  on \
+		IPOD      "Enable iPod support"   on
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -57,13 +56,13 @@ INSTALL=	/usr/bin/install
 CONFIGURE_ARGS+=	--disable-docs
 .endif
 
-#.if !defined(WITHOUT_IPOD)
-#LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/ipod-sharp-ui.pc:${PORTSDIR}/audio/ipod-sharp
-#PLIST_SUB+=	OPT_IPOD=""
-#.else
+.if !defined(WITHOUT_IPOD)
+LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/ipod-sharp-ui.pc:${PORTSDIR}/audio/ipod-sharp
+PLIST_SUB+=	OPT_IPOD=""
+.else
 CONFIGURE_ARGS+=	--disable-ipod
 PLIST_SUB+=	OPT_IPOD="@comment "
-#.endif
+.endif
 
 .if !defined(WITHOUT_MTP)
 LIB_DEPENDS+=	mtp.8:${PORTSDIR}/audio/libmtp
@@ -73,36 +72,8 @@ CONFIGURE_ARGS+=	--disable-mtp
 PLIST_SUB+=	OPT_MTP="@comment "
 .endif
 
-#.if !defined(WITHOUT_BPMDETECT)
-#USE_GSTREAMER+=	soundtouch
-#.endif
-
-post-patch:
-	@${REINPLACE_CMD} "s|!/bin/bash|!${PREFIX}/bin/bash|" \
-				${WRKSRC}/build/icon-theme-installer \
-				${WRKSRC}/build/private-icon-theme-installer \
-				${WRKSRC}/data/desktop-files/update-desktop-file.sh \
-				${WRKSRC}/src/Clients/Booter/banshee-1.in
-	@${REINPLACE_CMD} 's|sed -r|sed -E|' \
-				${WRKSRC}/data/icon-theme-hicolor/Makefile.in
-#				${WRKSRC}/configure \
-
-# XXX - This is gross.
-post-configure:
-	@${REINPLACE_CMD} -e 's|^\(MSGFMT =\).*|\1 ${LOCALBASE}/bin/msgfmt|' \
-		-e 's|^\(GMSGFMT =\).*|\1 ${LOCALBASE}/bin/msgfmt|' \
-			${WRKSRC}/po/Makefile
-
-# XXX - Really ugly too.
-pre-build:
-	${MKDIR} ${WRKSRC}/bin/share/banshee-1/icons/hicolor/scalable/
-
-# XXX - This one is the best.
-pre-install:
-.for i in 16x16 22x22 32x32 48x48 128x128 scalable
-. for j in actions categories devices status
-	@${MKDIR} ${PREFIX}/share/banshee-1/icons/hicolor/$i/$j/
-. endfor
-.endfor
+.if !defined(WITHOUT_BPMDETECT)
+USE_GSTREAMER+=	soundtouch
+.endif
 
 .include <bsd.port.post.mk>
