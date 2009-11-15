@@ -30,7 +30,7 @@ LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono \
 OPTIONS=	DOCS      "Install documentation" on \
 		MTP       "Enable MTP support"    on \
 		BPMDETECT "Enable BPM detection"  on \
-		IPOD      "Enable iPod support"   on
+#		IPOD      "Enable iPod support"   on
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -56,13 +56,13 @@ INSTALL=	/usr/bin/install
 CONFIGURE_ARGS+=	--disable-docs
 .endif
 
-.if !defined(WITHOUT_IPOD)
-LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/ipod-sharp-ui.pc:${PORTSDIR}/audio/ipod-sharp
-PLIST_SUB+=	OPT_IPOD=""
-.else
+#.if !defined(WITHOUT_IPOD)
+#LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/ipod-sharp-ui.pc:${PORTSDIR}/audio/ipod-sharp
+#PLIST_SUB+=	OPT_IPOD=""
+#.else
 CONFIGURE_ARGS+=	--disable-ipod
 PLIST_SUB+=	OPT_IPOD="@comment "
-.endif
+#.endif
 
 .if !defined(WITHOUT_MTP)
 LIB_DEPENDS+=	mtp.8:${PORTSDIR}/audio/libmtp
