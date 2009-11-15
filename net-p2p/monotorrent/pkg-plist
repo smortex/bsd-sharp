@@ -1,3 +1,0 @@
-lib/monotorrent/MonoTorrent.dll
-libdata/pkgconfig/monotorrent.pc
-@dirrm lib/monotorrent
