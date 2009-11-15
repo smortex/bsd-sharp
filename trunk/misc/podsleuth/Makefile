@@ -13,7 +13,7 @@ MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/${PORTVERSION}/
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A tool to discover detailed model information about an iPod
 
-LIB_DEPENDS=	sgutils.1:${PORTSDIR}/sysutils/sg3_utils \
+LIB_DEPENDS=	sgutils2.2:${PORTSDIR}/sysutils/sg3_utils \
 		hal.1:${PORTSDIR}/sysutils/hal
 BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
