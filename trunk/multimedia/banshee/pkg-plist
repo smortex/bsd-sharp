@@ -24,7 +24,6 @@ lib/banshee-1/Banshee.Services.addins
 lib/banshee-1/Banshee.Services.dll
 lib/banshee-1/Banshee.Services.dll.mdb
 lib/banshee-1/Banshee.ThickClient.dll
-lib/banshee-1/Banshee.ThickClient.dll.config
 lib/banshee-1/Banshee.ThickClient.dll.mdb
 lib/banshee-1/Banshee.Widgets.dll
 lib/banshee-1/Banshee.Widgets.dll.config
@@ -54,6 +53,8 @@ lib/banshee-1/Extensions/Banshee.Dap.dll
 lib/banshee-1/Extensions/Banshee.Dap.dll.mdb
 lib/banshee-1/Extensions/Banshee.FileSystemQueue.dll
 lib/banshee-1/Extensions/Banshee.FileSystemQueue.dll.mdb
+lib/banshee-1/Extensions/Banshee.InternetArchive.dll
+lib/banshee-1/Extensions/Banshee.InternetArchive.dll.mdb
 lib/banshee-1/Extensions/Banshee.InternetRadio.dll
 lib/banshee-1/Extensions/Banshee.InternetRadio.dll.mdb
 lib/banshee-1/Extensions/Banshee.Lastfm.dll
@@ -66,7 +67,6 @@ lib/banshee-1/Extensions/Banshee.NotificationArea.dll
 lib/banshee-1/Extensions/Banshee.NotificationArea.dll.config
 lib/banshee-1/Extensions/Banshee.NotificationArea.dll.mdb
 lib/banshee-1/Extensions/Banshee.NowPlaying.dll
-lib/banshee-1/Extensions/Banshee.NowPlaying.dll.config
 lib/banshee-1/Extensions/Banshee.NowPlaying.dll.mdb
 lib/banshee-1/Extensions/Banshee.PlayQueue.dll
 lib/banshee-1/Extensions/Banshee.PlayQueue.dll.mdb
@@ -75,9 +75,7 @@ lib/banshee-1/Extensions/Banshee.PlayerMigration.dll.mdb
 lib/banshee-1/Extensions/Banshee.Podcasting.dll
 lib/banshee-1/Extensions/Banshee.Podcasting.dll.mdb
 %%OPT_IPOD%%lib/banshee-1/Extensions/ipod-sharp-ui.dll
-%%OPT_IPOD%%lib/banshee-1/Extensions/ipod-sharp-ui.dll.mdb
 %%OPT_IPOD%%lib/banshee-1/Extensions/ipod-sharp.dll
-%%OPT_IPOD%%lib/banshee-1/Extensions/ipod-sharp.dll.mdb
 lib/banshee-1/Halie.exe
 lib/banshee-1/Halie.exe.mdb
 lib/banshee-1/Hyena.Gui.dll
