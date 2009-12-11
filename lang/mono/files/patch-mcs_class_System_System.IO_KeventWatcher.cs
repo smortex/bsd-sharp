@@ -1,6 +1,8 @@
 
 $FreeBSD$
 
+https://bugzilla.novell.com/show_bug.cgi?id=542485
+
 --- mcs/class/System/System.IO/KeventWatcher.cs.orig
 +++ mcs/class/System/System.IO/KeventWatcher.cs
 @@ -38,11 +38,11 @@
