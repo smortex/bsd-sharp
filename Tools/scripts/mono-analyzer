@@ -26,7 +26,19 @@ ensure_sysctl_ge()
 # Entry point
 
 case `uname -r` in
-	6*|7*|8*) ;;
+	6*)
+		if [ ! -r /etc/libmap.conf ] || [ "`grep -Ec '^[^#]*libpthread.so(.[:digit:])?[:blank:]*.*libthr.so(.[:digit:])?' /etc/libmap.conf`" != 2 ]; then
+			echo "E: Mono can't be build with FreeBSD 6.X kse(2) pthreads."
+			echo "   KSE was disabled in FreeBSD 7.0 and removed in FreeBSD 8.0."
+			echo "   You can workaround this error adding the following to /etc/libmap.conf:"
+			echo "   libpthread.so.2  libthr.so.2"
+			echo "   libpthread.so    libthr.so"
+			problems=$((problems+1))
+		fi
+
+		;;
+	7*) ;;
+	8*) ;;
 	*)
 		echo "E: Only FreeBSD 6.x, 7.x and 8.x are supported."
 		problems=$((problems+1))
