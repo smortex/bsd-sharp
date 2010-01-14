@@ -7,14 +7,15 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.6
+PORTVERSION=	2.6.1
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	An open source implementation of .NET Development Framework
 
-BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser
+BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser \
+    		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
 USE_BISON=	build
@@ -26,7 +27,7 @@ USE_LDCONFIG=	yes
 USE_GETTEXT=	yes
 
 OPTIONS=	PROFILE2	"Enable the 2.0 mono profile"			on \
-		MOON		"Enable Moonlight Profile"			off \
+		MOON		"Enable Moonlight Profile"			on \
 		PROFILE4	"Enable the 4.0 mono profile (experimental)"	off
 
 # Set location for .wapi creation.
@@ -85,11 +86,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj2k5 \
-		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5 \
-		${WRKSRC}/mcs/class/Mono.Cairo/Samples/gtk/compile.sh \
-		${WRKSRC}/mcs/class/Mono.Cairo/Samples/png/compile.sh \
-		${WRKSRC}/mcs/class/Mono.Cairo/Samples/win32/compile.sh \
-		${WRKSRC}/mcs/class/Mono.Cairo/Samples/x11/compile.sh
+		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5
+	@${FIND} ${WRKSRC} -name '*.sh' | ${XARGS} ${REINPLACE_CMD} \
+		-e 's|^#!/bin/bash|#!/bin/sh|g'
 
 tests: build
 	@${ECHO_MSG} "===> Running mono regression tests"
