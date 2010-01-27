@@ -1,7 +1,0 @@
-@comment $FreeBSD$
-bin/nemo
-bin/nemo.exe
-share/applications/nemo.desktop
-share/nemo/nemo.png
-share/nemo/no-preview.png
-@dirrm share/nemo
