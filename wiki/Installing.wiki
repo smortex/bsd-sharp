@@ -15,13 +15,13 @@ svn co "http://bsd-sharp.googlecode.com/svn/branches/portshaker/"
 
 Then build and install _portshaker_:
 {{{
-make DESTDIR="/usr/local"
-sudo make DESTDIR="/usr/local" install
+make PREFIX="/usr/local"
+sudo make PREFIX="/usr/local" install
 }}}
 
 For convenience, _portshaker_ ships with example configuration files for tracking the `trunk`, where the porting effort is concentrated. Install the examples running:
 {{{
-make -C examples DESTDIR="/usr/local" install
+make -C examples PREFIX="/usr/local" install
 }}}
 
 The default configuration file should fit your needs, but you can customise it: `/usr/local/etc/portshaker.conf`.
