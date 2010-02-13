@@ -3,12 +3,12 @@
 # Whom:                 Juli Mallett
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.27 2007/10/03 00:48:49 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	gtk-sharp
 PORTVERSION=	2.12.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 

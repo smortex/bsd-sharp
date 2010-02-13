@@ -2,8 +2,8 @@
 # Date created:			2005-06-16
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/devel/mono-tools/Makefile,v 1.15 2009/06/22 07:55:46 flz Exp $
-#   $Id: Makefile,v 1.30 2007/12/13 19:32:53 killfill Exp $
+# $FreeBSD$
+#   $Id$
 #
 
 PORTNAME=	mono-tools
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget gnomedesktopsharp20
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GECKO=	firefox mozilla
+USE_GECKO=	libxul
 
 MAN1=		create-native-map.1 gendarme.1 mprof-decoder.1 mprof-heap-viewer.1
 
@@ -40,5 +40,4 @@ post-patch:
 		's|@datadir@/man/man1|@mandir@/man1|g'
 
 .include "${PORTSDIR}/lang/mono/bsd.mono.mk"
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 .include <bsd.port.post.mk>
