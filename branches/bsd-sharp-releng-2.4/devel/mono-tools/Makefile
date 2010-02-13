@@ -2,12 +2,13 @@
 # Date created:			2005-06-16
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/devel/mono-tools/Makefile,v 1.15 2009/06/22 07:55:46 flz Exp $
-#   $Id: Makefile,v 1.30 2007/12/13 19:32:53 killfill Exp $
+# $FreeBSD$
+#   $Id$
 #
 
 PORTNAME=	mono-tools
 PORTVERSION=	2.4.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 

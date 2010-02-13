@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.17 2006/10/26 18:37:29 tmclau02 Exp $
+#   $Id$
 #
 
 PORTREVISION=	1

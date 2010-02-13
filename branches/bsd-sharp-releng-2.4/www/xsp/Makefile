@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.38 2007/12/15 00:04:31 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	xsp

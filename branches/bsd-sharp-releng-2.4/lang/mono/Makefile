@@ -3,11 +3,12 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.98 2007/12/13 19:31:45 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	mono
 PORTVERSION=	2.4.3.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -29,6 +30,7 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 MAKE_ARGS=	EXTERNAL_MCS=false
 USE_GETTEXT=	yes
+MAKE_JOBS_UNSAFE=yes
 
 OPTIONS=	MOON	"Enable Moonlight Profile (2.1 Alpha)"	on
 

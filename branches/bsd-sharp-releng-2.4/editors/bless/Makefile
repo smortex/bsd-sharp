@@ -3,12 +3,12 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.22 2006/11/01 02:49:57 tmclau02 Exp $
+#   $Id$
 #
 
 PORTNAME=	bless
 PORTVERSION=	0.6.0
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://download.gna.org/bless/

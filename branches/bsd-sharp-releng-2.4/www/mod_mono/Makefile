@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.39 2007/12/13 19:35:47 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	mod_mono

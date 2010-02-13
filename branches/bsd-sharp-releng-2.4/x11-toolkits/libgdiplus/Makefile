@@ -3,11 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.46 2007/12/13 19:37:18 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	libgdiplus
 PORTVERSION=	2.4.2
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 

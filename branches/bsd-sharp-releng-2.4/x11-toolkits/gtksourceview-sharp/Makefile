@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.30 2007/05/19 17:34:30 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	gtksourceview-sharp
 PORTVERSION=	0.12
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gtksourceview-sharp-2.0/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
