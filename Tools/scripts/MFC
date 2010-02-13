@@ -7,29 +7,25 @@
 
 PORTSDIR=${PORTSDIR:=/var/cache/portshaker/freebsd}
 
-# Unexpand any expanded VCS tag (e.g. $Id$) in $1 and write the result in $2.
+# Unexpand any expanded VCS tag (e.g. $Id$)
 unsubstitute_keywords()
 {
-	sed -E -e 's#\$(FreeBSD|Id|MCom):[^\$]*\$#$\1$#g' < $1 > $2
+	sed -I '' -E -e 's#\$(FreeBSD|Id|MCom):[^\$]*\$#$\1$#g' $@
 }
 
-copy_noid()
-{
-	while read file_name
-	do
-		dir_name=`basename "${file_name}"`
-
-		if [ ! -d ${dir_name} ]; then
-			mkdir "${dir_name}" || exit 1
-		fi
-
-		unsubstitute_keywords "${PORTSDIR}/${file_name}" "${file_name}"
-	done
-}
+if [ $# -eq 1 -a $1 = "-a" ]; then
+    set -- `find . -depth 3 -name Makefile | sed -E -e 's#^\\./(.*)/Makefile$#\1#'`
+fi
 
 for directory
 do
-	echo "MFC ${PORTSDIR}/${directory} -> ${directory}"
-	find $directory -type f  ! -regex '.*/\.svn.*' | copy_noid
+	if [ -d "${PORTSDIR}/${directory}" ]; then
+		echo "MFC ${PORTSDIR}/${directory} -> ${directory}"
+		find ${directory} -type f  ! -regex '.*/\.svn.*' -delete || exit 1
+		(cd ${PORTSDIR} && tar cf - ${directory}) | tar xf -
+		unsubstitute_keywords `find ${directory} -type f`
+	else
+		echo "${directory} is not in the FreeBSD ports (yet)" >&2
+	fi
 done
 
