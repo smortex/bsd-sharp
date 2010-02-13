@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.19 2007/02/07 15:49:20 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	gecko-sharp
 PORTVERSION=	0.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}

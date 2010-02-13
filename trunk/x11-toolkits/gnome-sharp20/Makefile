@@ -3,12 +3,12 @@
 # Whom:                 		Tom McLaughlin <tmclaugh@FreeBSD.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.3 2007/10/02 03:37:51 killfill Exp $
+#   $Id$
 #
 
 PORTNAME=	gnome-sharp
 PORTVERSION=	2.24.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
