@@ -1,0 +1,13 @@
+bin/mopen1
+lib/libmoon.la
+lib/libmoon.so
+lib/libmoon.so.0
+lib/moon/plugin/README
+lib/moon/plugin/libmoonloader.la
+lib/moon/plugin/libmoonloader.so
+lib/moon/plugin/libmoonplugin-ff3bridge.la
+lib/moon/plugin/libmoonplugin-ff3bridge.so
+lib/moon/plugin/libmoonplugin.la
+lib/moon/plugin/libmoonplugin.so
+@dirrm lib/moon/plugin
+@dirrm lib/moon
