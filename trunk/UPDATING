@@ -1,3 +1,11 @@
+20100217:
+  AFFECTS: users of lang/mono
+  AUTHOR: mono@FreeBSD.org
+
+  Starting with mono-2.6, the Moonlight compiler and assemblies are not
+  installed by the lang/mono port anymore, and are available through the
+  multimedia/moonlight port.
+
 20090907:
   AFFECTS: users of lang/boo
   AUTHOR: romain@blogreen.org
