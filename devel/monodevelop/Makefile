@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	2.2
+PORTVERSION=	2.2.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -35,7 +35,7 @@ OPTIONS=	MONOEXT "Enable extensions for Mono development" on \
 		SVN "Enable subversion support" on
 
 # Restrict to stable (even) versions, indicated by the second component.
-PORTSCOUT=      limitw:1,even
+PORTSCOUT=	limitw:1,even
 
 .include <bsd.port.pre.mk>
 
