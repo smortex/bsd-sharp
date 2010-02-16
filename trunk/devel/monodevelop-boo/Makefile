@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	monodevelop-boo
-PORTVERSION=	2.1.1
+PORTVERSION=	2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -33,6 +33,6 @@ post-patch:
 		${WRKSRC}/Makefile.include
 
 # Restrict to stable (even) versions, indicated by the second component.
-PORTSCOUT=      limitw:1,even
+PORTSCOUT=	limitw:1,even
 
 .include <bsd.port.mk>
