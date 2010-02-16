@@ -26,8 +26,10 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GETTEXT=	yes
 
+# Moonlight is installed as part of www/moonlight
+CONFIGURE_ARGS=	--with-moonlight=no
+
 OPTIONS=	PROFILE2	"Enable the 2.0 mono profile"			on \
-		MOON		"Enable Moonlight Profile"			on \
 		PROFILE4	"Enable the 4.0 mono profile (experimental)"	off
 
 # Set location for .wapi creation.
@@ -61,14 +63,6 @@ PLIST_SUB+=	PROFILE2=""
 .else
 CONFIGURE_ARGS+=--with-profile2=no
 PLIST_SUB+=	PROFILE2="@comment "
-.endif
-
-.if defined(WITH_MOON) && !defined(WITHOUT_MOON)
-CONFIGURE_ARGS+=--with-moonlight
-PLIST_SUB+=	MOON=""
-.else
-CONFIGURE_ARGS+=--without-moonlight
-PLIST_SUB+=	MOON="@comment "
 .endif
 
 .if defined(WITH_PROFILE4) && !defined(WITHOUT_PROFILE4)
