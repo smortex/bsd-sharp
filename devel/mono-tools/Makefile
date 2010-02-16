@@ -3,12 +3,10 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id$
 #
 
 PORTNAME=	mono-tools
-PORTVERSION=	2.4.2
-PORTREVISION=	1
+PORTVERSION=	2.6.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -26,6 +24,7 @@ USE_GMAKE=	yes
 USE_GECKO=	libxul
 
 MAN1=		create-native-map.1 gendarme.1 mprof-decoder.1 mprof-heap-viewer.1
+MAN5=		gendarme.5
 
 .include <bsd.port.pre.mk>
 
@@ -40,4 +39,5 @@ post-patch:
 		's|@datadir@/man/man1|@mandir@/man1|g'
 
 .include "${PORTSDIR}/lang/mono/bsd.mono.mk"
+.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 .include <bsd.port.post.mk>
