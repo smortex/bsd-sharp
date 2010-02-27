@@ -7,6 +7,7 @@
 
 PORTNAME=	banshee
 PORTVERSION=	1.5.4
+PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/stable/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-1-${PORTVERSION}
