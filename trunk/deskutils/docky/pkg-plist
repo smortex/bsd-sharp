@@ -1,0 +1,161 @@
+@comment $FreeBSD$
+bin/docky
+etc/xdg/autostart/docky.desktop
+lib/docky/Docky.CairoHelper.dll
+lib/docky/Docky.CairoHelper.dll.mdb
+lib/docky/Docky.DBus.dll
+lib/docky/Docky.DBus.dll.mdb
+lib/docky/Docky.Items.dll
+lib/docky/Docky.Items.dll.mdb
+lib/docky/Docky.Services.dll
+lib/docky/Docky.Services.dll.config
+lib/docky/Docky.Services.dll.mdb
+lib/docky/Docky.Widgets.dll
+lib/docky/Docky.Widgets.dll.config
+lib/docky/Docky.Widgets.dll.mdb
+lib/docky/Docky.Windowing.dll
+lib/docky/Docky.Windowing.dll.config
+lib/docky/Docky.Windowing.dll.mdb
+lib/docky/Docky.addins
+lib/docky/Docky.exe
+lib/docky/Docky.exe.mdb
+lib/docky/gapi_codegen.exe
+lib/docky/gapi_codegen.exe.mdb
+lib/docky/gio-sharp.dll
+lib/docky/gio-sharp.dll.config
+lib/docky/plugins/BatteryMonitor.dll
+lib/docky/plugins/BatteryMonitor.dll.mdb
+lib/docky/plugins/Bookmarks.dll
+lib/docky/plugins/Bookmarks.dll.mdb
+lib/docky/plugins/CPUMonitor.dll
+lib/docky/plugins/CPUMonitor.dll.mdb
+lib/docky/plugins/Clock.dll
+lib/docky/plugins/Clock.dll.mdb
+lib/docky/plugins/GMail.dll
+lib/docky/plugins/GMail.dll.mdb
+lib/docky/plugins/Mounter.dll
+lib/docky/plugins/Mounter.dll.mdb
+lib/docky/plugins/NPR.dll
+lib/docky/plugins/NPR.dll.mdb
+lib/docky/plugins/NetworkManager.dll
+lib/docky/plugins/NetworkManager.dll.mdb
+lib/docky/plugins/RecentDocuments.dll
+lib/docky/plugins/RecentDocuments.dll.mdb
+lib/docky/plugins/Trash.dll
+lib/docky/plugins/Trash.dll.mdb
+lib/docky/plugins/Weather.dll
+lib/docky/plugins/Weather.dll.mdb
+%%PYTHON_SITELIBDIR%%/docky/__init__.py
+%%PYTHON_SITELIBDIR%%/docky/__init__.pyc
+%%PYTHON_SITELIBDIR%%/docky/__init__.pyo
+%%PYTHON_SITELIBDIR%%/docky/docky.py
+%%PYTHON_SITELIBDIR%%/docky/docky.pyc
+%%PYTHON_SITELIBDIR%%/docky/docky.pyo
+libdata/pkgconfig/docky.cairohelper.pc
+libdata/pkgconfig/docky.items.pc
+libdata/pkgconfig/docky.services.pc
+libdata/pkgconfig/docky.widgets.pc
+libdata/pkgconfig/docky.windowing.pc
+share/applications/docky.desktop
+%%DATADIR%%/ClockTheme/default-24/clock-drop-shadow.svg
+%%DATADIR%%/ClockTheme/default-24/clock-face-shadow.svg
+%%DATADIR%%/ClockTheme/default-24/clock-face.svg
+%%DATADIR%%/ClockTheme/default-24/clock-frame.svg
+%%DATADIR%%/ClockTheme/default-24/clock-glass.svg
+%%DATADIR%%/ClockTheme/default-24/clock-marks.svg
+%%DATADIR%%/ClockTheme/default/clock-drop-shadow.svg
+%%DATADIR%%/ClockTheme/default/clock-face-shadow.svg
+%%DATADIR%%/ClockTheme/default/clock-face.svg
+%%DATADIR%%/ClockTheme/default/clock-frame.svg
+%%DATADIR%%/ClockTheme/default/clock-glass.svg
+%%DATADIR%%/ClockTheme/default/clock-marks.svg
+%%DATADIR%%/albumoverlay_jewel.png
+%%DATADIR%%/albumoverlay_vinyl.png
+%%DATADIR%%/helpers/banshee_control.py
+%%DATADIR%%/helpers/deluge_badge.py
+%%DATADIR%%/helpers/gajim_badge.py
+%%DATADIR%%/helpers/gtg_menus.py
+%%DATADIR%%/helpers/liferea_badge.py
+%%DATADIR%%/helpers/metadata/banshee_control.py.info
+%%DATADIR%%/helpers/metadata/deluge_badge.py.info
+%%DATADIR%%/helpers/metadata/gajim_badge.py.info
+%%DATADIR%%/helpers/metadata/gtg_menus.py.info
+%%DATADIR%%/helpers/metadata/liferea_badge.py.info
+%%DATADIR%%/helpers/metadata/open_terminal_here.py.info
+%%DATADIR%%/helpers/metadata/pidgin_control.py.info
+%%DATADIR%%/helpers/metadata/rhythmbox_control.py.info
+%%DATADIR%%/helpers/metadata/tomboy_menus.py.info
+%%DATADIR%%/helpers/metadata/zeitgeist_docky.py.info
+%%DATADIR%%/helpers/metadata/zeitgeist_journal.py.info
+%%DATADIR%%/helpers/open_terminal_here.py
+%%DATADIR%%/helpers/pidgin_control.py
+%%DATADIR%%/helpers/rhythmbox_control.py
+%%DATADIR%%/helpers/tomboy_menus.py
+%%DATADIR%%/helpers/zeitgeist_docky.py
+%%DATADIR%%/helpers/zeitgeist_journal.py
+%%DATADIR%%/poof.png
+%%DATADIR%%/themes/Air/background.svg
+%%DATADIR%%/themes/Air/badge.svg
+%%DATADIR%%/themes/Air/menu.svg
+%%DATADIR%%/themes/Air/stretch_separator.svg
+%%DATADIR%%/themes/Air/tooltip.svg
+%%DATADIR%%/themes/Glass/background.svg
+%%DATADIR%%/themes/Glass/badge.svg
+%%DATADIR%%/themes/Glass/menu.svg
+%%DATADIR%%/themes/Glass/stretch_separator.svg
+%%DATADIR%%/themes/Glass/tooltip.svg
+%%DATADIR%%/themes/Grayscale/background.svg
+%%DATADIR%%/themes/Grayscale/badge.svg
+%%DATADIR%%/themes/Grayscale/menu.svg
+%%DATADIR%%/themes/Grayscale/tooltip.svg
+%%DATADIR%%/themes/HUD/background.svg
+%%DATADIR%%/themes/HUD/badge.svg
+%%DATADIR%%/themes/HUD/menu.svg
+%%DATADIR%%/themes/HUD/tooltip.svg
+%%DATADIR%%/themes/Smoke/background.svg
+%%DATADIR%%/themes/Smoke/badge.svg
+%%DATADIR%%/themes/Smoke/menu.svg
+%%DATADIR%%/themes/Smoke/stretch_separator.svg
+%%DATADIR%%/themes/Smoke/tooltip.svg
+share/icons/hicolor/128x128/apps/docky.svg
+share/icons/hicolor/128x128/apps/gmail.png
+share/icons/hicolor/16x16/apps/docky.svg
+share/icons/hicolor/22x22/apps/docky.svg
+share/icons/hicolor/24x24/apps/docky.svg
+share/icons/hicolor/32x32/apps/docky.svg
+share/icons/hicolor/48x48/apps/docky.svg
+share/icons/hicolor/48x48/mimetypes/extension.svg
+share/icons/hicolor/64x64/apps/docky.svg
+share/locale/bn/LC_MESSAGES/docky.mo
+share/locale/ca/LC_MESSAGES/docky.mo
+share/locale/de/LC_MESSAGES/docky.mo
+share/locale/es/LC_MESSAGES/docky.mo
+share/locale/eu/LC_MESSAGES/docky.mo
+share/locale/fr/LC_MESSAGES/docky.mo
+share/locale/gl/LC_MESSAGES/docky.mo
+share/locale/hr/LC_MESSAGES/docky.mo
+share/locale/hu/LC_MESSAGES/docky.mo
+share/locale/id/LC_MESSAGES/docky.mo
+share/locale/is/LC_MESSAGES/docky.mo
+share/locale/it/LC_MESSAGES/docky.mo
+share/locale/ko/LC_MESSAGES/docky.mo
+share/locale/pl/LC_MESSAGES/docky.mo
+share/locale/pt_BR/LC_MESSAGES/docky.mo
+share/locale/ru/LC_MESSAGES/docky.mo
+share/locale/sv/LC_MESSAGES/docky.mo
+share/locale/zh_CN/LC_MESSAGES/docky.mo
+@dirrm %%DATADIR%%/themes/Smoke
+@dirrm %%DATADIR%%/themes/HUD
+@dirrm %%DATADIR%%/themes/Grayscale
+@dirrm %%DATADIR%%/themes/Glass
+@dirrm %%DATADIR%%/themes/Air
+@dirrm %%DATADIR%%/themes
+@dirrm %%DATADIR%%/helpers/metadata
+@dirrm %%DATADIR%%/helpers
+@dirrm %%DATADIR%%/ClockTheme/default-24
+@dirrm %%DATADIR%%/ClockTheme/default
+@dirrm %%DATADIR%%/ClockTheme
+@dirrm %%DATADIR%%
+@dirrm %%PYTHON_SITELIBDIR%%/docky
+@dirrm lib/docky/plugins
+@dirrm lib/docky
