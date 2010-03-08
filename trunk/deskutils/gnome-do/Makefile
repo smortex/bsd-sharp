@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	gnome-do
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.3.1
 CATEGORIES=	deskutils
-MASTER_SITES=	https://launchpadlibrarian.net/28398054/
+MASTER_SITES=	http://launchpadlibrarian.net/36605829/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Powerful, speedy, and sexy remote control for your GNOME Desktop

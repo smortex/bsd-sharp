@@ -1,9 +1,17 @@
---- Do/gnome-do.in.orig	2008-03-24 23:13:27.000000000 -0300
-+++ Do/gnome-do.in	2008-03-24 23:13:33.000000000 -0300
-@@ -18,5 +18,6 @@
+
+$FreeBSD$
+
+--- Do/gnome-do.in.orig
++++ Do/gnome-do.in
+@@ -16,10 +16,4 @@
+ dbus-send --session --type=method_call --dest='org.gnome.Do' \
+ 	'/org/gnome/Do/Controller' 'org.gnome.Do.Controller.Summon'
  
- # If Do is not running, run it.
- if pgrep -u "`id -un`" '^gnome-do$' >/dev/null; then
-+else
- 	exec mono "$GNOME_DO_EXE" "$@"
- fi
+-# If Do is not running, run it.
+-if pgrep -u "`id -u`" '^gnome-do$' >/dev/null; then
+-	mono "$GNOME_DO_EXE" "$@"
+-fi
+-while [ "$?" -eq "20" ]; do
+-	mono "$GNOME_DO_EXE" "$@"
+-done
++mono "$GNOME_DO_EXE" "$@"
