@@ -29,19 +29,19 @@ lib/mono/gac/Google.GData.Health/1.4.0.2__7dc2246c3cef9211/Google.GData.Health.d
 lib/mono/gac/Google.GData.Photos/1.4.0.2__a25b50f2e8e3887a/Google.GData.Photos.dll
 lib/mono/gac/Google.GData.Spreadsheets/1.4.0.2__3f77feb76ff0d9a1/Google.GData.Spreadsheets.dll
 lib/mono/gac/Google.GData.YouTube/1.4.0.2__af04a32718ae8833/Google.GData.YouTube.dll
-lib/pkgconfig/gdata-sharp-acl.pc
-lib/pkgconfig/gdata-sharp-apps.pc
-lib/pkgconfig/gdata-sharp-base.pc
-lib/pkgconfig/gdata-sharp-blogger.pc
-lib/pkgconfig/gdata-sharp-calendar.pc
-lib/pkgconfig/gdata-sharp-codesearch.pc
-lib/pkgconfig/gdata-sharp-contacts.pc
-lib/pkgconfig/gdata-sharp-core.pc
-lib/pkgconfig/gdata-sharp-documents.pc
-lib/pkgconfig/gdata-sharp-health.pc
-lib/pkgconfig/gdata-sharp-photos.pc
-lib/pkgconfig/gdata-sharp-spreadsheets.pc
-lib/pkgconfig/gdata-sharp-youtube.pc
+libdata/pkgconfig/gdata-sharp-acl.pc
+libdata/pkgconfig/gdata-sharp-apps.pc
+libdata/pkgconfig/gdata-sharp-base.pc
+libdata/pkgconfig/gdata-sharp-blogger.pc
+libdata/pkgconfig/gdata-sharp-calendar.pc
+libdata/pkgconfig/gdata-sharp-codesearch.pc
+libdata/pkgconfig/gdata-sharp-contacts.pc
+libdata/pkgconfig/gdata-sharp-core.pc
+libdata/pkgconfig/gdata-sharp-documents.pc
+libdata/pkgconfig/gdata-sharp-health.pc
+libdata/pkgconfig/gdata-sharp-photos.pc
+libdata/pkgconfig/gdata-sharp-spreadsheets.pc
+libdata/pkgconfig/gdata-sharp-youtube.pc
 @dirrm lib/pkgconfig
 @dirrm lib/mono/gac/Google.GData.YouTube/1.4.0.2__af04a32718ae8833
 @dirrm lib/mono/gac/Google.GData.YouTube

@@ -8,7 +8,7 @@ $FreeBSD$
  	for i in $(ALLLIBS); do gacutil -i $$i -package GData-Sharp -root "$(DESTDIR)$(PREFIX)/lib"; done
  	install -d "$(DESTDIR)$(PREFIX)/lib/pkgconfig"
 -	install -m 644 -t "$(DESTDIR)$(PREFIX)/lib/pkgconfig" $(PKGCONFIG_FILES) 
-+	install -m 644 $(PKGCONFIG_FILES) "$(DESTDIR)$(PREFIX)/lib/pkgconfig"
++	install -m 644 $(PKGCONFIG_FILES) "$(DESTDIR)$(PREFIX)/libdata/pkgconfig"
  
  uninstall:
  	for i in $(ALLLIBS); do gacutil -u $$i -package GData-Sharp -root "$(DESTDIR)$(PREFIX)/lib"; done
