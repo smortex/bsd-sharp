@@ -228,6 +228,8 @@ lib/mono/1.0/Novell.Directory.Ldap.dll
 lib/mono/1.0/Npgsql.dll
 lib/mono/1.0/OpenSystem.C.dll
 lib/mono/1.0/PEAPI.dll
+lib/mono/1.0/RabbitMQ.Client.Apigen.exe
+lib/mono/1.0/RabbitMQ.Client.Apigen.exe.mdb
 lib/mono/1.0/RabbitMQ.Client.dll
 lib/mono/1.0/System.Configuration.Install.dll
 lib/mono/1.0/System.Data.OracleClient.dll
@@ -390,6 +392,8 @@ lib/mono/2.0/Novell.Directory.Ldap.dll
 lib/mono/2.0/Npgsql.dll
 lib/mono/2.0/OpenSystem.C.dll
 lib/mono/2.0/PEAPI.dll
+lib/mono/2.0/RabbitMQ.Client.Apigen.exe
+lib/mono/2.0/RabbitMQ.Client.Apigen.exe.mdb
 lib/mono/2.0/RabbitMQ.Client.dll
 lib/mono/2.0/System.ComponentModel.DataAnnotations.dll
 lib/mono/2.0/System.Configuration.Install.dll
