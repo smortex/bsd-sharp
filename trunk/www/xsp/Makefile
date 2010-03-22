@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	xsp
-PORTVERSION=	2.6
+PORTVERSION=	2.6.3
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -25,6 +25,8 @@ USE_GMAKE=	yes
 
 MAN1=		asp-state.1 dbsessmgr.1 mod-mono-server.1 xsp.1 \
 		fastcgi-mono-server.1
+
+PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 pre-su-install:
 	${MKDIR} ${XSP_DOCROOT}
