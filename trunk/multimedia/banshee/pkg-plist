@@ -37,6 +37,8 @@ lib/banshee-1/Extensions/Banshee.AudioCd.dll
 lib/banshee-1/Extensions/Banshee.AudioCd.dll.mdb
 lib/banshee-1/Extensions/Banshee.Audiobook.dll
 lib/banshee-1/Extensions/Banshee.Audiobook.dll.mdb
+%%OPT_BOO%%lib/banshee-1/Extensions/Banshee.BooScript.dll
+%%OPT_BOO%%lib/banshee-1/Extensions/Banshee.BooScript.dll.mdb
 lib/banshee-1/Extensions/Banshee.Bookmarks.dll
 lib/banshee-1/Extensions/Banshee.Bookmarks.dll.mdb
 lib/banshee-1/Extensions/Banshee.Bpm.dll
@@ -220,6 +222,8 @@ share/banshee-1/icons/hicolor/22x22/devices/phone-google-nexus-one.png
 share/banshee-1/icons/hicolor/22x22/devices/phone-htc-g1-white.png
 share/banshee-1/icons/hicolor/22x22/devices/phone-nokia-n900.png
 share/banshee-1/icons/hicolor/22x22/devices/phone-palm-pre.png
+share/banshee-1/icons/hicolor/24x24/devices/phone-google-nexus-one.png
+share/banshee-1/icons/hicolor/24x24/devices/phone-htc-g1-white.png
 share/banshee-1/icons/hicolor/24x24/devices/phone-nokia-n900.png
 share/banshee-1/icons/hicolor/24x24/devices/phone-palm-pre.png
 share/banshee-1/icons/hicolor/256x256/devices/phone-google-nexus-one.png
