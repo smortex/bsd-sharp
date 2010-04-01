@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.5.6
+PORTVERSION=	1.6.0
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/stable/${PORTVERSION}/
@@ -68,8 +68,10 @@ USE_GSTREAMER+=	soundtouch
 CONFIGURE_ARGS+=--enable-boo
 BUILD_DEPENDS+=	booc:${PORTSDIR}/lang/boo
 RUN_DEPENDS+=	booc:${PORTSDIR}/lang/boo
+PLIST_SUB+=	OPT_BOO=""
 .else
 CONFIGURE_ARGS+=--disable-boo
+PLIST_SUB+=	OPT_BOO="@comment "
 .endif
 
 .if !defined(WITHOUT_IPOD)
@@ -91,11 +93,11 @@ PLIST_SUB+=	OPT_MTP="@comment "
 .endif
 
 .if !defined(WITHOUT_WEBKIT)
-CONFIGURE_ARGS+=--enable-wikipedia
+CONFIGURE_ARGS+=--enable-webkit
 LIB_PC_DEPENDS+=${LOCALBASE}/libdata/pkgconfig/webkit-sharp-1.0.pc:${PORTSDIR}/www/webkit-sharp
 PLIST_SUB+=	OPT_WEBKIT=""
 .else
-CONFIGURE_ARGS+=--disable-wikipedia
+CONFIGURE_ARGS+=--disable-webkit
 PLIST_SUB+=	OPT_WEBKIT="@comment "
 .endif
 
