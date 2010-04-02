@@ -8,6 +8,7 @@
 
 PORTNAME=	libgdiplus
 PORTVERSION=	2.6.2
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -16,7 +17,7 @@ COMMENT=	GDI+ API for System.Windows.Forms in Mono
 
 LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff \
 		ungif.5:${PORTSDIR}/graphics/libungif \
-		png.5:${PORTSDIR}/graphics/png
+		png.6:${PORTSDIR}/graphics/png
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget glib20
