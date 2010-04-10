@@ -3,6 +3,8 @@ bin/muinshee
 lib/banshee-1/Backends/Banshee.GStreamer.dll
 lib/banshee-1/Backends/Banshee.GStreamer.dll.config
 lib/banshee-1/Backends/Banshee.GStreamer.dll.mdb
+lib/banshee-1/Backends/Banshee.Gio.dll
+lib/banshee-1/Backends/Banshee.Gio.dll.mdb
 lib/banshee-1/Backends/Banshee.Gnome.dll
 lib/banshee-1/Backends/Banshee.Gnome.dll.mdb
 lib/banshee-1/Backends/Banshee.Hal.dll
