@@ -48,7 +48,8 @@ USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project
+CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project \
+			--disable-gapless-playback
 
 # Need absolute path for build/icon-install-theme.
 INSTALL=	/usr/bin/install
