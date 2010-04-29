@@ -1,7 +1,0 @@
-Beagle is an experimental tool for indexing and searching your local
-files. Using Beagle, you can search your office documents, images,
-music files, and your source code.
-
-This port provides the python bindings for Beagle.
-
-WWW: http://www.beaglewiki.org/
