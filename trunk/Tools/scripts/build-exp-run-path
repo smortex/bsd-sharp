@@ -47,13 +47,11 @@ awk '
     BEGIN {
 	lil = 0;
 	lib = 0;
-	lr = 0;
+	lrl = 0;
 	lrb = 0;
     }
     /^@@/ {
 	l=NR;
-	lil = 0;
-	lrb = 0;
     }
     /^-.*\$FreeBSD/ {
 	lrl = NR;
