@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Id$
+
+. @@PREFIX@@/share/portshaker/portshaker.subr
+
+method="svn"
+svn_checkout_path="http://freebsd-texlive.googlecode.com/svn/branches/freebsd-texlive-2009"
+
+run_portshaker_command $*
