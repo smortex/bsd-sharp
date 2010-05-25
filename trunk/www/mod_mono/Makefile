@@ -14,7 +14,6 @@ MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Apache module for serving ASP.NET applications
 
-LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		xsp:${PORTSDIR}/www/xsp
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
