@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	podsleuth
-PORTVERSION=	0.6.5
+PORTVERSION=	0.6.7
 CATEGORIES=	misc
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/${PORTVERSION}/
 
@@ -20,13 +20,10 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
 
+CONFIGURE_ARGS+=--with-hal-callouts-dir=${PREFIX}/libexec
+CONFIGURE_ENV+=	LDFLAGS="-L${LOCALBASE}/lib"
 GNU_CONFIGURE=	yes
-CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS+=--with-hal-callouts-dir=/usr/local/libexec
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack pkgconfig
-
-CONFIGURE_ENV=	CPPFLAGS="${CXXFLAGS} -I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
