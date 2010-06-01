@@ -33,7 +33,8 @@ pre-build:
 	@${ECHO_CMD} "--->  Returning to build for ${PKGNAME}"
 
 post-install:
-	@${CP} ${WRKDIR}/zlib-${ZLIB_VERSION}/libz.so.${ZLIB_VERSION} ${PREFIX}/lib/mono/gac/Google.GData.Client/1.4.0.2__04a59ca9b0273830/
-	@${CP} ${WRKSRC}/misc/Google.GData.Client.dll.config ${PREFIX}/lib/mono/gac/Google.GData.Client/1.4.0.2__04a59ca9b0273830/
+	@${CP} ${WRKDIR}/zlib-${ZLIB_VERSION}/libz.so.${ZLIB_VERSION} \
+	    ${WRKSRC}/misc/Google.GData.Client.dll.config \
+	    ${PREFIX}/lib/mono/gac/Google.GData.Client/${PORTVERSION}__04a59ca9b0273830/
 
 .include <bsd.port.mk>
