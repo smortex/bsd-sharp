@@ -1,6 +1,10 @@
 
 $FreeBSD$
 
+http://www.freebsd.org/cgi/query-pr.cgi?pr=118092
+
+Rename uudecode and uuencode to gmime-* to not conflict with userland
+
 --- src/Makefile.in.orig
 +++ src/Makefile.in
 @@ -26,6 +26,7 @@
