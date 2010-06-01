@@ -31,10 +31,14 @@ find . -maxdepth 3 -name Makefile | sed 's:^./::' | while read file_name; do
     if [ -e "${PORTSDIR}/${file_name}" ]; then
 	port=`dirname "${file_name}"`
 	if [ -d "${port}/.svn" ]; then
+	    case `svnversion "${port}"` in
+		*M)  echo "FATAL:   ${port} has local modifications." >&2 ; exit 1;;
+		*:*) echo "WARNING: ${port} should be updated" >&2 ;;
+	    esac
 	    mkdir -p "${EXPORTDIR}/`dirname ${port}`"
 	    echo -n "."
 	    svn export "${port}" "${EXPORTDIR}/${port}" > /dev/null
-	    (cd "${EXPORTDIR}" && diff -NrU 0 --ignore-matching-lines='\(FreeBSD\|Id\|MCom\)' "${PORTSDIR}/${port}" "${port}") >> ${patch}
+	    (cd "${EXPORTDIR}" && diff -NrU 0 --ignore-matching-lines='\$\(FreeBSD\|Id\|MCom\)' "${PORTSDIR}/${port}" "${port}") >> ${patch}
 	fi
     fi
 done
