@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	tomboy-plugin-reminder
-PORTVERSION=	0.9.1
+PORTVERSION=	0.9.2
 CATEGORIES=	deskutils
 MASTER_SITES=	http://flukkost.nu/
 DISTNAME=	tomboy-reminder-${PORTVERSION}
@@ -17,7 +17,6 @@ COMMENT=	Automatically open notes at a given date and time
 BUILD_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 
-USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
