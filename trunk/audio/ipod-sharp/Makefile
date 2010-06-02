@@ -7,7 +7,7 @@
 
 PORTNAME=	ipod-sharp
 PORTVERSION=	0.8.5
-CATEGORIES=	misc
+CATEGORIES=	audio
 MASTER_SITES=	http://download.banshee-project.org/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	mono@FreeBSD.org
