@@ -12,7 +12,9 @@ MASTER_SITES=	http://www.proven-corporation.com/~jhs/
 DISTNAME=	tomboy-wordcount-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
-COMMENT=	Counts the lines, words, and characters in your note
+COMMENT=	Counts lines, words, and characters in your notes
+
+CONFLICTS=	tomboy-plugin-editorswordcount-*
 
 BUILD_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
@@ -24,5 +26,4 @@ PLIST_FILES=	lib/tomboy/addins/Wordcount.dll
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} Wordcount.dll ${PREFIX}/lib/tomboy/addins/
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
