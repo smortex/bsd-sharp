@@ -14,8 +14,6 @@ DISTNAME=	tomboy-wordcount-${PORTVERSION}
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Counts lines, words, and characters in your notes
 
-CONFLICTS=	tomboy-plugin-editorswordcount-*
-
 BUILD_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 
