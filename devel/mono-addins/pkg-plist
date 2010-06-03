@@ -52,7 +52,6 @@ lib/mono/xbuild/Mono.Addins.targets
 libdata/pkgconfig/mono-addins-msbuild.pc
 libdata/pkgconfig/mono-addins-setup.pc
 libdata/pkgconfig/mono-addins.pc
-@dirrm lib/pkgconfig
 @dirrm lib/mono/mono-addins
 @dirrm lib/mono/gac/policy.0.4.Mono.Addins/0.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/policy.0.4.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756
