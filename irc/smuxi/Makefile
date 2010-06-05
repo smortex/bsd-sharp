@@ -21,11 +21,18 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	intltool gnomehack gnomesharp20
-USE_GETTEXT=	yes
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@libdir@/pkgconfig|@prefix@/libdata/pkgconfig|g ; \
 		s|@libdir@/locale|@prefix@/share/locale|g'
+
+.if !defined(WITHOUT_NLS)
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
 
 .include <bsd.port.mk>
