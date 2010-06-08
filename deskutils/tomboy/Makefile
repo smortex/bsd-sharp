@@ -43,6 +43,9 @@ CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		tomboy.1
 GCONF_SCHEMAS=	tomboy.schemas
 
+# Restrict to stable (even) versions, indicated by the second component.
+PORTSCOUT=	limitw:1,even
+
 .include <bsd.port.pre.mk>
 
 post-patch:
