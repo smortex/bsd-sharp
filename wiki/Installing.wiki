@@ -8,23 +8,11 @@ First, have a look to the [Branches] of mono ports maintained by the BSD# Team a
 
 == Install _portshaker_ ==
 
-Either downlaod and extract a tarball from the download section or checkout the code using the following command:
-{{{
-svn co "http://bsd-sharp.googlecode.com/svn/branches/portshaker/"
-}}}
+Portshaker is now in the FreeBSD ports, so installing it with a working configuration is as simple as:
 
-Then build and install _portshaker_:
 {{{
-make PREFIX="/usr/local"
-sudo make PREFIX="/usr/local" install
+make -C /usr/ports/ports-mgmt/portshaker-config install
 }}}
-
-For convenience, _portshaker_ ships with example configuration files for tracking the `trunk`, where the porting effort is concentrated. Install the examples running:
-{{{
-make -C examples PREFIX="/usr/local" install
-}}}
-
-The default configuration file should fit your needs, but you can customise it: `/usr/local/etc/portshaker.conf`.
 
 == Update your ports ==
 
