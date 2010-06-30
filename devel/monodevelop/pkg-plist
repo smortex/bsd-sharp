@@ -307,8 +307,8 @@ share/mime/types
 @dirrm lib/monodevelop/AddIns/GnomePlatform
 @dirrm lib/monodevelop/AddIns/ChangeLogAddIn
 @dirrm lib/monodevelop/AddIns/BackendBindings
-@dirrm lib/monodevelop/AddIns
-@dirrm lib/monodevelop
+@dirrmtry lib/monodevelop/AddIns
+@dirrmtry lib/monodevelop
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
