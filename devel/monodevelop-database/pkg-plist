@@ -20,6 +20,31 @@ lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.Sqlite.dll.
 lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.dll
 lib/monodevelop/AddIns/MonoDevelop.Database/MonoDevelop.Database.Sql.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Database/MySql.Data.dll
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Column.Key.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Column.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Connection.Error.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Connection.Remove.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Connection.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Constraints.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Database.Error.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Database.Ok.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Database.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Execute.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Function.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Parameter.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Procedure.Error.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Procedure.Source.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Procedure.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Relations.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Table.Error.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Table.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Tables.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.User.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Users.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.View.Error.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.View.Source.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.View.png
+lib/monodevelop/AddIns/MonoDevelop.Database/icons/Icons.16x16.Database.Views.png
 lib/monodevelop/AddIns/MonoDevelop.Database/locale/ca/LC_MESSAGES/monodevelop-database.mo
 lib/monodevelop/AddIns/MonoDevelop.Database/locale/cs/LC_MESSAGES/monodevelop-database.mo
 lib/monodevelop/AddIns/MonoDevelop.Database/locale/da/LC_MESSAGES/monodevelop-database.mo
@@ -85,4 +110,5 @@ libdata/pkgconfig/monodevelop-database.pc
 @dirrmtry lib/monodevelop/AddIns/MonoDevelop.Database/locale/ca/LC_MESSAGES
 @dirrmtry lib/monodevelop/AddIns/MonoDevelop.Database/locale/ca
 @dirrmtry lib/monodevelop/AddIns/MonoDevelop.Database/locale
+@dirrm lib/monodevelop/AddIns/MonoDevelop.Database/icons
 @dirrmtry lib/monodevelop/AddIns/MonoDevelop.Database
