@@ -17,7 +17,6 @@ COMMENT=	Windows Media playback through Moonlight and Firefox
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 FETCH_BEFORE_ARGS=	-o ${DISTNAME}${EXTRACT_SUFX}
-FETCH_ARGS=	-apRr
 GITCOMMIT=	35085a4
 
 USE_GMAKE=	yes
