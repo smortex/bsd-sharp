@@ -1,0 +1,19 @@
+
+$FreeBSD$
+
+--- configure.orig
++++ configure
+@@ -22139,13 +22139,6 @@
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
+-if test -z "${ENABLE_SK_TRUE}" && test -z "${ENABLE_SK_FALSE}"; then
+-  { { $as_echo "$as_me:$LINENO: error: conditional \"ENABLE_SK\" was never defined.
+-Usually this means the macro was only invoked conditionally." >&5
+-$as_echo "$as_me: error: conditional \"ENABLE_SK\" was never defined.
+-Usually this means the macro was only invoked conditionally." >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
+ if test -z "${HAVE_GNOME_DOC_UTILS_TRUE}" && test -z "${HAVE_GNOME_DOC_UTILS_FALSE}"; then
+   { { $as_echo "$as_me:$LINENO: error: conditional \"HAVE_GNOME_DOC_UTILS\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5

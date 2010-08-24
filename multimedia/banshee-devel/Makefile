@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	banshee-devel
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.4
 CATEGORIES=	multimedia audio
-MASTER_SITES=	http://download.banshee-project.org/${PORTNAME:C/-.*//}/unstable/${PORTVERSION}/
+MASTER_SITES=	http://download.banshee.fm/${PORTNAME:C/-.*//}/unstable/${PORTVERSION}/
 DISTNAME=	${PORTNAME:C/-.*//}-1-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
@@ -41,7 +41,6 @@ USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtksharp20 gnomesharp20
 USE_GSTREAMER=	cdparanoia
-USE_GETTEXT=	yes
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME:C/-.*//}-1
 USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
@@ -50,14 +49,32 @@ CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
 CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project \
 			--disable-gapless-playback
 
+.if !defined(WITHOUT_NLS)
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
 # Need absolute path for build/icon-install-theme.
 INSTALL=	/usr/bin/install
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 
+.if exists(${LOCALBASE}/libdata/pkgconfig/gio-sharp-2.0.pc)
+PLIST_SUB+=		HAS_GIO=""
+.else
+PLIST_SUB+=		HAS_GIO="@comment "
+.endif
+
 .if defined(WITHOUT_DOCS) || defined(NOPORTDOCS)
 CONFIGURE_ARGS+=	--disable-docs
+PLIST_SUB+=		OPT_DOCS="@comment "
+.else
+CONFIGURE_ARGS+=	--enable-docs
+PLIST_SUB+=		OPT_DOCS=""
 .endif
 
 .if !defined(WITHOUT_BPMDETECT)
@@ -85,7 +102,7 @@ PLIST_SUB+=	OPT_IPOD="@comment "
 
 .if !defined(WITHOUT_MTP)
 CONFIGURE_ARGS+=--enable-mtp
-LIB_DEPENDS+=	mtp.8:${PORTSDIR}/audio/libmtp
+LIB_DEPENDS+=	mtp.11:${PORTSDIR}/audio/libmtp
 PLIST_SUB+=	OPT_MTP=""
 .else
 CONFIGURE_ARGS+=--disable-mtp
@@ -94,7 +111,7 @@ PLIST_SUB+=	OPT_MTP="@comment "
 
 .if !defined(WITHOUT_WEBKIT)
 CONFIGURE_ARGS+=--enable-webkit
-LIB_PC_DEPENDS+=${LOCALBASE}/libdata/pkgconfig/webkit-sharp-1.0.pc:${PORTSDIR}/www/webkit-sharp
+LIB_DEPENDS+=	webkit-1.0:${PORTSDIR}/www/webkit-gtk2
 PLIST_SUB+=	OPT_WEBKIT=""
 .else
 CONFIGURE_ARGS+=--disable-webkit
