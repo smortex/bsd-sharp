@@ -13,7 +13,7 @@ MASTER_SITES=	http://folks.o-hand.com/iain/last-exit/
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono based Gnome last.fm player
 
-LIB_DEPENDS= 	id3tag.0:${PORTSDIR}/audio/libid3tag \
+LIB_DEPENDS=	id3tag.0:${PORTSDIR}/audio/libid3tag \
 		gdbm:${PORTSDIR}/databases/gdbm \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
