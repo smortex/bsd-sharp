@@ -24,11 +24,11 @@ USE_GMAKE=	yes
 
 .include <bsd.port.pre.mk>
 .if exists(${LOCALBASE}/bin/antlr) || defined(WITH_ANTLR)
-PLIST_SUB+=     ANTLR=""
-BUILD_DEPENDS=  antlr:${PORTSDIR}/devel/antlr
-RUN_DEPENDS+=   antlr:${PORTSDIR}/devel/antlr
+PLIST_SUB+=	ANTLR=""
+BUILD_DEPENDS=	antlr:${PORTSDIR}/devel/antlr
+RUN_DEPENDS+=	antlr:${PORTSDIR}/devel/antlr
 .else
-PLIST_SUB+=     ANTLR="@comment "
+PLIST_SUB+=	ANTLR="@comment "
 .endif
 
 post-patch:
