@@ -5,11 +5,12 @@
 # $FreeBSD$
 #
 
-PORTNAME=	banshee-devel
+PORTNAME=	banshee
 PORTVERSION=	1.7.4
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME:C/-.*//}/unstable/${PORTVERSION}/
 DISTNAME=	${PORTNAME:C/-.*//}-1-${PORTVERSION}
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
