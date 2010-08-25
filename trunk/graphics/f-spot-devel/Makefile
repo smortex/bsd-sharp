@@ -6,11 +6,13 @@
 #
 
 PORTNAME=	f-spot
-PORTVERSION=	0.6.2
+PORTVERSION=	0.7.2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITE_SUBDIR=	sources/f-spot/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+PKGNAMESUFFIX=	-devel
+DISTNAME=	f-spot-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Personal photo management to the GNOME desktop
@@ -19,10 +21,14 @@ LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		gphoto2.2:${PORTSDIR}/graphics/libgphoto2
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins
+		${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins \
+		${LOCALBASE}/libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp \
+		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins
+		${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins \
+		${LOCALBASE}/libdata/pkgconfig/gnome-keyring-sharp-1.0.pc:${PORTSDIR}/security/gnome-keyring-sharp \
+		${LOCALBASE}/libdata/pkgconfig/flickrnet.pc:${PORTSDIR}/devel/flickrnet
 
 USE_BZIP2=	yes
 USE_SQLITE=	yes
@@ -38,11 +44,13 @@ GCONF_SCHEMAS=	f-spot.schemas
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-# Restrict to stable (even) versions, indicated by the second component.
-PORTSCOUT=      limitw:1,even
+CONFIGURE_ARGS+=--with-vendor-build-id=FreeBSD\ BSD\#\ Project
 
-post-patch:
-	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
-		${WRKSRC}/src/f-spot.in
+# Restrict to unstable (odd) versions, indicated by the second component.
+PORTSCOUT=	limitw:1,odd
+
+#post-patch:
+#	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
+#		${WRKSRC}/src/f-spot.in
 
 .include <bsd.port.mk>
