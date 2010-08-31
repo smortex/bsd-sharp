@@ -49,8 +49,8 @@ CONFIGURE_ARGS+=--with-vendor-build-id=FreeBSD\ BSD\#\ Project
 # Restrict to unstable (odd) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,odd
 
-#post-patch:
-#	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
-#		${WRKSRC}/src/f-spot.in
+post-patch:
+	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
+		${WRKSRC}/src/f-spot.in
 
 .include <bsd.port.mk>
