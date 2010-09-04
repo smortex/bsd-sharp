@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME:C/-.*//}/unstable/${PORTVERSION}/
 DISTNAME=	${PORTNAME:C/-.*//}-1-${PORTVERSION}
@@ -32,6 +32,7 @@ OPTIONS=	DOCS      "Install documentation"    on \
 		BOO       "Enable Boo support"       off \
 		BPMDETECT "Enable BPM detection"     on \
 		MTP       "Enable MTP support"       on \
+		APPLEDEV  "Enable Apple device DAP"  off \
 		IPOD      "Enable iPod support"      on \
 		WEBKIT    "Enable Wikipedia support" on \
 		YOUTUBE   "Enable Youtube support"   on
@@ -90,6 +91,16 @@ PLIST_SUB+=	OPT_BOO=""
 .else
 CONFIGURE_ARGS+=--disable-boo
 PLIST_SUB+=	OPT_BOO="@comment "
+.endif
+
+.if !defined(WITHOUT_APPLEDEV)
+CONFIGURE_ARGS+=--enable-appledevice
+LIB_PC_DEPENDS+=${LOCALBASE}/libdata/pkgconfig/libgpodsharp.pc:${PORTSDIR}/audio/libgpod-sharp
+BROKEN=		Missing dependency
+PLIST_SUB+=	APPLEDEV=""
+.else
+CONFIGURE_ARGS+=--disable-appledevice
+PLIST_SUB+=	APPLEDEV="@comment "
 .endif
 
 .if !defined(WITHOUT_IPOD)
