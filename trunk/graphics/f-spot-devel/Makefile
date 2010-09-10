@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	f-spot
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -51,6 +51,6 @@ PORTSCOUT=	limitw:1,odd
 
 post-patch:
 	@${REINPLACE_CMD} 's|#!/bin/bash|#!/usr/bin/env bash|g' \
-		${WRKSRC}/src/f-spot.in
+		${WRKSRC}/src/Clients/MainApp/f-spot.in
 
 .include <bsd.port.mk>
