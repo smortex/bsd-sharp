@@ -1,0 +1,25 @@
+20100217:
+  AFFECTS: users of lang/mono
+  AUTHOR: mono@FreeBSD.org
+
+  Starting with mono-2.6, the Moonlight compiler and assemblies are not
+  installed by the lang/mono port anymore, and are available through the
+  multimedia/moonlight port.
+
+20090907:
+  AFFECTS: users of lang/boo
+  AUTHOR: romain@blogreen.org
+
+  Boo has been updated to the latest available version, unfortunately, it is
+  not possible to compile the latest version with a previous version installed.
+  You will have to deinstall any previous version of lang/boo before installing
+  in order to update Boo.
+
+20090630:
+  AFFECTS: users of lang/boo
+  AUTHOR: romain@blogreen.org
+
+  Boo has been updated to the latest available version, unfortunately, it is
+  not possible to compile the latest version with a previous version installed.
+  You will have to deinstall any previous version of lang/boo before installing
+  in order to update Boo.
