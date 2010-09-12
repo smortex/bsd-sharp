@@ -33,10 +33,7 @@ INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 
-CONFIGURE_ARGS+=--enable-evolution=yes \
-		--enable-dbus=yes \
-		--enable-dbus-service-dir-check=no \
-		--with-dbus-service-dir=${PREFIX}/share/dbus-1/services
+CONFIGURE_ARGS+=--enable-evolution=yes
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		DBUS_SERVICE_DIR="${PREFIX}/share/dbus-1/services"
