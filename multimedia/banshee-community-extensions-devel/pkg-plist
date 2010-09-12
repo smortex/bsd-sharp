@@ -36,6 +36,9 @@
 %%MIRAGE%%lib/banshee-1/Extensions/libmirageaudio.a
 %%MIRAGE%%lib/banshee-1/Extensions/libmirageaudio.la
 %%MIRAGE%%lib/banshee-1/Extensions/libmirageaudio.so
+share/gnome/help/banshee/C/AlarmClock-alarm.page
+share/gnome/help/banshee/C/AlarmClock-sleep.page
+share/gnome/help/banshee/C/AlarmClock.page
 share/locale/de/LC_MESSAGES/banshee-community-extensions.mo
 share/locale/fi/LC_MESSAGES/banshee-community-extensions.mo
 share/locale/fr/LC_MESSAGES/banshee-community-extensions.mo

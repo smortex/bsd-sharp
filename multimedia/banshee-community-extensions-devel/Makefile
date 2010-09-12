@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee-community-extensions
-PORTVERSION=	1.6.1
+PORTVERSION=	1.7.4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/${PORTVERSION}/
 PKGNAMESUFFIX=	-devel
@@ -14,7 +14,7 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	Banshee Community Extensions
 
-BUILD_DEPENDS=	banshee-1:${PORTSDIR}/multimedia/banshee
+BUILD_DEPENDS=	banshee-1:${PORTSDIR}/multimedia/banshee-devel
 RUN_DEPENDS=	${BUILD_DEPENDS}
 
 OPTIONS=	ALARMCLOCK	"Build the AlarmClock extension" on \
@@ -34,7 +34,7 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack intltool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--disable-appindicator \
 	       --disable-clutterflow \
@@ -95,6 +95,8 @@ PLIST_SUB+=	LIVERADIO="@comment "
 .if !defined(WITHOUT_LYRICS)
 CONFIGURE_ARGS+=--enable-lyrics
 PLIST_SUB+=	LYRICS=""
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/webkit-sharp-1.0.pc:${PORTSDIR}/www/webkit-sharp
+RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/webkit-sharp-1.0.pc:${PORTSDIR}/www/webkit-sharp
 .else
 CONFIGURE_ARGS+=--disable-lyrics
 PLIST_SUB+=	LYRICS="@comment "
