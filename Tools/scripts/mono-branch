@@ -3,7 +3,7 @@
 # Branch the BSD# repository.
 #
 # Run this script when a new version of mono is available upstream and will be
-# tested in trunk while the version actually in trunk has to be maintained, or
+# tested in trunk while the version currently in trunk has to be maintained, or
 # if you are about to update the version of mono provided in the FreeBSD port
 # tree.
 #
@@ -25,12 +25,12 @@ if [ -r ".bsdsharprc" ]; then
 	. .bsdsharprc
 fi
 
-PORTSDIR="${PORTSDIR:=/var/cache/portshaker/freebsd}"
+PORTSDIR="${PORTSDIR:=/var/cache/portshaker/ports}"
 BRANCHES_DIRECTORY="${BRANCHES_DIRECTORY:=../branches}"
-EXTRA_FILES="${EXTRA_FILES:=MOVED}"
+EXTRA_FILES="${EXTRA_FILES:=MOVED UPDATING}"
 
 # General configuration (please don't change)
-mono_version=`make -C lang/mono -V PORTVERSION`
+mono_version=`make -C lang/mono -V PORTVERSION | egrep -o '^[0-9]+\.[0-9]+' `
 branch_name="bsd-sharp-releng-${mono_version}"
 
 svn_root="https://bsd-sharp.googlecode.com/svn"
@@ -50,34 +50,46 @@ fi
 svn info "${svn_branch}" > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "The RELENG branch for mono-${mono_version} already exists." >&2
-	exit 1
+	echo "If you don't know why this message, press Ctrl+C."
+else
+	# Create the new branch.
+	svn mkdir "${svn_branch}" -m "(${branch_name}) Create a new (empty) branch for mono-${mono_version}." || exit 1
+
+	# Fetch it.
+	if [ ! -d "${BRANCHES_DIRECTORY}" ]; then
+	    mkdir -p "${BRANCHES_DIRECTORY}" || exit 1
+	fi
+	( cd "${BRANCHES_DIRECTORY}" && svn checkout "${svn_branch}" ) || exit 1
 fi
-
-
-# Create the new branch.
-svn mkdir "${svn_branch}" -m "(${branch_name}) Create a new (empty) branch for mono-${mono_version}." || exit 1
-
-# Fetch it.
-if [ ! -d "${BRANCHES_DIRECTORY}" ]; then
-	mkdir -p "${BRANCHES_DIRECTORY}" || exit 1
-fi
-( cd "${BRANCHES_DIRECTORY}" && svn checkout "${svn_branch}" ) || exit 1
 
 # Copy ports that are part of the FreeBSD ports tree and also provided in the
 # BSD# repository to the new branch.
 for port in `find . -name Makefile -mindepth 3 -maxdepth 3 | awk -F/ '{ print $2"/"$3  }' `; do
-	if [ -d "${PORTSDIR}/${port}" ]; then
+	if [ -d "${port}/.svn" -a -d "${PORTSDIR}/${port}" ]; then
 		svn copy --parents "${port}" "${BRANCHES_DIRECTORY}/${branch_name}/${port}" || exit 1
 	fi
 done
 
 # Copy extra files to the branch.
-if [ -n "${EXTRA_FILES}" ]; then
-	svn copy ${EXTRA_FILES} "${BRANCHES_DIRECTORY}/${branch_name}/${port}" || exit 1
-fi
+for f in ${EXTRA_FILES}; do
+	if [ -e $f ]; then
+		svn copy $f "${BRANCHES_DIRECTORY}/${branch_name}/$f" || exit 1
+	else
+		echo "WARNING: $f does NOT exists.  Press Ctrl+C if it's a problem.";
+	fi
+done
+
+n=5
+echo -n "Finished... Will commit in $n"
+while [ $n -gt 0 ]; do
+	sleep 1;
+	n=$((n-1))
+	echo -n " $n"
+done
+echo
 
 # Commit changes to the branch.
-( cd "${BRANCHES_DIRECTORY}/${branch_name}" && svn commit -m "(${branch_name}) Actually add ports to the branch for mono-${mono_version}." ) || exit 1
+( cd "${BRANCHES_DIRECTORY}/${branch_name}" && svn commit -m "(${branch_name}) BRANCH ports into mono-${mono_version}." ) || exit 1
 
 # TAG the branch.
 svn copy "${svn_branch}" "${svn_root}/tags/bsd-sharp-`date +%Y%m%d`" -m "TAG bsd-sharp-`date +%Y%m%d`." || exit 1
