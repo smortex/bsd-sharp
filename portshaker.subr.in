@@ -1,0 +1,971 @@
+# vim:set syntax=sh:
+# $Id$
+#
+# portshaker.subr
+# 	functions used by portshaker(8)
+#
+
+if [ -z "${_portshaker_subr_loaded}" ]; then
+
+_portshaker_subr_loaded="YES"
+
+if [ "${_portshaker_load_config}" != "no" ]; then
+	config_dir="@@ETCDIR@@"
+	. ${config_dir}/portshaker.conf
+fi
+
+# User tunable variables
+
+#CP_FLAGS="-v"
+#CSUP_FLAGS=""
+CVS="${CVS:=cvs}"
+CVS_FLAGS="${CVS_FLAGS:=-q}"		# Quiet
+DIFF_FLAGS="${DIFF_FLAGS:=-uN}"		# Unified diff, New files
+GIT="${GIT:=git}"
+HG="${HG:=hg}"
+MAKE="${MAKE:=make}"
+PAGER="${PAGER:=less}"
+PATCH_FLAGS="${PATCH_FLAGS:=-s}"	# Silent
+#PORTSNAP_FLAGS=""
+#RM_FLAGS=""
+#RSYNC_FLAGS=""
+SVN="${SVN:=svn}"
+#SVN_FLAGS=""
+VCS_ID_KEYWORDS="${VCS_ID_KEYWORDS:=FreeBSD Id MCom}"
+
+# Tinderbox related variables
+PB="${PB:=/usr/local/tinderbox}"
+TC="${TC:=${PB}/tc}"
+
+
+# Convenient variables
+DIFF_IGNORE_FLAGS_MK="--ignore-matching-lines='\$\(FreeBSD\|Id\|MCom\)\$'"
+DIFF_IGNORE_FLAGS_PORT="--ignore-space-change --ignore-blank-lines --ignore-matching-lines='^\(BROKEN\|IGNORE\|PORTSCOUT\)='"
+RSYNC_ARGS="--archive --delete"
+RSYNC_EXCLUDE="--exclude packages --exclude distfiles"
+
+_keywords="update clone_to copy_to merge_to"
+_portshaker_arg=""
+
+_pretend=0
+
+_use_zfs=0
+use_zfs=${use_zfs:=0}
+
+case $use_zfs in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_use_zfs=1
+	;;
+esac
+
+#
+#	functions
+#	---------
+
+# err
+# 	Display error message to stderr and exit.
+# 	$1 - Exit code.
+#
+err()
+{
+	exitval=$1
+	shift
+
+	printf "\\033[31;3m[Error $(date +%T)]\\033[0m $*\\n" >&2
+	exit ${exitval}
+}
+
+# warn
+# 	Display warning message to stderr.
+#
+warn()
+{
+	printf "\\033[33;3m[Warn  $(date +%T)]\\033[0m $*\\n" >&2
+}
+
+# info
+# 	Display information message to stderr.
+#
+info()
+{
+	case ${portshaker_info} in
+		[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+			printf "\\033[32;3m[Info  $(date +%T)]\\033[0m $*\\n" >&2
+	esac
+}
+
+# debug
+# 	Display debug message to stderr.
+#
+debug()
+{
+	case ${portshaker_debug} in
+		[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+			printf "\\033[34;3m[Debug $(date +%T)]\\033[0m $*\\n" >&2
+	esac
+}
+
+# portshaker_usage
+# 	Display command line arguments for portshaker scripts.
+#
+portshaker_usage()
+{
+	(
+	echo -n "usage: $0 "
+	case ${_portshaker_arg} in
+		update)
+			echo "update"
+			;;
+		clone_to)
+			echo "clone_to [-p] -t target [-z zfs_target_dataset]"
+			echo "Supported arguments"
+			echo "  -p  Show what is going to happen but do not do anything (pretend mode)"
+			echo "  -t  Target directory to clone the ports tree to"
+			echo "  -z  ZFS dataset to use and mount as target directory"
+			;;
+		copy_to)
+			echo "copy_to -t target"
+			echo "Supported arguments"
+			echo "  -t  Target directory to copy the ports tree to"
+			;;
+		merge_to)
+			echo "merge_to [-ap] [-b build] -m master -t target"
+			echo "Supported arguments:"
+			echo "  -a  Automatically copy port if files where touched but version is unchanged"
+			echo "  -b  Tinderboy build to add copied packages to"
+			echo "  -m  Master source ports tree (for comparing Mk/* files)"
+			echo "  -p  Show what is going to happen but do not do anything (pretend mode)"
+			echo "  -t  Target directory to merge the ports tree in"
+			;;
+		*)
+			echo "($(echo $_keywords | sed -e "s/ /|/g"))"
+			;;
+	esac
+	) 1>&2
+	exit 1
+}
+
+# read_makefile_value
+# 	Reads the value of a variable from a Makefile in the current
+# 	directory.
+#	This is mostly identical to ``make -V $1'' but will not fail
+#	if the Makefile include a missing Makefile (for example a
+#	source ports tree provide a port that depends on another which
+#	is not included in the source ports tree).
+#	$1 - Name of the variable to read.
+#
+read_makefile_value()
+{
+	value=`awk 'BEGIN { r = "0"} /^'$1'\??=/ { $1 = ""; r = $0; } END { print r }  ' Makefile`
+	echo $value
+}
+
+# read_file_vcs_keyword
+# 	Look for VCS $Keyword$ information string in the provided file.
+# 	$1 - Filename
+# 	$1 - Keyword
+read_file_vcs_keyword()
+{
+	grep -o "\\\$$2:[^\$]*\\\$" "$1"
+}
+
+# newer_or_same_vcs_id
+# 	Compare VCS $Ids...$ in files and returns 0 unless the version is going
+# 	backwards in which case 1 is returned.
+# 	$1 - File to compare
+# 	$2 - Reference File
+newer_or_same_vcs_id()
+{
+	_ret=0
+
+	for _keyword in ${VCS_ID_KEYWORDS}; do
+		new_rev=$(read_file_vcs_keyword "$1" ${_keyword} | cut -d' ' -f3)
+		old_rev=$(read_file_vcs_keyword "$2" ${_keyword} | cut -d' ' -f3)
+
+		if [ -z "${new_rev}" -o -z "${old_rev}" ]; then
+			continue
+		fi
+
+		_ret=`echo "${new_rev} ${old_rev}" | awk ' {
+			if ($1 > $2) {
+				print 1;
+			} else if ($1 == $2) {
+				print 0;
+			} else {
+				print -1;
+			}
+		}'`
+
+	done
+
+	#echo ${_ret}
+
+	if [ ${_ret} -eq -1 ]; then
+		return 1
+	else
+		return 0
+	fi
+}
+
+# newer_portepoch
+# 	Compare PORTEPOCH of two ports (``new'' and ``old'') and assert
+# 	that the ``new'' port is newer than the ``old'' one.
+# 	$1 - Directory of the ``new'' port.
+# 	$2 - Directory of the ``old'' port.
+#
+newer_portepoch()
+{
+	new_epoch=$(cd $1 && read_makefile_value PORTEPOCH)
+	old_epoch=$(cd $2 && read_makefile_value PORTEPOCH)
+
+	if [ -z "${old_epoch}" -a -z "${new_epoch}" ]; then
+		return 1
+	fi
+	[ "${old_epoch}" -lt "${new_epoch}" ]
+}
+
+# newer_portversion
+# 	Compare PORTVERSION of two ports (``new'' and ``old'') and assert
+# 	that the ``new'' port is newer than the ``old'' one.
+# 	$1 - Directory of the ``new'' port.
+# 	$2 - Directory of the ``old'' port.
+#
+newer_portversion()
+{
+	new_version=$(cd $1 && read_makefile_value PORTVERSION).
+	old_version=$(cd $2 && read_makefile_value PORTVERSION).
+
+	if [ ${old_version} = "0." -a ${new_version} = "0." ]; then
+		return 0 # Always update
+	fi
+	[ ${old_version} = ${new_version} ] && return 1
+
+	while [ -n "${old_version}" -a -n "${new_version}" ]; do
+		if [ ${old_version%%.*} -lt ${new_version%%.*} ]; then
+			return 0
+		elif [ ${old_version%%.*} -gt ${new_version%%.*} ]; then
+			return 2
+		fi
+
+		old_version=${old_version##${old_version%%.*}.}
+		new_version=${new_version##${new_version%%.*}.}
+	done
+
+	if [ -z "${old_version}" -a -n "${new_version}" ]; then
+		return 0
+	fi
+	return 2
+}
+
+# newer_portrevision
+# 	Compare PORTREVISION of two ports (``new'' and ``old'') and assert
+# 	that the ``new'' port is newer than the ``old'' one.
+# 	$1 - Directory of the ``new'' port.
+# 	$2 - Directory of the ``old'' port.
+#
+newer_portrevision()
+{
+	new_revision=$(cd $1 && read_makefile_value PORTREVISION)
+	old_revision=$(cd $2 && read_makefile_value PORTREVISION)
+
+	if [ -z "${old_revision}" -a -z "${new_revision}" ]; then
+		return 1
+	fi
+
+	if [ "${old_revision:=0}" -lt "${new_revision:=0}" ]; then
+		return 0
+	elif [ "${old_revision:=0}" -gt "${new_revision:=0}" ]; then
+		return 2
+	else
+		return 1
+	fi
+}
+
+# unsubstitute_keywords
+#	Unexpand keywords in source file, writing the new file in dest file.
+#	$1 -- source file
+#	$2 -- dest file
+unsubstitute_keywords()
+{
+	sed -E -e 's#\$('$(echo ${VCS_ID_KEYWORDS} | sed -e 's/ /|/g')'):[^\$]*\$#$\1$#g' < $1 > $2
+}
+
+# compare_noid
+#	Compare provided files ignoring any VCS Ids. Returns 0 if files are
+#	identiqual.
+#	$1 -- Original file
+#	$2 -- New file
+compare_noid()
+{
+	ret=1
+	original="$1"  new="$2"
+
+	if [ -e "${original}" -a -e "${new}" ]; then
+		cmp -s "${original}" "${new}"
+		ret=$?
+		if [ ${ret} -ne 0 ]; then
+			# Files are different: un-substitutes keywords and try again.
+			original_noid=`mktemp -t MFC`
+			new_noid=`mktemp -t MFC`
+
+			unsubstitute_keywords "${original}" "${original_noid}"
+			unsubstitute_keywords "${new}"      "${new_noid}"
+
+			eval diff ${DIFF_IGNORE_FLAGS_PORT} "${original_noid}" "${new_noid}" > /dev/null
+			ret=$?
+			rm -f ${RM_FLAGS} "${original_noid}" "${new_noid}"
+		fi
+	fi
+	return ${ret}
+}
+
+# run_portshaker_command
+# 	Do all the magic!
+#
+run_portshaker_command()
+{
+	_return=0
+
+	_portshaker_arg=$1
+	shift 1
+	_portshaker_extra_args="$*"
+
+	name=`basename $0`
+
+	_portsdir="${mirror_base_dir}/${name}"
+
+	# If the source ports tree directory does not exist, create it.
+	if [ ! -d "${mirror_base_dir}" ]; then
+		info "Creating the '${mirror_base_dir}' directory."
+		mkdir -p "${mirror_base_dir}" || err 1 "Failed to create '${mirror_base_dir}' directory."
+	fi
+
+	# Only proceed known commands.
+	for _elem in ${_keywords}; do
+		if [ "${_elem}" != "${_portshaker_arg}" ]; then
+			continue
+		fi
+
+		# Look for a pre-command and execute it.
+		if type ${name}_pre${_portshaker_arg} 1>/dev/null 2>&1; then
+			info "Executing pre-command '${name}_pre${_portshaker_arg}'."
+			${name}_pre${_portshaker_arg} ${_portshaker_extra_args} || exit 1
+		fi
+
+		if [ $_use_zfs -eq 1 ]; then
+			_source_dataset=`zfs list -H | awk "\\\$5 == \"${_portsdir}\" {print \\\$1}"`
+		fi
+
+		# Proceed with the command
+		case "${_portshaker_arg}" in
+		clone_to|copy_to)
+			_args=`getopt apt:z: ${_portshaker_extra_args}`
+			if [ $? -ne 0 ]; then
+				portshaker_usage
+			fi
+			set -- ${_args}
+			_target=""
+			_zfs_target_dataset=""
+			for _i; do
+				case "${_i}" in
+					-p)
+						_pretend=1
+						shift ;;
+					-t)
+						_target="$2"; shift
+						shift ;;
+					-z)
+						_zfs_target_dataset="$2"; shift
+						shift ;;
+					--)
+						shift; break ;;
+				esac
+			done
+			if [ -z "${_target}" ]; then
+				portshaker_usage
+			fi
+
+			if [ ! -d "${_portsdir}" ]; then
+				err 1 "'${_portsdir}' does not exists."
+			fi
+			if [ -z "${_target}" ]; then
+				err 1 "Missing target directory."
+			fi
+			if [ ! -d "${_target}" ]; then
+				debug "Creating the '${_target}' directory."
+				mkdir -p "${_target}" || err 1 "Cannot create '${_target}' directory."
+			fi
+			if [ $_use_zfs -eq 1 ]; then
+				if [ -d "${_target}/.zfs" ]; then
+				_target_dataset=`zfs list -H | awk "\\\$5 == \"${_target}\" {print \\\$1}"`
+				fi
+				if [ -z "${_source_dataset}" ]; then
+					warn "'${_portsdir}' shall be an existing ZFS filesystem when \$use_zfs=yes. Falling back to rsync(1)."
+					_use_zfs=0
+				fi
+			fi
+			case "${_portshaker_arg}" in
+			clone_to)
+				info "Cloning '${_portsdir}' to '${_target}'."
+				if [ $_use_zfs -eq 1 ]; then
+					if [ -z "${_target_dataset}" ]; then
+						warn "No ZFS dataset already exists with mountpoint '${_target}'."
+						_target_dataset="$_zfs_target_dataset"
+						if [ -z "${_target_dataset}" ]; then
+							warn "No '\$zfs_target_dataset' provided (hint: use '-z zfs_target_dataset')."
+							warn "Falling back to rsync(1)."
+							_use_zfs=0
+						fi
+					fi
+				fi # _use_zfs -eq 1
+				if [ $_use_zfs -eq 1 ]; then
+					if [ -d "${_target}/.zfs" ]; then
+						debug "Running 'zfs destroy ${_target_dataset}'."
+						if [ $_pretend -eq 0 ]; then
+							zfs destroy ${_target_dataset}
+							if [ $? -ne 0 ]; then
+								echo "The following processes are using '${_target}':"
+								fstat -f "${_target}"
+								err 1 "Can't destroy ZFS filesystem '${_target_dataset}'."
+							fi
+						fi
+					fi
+					# Get the latests snapshot available.
+					_snapshot=`cd ${_portsdir}/.zfs/snapshot && ls -d portshaker-* | tail -n 1`
+					if [ -z "${_snapshot}" ]; then
+						err 1 "No snapshot for '${_source_dataset}'.  Update the '${name}' source port tree then retry."
+					fi
+					debug "Running 'zfs clone ${_source_dataset}@${_snapshot} ${_target_dataset}'."
+					if [ $_pretend -eq 0 ]; then
+						zfs clone ${_source_dataset}@${_snapshot} ${_target_dataset} || err 1 "Can't clone '${_source_dataset}@${_snapshot}' to '${_target_dataset}'."
+					fi
+					debug "Running 'zfs set mountpoint="${_target}" "${_target_dataset}"'."
+					if [ $_pretend -eq 0 ]; then
+						zfs set mountpoint="${_target}" "${_target_dataset}" || err 1 "Can't set '${_target_dataset}' mountpoint to '${_target}'."
+					fi
+				else
+					debug "Running 'rsync ${RSYNC_FLAGS} ${RSYNC_ARGS} ${RSYNC_EXCLUDE} \"${_portsdir}/\" \"${_target}\"'."
+					if [ $_pretend -eq 0 ]; then
+						rsync ${RSYNC_FLAGS} ${RSYNC_ARGS} ${RSYNC_EXCLUDE} "${_portsdir}/" "${_target}"
+						if [ $? -ne 0 ]; then
+							err 1 "Failed to clone '${_portsdir}' to '${_target}'."
+						fi
+					fi
+				fi
+				;;
+			copy_to)
+				info "Copying '${_portsdir}' to '${_target}'."
+				debug Running "'cp -pr ${CP_FLAGS} \"${_portsdir}/\" \"${_target}\"'."
+				cp -pr ${CP_FLAGS} "${_portsdir}/" "${_target}"
+				if [ $? -ne 0 ]; then
+					err 1 "Failed to copy '${_portsdir}' to '${_target}'."
+				fi
+				;;
+			esac
+			;;
+		merge_to)
+			_args=`getopt ab:m:pt: ${_portshaker_extra_args}`
+			if [ $? -ne 0 ]; then
+				portshaker_usage
+			fi
+			set -- ${_args}
+			_auto_install=0
+			_master=""
+			_target=""
+			_tinderbox_builds=""
+			for _i; do
+				case "${_i}" in
+					-a)
+						_auto_install=1
+						shift ;;
+					-b)
+						_tinderbox_builds="${_tinderbox_builds} $2"; shift
+						shift ;;
+					-m)
+						_master="$2"; shift
+						shift ;;
+					-p)
+						_pretend=1
+						shift ;;
+					-t)
+						_target="$2"; shift
+						shift ;;
+					--)
+						shift; break ;;
+				esac
+			done
+			if [ -z "${_master}" -o -z "${_target}" ]; then
+				portshaker_usage
+			fi
+
+			if [ ! -d "${_portsdir}" ]; then
+				err 1 "${_portsdir} does not exists."
+			fi
+			if [ -z "${_target}" ]; then
+				err 1 "Missing target directory."
+			fi
+			if [ ! -d "${_target}" ]; then
+				err 1 "Target directory does not exist."
+			fi
+
+			info "Merging '${_portsdir}' to '${_target}'."
+
+			# Merge Mk/*.mk files
+			if [ -d "${_portsdir}/Mk" ]; then
+				if [ ! -d "${_target}/Mk" ]; then
+					err 1 "'${_target}/Mk' missing! copy / clone repository before merging."
+				fi
+				cd "${_portsdir}/Mk" || exit 1
+				for _mk in `ls`; do
+					if [ ${_mk} = "CVS" -o ${_mk} = ".svn" ]; then
+						continue
+					fi
+					if [ -e "${_target}/Mk/${_mk}" -a -e "${mirror_base_dir}/${_master}/Mk/${_mk}" ]; then
+						if [ -e "${_target}/Mk/.${_mk}-${name}-patched" ]; then
+							warn "'Mk/${_mk}' has already been patched (ignoring)."
+							continue
+						fi
+						if ! newer_or_same_vcs_id "${_mk}" "${mirror_base_dir}/${_master}/Mk/${_mk}"; then
+							err 1 "'Mk/${_mk}' from '${name}' is not in sync with the one provided in the FreeBSD ports."
+						fi
+						debug "Updating 'Mk/${_mk}'."
+						if [ ${_pretend} -eq 0 ]; then
+							if diff ${DIFF_FLAGS} ${DIFF_IGNORE_FLAGS_MK} "${mirror_base_dir}/${_master}/Mk/${_mk}" "${_mk}" | (cd ${_target}/Mk && patch ${PATCH_FLAGS}); then
+								touch "${_target}/Mk/.${_mk}-${name}-patched"
+							else
+								err 1 "Unable to patch 'Mk/${_mk}'."
+							fi
+						fi
+					else
+						debug "Copying 'Mk/${_mk}'."
+						if [ ${_pretend} -eq 0 ]; then
+							cp ${CP_FLAGS} "${_mk}" "${_target}/Mk/${_mk}" || err 1 "Unable to copy 'Mk/${_mk}'."
+						fi
+					fi
+				done
+			fi
+
+			# Merge ports
+			cd "${_portsdir}" || exit 1
+			for _category in `ls`; do
+				_regen_category_makefile=0
+				if [ ! -d ${_category} ] || [ ${_category} = "Mk" -o ${_category} = "CVS" -o ${_category} = ".svn" -o ${_category} = ".git" -o ${_category} = ".hg" -o ${_category} = "Tools" ]; then
+					continue
+				fi
+				cd ${_category} || exit 1
+				for _port in `ls`; do
+					if [ ${_port} = "CVS" -o ${_port} = ".svn" ]; then
+						continue
+					fi
+					_copy_port=0
+					_version_going_backward=0
+
+					debug "Processing ${_category}/${_port}."
+
+					if [ ! -f "${_port}/Makefile" ]; then
+						warn "${_category}/${_port}: No Makefile in this directory!"
+						continue
+					fi
+
+					# Track packages version to help debugging failing update paths
+					_current_pkg_version="0"
+
+					# Determine wether the port has to be merged or not
+					if [ ! -d "${_target}/${_category}/${_port}" ]; then
+						debug "${_category}/${_port} is a new port."
+						_regen_category_makefile=1
+						_copy_port=1
+					else
+						_current_pkg_version=`${MAKE} -C "${_target}/${_category}/${_port}" -V PKGVERSION`
+						# Compare port versions
+						if newer_portepoch "${_portsdir}/${_category}/${_port}" "${_target}/${_category}/${_port}"; then
+							debug "${_category}/${_port} has been updated (higher PORTEPOCH)."
+							_copy_port=1
+						else
+							newer_portversion "${_portsdir}/${_category}/${_port}" "${_target}/${_category}/${_port}"
+							case $? in
+								0)
+									debug "${_category}/${_port} has been updated (higher PORTVERSION)."
+									_copy_port=1
+									;;
+								1)
+									newer_portrevision "${_portsdir}/${_category}/${_port}" "${_target}/${_category}/${_port}"
+									case $? in
+										0)
+											debug "${_category}/${_port} has been updated (higher PORTREVISION)."
+											_copy_port=1
+											;;
+										1)
+											debug "${_category}/${_port} has not been updated."
+											;;
+										2)
+											_version_going_backward=1
+											;;
+									esac
+									;;
+								2)
+									_version_going_backward=1
+									;;
+							esac
+						fi
+					fi
+					if [ ${_version_going_backward} -eq 1 ]; then
+						warn "${_category}/${_port}: port version going backward (I will not merge this port)!"
+						if [ -f "${_target}/.portshaker-merged-ports" ]; then
+							awk -F: 'BEGIN { first = 1 ; } $2 == "'${_category}/${_port}'" { if (first == 1) { printf("                 `-> Update path: %s", $3); } printf(" --[%s]--> %s", $1, $4); first = 0 } END { if (first == 0) { printf("\n"); } } ' < "${_target}/.portshaker-merged-ports"
+						fi
+					fi
+					# Ensure merging is consistent
+					if [ ${_copy_port} -eq 0 -a ${_version_going_backward} = 0 ]; then
+						_touched_files=""
+
+						# Look for modifications of port files
+						for _file in `find "${_portsdir}/${_category}/${_port}" -maxdepth 1 -type f -exec basename '{}' ';'`; do
+							if [ ! -e "${_target}/${_category}/${_port}/${_file}" ]; then
+								debug "${_category}/${_port}/${_file} has been created."
+								_touched_files="${_touched_files} ${_file}"
+							else
+								compare_noid "${_portsdir}/${_category}/${_port}/${_file}" "${_target}/${_category}/${_port}/${_file}"
+								if [ $? -ne 0 ]; then
+									debug "${_category}/${_port}/${_file} has been changed."
+									_touched_files="${_touched_files} ${_file}"
+								fi
+							fi
+						done
+						for _file in `find "${_target}/${_category}/${_port}" -maxdepth 1 -type f -exec basename '{}' ';'`; do
+							if [ ! -e "${_portsdir}/${_category}/${_port}/${_file}" ]; then
+								debug "${_category}/${_port}/${_file} has been removed."
+								_touched_files="${_touched_files} ${_file}"
+							fi
+						done
+
+						# Look for modification of patches
+						_patches=""
+						if [ -d "${_portsdir}/${_category}/${_port}/files" ]; then
+							for _patch in `find "${_portsdir}/${_category}/${_port}/files" -maxdepth 1 -type f -exec basename '{}' ';'`; do
+								if [ ! -e "${_target}/${_category}/${_port}/files/${_patch}" ]; then
+									debug "${_category}/${_port}/files/${_patch} has been created."
+									_patches="${_patches} ${_patch}"
+								else
+									compare_noid "${_portsdir}/${_category}/${_port}/files/${_patch}" "${_target}/${_category}/${_port}/files/${_patch}"
+									if [ $? -ne 0 ]; then
+										debug "${_category}/${_port}/files/${_patch} has been changed."
+										_patches="${_patches} ${_patch}"
+									fi
+								fi
+							done
+						fi
+						if [ -d "${_target}/${_category}/${_port}/files" ]; then
+							for _patch in `find "${_target}/${_category}/${_port}/files" -maxdepth 1 -type f -exec basename '{}' ';'`; do
+								if [ ! -e "${_portsdir}/${_category}/${_port}/files/${_patch}" ]; then
+									debug "${_category}/${_port}/files/${_patch} has been removed."
+									_patches="${_patches} ${_patch}"
+								fi
+							done
+						fi
+						for _patch in ${_patches}; do
+							compare_noid "${_portsdir}/${_category}/${_port}/files/${_patch}" "${_target}/${_category}/${_port}/files/${_patch}"
+							if [ $? -ne 0 ]; then
+								_touched_files="${_touched_files} files/${_patch}"
+							fi
+						done
+
+						# Handle touched files
+						if [ -n "${_touched_files}" ]; then
+							if  [ "${_auto_install}" -eq 1 ]; then
+								warn "${_category}/${_port}:${_touched_files} changed but the port version is still the same (copying port anyway)."
+								_copy_port=1
+							elif [ ${_pretend} -eq 1 ]; then
+								warn "${_category}/${_port}:${_touched_files} changed but the port version is still the same."
+							else
+								_r=""
+								while true; do
+									case ${_r} in
+										# diff
+										d*|D*)
+											for _file in ${_touched_files}; do
+												diff ${DIFF_FLAGS} "${_target}/${_category}/${_port}/${_file}" "${_portsdir}/${_category}/${_port}/${_file}"
+											done | ${PAGER}
+											_r=""
+											;;
+										# install
+										i*|I*)
+											_copy_port=1
+											break
+											;;
+										# continue
+										c*|C*)
+											break
+											;;
+										*)
+											warn "Conflict detected!"
+											echo "The target ports tree (${_target}) already have the version of ${_category}/${_port} provided by ${name}."
+											echo "However, the following file(s) has been touched:${_touched_files}."
+											echo "An update may be required."
+											echo -n "(diff|install|continue) > "
+											read _r
+											;;
+									esac
+								done
+							fi
+						fi
+					fi
+					# Merge port
+					if [ ${_copy_port} -eq 1 -a ${_version_going_backward} -eq 0 ]; then
+						debug "Copying '${_portsdir}/${_category}/${_port}' to '${_target}/${_category}/${_port}'."
+						if [ ${_pretend} -eq 0 ]; then
+							rm -rf ${RM_FLAGS} "${_target}/${_category}/${_port}" || err 1 "Cannot remove outdated '${_target}/${_category}/${_port}' port directory."
+							cp -pr ${CP_FLAGS} "${_portsdir}/${_category}/${_port}" "${_target}/${_category}/${_port}" || err 1 "Cannot merge ${_category}/${_port}."
+							for _special_file in CVS .svn files/CVS files/.svn; do
+								if [ -d "${_target}/${_category}/${_port}/${_special_file}" ]; then
+									rm -rf ${RM_FLAGS} "${_target}/${_category}/${_port}/${_special_file}" || err 1 "Cannot remove '${_target}/${_category}/${_port}/${_special_file}'."
+								fi
+							done
+							# Reference port in tinderbox
+							if [ -n "${_tinderbox_builds}" ]; then
+								for _build in ${_tinderbox_builds}; do
+									(cd "${PB}/scripts" && ${TC} addPort -b "${_build}" -d "${_category}/${_port}")
+								done
+							fi
+							# Keep a trace of merged ports (for speeding up tinderbox in hooks for example)
+							_new_pkg_version=`${MAKE} -C "${_target}/${_category}/${_port}" -V PKGVERSION 2> /dev/null`
+							if [ -z ${_new_pkg_version} ]; then
+								# Second chance: if it was not possible to get the package name from the tagret
+								# ports tree, try to get it from the source ports tree.  This is usefull if the
+								# current port has a master port in the source ports tree that has not already
+								# been merged in the target ports tree.
+								_new_pkg_version=`${MAKE} -C "${_portsdir}/${_category}/${_port}" -V PKGVERSION 2> /dev/null`
+							fi
+							echo "${name}:${_category}/${_port}:${_current_pkg_version}:${_new_pkg_version}" >> "${_target}/.portshaker-merged-ports"
+						fi
+					else
+						debug "Not copying '${_portsdir}/${_category}/${_port}' to '${_target}/${_category}/${_port}'."
+					fi
+				done # _port
+
+				if [ ${_regen_category_makefile} -eq 1 ]; then
+					(cd ${_target}/${_category}
+					debug "Updating ${_category} Makefile."
+					if [ ${_pretend} -eq 0 ]; then
+						head -n 5 Makefile > Makefile.new
+						find . -mindepth 1 -maxdepth 1 -type d -print | sort | sed -e 's|^./|    SUBDIR += |' >> Makefile.new
+						tail -n 2 Makefile >> Makefile.new
+						mv -f Makefile.new Makefile
+					fi
+					)
+				fi
+				cd ..
+			done # _category
+
+			# Remove obsolete ports
+			if [ -f "${_portsdir}/MOVED" ]; then
+				cat "${_portsdir}/MOVED" | while read _line; do
+					_port=`echo $_line | cut -d'|' -f1`
+					if [ -d "${_target}/${_port}" ]; then
+						info "Removing obsolete port ${_port}."
+						if [ ${_pretend} -eq 0 ]; then
+							rm -rf ${RM_FLAGS} "${_target}/${_port}" || err 1 "Cannot remove obsolete port ${_port}."
+						fi
+					else
+						warn "${_port} referenced in ${_portsdir}/MOVED does not exist."
+					fi
+					if [ ${_pretend} -eq 0 ]; then
+						echo "${_line}" >> "${_target}/MOVED"
+					fi
+				done # while read _line
+			fi
+
+			# Merge UPDATING information
+			if [ -f "${_portsdir}/UPDATING" -a -f "${_target}/UPDATING" -a ${_pretend} -eq 0 ]; then
+				info "Merging UPDATING entries from '${name}'."
+				mv "${_target}/UPDATING" "${_target}/UPDATING.orig"
+				awk -f "@@SHAREDIR@@/portshaker/merge-updating.awk" -v in1="${_target}/UPDATING.orig" -v in2="${_portsdir}/UPDATING" -v out="${_target}/UPDATING"
+				rm ${RM_FLAGS} "${_target}/UPDATING.orig"
+			fi
+			;;
+		update)
+			info "Updating '${name}' source ports tree with method '${method}'."
+
+			if [ ! -d "${_portsdir}" ] && [ ! "${method}" = "cvs" ]; then
+				debug "Creating the '${_portsdir}' directory."
+				if [ $_use_zfs -eq 1 ]; then
+				    _parent=`dirname "${_portsdir}"`
+				    _parent_dataset=`zfs list -H | awk "\\\$5 == \"${_parent}\" {print \\\$1}"`
+				    if [ -z "${_parent_dataset}" ]; then
+					err 1 "The ${_parent} directory shall be a ZFS filesystem when \$use_zfs=yes."
+				    fi
+				    _source_dataset="${_parent_dataset}/${name}"
+				    zfs create "${_source_dataset}" || err 1 "Cannot create the ${_source_dataset} ZFS filesystem."
+				    zfs set compression=gzip ${_source_dataset} || warn "Cannot set gzip compression on the ${_source_dataset} ZFS filesystem."
+				else
+				    mkdir -p "${_portsdir}" || err 1 "Cannot create the '${_portsdir}' directory."
+				fi
+			fi
+			if [ ! -w "${_portsdir}" ] && [ ! "${method}" = "cvs" ]; then
+				err 1 "'${_portsdir}' is not writable: cannot update '${name}'."
+			fi
+
+			case "${method}" in
+			csup)
+				if [ -z "${csup_supfile}" ]; then
+					err 1 "\$csup_supfile is not defined."
+				fi
+				if [ "${name}" != "ports" ]; then
+					err 1 "A source ports tree updated using csup requires be named 'ports'."
+				fi
+				debug "Running 'csup ${CSUP_FLAGS} ${csup_supfile}'."
+				csup ${CSUP_FLAGS} ${csup_supfile}
+				if [ $? -ne 0 ]; then
+					err 1 "csup update failed."
+				fi
+				;;
+			cvs)
+				if [ -z "${cvs_root}" ]; then
+					err 1 "\$cvs_root is not defined."
+				fi
+				if [ -z "${cvs_module}" ]; then
+					err 1 "\$cvs_module is not defined."
+				fi
+				if [ ! -d "${_portsdir}/CVS" ]; then
+					cd ${mirror_base_dir}
+					debug "Running '${CVS} ${CVS_FLAGS} -d\"${cvs_root}\" login'."
+					${CVS} ${CVS_FLAGS} -d"${cvs_root}" login
+					if [ $? -ne 0 ]; then
+						err 1 "CVS login failed."
+					fi
+					debug "Running '${CVS} ${CVS_FLAGS} -d\"${cvs_root}\" checkout -d ${name} -P \"${cvs_module}\"'."
+					${CVS} ${CVS_FLAGS} -d"${cvs_root}" checkout -d ${name} -P "${cvs_module}"
+					if [ $? -ne 0 ]; then
+						err 1 "CVS checkout failed."
+					fi
+				else
+					cd "${_portsdir}"
+					debug "Running '${CVS} ${CVS_FLAGS} update -Pd -A'."
+					${CVS} ${CVS_FLAGS} update -Pd -A 2>&1 | sed 's|^cvs update: \(.*\) is no longer in the repository$|D \1|'
+					if [ $? -ne 0 ]; then
+						err 1 "CVS update failed."
+					fi
+				fi
+				;;
+			portsnap)
+				PORTSNAP_FLAGS="${PORTSNAP_FLAGS} -p ${_portsdir}"
+				debug "Running 'portsnap ${PORTSNAP_FLAGS} fetch'."
+				portsnap ${PORTSNAP_FLAGS} fetch
+				if [ $? -ne 0 ]; then
+					err 1 "portsnap fetch failed."
+				fi
+				if [ ! -f ${_portsdir}/.portsnap.INDEX ]; then
+					debug "Running 'portsnap ${PORTSNAP_FLAGS} extract'."
+					portsnap ${PORTSNAP_FLAGS} extract
+					if [ $? -ne 0 ]; then
+						err 1 "portsnap extract failed."
+					fi
+				else
+					debug "Running 'portsnap ${PORTSNAP_FLAGS} update'."
+					portsnap ${PORTSNAP_FLAGS} update
+					if [ $? -ne 0 ]; then
+						err 1 "portsnap update failed."
+					fi
+				fi
+				;;
+			git)
+				if [ -z "${git_clone_uri}" ]; then
+					err 1 "\$git_clone_uri is not defined."
+				fi
+				if [ ! -d "${_portsdir}/.git" ]; then
+					debug "Running '${GIT} clone ${git_clone_uri} ${_portsdir}'."
+					${GIT} clone "${git_clone_uri}" "${_portsdir}"
+					if [ $? -ne 0 ]; then
+						err 1 "git clone failed."
+					fi
+				else
+					cd "${_portsdir}"
+					debug "Running '${GIT} pull'."
+					${GIT} pull
+					if [ $? -ne 0 ]; then
+						err 1 "git pull failed."
+					fi
+				fi
+				;;
+			hg)
+				if [ -z "${hg_clone_uri}" ]; then
+					err 1 "\$hg_clone_uri is not defined."
+				fi
+				if [ ! -d "${_portsdir}/.hg" ]; then
+					debug "Running '${HG} clone ${hg_clone_uri} ${_portsdir}'."
+					${HG} clone "${hg_clone_uri}" "${_portsdir}"
+					if [ $? -ne 0 ]; then
+						err 1 "hg clone failed."
+					fi
+				else
+					cd "${_portsdir}"
+					debug "Running '${HG} pull'."
+					${HG} pull
+					if [ $? -ne 0 ]; then
+						err 1 "hg pull failed."
+					fi
+					debug "Running '${HG} update'."
+					${HG} update
+					if [ $? -ne 0 ]; then
+						err 1 "hg update failed."
+					fi
+				fi
+				;;
+			svn)
+				if [ -z "${svn_checkout_path}" ]; then
+					err 1 "\$svn_checkout_path is not defined."
+				fi
+				if [ ! -d "${_portsdir}/.svn" ]; then
+					debug "Running '${SVN} ${SVN_FLAGS} checkout \"${svn_checkout_path}\" \"${_portsdir}\"'."
+					${SVN} ${SVN_FLAGS} checkout "${svn_checkout_path}" "${_portsdir}"
+					if [ $? -ne 0 ]; then
+						err 1 "Subversion checkout failed."
+					fi
+				else
+					cd "${_portsdir}"
+					debug "Running '${SVN} ${SVN_FLAGS} update'."
+					${SVN} ${SVN_FLAGS} update
+					if [ $? -ne 0 ]; then
+						err 1 "Subversion update failed."
+					fi
+				fi
+				;;
+			*)
+				err 1 "Unsupported update method '${method}'."
+				;;
+			esac
+
+			# If the updated ports tree is a ZFS filesystem, snapshot it.
+			if [ $_use_zfs -eq 1 -a -d "${_portsdir}/.zfs" ]; then
+				for p in "${_portsdir}/.zfs/snapshot/portshaker"*; do
+					# Purge old snapshots
+					debug "Running 'zfs destroy ${_source_dataset}@`basename ${p}`'."
+					if [ $_pretend -eq 0 ]; then
+						zfs destroy ${_source_dataset}@`basename ${p}` >/dev/null 2>&1
+					fi
+				done
+				date=`date +%F:%T`
+				debug "Running 'zfs snapshot ${_source_dataset}@portshaker-${date}'."
+				if [ $_pretend -eq 0 ]; then
+					zfs snapshot "${_source_dataset}@portshaker-${date}" || err 1 "Can't create ZFS snapshot '${_source_dataset}@portshaker-${date}'."
+				fi
+			fi
+			;; # _portshaker_arg = update
+		esac
+
+		# Look for a post-command and execute it
+		if type ${name}_post${_portshaker_arg} 1>/dev/null 2>&1; then
+			info "Executing post-command \"${name}_post${_portshaker_arg}\"."
+			${name}_post${_portshaker_arg} ${_portshaker_extra_args} || exit 1
+		fi
+
+		return ${_return}
+	done
+
+	# Invalid command
+	echo 1>&2 "$0: unknown command '${_portshaker_arg}'"
+	portshaker_usage
+	# not reached
+}
+
+fi
