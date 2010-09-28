@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	hyena
-PORTVERSION=	0.2
+PORTVERSION=	0.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	romain@FreeBSD.org
 COMMENT=	Library of GUI and non-GUI C-sharp code
 
 GNU_CONFIGURE=	yes
