@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	gstreamer-sharp
-PORTVERSION=	0.9.0
+PORTVERSION=	0.9.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer-sharp/
 
-MAINTAINER=	romain@blogreen.org
+MAINTAINER=	romain@FreeBSD.org
 COMMENT=	C-sharp bindings for GStreamer
 
 USE_BZIP2=	yes
@@ -19,5 +19,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtksharp20
 USE_GSTREAMER=	yes
 USE_LDCONFIG=	yes
+
+PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
 .include <bsd.port.mk>
