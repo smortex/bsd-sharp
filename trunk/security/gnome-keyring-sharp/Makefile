@@ -20,5 +20,6 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtksharp20
+USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
