@@ -10,7 +10,7 @@ PORTVERSION=	0.9.0
 CATEGORIES=	print
 MASTER_SITES=	GNOME
 
-MAINTAINER=	romain@FreeBSD.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A tool for modifying PDF documents
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/hyena.pc:${PORTSDIR}/devel/hyena
