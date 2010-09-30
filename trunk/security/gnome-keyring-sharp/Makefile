@@ -6,32 +6,19 @@
 #
 
 PORTNAME=	gnome-keyring-sharp
-PORTVERSION=	1.0.0
-#PORTREVISION=	0
-#PORTEPOCH=	0
+PORTVERSION=	1.0.2
 CATEGORIES=	security
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
-#MASTER_SITE_SUBDIR=
-#PKGNAMEPREFIX=
-#PKGNAMESUFFIX=
-#DISTNAME=
-#EXTRACT_SUFX=
-#DISTFILES=
-#DIST_SUBDIR=	${PORTNAME}
-#EXTRACT_ONLY=
+MASTER_SITES=	http://www.go-mono.com/archive/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Fully managed implementation of gnome-keyring
 
-BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
-RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus \
+		${LOCALBASE}/libdata/pkgconfig/gnome-keyring-1.pc:${PORTSDIR}/security/gnome-keyring
+RUN_DEPENDS=	${BUILD_DEPENDS}
 
-USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack gtksharp20
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
