@@ -10,7 +10,7 @@ PORTVERSION=	0.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
-MAINTAINER=	romain@FreeBSD.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Library of GUI and non-GUI C-sharp code
 
 GNU_CONFIGURE=	yes
