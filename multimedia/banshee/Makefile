@@ -48,8 +48,7 @@ USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project \
-			--disable-gapless-playback
+CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project
 
 .if !defined(WITHOUT_NLS)
 USE_GETTEXT=	yes
