@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee-community-extensions
-PORTVERSION=	1.6.1
+PORTVERSION=	1.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/${PORTVERSION}/
 
@@ -33,7 +33,7 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack intltool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--disable-appindicator \
 	       --disable-clutterflow \
@@ -94,6 +94,8 @@ PLIST_SUB+=	LIVERADIO="@comment "
 .if !defined(WITHOUT_LYRICS)
 CONFIGURE_ARGS+=--enable-lyrics
 PLIST_SUB+=	LYRICS=""
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/webkit-sharp-1.0.pc:${PORTSDIR}/www/webkit-sharp
+RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/webkit-sharp-1.0.pc:${PORTSDIR}/www/webkit-sharp
 .else
 CONFIGURE_ARGS+=--disable-lyrics
 PLIST_SUB+=	LYRICS="@comment "
