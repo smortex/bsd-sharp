@@ -202,6 +202,7 @@ share/pixmaps/monodoc.png
 @dirrm lib/monodoc/web/ptree
 @dirrm lib/monodoc/web/images
 @dirrm lib/monodoc/web
+@dirrm lib/mono/1.0
 @dirrm lib/mono-tools
 @dirrm lib/minvoke
 @dirrm lib/ilcontrast
