@@ -1,4 +1,5 @@
 @comment $FreeBSD$
 lib/mono/flickrnet/FlickrNet.dll
+lib/mono/flickrnet/FlickrNet.dll.mdb
 libdata/pkgconfig/flickrnet.pc
 @dirrm lib/mono/flickrnet
