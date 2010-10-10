@@ -7,8 +7,7 @@
 #
 
 PORTNAME=	mono-tools
-PORTVERSION=	2.6.2
-PORTREVISION=	1
+PORTVERSION=	2.8
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 

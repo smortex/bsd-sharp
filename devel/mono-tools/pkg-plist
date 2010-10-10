@@ -38,6 +38,7 @@ lib/gendarme/rules.xml
 lib/gsharp/gsharp.exe
 lib/gsharp/gsharp.exe.config
 lib/gui-compare/gui-compare.exe
+lib/gui-compare/gui-compare.exe.mdb
 lib/ilcontrast/ilcontrast.exe
 lib/minvoke/minvoke.exe
 lib/mono-tools/Mono.Profiler.Widgets.dll
