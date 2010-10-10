@@ -8,7 +8,7 @@
 PORTNAME=	xsp
 PORTVERSION=	2.8
 CATEGORIES=	www
-MASTER_SITES=	http://mono.ximian.com/monobuild/preview/sources/${PORTNAME}/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono based web server
