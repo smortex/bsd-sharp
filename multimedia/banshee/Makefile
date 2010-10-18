@@ -7,6 +7,7 @@
 
 PORTNAME=	banshee
 PORTVERSION=	1.8.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/stable/${PORTVERSION}/
