@@ -383,8 +383,8 @@ share/locale/zh_TW/LC_MESSAGES/banshee-1.mo
 share/mime/packages/banshee-amz.xml
 @dirrm share/gnome/help/banshee/gl
 @dirrm share/gnome/help/banshee/de
-@dirrm share/gnome/help/banshee/C
-@dirrm share/gnome/help/banshee
+@dirrmtry share/gnome/help/banshee/C
+@dirrmtry share/gnome/help/banshee
 @dirrm share/banshee-1/icons/hicolor/scalable/devices
 @dirrm share/banshee-1/icons/hicolor/scalable/categories
 @dirrm share/banshee-1/icons/hicolor/scalable
@@ -418,6 +418,6 @@ share/mime/packages/banshee-amz.xml
 @dirrm share/banshee-1/audio-profiles
 @dirrm share/banshee-1
 @dirrm lib/banshee-1/gstreamer-0.10
-@dirrm lib/banshee-1/Extensions
+@dirrmtry lib/banshee-1/Extensions
 @dirrm lib/banshee-1/Backends
-@dirrm lib/banshee-1
+@dirrmtry lib/banshee-1
