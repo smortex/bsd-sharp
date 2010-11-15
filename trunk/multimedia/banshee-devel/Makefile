@@ -6,12 +6,12 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTVERSION=	1.9.0
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
-MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/stable/${PORTVERSION}/
+MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/unstable/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-1-${PORTVERSION}
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
@@ -49,7 +49,7 @@ USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project
+CONFIGURE_ARGS+=	--with-vendor-build-id=${OPSYS}\ ${OSREL}\ BSD\#\ Project
 
 .if !defined(WITHOUT_NLS)
 USE_GETTEXT=	yes
