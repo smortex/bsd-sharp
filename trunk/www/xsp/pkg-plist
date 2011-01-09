@@ -248,17 +248,14 @@ libdata/pkgconfig/xsp-4.pc
 @dirrm lib/mono/gac/xsp4
 @dirrm lib/mono/gac/xsp2/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/xsp2
-@dirrm lib/mono/gac/xsp/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/mod-mono-server4/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/mod-mono-server4
 @dirrm lib/mono/gac/mod-mono-server2/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/mod-mono-server2
-@dirrm lib/mono/gac/mod-mono-server/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/fastcgi-mono-server4/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/fastcgi-mono-server4
 @dirrm lib/mono/gac/fastcgi-mono-server2/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/fastcgi-mono-server2
-@dirrm lib/mono/gac/fastcgi-mono-server/%%PORTVERSION%%.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.WebServer2/0.4.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.WebServer2/0.2.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.WebServer2
