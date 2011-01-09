@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	mod_mono
-PORTVERSION=	2.8
+PORTVERSION=	2.8.2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -23,7 +23,7 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 USE_APACHE=	2.0+
 USE_BZIP2=	yes
 USE_GNOME=	gnometarget
-USE_AUTOTOOLS=	libtool:22
+USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--man=${PREFIX}/man
 
 MAN8=		mod_mono.8
