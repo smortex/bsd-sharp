@@ -21,12 +21,15 @@ LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack gtksharp20
+USE_GNOME=	gnomehack gtksharp20 desktopfileutils
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 
 MAN1=	pinta.1
 MANCOMPRESSED=	yes
+
+post-install:
+	-@update-desktop-database
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
