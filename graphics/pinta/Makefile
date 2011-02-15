@@ -13,7 +13,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/jpobst/Pinta/
 DISTFILES=	${DISTNAME}-1${EXTRACT_SUFX}
 
 MAINTAINER=	mono@FreeBSD.org
-COMMENT=	Simple Gtk# Paint Program
+COMMENT=	Simple Gtk\# Paint Program
 
 LICENSE=	MIT
 
