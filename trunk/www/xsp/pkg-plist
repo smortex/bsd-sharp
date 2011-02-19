@@ -38,6 +38,9 @@ lib/mono/gac/xsp2/%%PORTVERSION%%.0__0738eb9f132ed756/xsp2.exe
 lib/mono/gac/xsp2/%%PORTVERSION%%.0__0738eb9f132ed756/xsp2.exe.mdb
 lib/mono/gac/xsp4/%%PORTVERSION%%.0__0738eb9f132ed756/xsp4.exe
 lib/mono/gac/xsp4/%%PORTVERSION%%.0__0738eb9f132ed756/xsp4.exe.mdb
+lib/monodoc/sources/Mono.FastCGI.source
+lib/monodoc/sources/Mono.FastCGI.tree
+lib/monodoc/sources/Mono.FastCGI.zip
 lib/monodoc/sources/Mono.WebServer.source
 lib/monodoc/sources/Mono.WebServer.tree
 lib/monodoc/sources/Mono.WebServer.zip
