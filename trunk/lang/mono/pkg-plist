@@ -44,6 +44,7 @@ bin/mono-gdb.py
 bin/mono-heapviz
 bin/mono-service
 bin/mono-service2
+bin/mono-sgen
 bin/mono-shlib-cop
 bin/mono-test-install
 bin/mono-xmltool
@@ -150,6 +151,10 @@ lib/libmono-profiler-log.a
 lib/libmono-profiler-log.la
 lib/libmono-profiler-log.so
 lib/libmono-profiler-log.so.0
+lib/libmonosgen-2.0.a
+lib/libmonosgen-2.0.la
+lib/libmonosgen-2.0.so
+lib/libmonosgen-2.0.so.0
 lib/mono-source-libs/Options.cs
 lib/mono-source-libs/getline.cs
 lib/mono/2.0/Accessibility.dll
@@ -960,6 +965,7 @@ libdata/pkgconfig/mono-options.pc
 libdata/pkgconfig/mono.pc
 libdata/pkgconfig/mono.web.pc
 libdata/pkgconfig/monodoc.pc
+libdata/pkgconfig/monosgen-2.pc
 libdata/pkgconfig/system.web.extensions.design_1.0.pc
 libdata/pkgconfig/system.web.extensions_1.0.pc
 libdata/pkgconfig/system.web.mvc.pc
