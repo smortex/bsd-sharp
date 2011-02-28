@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.10
+PORTVERSION=	2.10.1
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
@@ -26,7 +26,7 @@ USE_LDCONFIG=	yes
 USE_GETTEXT=	yes
 
 # Moonlight is installed as part of www/moonlight
-CONFIGURE_ARGS=	--with-moonlight=no --with-sgen=no
+CONFIGURE_ARGS=	--with-moonlight=no
 
 # Set location for .wapi creation.
 MONO_SHARED_DIR=${WRKDIR}
