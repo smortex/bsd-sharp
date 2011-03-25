@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	flickrnet
-PORTVERSION=	3.1.0.0
+PORTVERSION=	3.1.4000.0
 CATEGORIES=	devel
 MASTER_SITES=	http://romain.blogreen.org/distfiles/
-DISTNAME=	FlickrNet-77169
+DISTNAME=	FlickrNet-81973
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Flickr .Net API Library
