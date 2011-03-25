@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTVERSION=	1.8.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/stable/${PORTVERSION}/
@@ -15,6 +14,8 @@ DISTNAME=	${PORTNAME}-1-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
+
+IGNORE=		Unstable release.  Freeses after a few minutes.
 
 # Could do without bash, but it's brought in by gnome anyway.
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser \
