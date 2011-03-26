@@ -19,6 +19,10 @@ RUN_DEPENDS=	banshee-1:${PORTSDIR}/multimedia/banshee
 LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float \
 		samplerate.1:${PORTSDIR}/audio/libsamplerate
 
+BROKEN=		does not build
+DEPRECATED=	has been broken for over a half year
+EXPIRATION_DATE=2011-04-17
+
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
