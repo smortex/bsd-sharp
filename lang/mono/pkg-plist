@@ -45,6 +45,7 @@ bin/mono-heapviz
 bin/mono-service
 bin/mono-service2
 bin/mono-sgen
+bin/mono-sgen-gdb.py
 bin/mono-shlib-cop
 bin/mono-test-install
 bin/mono-xmltool
@@ -677,8 +678,10 @@ lib/mono/gac/Mono.Web/2.0.0.0__0738eb9f132ed756/Mono.Web.dll
 lib/mono/gac/Mono.Web/2.0.0.0__0738eb9f132ed756/Mono.Web.dll.mdb
 lib/mono/gac/Mono.Web/4.0.0.0__0738eb9f132ed756/Mono.Web.dll
 lib/mono/gac/Mono.Web/4.0.0.0__0738eb9f132ed756/Mono.Web.dll.mdb
-lib/mono/gac/Mono.WebBrowser/0.5.0.0__0738eb9f132ed756/Mono.WebBrowser.dll
-lib/mono/gac/Mono.WebBrowser/0.5.0.0__0738eb9f132ed756/Mono.WebBrowser.dll.mdb
+lib/mono/gac/Mono.WebBrowser/2.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll
+lib/mono/gac/Mono.WebBrowser/2.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll.mdb
+lib/mono/gac/Mono.WebBrowser/4.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll
+lib/mono/gac/Mono.WebBrowser/4.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll.mdb
 lib/mono/gac/Novell.Directory.Ldap/2.0.0.0__0738eb9f132ed756/Novell.Directory.Ldap.dll
 lib/mono/gac/Novell.Directory.Ldap/2.0.0.0__0738eb9f132ed756/Novell.Directory.Ldap.dll.mdb
 lib/mono/gac/Novell.Directory.Ldap/4.0.0.0__0738eb9f132ed756/Novell.Directory.Ldap.dll
@@ -921,6 +924,10 @@ lib/mono/mono-configuration-crypto/4.0/Mono.Configuration.Crypto.dll.mdb
 lib/mono/mono-configuration-crypto/4.0/mono-configuration-crypto.exe
 lib/mono/mono-configuration-crypto/4.0/mono-configuration-crypto.exe.mdb
 lib/mono/monodoc/monodoc.dll
+lib/mono/xbuild-frameworks/.NETFramework/v2.0/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v3.0/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList/FrameworkList.xml
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.CSharp.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.Common.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.VisualBasic.targets
@@ -1022,6 +1029,16 @@ share/mono-2.0/mono/cil/cil-opcodes.xml
 @dirrm lib/mono/xbuild/Microsoft/Silverlight/v2.0
 @dirrm lib/mono/xbuild/Microsoft/Silverlight
 @dirrm lib/mono/xbuild/Microsoft
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v4.0
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v3.5
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v3.0/RedistList
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v3.0
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v2.0/RedistList
+@dirrm lib/mono/xbuild-frameworks/.NETFramework/v2.0
+@dirrm lib/mono/xbuild-frameworks/.NETFramework
+@dirrm lib/mono/xbuild-frameworks
 @dirrmtry lib/mono/xbuild
 @dirrm lib/mono/monodoc
 @dirrm lib/mono/mono-configuration-crypto/4.0
@@ -1212,7 +1229,8 @@ share/mono-2.0/mono/cil/cil-opcodes.xml
 @dirrm lib/mono/gac/Novell.Directory.Ldap/4.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Novell.Directory.Ldap/2.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Novell.Directory.Ldap
-@dirrm lib/mono/gac/Mono.WebBrowser/0.5.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/Mono.WebBrowser/4.0.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/Mono.WebBrowser/2.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.WebBrowser
 @dirrm lib/mono/gac/Mono.Web/4.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.Web/2.0.0.0__0738eb9f132ed756
