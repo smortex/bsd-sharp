@@ -210,21 +210,9 @@ lib/xsp/test/sample.webapp
 lib/xsp/test/small-icon.png
 lib/xsp/test/web.config
 lib/xsp/test/xsp.exe.config
-lib/xsp/unittests/ChangeLog
-lib/xsp/unittests/NOACCESS
-lib/xsp/unittests/README
-lib/xsp/unittests/Tests.XSP.Security/DirectoryTraversalTest.cs
-lib/xsp/unittests/Tests.XSP.Security/FileExtensionsTest.cs
-lib/xsp/unittests/Tests.XSP.Security/Makefile
-lib/xsp/unittests/Tests.XSP.Security/Tests.XSP.Security.dll
-lib/xsp/unittests/Tests.XSP.Security/WebTestHelper.cs
-lib/xsp/unittests/webroot/index.aspx
 libdata/pkgconfig/xsp-2.pc
 libdata/pkgconfig/xsp-4.pc
 @dirrm www/xsp
-@dirrm lib/xsp/unittests/webroot
-@dirrm lib/xsp/unittests/Tests.XSP.Security
-@dirrm lib/xsp/unittests
 @dirrm lib/xsp/test/controls
 @dirrm lib/xsp/test/bin
 @dirrm lib/xsp/test/App_Code
