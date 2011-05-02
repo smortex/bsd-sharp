@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.8.1
+PORTVERSION=	2.0.0
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/stable/${PORTVERSION}/
-DISTNAME=	${PORTNAME}-1-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
@@ -36,7 +35,6 @@ OPTIONS=	DOCS      "Install documentation"    on \
 		MTP       "Enable MTP support"       on \
 		APPLEDEV  "Enable Apple device DAP"  off \
 		IPOD      "Enable iPod support"      on \
-		WEBKIT    "Enable Wikipedia support" on \
 		YOUTUBE   "Enable Youtube support"   on
 
 USE_BZIP2=	yes
@@ -120,15 +118,6 @@ PLIST_SUB+=	OPT_MTP=""
 .else
 CONFIGURE_ARGS+=--disable-mtp
 PLIST_SUB+=	OPT_MTP="@comment "
-.endif
-
-.if !defined(WITHOUT_WEBKIT)
-CONFIGURE_ARGS+=--enable-webkit
-LIB_DEPENDS+=	webkit-1.0:${PORTSDIR}/www/webkit-gtk2
-PLIST_SUB+=	OPT_WEBKIT=""
-.else
-CONFIGURE_ARGS+=--disable-webkit
-PLIST_SUB+=	OPT_WEBKIT="@comment "
 .endif
 
 .if !defined(WITHOUT_YOUTUBE)
