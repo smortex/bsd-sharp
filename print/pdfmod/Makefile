@@ -14,7 +14,7 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT=	A tool for modifying PDF documents
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/hyena.pc:${PORTSDIR}/devel/hyena
-RUN_DEPENDS=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/hyena.pc:${PORTSDIR}/devel/hyena
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
