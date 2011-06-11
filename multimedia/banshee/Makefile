@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/stable/${PORTVERSION}/
@@ -43,7 +43,7 @@ USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtksharp20 gnomesharp20
 USE_GSTREAMER=	cdparanoia
-USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME:C/-.*//}-1
+USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME:C/-.*//}
 USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
