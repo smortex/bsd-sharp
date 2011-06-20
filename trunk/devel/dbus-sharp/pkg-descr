@@ -1,0 +1,4 @@
+DBus Sharp is a fork of ndesk-dbus, in other words, a C# implementation of
+D-Bus.
+
+WWW:	http://mono.github.com/dbus-sharp/
