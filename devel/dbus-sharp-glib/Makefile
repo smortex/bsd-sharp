@@ -14,6 +14,7 @@ MAINTAINER=	romain@FreeBSD.org
 COMMENT=	D-Bus for .NET: GLib integration module
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-1.0.pc:${PORTSDIR}/devel/dbus-sharp
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-1.0.pc:${PORTSDIR}/devel/dbus-sharp
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
