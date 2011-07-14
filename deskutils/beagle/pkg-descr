@@ -1,9 +1,0 @@
-Beagle is an experimental tool for indexing and searching your local
-files. Using Beagle, you can search your office documents, images,
-music files, and your source code.
-
-Beagle is written in C# using Mono and Gtk#. The indexing is handled by
-Lucene.Net, a C# port of the Lucene indexer. The source code lives in
-the GNOME CVS repository in the module beagle.
-
-WWW: http://beagle-project.org/
