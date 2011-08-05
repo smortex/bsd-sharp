@@ -25,7 +25,7 @@ USE_GMAKE=	yes
 
 pre-configure:
 	@${ECHO_CMD} "--->  Configuring for zlib-${ZLIB_VERSION}"
-	(cd ${WRKDIR}/zlib-${ZLIB_VERSION} && \
+	@(cd ${WRKDIR}/zlib-${ZLIB_VERSION} && \
 	    ${SET_LATE_CONFIGURE_ARGS} \
 	    if ! ${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
 	    CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
