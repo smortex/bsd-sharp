@@ -1,0 +1,29 @@
+
+$FreeBSD$
+
+--- po/LINGUAS.orig
++++ po/LINGUAS
+@@ -1,12 +1,12 @@
+-ca
+-de
+-es
+-fr
+-it
+-ja
+-nb
+-pl
+-pt_BR
+-ru
+-sk
++ca \
++de \
++es \
++fr \
++it \
++ja \
++nb \
++pl \
++pt_BR \
++ru \
++sk \
+ sv
