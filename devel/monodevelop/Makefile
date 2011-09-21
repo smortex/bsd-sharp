@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	monodevelop
-PORTVERSION=	2.6
+PORTVERSION=	2.6.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:${PORTSDIR}/x11-toolkits/libgdiplus \
 USE_GNOME=	gnomehack gtksharp20 gnomesharp20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-#CONFIGURE_ARGS+=	DATADIRNAME=share GMSGFMT=msgfmt
+USE_BZIP2=	yes
 MAN1=		mdtool.1 monodevelop.1
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
