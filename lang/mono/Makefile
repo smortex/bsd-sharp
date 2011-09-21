@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.10.3
+PORTVERSION=	2.10.5
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
