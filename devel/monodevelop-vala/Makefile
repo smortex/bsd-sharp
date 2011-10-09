@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	monodevelop-vala
-PORTVERSION=	2.6.0.1
+PORTVERSION=	2.8
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
@@ -21,7 +21,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/monodevelop.pc:${PORTSDIR}/devel/mon
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-PLIST_FILES=	lib/monodevelop/AddIns/BackendBindings/MonoDevelop.ValaBinding.dll
+PLIST_FILES=	lib/monodevelop/AddIns/BackendBindings/MonoDevelop.ValaBinding.dll \
+		lib/monodevelop/AddIns/BackendBindings/MonoDevelop.ValaBinding.dll.config
 
 # Restrict to stable (even) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,even
