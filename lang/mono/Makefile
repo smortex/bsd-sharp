@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mono
-PORTVERSION=	2.10.6
+PORTVERSION=	2.10.8
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
@@ -16,7 +16,6 @@ COMMENT=	An open source implementation of .NET Development Framework
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
-USE_BZIP2=	yes
 USE_BISON=	build
 USE_GNOME=	gnomehack glib20
 USE_GMAKE=	yes
