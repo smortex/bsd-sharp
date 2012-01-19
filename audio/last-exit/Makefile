@@ -25,7 +25,7 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix gnomehack gnometarget gconf2 gnomesharp20
+USE_GNOME=	gnomeprefix gnomehack gconf2 gnomesharp20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	DATADIRNAME=share
 USE_GSTREAMER=	flac vorbis

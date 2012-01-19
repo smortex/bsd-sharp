@@ -18,7 +18,7 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		dbus-daemon:${PORTSDIR}/devel/dbus
 
-USE_GNOME=	gnometarget gnomesharp20
+USE_GNOME=	gnomesharp20
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--program-transform-name=''

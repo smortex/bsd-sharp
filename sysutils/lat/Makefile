@@ -20,7 +20,7 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 
 MAN1=	lat.1
 
-USE_GNOME=	intltool gnometarget gnomeprefix gnomehack gnomesharp20
+USE_GNOME=	intltool gnomeprefix gnomehack gnomesharp20
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

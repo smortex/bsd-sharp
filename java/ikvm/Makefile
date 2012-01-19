@@ -20,7 +20,6 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	${BUILD_DEPENDS}
 
 USE_ZIP=	yes
-USE_GNOME=	gnometarget
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
