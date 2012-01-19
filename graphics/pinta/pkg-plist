@@ -1,4 +1,4 @@
-bin/pinta  
+bin/pinta
 lib/pinta/Pinta.exe
 lib/pinta/Pinta.Core.dll
 lib/pinta/Pinta.Effects.dll
@@ -22,6 +22,7 @@ share/locale/ga/LC_MESSAGES/pinta.mo
 share/locale/gl/LC_MESSAGES/pinta.mo
 share/locale/he/LC_MESSAGES/pinta.mo
 share/locale/hr/LC_MESSAGES/pinta.mo
+share/locale/hu/LC_MESSAGES/pinta.mo
 share/locale/hy/LC_MESSAGES/pinta.mo
 share/locale/id/LC_MESSAGES/pinta.mo
 share/locale/it/LC_MESSAGES/pinta.mo

@@ -6,11 +6,9 @@
 #
 
 PORTNAME=	pinta
-PORTVERSION=	0.6
+PORTVERSION=	1.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://cloud.github.com/downloads/jpobst/Pinta/
-# Remove in the next version:
-DISTFILES=	${DISTNAME}-1${EXTRACT_SUFX}
+MASTER_SITES=	http://cloud.github.com/downloads/PintaProject/Pinta/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Simple Gtk\# Paint Program

@@ -3,32 +3,11 @@ $FreeBSD$
 
 --- Pinta.Install.proj.orig
 +++ Pinta.Install.proj
-@@ -135,7 +135,7 @@
-     <Copy SourceFiles="@(ExtensionFile)" DestinationFolder="$(InstallPrefix)/lib/pinta/Extensions" />
-     <MakeDir Directories="$(InstallPrefix)/bin" />
-     <Copy SourceFiles="$(OutputPath)/locale/%(Translation.Code)/LC_MESSAGES/pinta.mo" DestinationFolder="$(InstallPrefix)/share/locale/%(Translation.Code)/LC_MESSAGES" />
--    <Copy SourceFiles="xdg/pinta.1" DestinationFolder="$(InstallPrefix)/share/man/man1" />
-+    <Copy SourceFiles="xdg/pinta.1" DestinationFolder="$(InstallPrefix)/man/man1" />
-     <Copy SourceFiles="xdg/pinta.desktop" DestinationFolder="$(InstallPrefix)/share/applications" />
-     <Copy SourceFiles="xdg/pinta.xpm" DestinationFolder="$(InstallPrefix)/share/pixmaps" />
-     <Copy SourceFiles="xdg/16x16/pinta.png" DestinationFolder="$(InstallPrefix)/share/icons/hicolor/16x16/apps" />
-@@ -144,7 +144,7 @@
-     <Copy SourceFiles="xdg/32x32/pinta.png" DestinationFolder="$(InstallPrefix)/share/icons/hicolor/32x32/apps" />
-     <Copy SourceFiles="xdg/96x96/pinta.png" DestinationFolder="$(InstallPrefix)/share/icons/hicolor/96x96/apps" />
-     <Copy SourceFiles="xdg/scalable/pinta.svg" DestinationFolder="$(InstallPrefix)/share/icons/hicolor/scalable/apps" />
--    <Exec Command='gzip -f "$(InstallPrefix)/share/man/man1/pinta.1"' />
-+    <Exec Command='gzip -f "$(InstallPrefix)/man/man1/pinta.1"' />
-   </Target>
- 
-   <!-- Uninstall everything for Pinta -->
-@@ -152,8 +152,8 @@
-     <Exec Command='rm -rf "$(InstallPrefix)/lib/pinta"' />
-     <Delete Files="$(InstallPrefix)/bin/pinta" />
-     <Delete Files="$(InstallPrefix)/share/locale/%(Translation.Code)/LC_MESSAGES/pinta.mo" />
--    <Delete Files="$(InstallPrefix)/share/man/man1/pinta.1" />
--    <Delete Files="$(InstallPrefix)/share/man/man1/pinta.1.gz" />
-+    <Delete Files="$(InstallPrefix)/man/man1/pinta.1" />
-+    <Delete Files="$(InstallPrefix)/man/man1/pinta.1.gz" />
-     <Delete Files="$(InstallPrefix)/share/applications/pinta.desktop" />
-     <Delete Files="$(InstallPrefix)/share/pixmaps/pinta.xpm" />
-     <Delete Files="$(InstallPrefix)/share/icons/hicolor/16x16/apps/pinta.png" />
+@@ -8,7 +8,7 @@
+     <BinDir>/usr/local/bin</BinDir>
+     <LibDir>/usr/local/lib</LibDir>
+     <DataRootDir>/usr/local/share</DataRootDir>
+-    <ManDir>/usr/local/share/man</ManDir>
++    <ManDir>/usr/local/man</ManDir>
+     <LocaleDir>/usr/local/share/locale</LocaleDir>
+   </PropertyGroup>
