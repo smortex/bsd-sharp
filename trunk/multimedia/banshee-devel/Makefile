@@ -6,12 +6,10 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	1.9.0
+PORTVERSION=	2.3.4
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
-MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/unstable/${PORTVERSION}/
-DISTNAME=	${PORTNAME}-1-${PORTVERSION}
-PKGNAMESUFFIX=	-devel
+MASTER_SITES=	GNOME
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
@@ -34,22 +32,20 @@ OPTIONS=	DOCS      "Install documentation"    on \
 		BPMDETECT "Enable BPM detection"     on \
 		MTP       "Enable MTP support"       on \
 		APPLEDEV  "Enable Apple device DAP"  off \
-		IPOD      "Enable iPod support"      on \
-		WEBKIT    "Enable Wikipedia support" on \
 		YOUTUBE   "Enable Youtube support"   on
 
-USE_BZIP2=	yes
+USE_XZ=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtksharp20 gnomesharp20
 USE_GSTREAMER=	cdparanoia
-USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME:C/-.*//}-1
+USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME:C/-.*//}
 USE_XORG=	xrandr xxf86vm
 USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS+=	--with-vendor-build-id=${OPSYS}\ ${OSREL}\ BSD\#\ Project
+CONFIGURE_ARGS+=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project
 
 .if !defined(WITHOUT_NLS)
 USE_GETTEXT=	yes
@@ -103,15 +99,6 @@ CONFIGURE_ARGS+=--disable-appledevice
 PLIST_SUB+=	APPLEDEV="@comment "
 .endif
 
-.if !defined(WITHOUT_IPOD)
-CONFIGURE_ARGS+=--enable-ipod
-LIB_PC_DEPENDS+=${LOCALBASE}/libdata/pkgconfig/ipod-sharp-ui.pc:${PORTSDIR}/audio/ipod-sharp
-PLIST_SUB+=	OPT_IPOD=""
-.else
-CONFIGURE_ARGS+=--disable-ipod
-PLIST_SUB+=	OPT_IPOD="@comment "
-.endif
-
 .if !defined(WITHOUT_MTP)
 CONFIGURE_ARGS+=--enable-mtp
 LIB_DEPENDS+=	mtp.11:${PORTSDIR}/audio/libmtp
@@ -119,15 +106,6 @@ PLIST_SUB+=	OPT_MTP=""
 .else
 CONFIGURE_ARGS+=--disable-mtp
 PLIST_SUB+=	OPT_MTP="@comment "
-.endif
-
-.if !defined(WITHOUT_WEBKIT)
-CONFIGURE_ARGS+=--enable-webkit
-LIB_DEPENDS+=	webkit-1.0:${PORTSDIR}/www/webkit-gtk2
-PLIST_SUB+=	OPT_WEBKIT=""
-.else
-CONFIGURE_ARGS+=--disable-webkit
-PLIST_SUB+=	OPT_WEBKIT="@comment "
 .endif
 
 .if !defined(WITHOUT_YOUTUBE)
