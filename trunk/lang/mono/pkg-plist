@@ -323,6 +323,7 @@ lib/mono/4.0/IBM.Data.DB2.dll
 lib/mono/4.0/ICSharpCode.SharpZipLib.dll
 lib/mono/4.0/MSBuild/Microsoft.Build.CommonTypes.xsd
 lib/mono/4.0/MSBuild/Microsoft.Build.Core.xsd
+lib/mono/4.0/Microsoft.Build.dll
 lib/mono/4.0/Microsoft.Build.Engine.dll
 lib/mono/4.0/Microsoft.Build.Framework.dll
 lib/mono/4.0/Microsoft.Build.Tasks.v4.0.dll
@@ -598,6 +599,8 @@ lib/mono/gac/Microsoft.Build.Utilities.v4.0/4.0.0.0__b03f5f7f11d50a3a/Microsoft.
 lib/mono/gac/Microsoft.Build.Utilities.v4.0/4.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Utilities.v4.0.dll.mdb
 lib/mono/gac/Microsoft.Build.Utilities/2.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Utilities.dll
 lib/mono/gac/Microsoft.Build.Utilities/2.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Utilities.dll.mdb
+lib/mono/gac/Microsoft.Build/4.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.dll
+lib/mono/gac/Microsoft.Build/4.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.dll.mdb
 lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a/Microsoft.CSharp.dll
 lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a/Microsoft.CSharp.dll.mdb
 lib/mono/gac/Microsoft.VisualC/0.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
@@ -1295,6 +1298,7 @@ share/mono-2.0/mono/cil/cil-opcodes.xml
 @dirrm lib/mono/gac/Microsoft.VisualC
 @dirrm lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a
 @dirrm lib/mono/gac/Microsoft.CSharp
+@dirrm lib/mono/gac/Microsoft.Build/4.0.0.0__b03f5f7f11d50a3a
 @dirrm lib/mono/gac/Microsoft.Build.Utilities/2.0.0.0__b03f5f7f11d50a3a
 @dirrm lib/mono/gac/Microsoft.Build.Utilities.v4.0/4.0.0.0__b03f5f7f11d50a3a
 @dirrm lib/mono/gac/Microsoft.Build.Utilities.v4.0
@@ -1315,6 +1319,7 @@ share/mono-2.0/mono/cil/cil-opcodes.xml
 @dirrm lib/mono/gac/Microsoft.Build.Engine/3.5.0.0__b03f5f7f11d50a3a
 @dirrm lib/mono/gac/Microsoft.Build.Engine/2.0.0.0__b03f5f7f11d50a3a
 @dirrm lib/mono/gac/Microsoft.Build.Engine
+@dirrm lib/mono/gac/Microsoft.Build
 @dirrm lib/mono/gac/ICSharpCode.SharpZipLib/4.84.0.0__1b03e6acf1164f73
 @dirrm lib/mono/gac/ICSharpCode.SharpZipLib/2.84.0.0__1b03e6acf1164f73
 @dirrm lib/mono/gac/ICSharpCode.SharpZipLib/2.6.0.0__1b03e6acf1164f73
