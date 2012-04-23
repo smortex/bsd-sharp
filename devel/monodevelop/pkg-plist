@@ -155,8 +155,11 @@ lib/monodevelop/AddIns/NUnit/nunit.util.dll
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll.mdb
 %%GIT%%lib/monodevelop/AddIns/VersionControl/NGit.dll
+%%GIT%%lib/monodevelop/AddIns/VersionControl/NGit.dll.mdb
 %%GIT%%lib/monodevelop/AddIns/VersionControl/NSch.dll
+%%GIT%%lib/monodevelop/AddIns/VersionControl/NSch.dll.mdb
 %%GIT%%lib/monodevelop/AddIns/VersionControl/Sharpen.dll
+%%GIT%%lib/monodevelop/AddIns/VersionControl/Sharpen.dll.mdb
 lib/monodevelop/AddIns/VersionControl/comment.png
 lib/monodevelop/AddIns/VersionControl/menu_add.png
 lib/monodevelop/AddIns/VersionControl/menu_commit.png
