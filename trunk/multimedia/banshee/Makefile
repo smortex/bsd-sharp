@@ -6,15 +6,13 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	2.0.1
+PORTVERSION=	2.2.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
-MASTER_SITES=	http://download.banshee.fm/${PORTNAME}/stable/${PORTVERSION}/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
-
-IGNORE=		Unstable release.  Freeses after a few minutes.
 
 # Could do without bash, but it's brought in by gnome anyway.
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser \
@@ -34,7 +32,6 @@ OPTIONS=	DOCS      "Install documentation"    on \
 		BPMDETECT "Enable BPM detection"     on \
 		MTP       "Enable MTP support"       on \
 		APPLEDEV  "Enable Apple device DAP"  off \
-		IPOD      "Enable iPod support"      on \
 		YOUTUBE   "Enable Youtube support"   on
 
 USE_BZIP2=	yes
@@ -100,15 +97,6 @@ PLIST_SUB+=	APPLEDEV=""
 .else
 CONFIGURE_ARGS+=--disable-appledevice
 PLIST_SUB+=	APPLEDEV="@comment "
-.endif
-
-.if !defined(WITHOUT_IPOD)
-CONFIGURE_ARGS+=--enable-ipod
-LIB_PC_DEPENDS+=${LOCALBASE}/libdata/pkgconfig/ipod-sharp-ui.pc:${PORTSDIR}/audio/ipod-sharp
-PLIST_SUB+=	OPT_IPOD=""
-.else
-CONFIGURE_ARGS+=--disable-ipod
-PLIST_SUB+=	OPT_IPOD="@comment "
 .endif
 
 .if !defined(WITHOUT_MTP)
