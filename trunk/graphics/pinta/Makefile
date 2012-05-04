@@ -15,7 +15,8 @@ COMMENT=	Simple Gtk\# Paint Program
 
 LICENSE=	MIT
 
-LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -23,7 +24,7 @@ USE_GNOME=	gnomehack gtksharp20 desktopfileutils
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 
-MAN1=	pinta.1
+MAN1=		pinta.1
 MANCOMPRESSED=	yes
 
 post-install:
