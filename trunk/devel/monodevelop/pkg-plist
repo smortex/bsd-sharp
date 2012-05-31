@@ -276,6 +276,9 @@ share/mime/text/x-vb.xml
 @dirrmtry share/applications
 @dirrm lib/monodevelop/data/options
 @dirrm lib/monodevelop/data
+@dirrm lib/monodevelop/bin/MSBuild/3.5
+@dirrm lib/monodevelop/bin/MSBuild/2.0
+@dirrm lib/monodevelop/bin/MSBuild
 @dirrm lib/monodevelop/bin
 @dirrm lib/monodevelop/AddIns/VersionControl
 @dirrm lib/monodevelop/AddIns/NUnit
@@ -288,15 +291,12 @@ share/mime/text/x-vb.xml
 @dirrm lib/monodevelop/AddIns/MonoDevelop.RegexToolkit
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Refactoring
 @dirrm lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Moonlight/Templates
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Moonlight
 @dirrm lib/monodevelop/AddIns/MonoDevelop.GtkCore
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Gettext
 @dirrm lib/monodevelop/AddIns/MonoDevelop.DesignerSupport
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Deployment
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Debugger
-@dirrm lib/monodevelop/AddIns/MonoDevelop.CodeMetrics
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools/templates
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet/Schemas
