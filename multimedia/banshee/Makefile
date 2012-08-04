@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	2.2.1
+PORTVERSION=	2.4.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	GNOME
@@ -34,7 +34,7 @@ OPTIONS=	DOCS      "Install documentation"    on \
 		APPLEDEV  "Enable Apple device DAP"  off \
 		YOUTUBE   "Enable Youtube support"   on
 
-USE_BZIP2=	yes
+USE_XZ=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes

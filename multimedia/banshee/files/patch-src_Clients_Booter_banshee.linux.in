@@ -1,0 +1,13 @@
+
+$FreeBSD$
+
+--- src/Clients/Booter/banshee.linux.in.orig
++++ src/Clients/Booter/banshee.linux.in
+@@ -49,7 +49,7 @@ fi
+ #export MONO_ENV_OPTIONS="--gc=sgen"
+ 
+ if [ -n "$BANSHEE_DEBUG" -o -n "$BANSHEE_TRACE" -o -n "$BANSHEE_PROFILE" ]; then
+-    MONO_OPTIONS="$BANSHEE_DEBUG $BANSHEE_TRACE $BANSHEE_PROFILE"
++    MONO_OPTIONS="$BANSHEE_DEBUG $BANSHEE_TRACE $BANSHEE_PROFILE --runtime=v4.0"
+     echo "** Running Mono with $MONO_OPTIONS **"
+ fi
