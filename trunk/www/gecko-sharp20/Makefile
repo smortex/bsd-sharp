@@ -8,15 +8,15 @@
 
 PORTNAME=	gecko-sharp
 PORTVERSION=	0.13
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
-COMMENT=	Mono bindings for embeding mozilla
+COMMENT=	Mono bindings to embed Mozilla
 
-USE_GECKO=	libxul
+USE_GECKO=	libxul19
 USE_GNOME=	gtksharp20
 LATEST_LINK=	gecko-sharp20
 GNU_CONFIGURE=	yes
