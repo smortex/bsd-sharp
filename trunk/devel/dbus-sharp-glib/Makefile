@@ -1,16 +1,11 @@
-# New ports collection makefile for:	dbus-sharp-glib
-# Date created:		2011-06-20
-# Whom:			Romain Tartiere <romain@FreeBSD.org>
-#
 # $FreeBSD$
-#
 
 PORTNAME=	dbus-sharp-glib
 PORTVERSION=	0.5.0
 CATEGORIES=	devel
 MASTER_SITES=	http://cloud.github.com/downloads/mono/dbus-sharp/
 
-MAINTAINER=	romain@FreeBSD.org
+MAINTAINER=	mono@FreeBSD.org
 COMMENT=	D-Bus for .NET: GLib integration module
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-1.0.pc:${PORTSDIR}/devel/dbus-sharp
