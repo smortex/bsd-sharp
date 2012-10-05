@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	banshee
-PORTVERSION=	2.4.1
+PORTVERSION=	2.6.0
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	GNOME
@@ -15,13 +15,12 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Music management and playback for gnome
 
 # Could do without bash, but it's brought in by gnome anyway.
-BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/XML/Parser.pm:${PORTSDIR}/textproc/p5-XML-Parser \
+BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/ndesk-dbus \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
 		${LOCALBASE}/libdata/pkgconfig/taglib-sharp.pc:${PORTSDIR}/audio/taglib-sharp \
 		${LOCALBASE}/libdata/pkgconfig/mono-zeroconf.pc:${PORTSDIR}/net/mono-zeroconf \
 		${LOCALBASE}/libdata/pkgconfig/mono-addins.pc:${PORTSDIR}/devel/mono-addins \
@@ -34,7 +33,7 @@ OPTIONS=	DOCS      "Install documentation"    on \
 		APPLEDEV  "Enable Apple device DAP"  off \
 		YOUTUBE   "Enable Youtube support"   on
 
-USE_XZ=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
@@ -59,7 +58,7 @@ PLIST_SUB+=	NLS="@comment "
 INSTALL=	/usr/bin/install
 
 .include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+.include "${PORTSDIR}/lang/mono/bsd.mono.mk"
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/gio-sharp-2.0.pc)
 PLIST_SUB+=		HAS_GIO=""
@@ -101,7 +100,7 @@ PLIST_SUB+=	APPLEDEV="@comment "
 
 .if !defined(WITHOUT_MTP)
 CONFIGURE_ARGS+=--enable-mtp
-LIB_DEPENDS+=	mtp.11:${PORTSDIR}/audio/libmtp
+LIB_DEPENDS+=	mtp:${PORTSDIR}/audio/libmtp
 PLIST_SUB+=	OPT_MTP=""
 .else
 CONFIGURE_ARGS+=--disable-mtp
