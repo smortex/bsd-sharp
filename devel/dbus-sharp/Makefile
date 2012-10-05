@@ -1,6 +1,6 @@
-# New ports collection makefile for:	dbus-sharp
-# Date created:		2011-06-20
-# Whom:			Romain Tartiere <romain@FreeBSD.org>
+# New ports collection makefile for:		dbus-sharp
+# Date Created:					20041011
+# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
 #
@@ -8,11 +8,11 @@
 PORTNAME=	dbus-sharp
 PORTVERSION=	0.7.0
 PORTEPOCH=	1
-CATEGORIES=	devel
+CATEGORIES=	devel gnome
 MASTER_SITES=	http://cloud.github.com/downloads/mono/${PORTNAME}/
 
-MAINTAINER=	romain@FreeBSD.org
-COMMENT=	D-Bus for .NET
+MAINTAINER=	mono@FreeBSD.org
+COMMENT=	Mono interface to the D-BUS messaging system
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
@@ -21,4 +21,5 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack
 
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
