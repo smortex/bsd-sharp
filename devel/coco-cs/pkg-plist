@@ -1,7 +1,0 @@
-@comment $FreeBSD$
-bin/coco-cs
-lib/coco-cs/Coco.exe
-%%DATADIR%%/Parser.frame
-%%DATADIR%%/Scanner.frame
-@dirrm %%DATADIR%%
-@dirrm lib/coco-cs

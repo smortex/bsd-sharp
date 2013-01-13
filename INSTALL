@@ -1,0 +1,7 @@
+portshaker(8) use the standard FreeBSD Makefile mechanism.  Take a particular
+look at the PREFIX  environment variable is you want portshaker(8) to be
+installed as a contributed software package and not as part of the system.
+
+make PREFIX="/usr/local"
+su
+make PREFIX="/usr/local" install
