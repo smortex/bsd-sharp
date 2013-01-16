@@ -1,10 +1,5 @@
-# New ports collection makefile for:    	monodevelop
-# Date created:         			20040906
-# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-#
+# Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 # $FreeBSD$
-#   $Id: Makefile,v 1.48 2007/11/07 20:30:04 killfill Exp $
-#
 
 PORTNAME=	monodevelop
 PORTVERSION=	3.0.6
