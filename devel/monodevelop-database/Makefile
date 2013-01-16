@@ -1,9 +1,4 @@
-# New ports collection makefile for:	monodevelop-database
-# Date created:		2008-03-02
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
 # $FreeBSD$
-#
 
 PORTNAME=	monodevelop-database
 PORTVERSION=	3.0.6
