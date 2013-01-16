@@ -33,8 +33,13 @@ lib/monodevelop/AddIns/GnomePlatform.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/AddView/Empty.tt
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/MonoDevelop.AspNet.Mvc.dll
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/MonoDevelop.AspNet.Mvc.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/Error.cshtml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/HomeController.cs
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/HomeControllerTest.cs
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/Index.cshtml
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/ViewPageRazor.cshtml
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/_Layout.cshtml
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/_ViewStart.cshtml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Controller.xft.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/EmptyProject.xpt.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/EmptyProjectMvc3.xpt.xml
