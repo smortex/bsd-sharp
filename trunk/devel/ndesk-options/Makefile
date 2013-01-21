@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ndesk-options
-# Date created:		2008-08-06
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
 # $FreeBSD$
-#
 
 PORTNAME=	ndesk-options
 PORTVERSION=	0.2.1
