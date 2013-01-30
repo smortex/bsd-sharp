@@ -1,0 +1,233 @@
+#!/bin/sh
+# $Id$
+
+. @@SHAREDIR@@/portshaker/portshaker.subr
+
+# usage
+#	Display command line arguments for portshaker.
+#
+usage()
+{
+	echo "usage: $0 [-stVv] [ -U | -u source ] [ -M | -m target ] [ -I | -i target ]" 1>&2
+	exit 1
+}
+
+# source_ports_trees
+#	Get a list of all source ports trees referenced in the configuration files.
+#
+source_ports_trees()
+{
+	for _ports_tree in ${ports_trees}; do
+		_merge_from=`eval echo \\\$${_ports_tree}_merge_from`
+		for _from in ${_merge_from}; do
+			echo ${_from} | sed -e 's/!$//'
+		done
+	done | sort | uniq
+}
+
+# Entry point
+
+args=`getopt Ii:Mm:qstUu:Vv $*`
+if [ $? -ne 0 ]; then
+	usage
+fi
+
+_do_update=0
+_do_merge=0
+_do_update_index=0
+set -- $args
+for i; do
+	case "$i" in
+		-s)
+			echo $(source_ports_trees)
+			exit 0
+			;;
+		-t)
+			echo ${ports_trees}
+			exit 0
+			;;
+		-V)
+			echo "`basename $0` @@VERSION@@"
+			exit 0
+			;;
+		-q)
+			verbose="$(($verbose-1))"
+			shift
+			;;
+		-v)
+			verbose="$(($verbose+1))"
+			shift
+			;;
+		-U)	_do_update=1
+			_update_ports_trees="$(source_ports_trees)"
+			shift
+			;;
+		-u)	_do_update=1
+			_update_ports_trees="${_update_ports_trees} $2"; shift
+			shift
+			;;
+		-M)	_do_merge=1
+			_merge_ports_trees="${ports_trees}"
+			shift
+			;;
+		-m)	_do_merge=1
+			_merge_ports_trees="${_merge_ports_trees} $2"; shift
+			shift
+			;;
+		-I)	_do_update_index=1
+			_update_index_ports_trees="${ports_trees}"
+			shift
+			;;
+		-i)	_do_update_index=1
+			_update_index_ports_trees="${_update_index_ports_trees} $2"; shift
+			shift
+			;;
+		--)	shift
+			break
+			;;
+	esac
+done
+
+if [ $# -gt 0 ]; then
+	usage
+fi
+
+if [ -z "${_update_ports_trees}${_merge_ports_trees}${_update_index_ports_trees}" ]; then
+	# Assume -UM when no option is provided
+	_do_update=1
+	_update_ports_trees="$(source_ports_trees)"
+	_do_merge=1
+	_merge_ports_trees="${ports_trees}"
+fi
+
+if [ ${verbose} -gt 0 ]; then
+	export portshaker_info="YES"
+	if [ ${verbose} -gt 1 ]; then
+		export portshaker_debug="YES"
+	fi
+fi
+
+# Update
+if [ "${_do_update}" -eq 1 ]; then
+	for _ports_tree in ${_update_ports_trees}; do
+		if type ${_ports_tree}_preupdate 1>/dev/null 2>&1; then
+			info "executing pre-command '${_ports_tree}_preupdate()'."
+			${_ports_tree}_preupdate || exit 1
+		fi
+
+		_ports_tree_full=`echo ${_ports_tree} | sed -e 's|:| |g'`
+		${config_dir}/portshaker.d/${_ports_tree_full} update
+		if [ $? -ne 0 ]; then
+			err 1 "Failed to update the '${_ports_tree}' ports tree."
+		fi
+
+		if type ${_ports_tree}_postupdate 1>/dev/null 2>&1; then
+			info "Executing post-command '${_ports_tree}_postupdate()'."
+			${_ports_tree}_postupdate || exit 1
+		fi
+	done
+fi
+
+# Merge
+if [ "${_do_merge}" -eq 1 ]; then
+	for _ports_tree in ${_merge_ports_trees}; do
+		_target=`eval echo \\\$${_ports_tree}_ports_tree`
+		_poudriere_tree=`eval echo \\\$${_ports_tree}_poudriere_tree`
+		_merge_from=`eval echo \\\$${_ports_tree}_merge_from`
+		_first=1
+
+		if [ -n "${_target}" -a -n "${_poudriere_tree}" ]; then
+			err 1 "Only set one of '\\\$${_ports_tree}_ports_tree' and '\\\$${_ports_tree}_poudriere_tree'."
+		fi
+
+		if [ -n "${_poudriere_tree}" ]; then
+			_target="${poudriere_ports_mountpoint}/${_poudriere_tree}/ports"
+		fi
+
+		if [ -z "${_target}" ]; then
+			err 1 "Don't know where to merge ${_ports_tree}."
+		fi
+		if [ -z "${_merge_from}" ]; then
+			err 1 "Don't know how to build ${_ports_tree}."
+		fi
+
+		if type ${_ports_tree}_premerge 1>/dev/null 2>&1; then
+			info "executing pre-command '${_ports_tree}_premerge()'."
+			${_ports_tree}_premerge || exit 1
+		fi
+
+		_master=""
+
+		for _source in ${_merge_from}; do
+			_merge_flags=""
+			if [ "${_first}" -ne 1 -a "x${_source#${_source%?}}" = 'x!' ]; then
+				# Auto-install modified ports.
+				_source=${_source%?}
+				_merge_flags="${_merge_flags} -a"
+			fi
+			_source=`echo ${_source} | sed -e 's|:| |g'`
+			if [ "${_first}" -eq 1 ]; then
+				if [ $_use_zfs -eq 1 ]; then
+				if [ -n "${_poudriere_tree}" ]; then
+					if [ -z "${poudriere_dataset}" ]; then
+						err 1 "'\\\$poudriere_dataset' must be set in order to use '\\\$${_ports_tree}_use_poudriere'.";
+					fi
+					_zfs_dataset="${poudriere_dataset}/ports/${_poudriere_tree}"
+					_merge_flags="${_merge_flags} -P ${_poudriere_tree}"
+				else
+
+				_zfs_dataset=`eval echo \\\$${_ports_tree}_zfs_dataset`
+				if [ -z "${_zfs_dataset}" ]; then
+					# ZFS dataset not set in configuration.
+					# Assume the parent directory is a ZFS filesystem.
+					_target_parent=`dirname "${_target}"`
+					_target_parent_zfs_dataset=`zfs list -H | awk "\\\$5 == \"${_target_parent}\" {print \\\$1}"`
+					if [ -z "${_target_parent_zfs_dataset}" ]; then
+						warn "Target parent directory '${_target_parent}' is not a ZFS filesystem.  '\\\$${_ports_tree}_zfs_dataset' should be set explicitely."
+					else
+						_zfs_dataset="${_target_parent_zfs_dataset}/${_ports_tree}"
+					fi
+				fi
+				fi
+				if [ -n "$_zfs_dataset" ]; then
+				_merge_flags="${_merge_flags} -z ${_zfs_dataset}"
+				fi
+				fi
+				${config_dir}/portshaker.d/${_source} clone_to ${_merge_flags} -t ${_target} || exit 1
+				_master="${_source}"
+				_first=0
+			else
+				${config_dir}/portshaker.d/${_source} merge_to ${_merge_flags} -m "${_master}" -t ${_target} || exit 1
+			fi
+		done
+
+		if type ${_ports_tree}_portmerge 1>/dev/null 2>&1; then
+			info "Executing post-command '${_ports_tree}_postmerge()'."
+			${_ports_tree}_postmerge || exit 1
+		fi
+	done
+fi
+
+# Update INDEX
+if [ "${_do_update_index}" -eq 1 ]; then
+	for _ports_tree in ${_update_index_ports_trees}; do
+		_target=`eval echo \\\$${_ports_tree}_ports_tree`
+		if [ -z "${_target}" ]; then
+			err 1 "Don't know where are located ${_ports_tree}'s INDEX files."
+		fi
+
+		if type ${_ports_tree}_preupdateindex 1>/dev/null 2>&1; then
+			info "executing pre-command '${_ports_tree}_preupdateindex()'."
+			${_ports_tree}_preupdateindex || exit 1
+		fi
+
+		info "Building INDEX in ${_target}."
+		cd ${_target} && make index || err 1 "Error building INDEX in ${_target}."
+
+		if type ${_ports_tree}_postupdateindex 1>/dev/null 2>&1; then
+			info "executing post-command '${_ports_tree}_postupdateindex()'."
+			${_ports_tree}_postupdateindex || exit 1
+		fi
+	done
+fi
+exit 0
