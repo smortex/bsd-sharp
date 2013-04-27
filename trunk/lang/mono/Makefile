@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mono
-PORTVERSION=	3.0.3
-PORTREVISION=	2
+PORTVERSION=	3.0.7
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
@@ -14,13 +13,12 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USE_BISON=	build
-USE_GNOME=	gnomehack glib20
+USES=		bison pathfix gettext
+USE_GNOME=	glib20
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
 MAKE_JOBS_UNSAFE=yes
 
 # Moonlight is installed as part of www/moonlight
