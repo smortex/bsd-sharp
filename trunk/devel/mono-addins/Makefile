@@ -7,6 +7,7 @@
 
 PORTNAME=	mono-addins
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
