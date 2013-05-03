@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	1.12.2
+PORTVERSION=	1.14.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -31,13 +31,12 @@ INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 
-CONFIGURE_ARGS+=--enable-evolution=yes
-
 MAN1=		tomboy.1
 GCONF_SCHEMAS=	tomboy.schemas
 
-OPTIONS_DEFINE=	APPLET
+OPTIONS_DEFINE=	APPLET EVOLUTION
 APPLET_DESC=	Enable GNOME panel applet
+EVOLUTION_DESC=	Build and install Evolution add-in
 
 # Restrict to stable (even) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,even
@@ -50,6 +49,14 @@ PLIST_SUB+=	APPLET=""
 .else
 CONFIGURE_ARGS+=--disable-panel-applet
 PLIST_SUB+=	APPLET="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MEVOLUTION}
+CONFIGURE_ARGS+=--enable-evolution
+PLIST_SUB+=	EVOLUTION=""
+.else
+CONFIGURE_ARGS+=--disable-evolution
+PLIST_SUB+=	EVOLUTION="@comment "
 .endif
 
 post-patch:
