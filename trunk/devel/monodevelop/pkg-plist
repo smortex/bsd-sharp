@@ -2,6 +2,8 @@ bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll.mdb
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.Autotools.dll
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.Autotools.dll.mdb
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.dll
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.dll.mdb
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.AspNet.dll
@@ -10,14 +12,12 @@ lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.Autotools.dll
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.Autotools.dll.mdb
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.dll
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CSharpBinding.dll.mdb
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.DocFood.dll
+lib/monodevelop/AddIns/BackendBindings/MonoDevelop.DocFood.dll.mdb
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.VBNetBinding.dll
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.VBNetBinding.dll.mdb
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll.mdb
-lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.Autotools.dll
-lib/monodevelop/AddIns/BackendBindings/MonoDevelop.CBinding.Autotools.dll.mdb
-lib/monodevelop/AddIns/BackendBindings/MonoDevelop.DocFood.dll
-lib/monodevelop/AddIns/BackendBindings/MonoDevelop.DocFood.dll.mdb
 lib/monodevelop/AddIns/DisplayBindings/AssemblyBrowser/MonoDevelop.AssemblyBrowser.dll
 lib/monodevelop/AddIns/DisplayBindings/AssemblyBrowser/MonoDevelop.AssemblyBrowser.dll.mdb
 lib/monodevelop/AddIns/DisplayBindings/Gettext/MonoDevelop.Gettext.dll
@@ -27,12 +27,22 @@ lib/monodevelop/AddIns/DisplayBindings/HexEditor/MonoDevelop.HexEditor.dll
 lib/monodevelop/AddIns/DisplayBindings/HexEditor/MonoDevelop.HexEditor.dll.mdb
 lib/monodevelop/AddIns/DisplayBindings/SourceEditor/MonoDevelop.SourceEditor2.dll
 lib/monodevelop/AddIns/DisplayBindings/SourceEditor/MonoDevelop.SourceEditor2.dll.mdb
+lib/monodevelop/AddIns/DisplayBindings/SourceEditor/Xwt.dll
+lib/monodevelop/AddIns/DisplayBindings/SourceEditor/Xwt.dll.mdb
 lib/monodevelop/AddIns/GnomePlatform.dll
 lib/monodevelop/AddIns/GnomePlatform.dll.config
 lib/monodevelop/AddIns/GnomePlatform.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/AddView/Empty.tt
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddController/ControllerWithEmptyReadAndWriteActions.tt
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddController/Empty.tt
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddView/Aspx/Empty.tt
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddView/Razor/Empty.tt
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/MonoDevelop.AspNet.Mvc.dll
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/MonoDevelop.AspNet.Mvc.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Razor-templates.xml
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/System.Web.Mvc.dll
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/System.Web.Razor.dll
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/System.Web.WebPages.Razor.dll
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/System.Web.WebPages.dll
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/Error.cshtml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/HomeController.cs
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common/HomeControllerTest.cs
@@ -47,6 +57,7 @@ lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/GlobalAsax.xft.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/GlobalAsaxMvc3.xft.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/LayoutPage.xft.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/PartialViewPageRazor.xft.xml
+lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/PreprocessedRazorTemplate.xft.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Project.xpt.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/ProjectMvc3.xpt.xml
 lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/ProjectMvc3Razor.xpt.xml
@@ -111,6 +122,8 @@ lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll
 lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Refactoring/MonoDevelop.Refactoring.dll
 lib/monodevelop/AddIns/MonoDevelop.Refactoring/MonoDevelop.Refactoring.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.Refactoring/Xwt.dll
+lib/monodevelop/AddIns/MonoDevelop.Refactoring/Xwt.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.RegexToolkit/MonoDevelop.RegexToolkit.dll
 lib/monodevelop/AddIns/MonoDevelop.RegexToolkit/MonoDevelop.RegexToolkit.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/Mono.TextTemplating.Tests.dll
@@ -181,14 +194,29 @@ lib/monodevelop/bin/ICSharpCode.NRefactory.CSharp.dll
 lib/monodevelop/bin/ICSharpCode.NRefactory.CSharp.dll.mdb
 lib/monodevelop/bin/ICSharpCode.NRefactory.dll
 lib/monodevelop/bin/ICSharpCode.NRefactory.dll.mdb
+lib/monodevelop/bin/IKVM.Reflection.dll
+lib/monodevelop/bin/IKVM.Reflection.dll.mdb
 lib/monodevelop/bin/MSBuild/2.0/MonoDevelop.Projects.Formats.MSBuild.exe
 lib/monodevelop/bin/MSBuild/2.0/MonoDevelop.Projects.Formats.MSBuild.exe.config
 lib/monodevelop/bin/MSBuild/2.0/MonoDevelop.Projects.Formats.MSBuild.exe.mdb
 lib/monodevelop/bin/MSBuild/3.5/MonoDevelop.Projects.Formats.MSBuild.exe
 lib/monodevelop/bin/MSBuild/3.5/MonoDevelop.Projects.Formats.MSBuild.exe.config
 lib/monodevelop/bin/MSBuild/3.5/MonoDevelop.Projects.Formats.MSBuild.exe.mdb
+lib/monodevelop/bin/MSBuild/4.0/MonoDevelop.Projects.Formats.MSBuild.exe
+lib/monodevelop/bin/MSBuild/4.0/MonoDevelop.Projects.Formats.MSBuild.exe.config
+lib/monodevelop/bin/MSBuild/4.0/MonoDevelop.Projects.Formats.MSBuild.exe.mdb
+lib/monodevelop/bin/Mono.Addins.CecilReflector.dll
+lib/monodevelop/bin/Mono.Addins.CecilReflector.dll.mdb
+lib/monodevelop/bin/Mono.Addins.Gui.dll
+lib/monodevelop/bin/Mono.Addins.Gui.dll.mdb
+lib/monodevelop/bin/Mono.Addins.Setup.dll
+lib/monodevelop/bin/Mono.Addins.Setup.dll.mdb
+lib/monodevelop/bin/Mono.Addins.dll
+lib/monodevelop/bin/Mono.Addins.dll.mdb
 lib/monodevelop/bin/Mono.Cecil.Mdb.dll
 lib/monodevelop/bin/Mono.Cecil.Mdb.dll.mdb
+lib/monodevelop/bin/Mono.Cecil.Pdb.dll
+lib/monodevelop/bin/Mono.Cecil.Pdb.dll.mdb
 lib/monodevelop/bin/Mono.Cecil.dll
 lib/monodevelop/bin/Mono.Cecil.dll.mdb
 lib/monodevelop/bin/Mono.Debugging.dll
@@ -209,8 +237,13 @@ lib/monodevelop/bin/MonoDevelop.exe
 lib/monodevelop/bin/MonoDevelop.exe.addins
 lib/monodevelop/bin/MonoDevelop.exe.config
 lib/monodevelop/bin/MonoDevelop.exe.mdb
-lib/monodevelop/bin/OldNRefactory.dll
-lib/monodevelop/bin/OldNRefactory.dll.mdb
+lib/monodevelop/bin/Newtonsoft.Json.dll
+lib/monodevelop/bin/Newtonsoft.Json.dll.mdb
+lib/monodevelop/bin/Xwt.Gtk.dll
+lib/monodevelop/bin/Xwt.Gtk.dll.config
+lib/monodevelop/bin/Xwt.Gtk.dll.mdb
+lib/monodevelop/bin/Xwt.dll
+lib/monodevelop/bin/Xwt.dll.mdb
 lib/monodevelop/bin/buildinfo
 lib/monodevelop/bin/mdhost.exe
 lib/monodevelop/bin/mdhost.exe.config
@@ -219,11 +252,11 @@ lib/monodevelop/bin/mdmonitor.exe
 lib/monodevelop/bin/mdmonitor.exe.mdb
 lib/monodevelop/bin/mdtool.exe
 lib/monodevelop/bin/mdtool.exe.config
+lib/monodevelop/bin/mdtool.exe.mdb
 lib/monodevelop/data/options/DefaultEditingLayout.xml
 lib/monodevelop/data/options/MonoDevelop-templates.xml
 lib/monodevelop/data/options/MonoDevelop-tools.xml
 lib/monodevelop/data/options/MonoDevelopProperties.xml
-lib/monodevelop/data/options/StandardHeader.xml
 lib/monodevelop/data/options/TipsOfTheDay.xml
 lib/monodevelop/locale/ca/LC_MESSAGES/monodevelop.mo
 lib/monodevelop/locale/cs/LC_MESSAGES/monodevelop.mo
@@ -359,6 +392,7 @@ share/mime/text/x-vb.xml
 @dirrm lib/monodevelop/locale
 @dirrm lib/monodevelop/data/options
 @dirrm lib/monodevelop/data
+@dirrm lib/monodevelop/bin/MSBuild/4.0
 @dirrm lib/monodevelop/bin/MSBuild/3.5
 @dirrm lib/monodevelop/bin/MSBuild/2.0
 @dirrm lib/monodevelop/bin/MSBuild
@@ -384,7 +418,11 @@ share/mime/text/x-vb.xml
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet/Schemas
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates/Common
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/Templates
-@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/AddView
+@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddView/Razor
+@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddView/Aspx
+@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddView
+@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp/AddController
+@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates/CSharp
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc/CodeTemplates
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet.Mvc
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet
