@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	monodevelop
-PORTVERSION=	3.0.6
+PORTVERSION=	4.0.9
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
