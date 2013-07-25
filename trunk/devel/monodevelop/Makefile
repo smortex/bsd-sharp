@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	monodevelop
-PORTVERSION=	4.0.9
+PORTVERSION=	4.0.10
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
+DISTNAME=	${PORTNAME}-${PORTVERSION}-7
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	IDE for the .NET platform
@@ -23,6 +24,7 @@ USE_BZIP2=	yes
 MAN1=		mdtool.1 monodevelop.1
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 #OPTIONS_DEFINE=	GIT SVN
 #GIT_DESC=	Git support
