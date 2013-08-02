@@ -18,6 +18,8 @@ lib/monodevelop/AddIns/BackendBindings/MonoDevelop.VBNetBinding.dll
 lib/monodevelop/AddIns/BackendBindings/MonoDevelop.VBNetBinding.dll.mdb
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll.mdb
+lib/monodevelop/AddIns/DisplayBindings/AssemblyBrowser/ICSharpCode.NRefactory.Cecil.dll
+lib/monodevelop/AddIns/DisplayBindings/AssemblyBrowser/ICSharpCode.NRefactory.Cecil.dll.mdb
 lib/monodevelop/AddIns/DisplayBindings/AssemblyBrowser/MonoDevelop.AssemblyBrowser.dll
 lib/monodevelop/AddIns/DisplayBindings/AssemblyBrowser/MonoDevelop.AssemblyBrowser.dll.mdb
 lib/monodevelop/AddIns/DisplayBindings/Gettext/MonoDevelop.Gettext.dll
@@ -27,8 +29,6 @@ lib/monodevelop/AddIns/DisplayBindings/HexEditor/MonoDevelop.HexEditor.dll
 lib/monodevelop/AddIns/DisplayBindings/HexEditor/MonoDevelop.HexEditor.dll.mdb
 lib/monodevelop/AddIns/DisplayBindings/SourceEditor/MonoDevelop.SourceEditor2.dll
 lib/monodevelop/AddIns/DisplayBindings/SourceEditor/MonoDevelop.SourceEditor2.dll.mdb
-lib/monodevelop/AddIns/DisplayBindings/SourceEditor/Xwt.dll
-lib/monodevelop/AddIns/DisplayBindings/SourceEditor/Xwt.dll.mdb
 lib/monodevelop/AddIns/GnomePlatform.dll
 lib/monodevelop/AddIns/GnomePlatform.dll.config
 lib/monodevelop/AddIns/GnomePlatform.dll.mdb
@@ -122,12 +122,8 @@ lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll
 lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Refactoring/MonoDevelop.Refactoring.dll
 lib/monodevelop/AddIns/MonoDevelop.Refactoring/MonoDevelop.Refactoring.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.Refactoring/Xwt.dll
-lib/monodevelop/AddIns/MonoDevelop.Refactoring/Xwt.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.RegexToolkit/MonoDevelop.RegexToolkit.dll
 lib/monodevelop/AddIns/MonoDevelop.RegexToolkit/MonoDevelop.RegexToolkit.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.TextTemplating/Mono.TextTemplating.Tests.dll
-lib/monodevelop/AddIns/MonoDevelop.TextTemplating/Mono.TextTemplating.Tests.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/Mono.TextTemplating.dll
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/Mono.TextTemplating.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/MonoDevelop.TextTemplating.dll
@@ -192,6 +188,8 @@ lib/monodevelop/bin/ICSharpCode.Decompiler.dll
 lib/monodevelop/bin/ICSharpCode.Decompiler.dll.mdb
 lib/monodevelop/bin/ICSharpCode.NRefactory.CSharp.dll
 lib/monodevelop/bin/ICSharpCode.NRefactory.CSharp.dll.mdb
+lib/monodevelop/bin/ICSharpCode.NRefactory.IKVM.dll
+lib/monodevelop/bin/ICSharpCode.NRefactory.IKVM.dll.mdb
 lib/monodevelop/bin/ICSharpCode.NRefactory.dll
 lib/monodevelop/bin/ICSharpCode.NRefactory.dll.mdb
 lib/monodevelop/bin/IKVM.Reflection.dll
