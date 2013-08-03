@@ -338,7 +338,6 @@ lib/mono/4.0/Microsoft.CSharp.dll
 lib/mono/4.0/Microsoft.CSharp.targets
 lib/mono/4.0/Microsoft.Common.targets
 lib/mono/4.0/Microsoft.Common.tasks
-lib/mono/4.0/Microsoft.Portable.CSharp.targets
 lib/mono/4.0/Microsoft.VisualBasic.targets
 lib/mono/4.0/Microsoft.VisualC.dll
 lib/mono/4.0/Microsoft.Web.Infrastructure.dll
@@ -1182,7 +1181,6 @@ lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList/FrameworkList.xml
 lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList/FrameworkList.xml
 lib/mono/xbuild-frameworks/.NETFramework/v4.5/RedistList/FrameworkList.xml
 lib/mono/xbuild/Microsoft/Portable/v4.0/Microsoft.Portable.CSharp.targets
-lib/mono/xbuild/Microsoft/Portable/v4.5/Microsoft.Portable.CSharp.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.CSharp.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.Common.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.VisualBasic.targets
@@ -1285,7 +1283,6 @@ share/mono-2.0/mono/cil/cil-opcodes.xml
 @dirrm lib/mono/xbuild/Microsoft/Silverlight/v3.0
 @dirrm lib/mono/xbuild/Microsoft/Silverlight/v2.0
 @dirrm lib/mono/xbuild/Microsoft/Silverlight
-@dirrm lib/mono/xbuild/Microsoft/Portable/v4.5
 @dirrm lib/mono/xbuild/Microsoft/Portable/v4.0
 @dirrm lib/mono/xbuild/Microsoft/Portable
 @dirrm lib/mono/xbuild/Microsoft
