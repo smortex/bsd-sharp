@@ -13,7 +13,7 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USES=		bison pathfix gettext gmake perl5
+USES=		bison gettext gmake pathfix perl5
 USE_GNOME=	glib20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
@@ -49,6 +49,7 @@ MAN1=		al.1 cccheck.1 ccrewrite.1 cert2spc.1 certmgr.1 chktrust.1 \
 		signcode.1 sn.1 soapsuds.1 sqlsharp.1 wsdl.1 xbuild.1 xsd.1
 MAN5=		mdoc.5 mono-config.5
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
