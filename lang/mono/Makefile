@@ -17,7 +17,7 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USES=		bison gettext gmake pathfix perl5 shebangfix
+USES=		bison gettext gmake pathfix perl5
 USE_GNOME=	glib20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
@@ -50,6 +50,10 @@ post-patch:
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj2k5 \
 		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5
+	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/usr/bin/env bash|g' \
+		${WRKSRC}/scripts/mono-find-provides.in \
+		${WRKSRC}/scripts/mono-find-requires.in \
+		${WRKSRC}/scripts/mono-test-install
 	@${FIND} ${WRKSRC} -name '*.sh' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^#!/bin/bash|#!/bin/sh|g'
 	@${REINPLACE_CMD} 's/(1)/(1.0)/g' ${WRKSRC}/configure
