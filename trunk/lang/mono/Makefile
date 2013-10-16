@@ -6,6 +6,10 @@ PORTVERSION=	3.2.3
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
+PATCHFILES=	d2cc22580898df5d4a15e0f99ab513e1570a6082.patch
+PATCH_SITES=	https://github.com/mono/mono/commit/
+PATCH_DIST_STRIP=-p1
+
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	An open source implementation of .NET Development Framework
 
