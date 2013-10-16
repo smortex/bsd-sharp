@@ -1,10 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	mono-addins
-PORTVERSION=	0.6.2
-PORTREVISION=	1
+PORTVERSION=	1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
+MASTER_SITES=	http://romain.blogreen.org/distfiles/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono framework to create extensible applications
@@ -14,18 +13,15 @@ LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS}
 
-USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		gmake pathfix pkgconfig
+WANT_GNOME=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	GTK2
 OPTIONS_DEFAULT=	GTK2
 
-MAN1=		mautil.1
-
-PLIST_SUB+=	VER=0.6.0
+PLIST_SUB+=	VER=1.0.0
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
