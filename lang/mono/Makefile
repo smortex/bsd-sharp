@@ -42,6 +42,17 @@ ONLY_FOR_ARCHS=	i386 amd64 powerpc
 
 .include <bsd.port.pre.mk>
 
+.if ${OSVERSION} >= 902001 && exists(/usr/bin/clang)
+CC=	/usr/bin/clang
+CXX=	/usr/bin/clang++
+CPP=	/usr/bin/clang-cpp
+.else
+BUILD_DEPENDS+=	clang33:${PORTSDIR}/lang/clang33
+CC=	clang33
+CXX=	clang33
+CPP=	clang-cpp33
+.endif
+
 pre-everything::
 	@${CAT} ${PKGMESSAGE}
 
