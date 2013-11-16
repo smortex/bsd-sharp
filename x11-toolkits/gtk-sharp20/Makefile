@@ -1,10 +1,5 @@
-# New ports collection makefile for:    gtk-sharp
-# Date created:         2003-01-01
-# Whom:                 Juli Mallett
-#
+# Created by: Juli Mallett
 # $FreeBSD$
-#   $Id$
-#
 
 PORTNAME=	gtk-sharp
 PORTVERSION=	2.12.10
@@ -24,13 +19,16 @@ LATEST_LINK=	gtk-sharp20
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
-USE_GNOME=	gnomehack gtk20 libglade2
+USE_GNOME=	gtk20 libglade2
+USES=		gmake pathfix perl5 pkgconfig
+USE_PERL5=	run
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^#!/usr/bin/perl|#!${PERL}|'
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/glib/glue/*.c
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
