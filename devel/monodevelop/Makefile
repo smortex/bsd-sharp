@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	monodevelop
-PORTVERSION=	4.2
+PORTVERSION=	5.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
-DISTFILES=	${DISTNAME}-2${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}-0${EXTRACT_SUFX}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	IDE for the .NET platform
