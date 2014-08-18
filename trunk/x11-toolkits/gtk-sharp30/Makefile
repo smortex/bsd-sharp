@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gtk-sharp
-PORTVERSION=	2.99.1
+PORTVERSION=	2.99.3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	30
@@ -16,10 +16,10 @@ LIB_DEPENDS=	libgtk-3.so:${PORTSDIR}/x11-toolkits/gtk30
 MAKE_ENV=       INSTALL_STRIP_FLAG=${STRIP}
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USES=		gmake pathfix pkgconfig
+USES=		gmake pathfix perl5 pkgconfig
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${LOCALBASE}/bin/perl|' \
+	@${REINPLACE_CMD} -e 's|^#!/usr/bin/perl|#!${PERL}|' \
 		${WRKSRC}/parser/gapi2xml.pl \
 		${WRKSRC}/parser/gapi_pp.pl
 

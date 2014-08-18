@@ -49,6 +49,7 @@ lib/monodoc/sources/gtk-sharp-3-docs.source
 lib/monodoc/sources/gtk-sharp-3-docs.tree
 lib/monodoc/sources/gtk-sharp-3-docs.zip
 libdata/pkgconfig/gapi-3.0.pc
+libdata/pkgconfig/gdk-sharp-3.0.pc
 libdata/pkgconfig/gio-sharp-3.0.pc
 libdata/pkgconfig/glib-sharp-3.0.pc
 libdata/pkgconfig/gtk-dotnet-3.0.pc
@@ -61,8 +62,6 @@ share/gapi-3.0/glib-api.xml
 share/gapi-3.0/gtk-api.xml
 share/gapi-3.0/pango-api.xml
 @dirrmtry share/gapi-3.0
-@dirrmtry lib/monodoc/sources
-@dirrmtry lib/monodoc
 @dirrmtry lib/mono/gtk-sharp-3.0
 @dirrmtry lib/mono/gac/pango-sharp/3.0.0.0__35e10195dab3c99f
 @dirrmtry lib/mono/gac/pango-sharp
@@ -80,6 +79,4 @@ share/gapi-3.0/pango-api.xml
 @dirrmtry lib/mono/gac/cairo-sharp
 @dirrmtry lib/mono/gac/atk-sharp/3.0.0.0__35e10195dab3c99f
 @dirrmtry lib/mono/gac/atk-sharp
-@dirrmtry lib/mono/gac
-@dirrmtry lib/mono
 @dirrmtry lib/gapi-3.0
