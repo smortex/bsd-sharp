@@ -1,0 +1,11 @@
+--- sources/Makefile.am.orig	2014-08-18 17:39:09.999023943 +0200
++++ sources/Makefile.am	2014-08-18 17:39:29.670014593 +0200
+@@ -38,7 +38,7 @@
+ 
+ $(DLL): $(build_sources) generated-stamp
+ 	$(CSC) -nowarn:169 -unsafe -target:library $(GLIB_SHARP_LIBS) \
+-		$(build_sources)  generated/*.cs -out:$(DLL)
++		$(build_sources)  generated/*/*.cs -out:$(DLL)
+ 
+ install-data-local:
+ 	echo "$(GACUTIL) /i $(DLL) /f $(GACUTIL_FLAGS)";  \
