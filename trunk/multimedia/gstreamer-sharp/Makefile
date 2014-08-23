@@ -1,25 +1,26 @@
-# New ports collection makefile for:	gstreamer-sharp
-# Date created:		2009-09-06
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
 # $FreeBSD$
-#
 
 PORTNAME=	gstreamer-sharp
-PORTVERSION=	0.9.2
+PORTVERSION=	0.99.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer-sharp/
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	C-sharp bindings for GStreamer
 
-USE_BZIP2=	yes
+LICENSE=	AGPLv3
+
+USE_AUTOTOOLS=	aclocal autoconf automake libtoolize
+AUTOMAKE_ARGS+=	--add-missing
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtksharp20
+USE_GNOME=	gnomehack
 USE_GSTREAMER=	yes
 USE_LDCONFIG=	yes
+USES=		gmake
+MAKE_JOBS_UNSAFE=yes
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
+
+WRKSRC=		${WRKDIR}
 
 .include <bsd.port.mk>
