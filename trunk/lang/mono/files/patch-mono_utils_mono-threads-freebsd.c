@@ -1,6 +1,8 @@
 
 $FreeBSD$
 
+Merged in #1340 upstream.
+
 --- mono/utils/mono-threads-freebsd.c.orig
 +++ mono/utils/mono-threads-freebsd.c
 @@ -2,6 +2,7 @@

@@ -2,6 +2,7 @@
 $FreeBSD$
 
 pid_t is typedef'd in sys/types.h
+Merged in #1341 upstream.
 
 --- mono/io-layer/processes.h.orig
 +++ mono/io-layer/processes.h
