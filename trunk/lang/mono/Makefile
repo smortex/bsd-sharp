@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/mono/Makefile 368043 2014-09-12 16:34:06Z romain $
 
 PORTNAME=	mono
-PORTVERSION=	3.6.0
+PORTVERSION=	3.8.0
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
