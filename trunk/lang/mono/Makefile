@@ -1,19 +1,18 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/lang/mono/Makefile 368043 2014-09-12 16:34:06Z romain $
 
 PORTNAME=	mono
-PORTVERSION=	3.2.8
+PORTVERSION=	3.6.0
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
-COMMENT=	An open source implementation of .NET Development Framework
+COMMENT=	Open source implementation of .NET Development Framework
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
-    		bash:${PORTSDIR}/shells/bash
+		bash:${PORTSDIR}/shells/bash
 
-USE_BZIP2=	yes
-USES=		bison gettext gmake pathfix perl5
+USES=		bison compiler:c11 gettext gmake iconv libtool pathfix perl5 tar:bzip2
 USE_GNOME=	glib20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
@@ -36,22 +35,6 @@ MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 
 ONLY_FOR_ARCHS=	i386 amd64 powerpc
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} >= 902001 && exists(/usr/bin/clang)
-CC=	/usr/bin/clang
-CXX=	/usr/bin/clang++
-CPP=	/usr/bin/clang-cpp
-.else
-BUILD_DEPENDS+=	clang33:${PORTSDIR}/lang/clang33
-CC=	clang33
-CXX=	clang33
-CPP=	clang-cpp33
-.endif
-
-pre-everything::
-	@${CAT} ${PKGMESSAGE}
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/bin/sh|g' \
 		${WRKSRC}/mcs/class/Managed.Windows.Forms/build-csproj \
@@ -63,16 +46,15 @@ post-patch:
 		${WRKSRC}/scripts/mono-test-install
 	@${FIND} ${WRKSRC} -name '*.sh' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^#!/bin/bash|#!/bin/sh|g'
-	@${REINPLACE_CMD} 's/(1)/(1.0)/g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} 's/isinf (1)/isinf (1.0)/g' ${WRKSRC}/configure
 
 tests: build
 	@${ECHO_MSG} "===> Running mono regression tests"
-	@(cd ${WRKSRC}/mono/tests && ${SETENV} ${MAKE_ENV} ${GMAKE} \
-		${MAKE_FLAGS} Makefile ${MAKE_ARGS} test)
+	@(cd ${WRKSRC}/mono/tests && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} \
+		${MAKE_FLAGS} Makefile ${MAKE_ARGS} check)
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|share\/man|man|g' \
 		${WRKSRC}/mcs/jay/Makefile
 
-.include "${PORTSDIR}/lang/mono/bsd.mono.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
