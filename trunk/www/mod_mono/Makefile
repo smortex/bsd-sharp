@@ -2,23 +2,24 @@
 # $FreeBSD: head/www/mod_mono/Makefile 355337 2014-05-26 13:24:21Z bapt $
 
 PORTNAME=	mod_mono
-PORTVERSION=	2.10
-PORTREVISION=	1
+PORTVERSION=	3.8
 CATEGORIES=	www
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Apache module for serving ASP.NET applications
+
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		xsp:${PORTSDIR}/www/xsp
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		xsp:${PORTSDIR}/www/xsp
 
-USES=		libtool:oldver mono pkgconfig tar:bzip2
+USES=		libtool:oldver mono pkgconfig
 GNU_CONFIGURE=	yes
-USE_APACHE=	22
+USE_APACHE=	22+
 CONFIGURE_ARGS=	--man=${PREFIX}/man
 INSTALL_TARGET=	install
 
