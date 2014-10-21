@@ -1,15 +1,13 @@
 # $FreeBSD: head/devel/monodevelop-database/Makefile 363844 2014-08-03 00:05:14Z antoine $
 
 PORTNAME=	monodevelop-database
-PORTVERSION=	4.2.2
+PORTVERSION=	5.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
-DISTNAME=	${PORTNAME}-${PORTVERSION}-2
+DISTNAME=	${PORTNAME}-${PORTVERSION}-0
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	MonoDevelop database support
-
-BROKEN=		Fails to build with monodevelop-5.0.1
 
 LICENSE=	MIT
 
