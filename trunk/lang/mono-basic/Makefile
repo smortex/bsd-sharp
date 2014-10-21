@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mono-basic
-# Date created:		2008-12-20
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
-# $FreeBSD$
-#
+# Created by: Romain Tartiere <romain@blogreen.org>
+# $FreeBSD: head/lang/mono-basic/Makefile 363371 2014-07-29 18:41:15Z adamw $
 
 PORTNAME=	mono-basic
 PORTVERSION=	2.10
@@ -16,16 +12,13 @@ COMMENT=	VisualBasic.NET support for Mono
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
-MAN1=		vbnc.1
-
-USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-USE_GMAKE=	yes
+USES=		gmake tar:bzip2
 
 tests: build
 	@${ECHO_MSG} "===> Running ${PORTNAME} regression tests"
-	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} \
 		${MAKE_FLAGS} Makefile ${MAKE_ARGS} test)
 
 .include <bsd.port.mk>
