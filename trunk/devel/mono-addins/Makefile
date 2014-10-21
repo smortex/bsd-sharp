@@ -1,30 +1,34 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/mono-addins/Makefile 355305 2014-05-26 11:42:12Z bapt $
 
 PORTNAME=	mono-addins
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	devel
-MASTER_SITES=	http://romain.blogreen.org/distfiles/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono framework to create extensible applications
 
-LIB_PC_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mono.pc:${PORTSDIR}/lang/mono
+LICENSE=	MIT
 
-BUILD_DEPENDS+=	${LIB_PC_DEPENDS}
-RUN_DEPENDS+=	${LIB_PC_DEPENDS}
+USES=		mono
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	mono
+GH_TAGNAME=	${DISTNAME}
+GH_COMMIT=	64a45d9
 
 GNU_CONFIGURE=	yes
-USES=		gmake pathfix pkgconfig
+USE_AUTOTOOLS=	aclocal autoconf automake
+ACLOCAL_ARGS=	-I .
+AUTOMAKE_ARGS+=	--gnu --add-missing
+USES=		gmake pkgconfig
 WANT_GNOME=	yes
-MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	GTK2
-OPTIONS_DEFAULT=	GTK2
+OPTIONS_DEFAULT=GTK2
 
 PLIST_SUB+=	VER=1.0.0
 
 .include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 
 .if ${PORT_OPTIONS:MGTK2}
 USE_GNOME+=	gtksharp20
