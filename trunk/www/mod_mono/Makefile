@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD$
+# $FreeBSD: head/www/mod_mono/Makefile 355337 2014-05-26 13:24:21Z bapt $
 
 PORTNAME=	mod_mono
 PORTVERSION=	2.10
@@ -16,14 +16,14 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		xsp:${PORTSDIR}/www/xsp
 
+USES=		libtool:oldver mono pkgconfig tar:bzip2
+GNU_CONFIGURE=	yes
 USE_APACHE=	22
-USE_BZIP2=	yes
-USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--man=${PREFIX}/man
-
-MAN8=		mod_mono.8
+INSTALL_TARGET=	install
 
 .include <bsd.port.pre.mk>
+
 .if ${APACHE_VERSION} == 13
 MOD_MONOCONFDIR=${APACHEETCDIR}
 .else
@@ -36,5 +36,4 @@ post-patch:
 	@${REINPLACE_CMD} 's|%%MOD_MONOCONFDIR%%|${PREFIX}/${MOD_MONOCONFDIR}|g' \
 		${WRKSRC}/Makefile.in
 
-.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.post.mk>
