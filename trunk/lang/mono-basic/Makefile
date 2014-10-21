@@ -1,10 +1,9 @@
-# Created by: Romain Tartiere <romain@blogreen.org>
 # $FreeBSD: head/lang/mono-basic/Makefile 363371 2014-07-29 18:41:15Z adamw $
 
 PORTNAME=	mono-basic
-PORTVERSION=	2.10
+PORTVERSION=	3.8
 CATEGORIES=	lang
-MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
+MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	VisualBasic.NET support for Mono
