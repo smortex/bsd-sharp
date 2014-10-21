@@ -1,12 +1,9 @@
-# New ports collection makefile for:		tomboy
-# Date created:					20041011
-# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-#
-# $FreeBSD$
-#
+# Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
+# $FreeBSD: head/deskutils/tomboy/Makefile 365450 2014-08-20 12:28:29Z amdmi3 $
 
 PORTNAME=	tomboy
-PORTVERSION=	1.14.0
+PORTVERSION=	1.14.1
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -14,29 +11,25 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Personal note taking system for the GNOME desktop
 
-LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
-BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime24-sharp \
-		${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
+LIB_DEPENDS=	libgtkspell.so:${PORTSDIR}/textproc/gtkspell
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
 		mautil:${PORTSDIR}/devel/mono-addins
-RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime24-sharp \
-		${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
 		mautil:${PORTSDIR}/devel/mono-addins
 
-USE_XZ=		yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gnomedesktopsharp20
+USES=		gettext gmake libtool mono pathfix pkgconfig tar:xz
+USE_GNOME=	intlhack gnomeprefix gnomedesktopsharp20
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
-
-MAN1=		tomboy.1
 GCONF_SCHEMAS=	tomboy.schemas
+
+MAKE_JOBS_UNSAFE=yes
 
 OPTIONS_DEFINE=	APPLET EVOLUTION
 APPLET_DESC=	Enable GNOME panel applet
-EVOLUTION_DESC=	Build and install Evolution add-in
+EVOLUTION_DESC=	Build evolution addin
 
 # Restrict to stable (even) versions, indicated by the second component.
 PORTSCOUT=	limitw:1,even
@@ -53,6 +46,8 @@ PLIST_SUB+=	APPLET="@comment "
 
 .if ${PORT_OPTIONS:MEVOLUTION}
 CONFIGURE_ARGS+=--enable-evolution
+BUILD_DEPENDS+=	${LOCALBASE}/lib/mono/gmime-sharp-2.6/gmime-sharp.dll:${PORTSDIR}/mail/gmime26-sharp
+RUN_DEPENDS+=	${LOCALBASE}/lib/mono/gmime-sharp-2.6/gmime-sharp.dll:${PORTSDIR}/mail/gmime26-sharp
 PLIST_SUB+=	EVOLUTION=""
 .else
 CONFIGURE_ARGS+=--disable-evolution
@@ -66,8 +61,5 @@ post-patch:
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} 's|/bin/bash|/bin/sh|g' \
 		${WRKSRC}/Tomboy/tomboy*.in
-	@${REINPLACE_CMD} 's|gmime-sharp|gmime-sharp-2.4|g' \
-		${WRKSRC}/configure
 
-.include "${PORTSDIR}/lang/mono/bsd.mono.mk"
 .include <bsd.port.post.mk>
