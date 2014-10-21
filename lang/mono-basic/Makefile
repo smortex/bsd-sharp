@@ -8,6 +8,9 @@ MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	VisualBasic.NET support for Mono
 
+LICENSE=	LGPL20 MIT
+LICENSE_COMB=	multi
+
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
