@@ -1,8 +1,7 @@
 # $FreeBSD: head/multimedia/banshee/Makefile 369260 2014-09-25 15:18:27Z tijl $
 
 PORTNAME=	banshee
-PORTVERSION=	2.6.2
-PORTREVISION=	3
+PORTVERSION=	2.9.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	GNOME
@@ -44,7 +43,7 @@ USE_SQLITE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
-CONFIGURE_ARGS=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project --disable-gio-hardware --disable-boo
+CONFIGURE_ARGS=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project --disable-gio-hardware --disable-boo --enable-gst-native
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
 
