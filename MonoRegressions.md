@@ -1,0 +1,18 @@
+# Failing regression tests (`cd mono/tests && gmake test`) #
+
+## FreeBSD 8-RC1 amd64 (Last updated: 20090927) ##
+
+| **mono-2.4.2.3** (FreeBSD ports) | **mono-2.6**  (svn branch @145666) | **mono-trunk** (svn trunk @145666) |
+|:---------------------------------|:-----------------------------------|:-----------------------------------|
+|            | appdomain-unload.exe (1) | appdomain-unload.exe (1) |
+|            | bug-80307.exe (2)  |bug-80307.exe (2) |
+
+## FreeBSD 7-STABLE i386 (outdated) ##
+
+| **mono-2.4** (FreeBSD ports) | **mono-2.6**  (svn branch @_???_) | **mono-trunk** (svn trunk @_???_) |
+|:-----------------------------|:----------------------------------|:----------------------------------|
+|   | appdomain-unload.exe (1) _not tested_ |appdomain-unload.exe (1)  |
+|   | bug-80307.exe (2) _not tested_     |bug-80307.exe (2) |
+
+  1. https://bugzilla.novell.com/show_bug.cgi?id=528830
+  1. https://bugzilla.novell.com/show_bug.cgi?id=542485

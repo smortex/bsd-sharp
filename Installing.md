@@ -1,0 +1,26 @@
+# Choose which BSD# branch to track #
+
+First, have a look to the [Branches](Branches.md) of mono ports maintained by the BSD# Team and make yourself an idea of what you want to track.
+
+## Install _portshaker_ ##
+
+Portshaker is now in the FreeBSD ports, so installing it with a working configuration is as simple as:
+
+```
+make -C /usr/ports/ports-mgmt/portshaker-config install
+```
+
+## Update your ports ##
+
+Updating your FreeBSD ports tree, your copy of the BSD# repository and meging them is as easy as running _portshaker_:
+
+```
+portshaker
+```
+
+The default behaviour is to update and merge all configured ports tree.
+
+
+## Updating you ports ##
+
+Since the BSD# ports tree is merged into the FreeBSD ports tree, you can update your ports the usual way (using _portupgrade_ for example).

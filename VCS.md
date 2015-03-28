@@ -1,0 +1,65 @@
+# Introduction #
+
+The BSD# Project maintains a partial ports tree intended to be merged in the FreeBSD ports tree using portshaker. The partial ports tree is under the version control system (VCS) provided by Google: [Subversion](http://subversion.tigris.org).
+
+
+# Organisation of the VCS tree #
+
+## Trunk ##
+`/trunk` is the place where development takes place. It is possible that ports provided by `trunk` are broken, have leftovers, etc.
+
+If you want to help-out in bringing Mono to FreeBSD, it is location to check-out.
+
+## Branches ##
+`/branches` contains various  utilities that do not fit in the `trunk` but are related to the BSD# Project, and old versions of the `trunk` that are to be considered stable. Theese versions are used by the BSD# Team to maintain the version of mono curently in the FreeBSD ports tree while working on the future version in `trunk`.
+
+Examples:
+  * `/branches/bsd-sharp-releng-2.0` Maintenance branch of the BSD# partial ports tree providing mono-2.0.
+  * `/branches/bsd-sharp-releng-2.2` Maintenance branch of the BSD# partial ports tree providing mono-2.2.
+## Tags ##
+
+`/tags` contains snapshots of the branches. The content of a tag never change.
+
+# Creating a branch #
+
+To create a new branch (e.g. `trunk` has mono-2.0 and mono-2.2 is under development) copy the trunk to the new branch using:
+
+```
+svn copy https://bsd-sharp.googlecode.com/svn/trunk https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-releng-2.0 -m "Create bsd-sharp-2.0 branch for mono-2.0 maintenance."
+```
+
+The porting effort can now continue:
+  * mono-2.2 stuff can be introduce in `trunk`;
+  * updates of the mono-2.0 ports are made into the branch:
+```
+svn checkout https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-releng-2.0
+```
+
+# Creating Tags #
+
+When a branch is considered stable, tag it using the date in the form YYYYMMDD:
+```
+svn copy https://bsd-sharp.googlecode.com/svn/branches/bsd-sharp-releng-2.0 https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-`date +%Y%m%d` -m "TAG bsd-sharp-`date +%Y%m%d`."
+```
+
+You can then send a problem report mentioning the tag. If you want to send a diff in your PR, use svn ask for a diff between your tag and the previous one:
+
+```
+svn diff https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20081218  https://bsd-sharp.googlecode.com/svn/tags/bsd-sharp-20090204
+```
+
+# Merging Modifications #
+
+If a modification in trunk has to be made merged in a branch (or a modification in a branch has to be merged in the trunk), use the following syntax:
+
+```
+cd /path/to/the/branch
+# See what is going to happen
+svn diff -c 204 https://bsd-sharp.googlecode.com/svn/trunk
+# Try the merge
+svn merge --dry-run -c 204 https://bsd-sharp.googlecode.com/svn/trunk
+# Do it!
+svn merge -c 204 https://bsd-sharp.googlecode.com/svn/trunk
+```
+
+This will merge changeset 204 in the branch. Note that the merge is not committed, so do not forget to `svn commit`.

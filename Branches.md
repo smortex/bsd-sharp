@@ -1,0 +1,21 @@
+# BSD# Branches #
+
+The BSD# Team maintain various branches for various mono versions in the BSD# Repository:
+
+| **Path** | **Mono Version** | **Status** | **Maintained** |
+|:---------|:-----------------|:-----------|:---------------|
+| `/branches/bsd-sharp-releng-2.0` | 2.0.1 |Outdated| No |
+| `/branches/bsd-sharp-releng-2.2` | 2.2 | Outdated | No |
+| `/branches/bsd-sharp-releng-2.4` | 2.4.3 | Outdated | No |
+| `/branches/bsd-sharp-releng-2.6` | 2.6.7 | Committed | Yes |
+| `/trunk` | 2.10.1 | WIP | Yes |
+
+Each branch contains a partial ports tree (only ports related to mono and possibly patches for `Mk/*` files are available) and are **not intended to replace the FreeBSD ports tree** but rather merged into it.
+
+To ease this, a merge tool named _portshaker_ has been developed by the BSD# Team, and is available in the FreeBSD ports.
+
+# How to choose a branch #
+
+If you want the bleeding-edge, `/trunk` provides the work-in-progress ports for many .Net applications.
+
+If you want to track a particular release of Mono are want ports that have been tested, track any RELENG branch. Note that the latest RELENG branch is very similar to what is provided in the FreeBSD ports tree.
