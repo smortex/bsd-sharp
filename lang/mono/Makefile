@@ -1,31 +1,29 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: head/lang/mono/Makefile 380771 2015-03-08 12:29:57Z romain $
+# $FreeBSD: head/lang/mono/Makefile 413017 2016-04-11 11:10:14Z romain $
 
 PORTNAME=	mono
-PORTVERSION=	3.12.1
-PORTREVISION=	1
+PORTVERSION=	4.4.0.182
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
-PATCHFILES=	fb3468e61c943790ddad0f8cfb3e0cb0e3a00d0d.patch \
-		396d9dbeb1a93665ede08c0e24e3e051e2c3e1de.patch
+PATCHFILES=
 PATCH_SITES=	https://github.com/mono/mono/commit/
 PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Open source implementation of .NET Development Framework
 
-BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
-		bash:${PORTSDIR}/shells/bash
+BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
+		bash:shells/bash
 
-USES=		bison compiler:c11 gettext gmake iconv libtool pathfix perl5 tar:bzip2
+USES=		bison compiler:c11 cpe gettext gmake iconv libtool pathfix perl5 tar:bzip2
 USE_GNOME=	glib20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+WRKSRC=		${WRKDIR}/mono-${PORTVERSION:R}
 
-# Moonlight is installed as part of www/moonlight
-CONFIGURE_ARGS=	--with-moonlight=no --disable-dtrace
+CONFIGURE_ARGS=	--disable-dtrace
 
 CONFIGURE_ENV=	ac_cv_header_sys_inotify_h=no
 
@@ -37,7 +35,7 @@ MONO_SHARED_DIR=${WRKDIR}
 # strange crashes.
 MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 		INSTALL_STRIP_FLAG="${STRIP}" \
-		LC_ALL=C
+		LC_ALL=C TZ=UTC
 
 ONLY_FOR_ARCHS=	i386 amd64 powerpc
 

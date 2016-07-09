@@ -1,32 +1,22 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD$
+# $FreeBSD: head/www/xsp/Makefile 411178 2016-03-15 16:07:14Z amdmi3 $
 
 PORTNAME=	xsp
-PORTVERSION=	3.0.11
+PORTVERSION=	4.2
 CATEGORIES=	www
-MASTER_SITES=	GITHUB
+MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono based web server
 
 LICENSE=	MIT
-
-BUILD_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
-RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 MAKE_JOBS_UNSAFE=	yes
 
-GH_ACCOUNT=	mono
-GH_COMMIT=	4587438
-USE_GITHUB=	yes
-USE_SQLITE=	3
-USES=		gmake mono pathfix pkgconfig tar:bzip2
+USES=		gmake libtool mono pathfix pkgconfig sqlite
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	automake autoconf aclocal
-PATHFIX_MAKEFILEIN=Makefile.am
-
-AUTOMAKE_ARGS=	--add-missing --copy
-ACLOCAL_ARGS=	-I build/m4/shamrock -I build/m4/shave
+CONFIGURE_ENV=	ac_cv_path_GMCS=${LOCALBASE}/bin/mcs
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 

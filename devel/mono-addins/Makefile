@@ -1,7 +1,8 @@
-# $FreeBSD: head/devel/mono-addins/Makefile 355305 2014-05-26 11:42:12Z bapt $
+# $FreeBSD: head/devel/mono-addins/Makefile 387986 2015-05-30 21:25:06Z mat $
 
 PORTNAME=	mono-addins
-PORTVERSION=	1.1
+PORTVERSION=	1.2
+DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	devel
 
 MAINTAINER=	mono@FreeBSD.org
@@ -9,34 +10,25 @@ COMMENT=	Mono framework to create extensible applications
 
 LICENSE=	MIT
 
-USES=		mono
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
-GH_TAGNAME=	${DISTNAME}
-GH_COMMIT=	64a45d9
 
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	aclocal autoconf automake
-ACLOCAL_ARGS=	-I .
-AUTOMAKE_ARGS+=	--gnu --add-missing
-USES=		gmake pkgconfig
+CONFIGURE_ENV=	ac_cv_path_MCS=${LOCALBASE}/bin/mcs
+USES=		autoreconf gmake mono pkgconfig
 WANT_GNOME=	yes
 
-OPTIONS_DEFINE=	GTK2
+OPTIONS_DEFINE=	GTK2 GTK3
 OPTIONS_DEFAULT=GTK2
+
+GTK2_USE=	GNOME=gtksharp20
+GTK2_CONFIGURE_ENABLE=	gui
+OPTIONS_SUB=	yes
+
+#GTK3_USE=	GNOME=gtksharp30
+GTK3_CONFIGURE_ENABLE=	gui-gtk3
+OPTIONS_SUB=	yes
 
 PLIST_SUB+=	VER=1.0.0
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MGTK2}
-USE_GNOME+=	gtksharp20
-CONFIGURE_ARGS+=	--enable-gui
-PLIST_SUB+=	OPT_GTK2=""
-.else
-CONFIGURE_ARGS+=	--disable-gui
-PLIST_SUB+=	OPT_GTK2="@comment "
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

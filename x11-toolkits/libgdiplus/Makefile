@@ -1,27 +1,28 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: head/x11-toolkits/libgdiplus/Makefile 362656 2014-07-23 10:28:03Z tijl $
+# $FreeBSD: head/x11-toolkits/libgdiplus/Makefile 412351 2016-04-01 14:33:55Z mat $
 
 PORTNAME=	libgdiplus
-PORTVERSION=	3.8
+PORTVERSION=	4.2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	GDI+ API for System.Windows.Forms in Mono
 
-LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff \
-		libgif.so:${PORTSDIR}/graphics/giflib \
-		libpng15.so:${PORTSDIR}/graphics/png \
-		libcairo.so:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS=	libtiff.so:graphics/tiff \
+		libgif.so:graphics/giflib \
+		libpng.so:graphics/png \
+		libcairo.so:graphics/cairo
 
 GNU_CONFIGURE=	yes
-USES=		gmake libtool:keepla pathfix pkgconfig
+USES=		cpe gmake libtool:keepla pathfix pkgconfig
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_XORG=	x11
-CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+CPE_VENDOR=	mono-project
 
 PLIST_FILES=	lib/libgdiplus.a \
 		lib/libgdiplus.la \

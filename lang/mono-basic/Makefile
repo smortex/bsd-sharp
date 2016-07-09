@@ -1,22 +1,18 @@
-# $FreeBSD: head/lang/mono-basic/Makefile 363371 2014-07-29 18:41:15Z adamw $
+# Created by: Romain Tartiere <romain@blogreen.org>
+# $FreeBSD: head/lang/mono-basic/Makefile 386715 2015-05-18 20:57:58Z romain $
 
 PORTNAME=	mono-basic
-PORTVERSION=	3.8
+PORTVERSION=	4.0.1
 CATEGORIES=	lang
-MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
+MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/ \
+		http://ftp.novell.com/pub/mono/sources/${PORTNAME}/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	VisualBasic.NET support for Mono
 
-LICENSE=	LGPL20 MIT
-LICENSE_COMB=	multi
-
-BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
-RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
-
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-USES=		gmake tar:bzip2
+USES=		gmake mono tar:bzip2
 
 tests: build
 	@${ECHO_MSG} "===> Running ${PORTNAME} regression tests"
