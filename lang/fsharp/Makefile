@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/fsharp/Makefile 412347 2016-04-01 14:08:37Z mat $
 
 PORTNAME=	fsharp
-PORTVERSION=	4.0.1.1
+PORTVERSION=	4.0.1.8
 CATEGORIES=	lang
 
 MAINTAINER=	mono@FreeBSD.org
