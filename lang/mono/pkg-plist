@@ -578,7 +578,6 @@ lib/mono/4.5/Facades/System.Globalization.Calendars.dll
 lib/mono/4.5/Facades/System.Globalization.Extensions.dll
 lib/mono/4.5/Facades/System.Globalization.dll
 lib/mono/4.5/Facades/System.IO.Compression.ZipFile.dll
-lib/mono/4.5/Facades/System.IO.Compression.dll
 lib/mono/4.5/Facades/System.IO.FileSystem.AccessControl.dll
 lib/mono/4.5/Facades/System.IO.FileSystem.DriveInfo.dll
 lib/mono/4.5/Facades/System.IO.FileSystem.Primitives.dll
