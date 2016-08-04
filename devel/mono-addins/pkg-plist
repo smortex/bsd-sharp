@@ -3,8 +3,8 @@ lib/mono/gac/Mono.Addins.CecilReflector/%%VER%%.0__0738eb9f132ed756/Mono.Addins.
 lib/mono/gac/Mono.Addins.CecilReflector/%%VER%%.0__0738eb9f132ed756/Mono.Addins.CecilReflector.dll.mdb
 %%GTK2%%lib/mono/gac/Mono.Addins.Gui/%%VER%%.0__0738eb9f132ed756/Mono.Addins.Gui.dll
 %%GTK2%%lib/mono/gac/Mono.Addins.Gui/%%VER%%.0__0738eb9f132ed756/Mono.Addins.Gui.dll.mdb
-%%GTK3%%lib/mono/gac/Mono.Addins.GuiGtk3/1.0.5850.19100__0738eb9f132ed756/Mono.Addins.GuiGtk3.dll
-%%GTK3%%lib/mono/gac/Mono.Addins.GuiGtk3/1.0.5850.19100__0738eb9f132ed756/Mono.Addins.GuiGtk3.dll.mdb
+%%GTK3%%lib/mono/gac/Mono.Addins.GuiGtk3/1.0.6060.21481__0738eb9f132ed756/Mono.Addins.GuiGtk3.dll
+%%GTK3%%lib/mono/gac/Mono.Addins.GuiGtk3/1.0.6060.21481__0738eb9f132ed756/Mono.Addins.GuiGtk3.dll.mdb
 lib/mono/gac/Mono.Addins.MSBuild/%%VER%%.0__0738eb9f132ed756/Mono.Addins.MSBuild.dll
 lib/mono/gac/Mono.Addins.MSBuild/%%VER%%.0__0738eb9f132ed756/Mono.Addins.MSBuild.dll.mdb
 lib/mono/gac/Mono.Addins.Setup/%%VER%%.0__0738eb9f132ed756/Mono.Addins.Setup.dll
