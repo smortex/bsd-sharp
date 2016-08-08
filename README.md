@@ -30,3 +30,16 @@ main_merge_from="ports github:smortex:bsd-sharp!"
 p_mono_poudriere_tree="mono"
 p_mono_merge_from="ports github:smortex:bsd-sharp!"
 ~~~
+
+## Branches!
+
+Mono release numbers are sometimes surprising.  To help figure out if any
+release is stable, alpha or beta quality, upstream has setup different pages:
+
+* [Latest release](http://www.mono-project.com/download/)
+* [Alpha channel](http://www.mono-project.com/download/alpha/)
+* [Beta channel](http://www.mono-project.com/download/beta/)
+
+Only stable releases are committed to the FreeBSD tree, but the releases
+available in the other channels may be available through branhces of this
+repository.
