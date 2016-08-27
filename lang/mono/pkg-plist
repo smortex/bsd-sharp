@@ -567,7 +567,6 @@ lib/mono/4.5/Facades/System.Data.SqlClient.dll
 lib/mono/4.5/Facades/System.Diagnostics.Contracts.dll
 lib/mono/4.5/Facades/System.Diagnostics.Debug.dll
 lib/mono/4.5/Facades/System.Diagnostics.FileVersionInfo.dll
-lib/mono/4.5/Facades/System.Diagnostics.PerformanceCounter.dll
 lib/mono/4.5/Facades/System.Diagnostics.Process.dll
 lib/mono/4.5/Facades/System.Diagnostics.StackTrace.dll
 lib/mono/4.5/Facades/System.Diagnostics.TextWriterTraceListener.dll
@@ -597,7 +596,6 @@ lib/mono/4.5/Facades/System.Linq.Queryable.dll
 lib/mono/4.5/Facades/System.Linq.dll
 lib/mono/4.5/Facades/System.Net.AuthenticationManager.dll
 lib/mono/4.5/Facades/System.Net.Cache.dll
-lib/mono/4.5/Facades/System.Net.Http.WebRequestHandler.dll
 lib/mono/4.5/Facades/System.Net.HttpListener.dll
 lib/mono/4.5/Facades/System.Net.Mail.dll
 lib/mono/4.5/Facades/System.Net.NameResolution.dll
@@ -634,7 +632,6 @@ lib/mono/4.5/Facades/System.Runtime.Serialization.Xml.dll
 lib/mono/4.5/Facades/System.Runtime.dll
 lib/mono/4.5/Facades/System.Security.AccessControl.dll
 lib/mono/4.5/Facades/System.Security.Claims.dll
-lib/mono/4.5/Facades/System.Security.Cryptography.Algorithms.dll
 lib/mono/4.5/Facades/System.Security.Cryptography.DeriveBytes.dll
 lib/mono/4.5/Facades/System.Security.Cryptography.Encoding.dll
 lib/mono/4.5/Facades/System.Security.Cryptography.Encryption.Aes.dll
