@@ -433,7 +433,6 @@ lib/mono/4.5-api/Microsoft.Web.Infrastructure.dll
 lib/mono/4.5-api/Mono.C5.dll
 lib/mono/4.5-api/Mono.CSharp.dll
 lib/mono/4.5-api/Mono.Cairo.dll
-lib/mono/4.5-api/Mono.Cecil.Mdb.dll
 lib/mono/4.5-api/Mono.Cecil.dll
 lib/mono/4.5-api/Mono.CodeContracts.dll
 lib/mono/4.5-api/Mono.CompilerServices.SymbolWriter.dll
@@ -539,7 +538,6 @@ lib/mono/4.5-api/System.Xml.Linq.dll
 lib/mono/4.5-api/System.Xml.Serialization.dll
 lib/mono/4.5-api/System.Xml.dll
 lib/mono/4.5-api/System.dll
-lib/mono/4.5-api/SystemWebTestShim.dll
 lib/mono/4.5-api/WebMatrix.Data.dll
 lib/mono/4.5-api/WindowsBase.dll
 lib/mono/4.5-api/cscompmgd.dll
