@@ -608,7 +608,6 @@ lib/mono/4.5/Facades/System.Net.WebHeaderCollection.dll
 lib/mono/4.5/Facades/System.Net.WebSockets.Client.dll
 lib/mono/4.5/Facades/System.Net.WebSockets.dll
 lib/mono/4.5/Facades/System.ObjectModel.dll
-lib/mono/4.5/Facades/System.Private.CoreLib.InteropServices.dll
 lib/mono/4.5/Facades/System.Reflection.Emit.ILGeneration.dll
 lib/mono/4.5/Facades/System.Reflection.Emit.Lightweight.dll
 lib/mono/4.5/Facades/System.Reflection.Emit.dll
